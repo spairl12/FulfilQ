@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Quote" />
+			<Item Name="Columns.SPAIAccount.Caption" Value="Account" />
+			<Item Name="Columns.SPAIAmount.Caption" Value="Amount" />
+			<Item Name="Columns.SPAINumber.Caption" Value="Number" />
+			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
+		</Items>
+	</Group>
+</Resources>

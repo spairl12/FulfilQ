@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="nl-NL">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.OpportunityHistoryDS_EntityChangeType.Value" Value="Type wijzigen" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExpansionPanel_title.Value" Value="History of changes" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExportDataBtn_caption.Value" Value="Exporteer naar Excel" />
+			<Item Name="LocalizableStrings.OpportunityHistoryRefreshBtn_caption.Value" Value="Vernieuwen" />
+			<Item Name="LocalizableStrings.OpportunityHistorySearchFilter_placeholder.Value" Value="Zoeken" />
+			<Item Name="LocalizableStrings.OpportunityHistorySettingsBtn_caption.Value" Value="Lead" />
+			<Item Name="LocalizableStrings.addRecord_ih4zcqj_caption.Value" Value="Voeg nieuw toe" />
+		</Items>
+	</Group>
+</Resources>

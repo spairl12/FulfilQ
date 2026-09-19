@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "7ea4bd52-d140-4e90-bd0f-56a5133d8295",
+    "Name": "SPAIScheduleLines_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782125000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Schedule lines list page",
+    "DependsOn": []
+  }
+}

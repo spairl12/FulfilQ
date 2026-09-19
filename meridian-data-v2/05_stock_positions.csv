@@ -1,0 +1,2252 @@
+StockCode,ProductCode,LocationCode,LocationName,LocationType,QtyOnHand,QtyAllocated,QtyAvailable,NextInboundQty,NextInboundDate
+MCS-0001-DC02,MCS-0001,DC02,Sydney Central DC,Distribution Centre,390,132,258,245,2026-11-04
+MCS-0002-DC01,MCS-0002,DC01,Melbourne West DC,Distribution Centre,17,2,15,212,2027-01-06
+MCS-0002-DC03,MCS-0002,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0002-DC04,MCS-0002,DC04,Perth Metro DC,Distribution Centre,10,2,8,0,
+MCS-0002-ST03,MCS-0002,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0003-DC01,MCS-0003,DC01,Melbourne West DC,Distribution Centre,476,105,371,0,
+MCS-0003-DC02,MCS-0003,DC02,Sydney Central DC,Distribution Centre,422,28,394,189,2026-09-30
+MCS-0003-DC04,MCS-0003,DC04,Perth Metro DC,Distribution Centre,258,70,188,0,
+MCS-0003-ST01,MCS-0003,ST01,Melbourne CBD Store,Retail Store,0,0,0,194,2026-10-14
+MCS-0003-ST03,MCS-0003,ST03,Geelong Store,Retail Store,7,1,6,240,2026-09-23
+MCS-0003-ST05,MCS-0003,ST05,Parramatta Store,Retail Store,0,0,0,43,2026-09-30
+MCS-0003-ST06,MCS-0003,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0004-DC01,MCS-0004,DC01,Melbourne West DC,Distribution Centre,43,14,29,0,
+MCS-0004-DC02,MCS-0004,DC02,Sydney Central DC,Distribution Centre,409,45,364,0,
+MCS-0004-DC03,MCS-0004,DC03,Brisbane North DC,Distribution Centre,419,140,279,0,
+MCS-0004-ST01,MCS-0004,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0004-ST03,MCS-0004,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0004-ST06,MCS-0004,ST06,Newcastle Store,Retail Store,0,0,0,384,2026-10-21
+MCS-0005-DC02,MCS-0005,DC02,Sydney Central DC,Distribution Centre,12,3,9,0,
+MCS-0005-DC03,MCS-0005,DC03,Brisbane North DC,Distribution Centre,425,26,399,0,
+MCS-0005-DC04,MCS-0005,DC04,Perth Metro DC,Distribution Centre,183,17,166,0,
+MCS-0005-ST02,MCS-0005,ST02,Dandenong Store,Retail Store,1,0,1,0,
+MCS-0006-DC01,MCS-0006,DC01,Melbourne West DC,Distribution Centre,74,17,57,0,
+MCS-0007-DC02,MCS-0007,DC02,Sydney Central DC,Distribution Centre,6,2,4,0,
+MCS-0007-ST04,MCS-0007,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0007-ST06,MCS-0007,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0007-ST08,MCS-0007,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0008-DC02,MCS-0008,DC02,Sydney Central DC,Distribution Centre,315,15,300,105,2026-09-30
+MCS-0008-DC04,MCS-0008,DC04,Perth Metro DC,Distribution Centre,184,13,171,0,
+MCS-0008-ST02,MCS-0008,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0008-ST08,MCS-0008,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0009-DC01,MCS-0009,DC01,Melbourne West DC,Distribution Centre,443,137,306,0,
+MCS-0009-DC02,MCS-0009,DC02,Sydney Central DC,Distribution Centre,84,2,82,0,
+MCS-0009-DC03,MCS-0009,DC03,Brisbane North DC,Distribution Centre,383,53,330,0,
+MCS-0009-DC04,MCS-0009,DC04,Perth Metro DC,Distribution Centre,93,28,65,0,
+MCS-0009-ST01,MCS-0009,ST01,Melbourne CBD Store,Retail Store,5,0,5,0,
+MCS-0009-ST02,MCS-0009,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0009-ST03,MCS-0009,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0009-ST04,MCS-0009,ST04,Ballarat Store,Retail Store,0,0,0,124,2026-09-23
+MCS-0010-DC01,MCS-0010,DC01,Melbourne West DC,Distribution Centre,322,58,264,0,
+MCS-0010-DC02,MCS-0010,DC02,Sydney Central DC,Distribution Centre,365,55,310,0,
+MCS-0010-DC03,MCS-0010,DC03,Brisbane North DC,Distribution Centre,165,13,152,233,2026-10-21
+MCS-0010-ST08,MCS-0010,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0011-DC02,MCS-0011,DC02,Sydney Central DC,Distribution Centre,503,173,330,339,2026-10-07
+MCS-0011-DC03,MCS-0011,DC03,Brisbane North DC,Distribution Centre,338,117,221,296,2026-09-30
+MCS-0011-DC04,MCS-0011,DC04,Perth Metro DC,Distribution Centre,119,18,101,0,
+MCS-0011-ST01,MCS-0011,ST01,Melbourne CBD Store,Retail Store,2,0,2,0,
+MCS-0011-ST03,MCS-0011,ST03,Geelong Store,Retail Store,14,0,14,0,
+MCS-0011-ST04,MCS-0011,ST04,Ballarat Store,Retail Store,10,3,7,348,2026-10-07
+MCS-0011-ST08,MCS-0011,ST08,Adelaide Store,Retail Store,6,0,6,0,
+MCS-0012-DC01,MCS-0012,DC01,Melbourne West DC,Distribution Centre,300,66,234,0,
+MCS-0012-DC03,MCS-0012,DC03,Brisbane North DC,Distribution Centre,457,24,433,303,2026-10-28
+MCS-0012-ST02,MCS-0012,ST02,Dandenong Store,Retail Store,0,0,0,306,2026-09-30
+MCS-0012-ST04,MCS-0012,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0013-DC02,MCS-0013,DC02,Sydney Central DC,Distribution Centre,189,19,170,267,2026-11-04
+MCS-0013-DC03,MCS-0013,DC03,Brisbane North DC,Distribution Centre,347,22,325,0,
+MCS-0013-DC04,MCS-0013,DC04,Perth Metro DC,Distribution Centre,297,11,286,0,
+MCS-0013-ST05,MCS-0013,ST05,Parramatta Store,Retail Store,5,0,5,80,2026-10-28
+MCS-0013-ST07,MCS-0013,ST07,Gold Coast Store,Retail Store,0,0,0,311,2026-11-18
+MCS-0014-DC01,MCS-0014,DC01,Melbourne West DC,Distribution Centre,129,13,116,43,2026-11-04
+MCS-0014-DC02,MCS-0014,DC02,Sydney Central DC,Distribution Centre,291,23,268,0,
+MCS-0014-ST01,MCS-0014,ST01,Melbourne CBD Store,Retail Store,12,0,12,0,
+MCS-0014-ST04,MCS-0014,ST04,Ballarat Store,Retail Store,5,1,4,0,
+MCS-0014-ST07,MCS-0014,ST07,Gold Coast Store,Retail Store,3,0,3,131,2026-11-04
+MCS-0015-DC04,MCS-0015,DC04,Perth Metro DC,Distribution Centre,169,42,127,0,
+MCS-0015-ST01,MCS-0015,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0015-ST05,MCS-0015,ST05,Parramatta Store,Retail Store,9,3,6,0,
+MCS-0015-ST06,MCS-0015,ST06,Newcastle Store,Retail Store,0,0,0,335,2026-10-14
+MCS-0016-DC01,MCS-0016,DC01,Melbourne West DC,Distribution Centre,342,80,262,187,2026-11-18
+MCS-0016-DC02,MCS-0016,DC02,Sydney Central DC,Distribution Centre,317,85,232,0,
+MCS-0016-DC03,MCS-0016,DC03,Brisbane North DC,Distribution Centre,504,115,389,388,2026-11-04
+MCS-0017-DC01,MCS-0017,DC01,Melbourne West DC,Distribution Centre,397,137,260,0,
+MCS-0017-DC04,MCS-0017,DC04,Perth Metro DC,Distribution Centre,274,84,190,312,2026-11-04
+MCS-0017-ST01,MCS-0017,ST01,Melbourne CBD Store,Retail Store,0,0,0,249,2026-12-02
+MCS-0017-ST04,MCS-0017,ST04,Ballarat Store,Retail Store,0,0,0,300,2026-11-18
+MCS-0017-ST08,MCS-0017,ST08,Adelaide Store,Retail Store,0,0,0,236,2026-11-18
+MCS-0018-DC01,MCS-0018,DC01,Melbourne West DC,Distribution Centre,284,0,284,0,
+MCS-0018-DC02,MCS-0018,DC02,Sydney Central DC,Distribution Centre,66,11,55,0,
+MCS-0018-DC03,MCS-0018,DC03,Brisbane North DC,Distribution Centre,390,80,310,0,
+MCS-0018-ST04,MCS-0018,ST04,Ballarat Store,Retail Store,0,0,0,227,2026-10-21
+MCS-0019-DC02,MCS-0019,DC02,Sydney Central DC,Distribution Centre,72,19,53,0,
+MCS-0019-DC03,MCS-0019,DC03,Brisbane North DC,Distribution Centre,431,70,361,0,
+MCS-0019-DC04,MCS-0019,DC04,Perth Metro DC,Distribution Centre,395,87,308,0,
+MCS-0019-ST05,MCS-0019,ST05,Parramatta Store,Retail Store,0,0,0,367,2026-10-21
+MCS-0020-DC02,MCS-0020,DC02,Sydney Central DC,Distribution Centre,195,13,182,0,
+MCS-0020-DC03,MCS-0020,DC03,Brisbane North DC,Distribution Centre,457,157,300,0,
+MCS-0020-ST02,MCS-0020,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0020-ST03,MCS-0020,ST03,Geelong Store,Retail Store,4,1,3,0,
+MCS-0021-DC01,MCS-0021,DC01,Melbourne West DC,Distribution Centre,386,127,259,0,
+MCS-0021-DC03,MCS-0021,DC03,Brisbane North DC,Distribution Centre,45,6,39,0,
+MCS-0021-ST08,MCS-0021,ST08,Adelaide Store,Retail Store,3,1,2,0,
+MCS-0022-DC02,MCS-0022,DC02,Sydney Central DC,Distribution Centre,150,6,144,333,2026-09-30
+MCS-0022-DC04,MCS-0022,DC04,Perth Metro DC,Distribution Centre,358,112,246,248,2026-09-30
+MCS-0022-ST03,MCS-0022,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0022-ST04,MCS-0022,ST04,Ballarat Store,Retail Store,0,0,0,368,2026-10-14
+MCS-0022-ST05,MCS-0022,ST05,Parramatta Store,Retail Store,0,0,0,275,2026-09-23
+MCS-0023-DC02,MCS-0023,DC02,Sydney Central DC,Distribution Centre,401,46,355,0,
+MCS-0023-DC03,MCS-0023,DC03,Brisbane North DC,Distribution Centre,360,64,296,161,2026-11-04
+MCS-0023-DC04,MCS-0023,DC04,Perth Metro DC,Distribution Centre,344,112,232,152,2026-10-14
+MCS-0023-ST06,MCS-0023,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0024-DC01,MCS-0024,DC01,Melbourne West DC,Distribution Centre,508,42,466,0,
+MCS-0024-DC03,MCS-0024,DC03,Brisbane North DC,Distribution Centre,131,24,107,0,
+MCS-0024-ST08,MCS-0024,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0025-DC02,MCS-0025,DC02,Sydney Central DC,Distribution Centre,205,8,197,0,
+MCS-0025-DC03,MCS-0025,DC03,Brisbane North DC,Distribution Centre,253,33,220,122,2026-10-21
+MCS-0025-ST05,MCS-0025,ST05,Parramatta Store,Retail Store,0,0,0,251,2026-11-18
+MCS-0025-ST08,MCS-0025,ST08,Adelaide Store,Retail Store,0,0,0,258,2026-11-04
+MCS-0026-DC03,MCS-0026,DC03,Brisbane North DC,Distribution Centre,25,1,24,0,
+MCS-0026-ST01,MCS-0026,ST01,Melbourne CBD Store,Retail Store,4,1,3,0,
+MCS-0026-ST05,MCS-0026,ST05,Parramatta Store,Retail Store,7,2,5,0,
+MCS-0026-ST06,MCS-0026,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0026-ST08,MCS-0026,ST08,Adelaide Store,Retail Store,14,0,14,0,
+MCS-0027-DC01,MCS-0027,DC01,Melbourne West DC,Distribution Centre,503,36,467,0,
+MCS-0027-DC03,MCS-0027,DC03,Brisbane North DC,Distribution Centre,484,44,440,127,2026-11-18
+MCS-0027-DC04,MCS-0027,DC04,Perth Metro DC,Distribution Centre,269,65,204,0,
+MCS-0027-ST03,MCS-0027,ST03,Geelong Store,Retail Store,11,0,11,0,
+MCS-0028-DC01,MCS-0028,DC01,Melbourne West DC,Distribution Centre,163,0,163,0,
+MCS-0028-DC02,MCS-0028,DC02,Sydney Central DC,Distribution Centre,384,103,281,0,
+MCS-0028-DC03,MCS-0028,DC03,Brisbane North DC,Distribution Centre,4,0,4,0,
+MCS-0028-ST01,MCS-0028,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0028-ST04,MCS-0028,ST04,Ballarat Store,Retail Store,14,2,12,0,
+MCS-0028-ST05,MCS-0028,ST05,Parramatta Store,Retail Store,1,0,1,386,2026-11-04
+MCS-0028-ST08,MCS-0028,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0029-DC01,MCS-0029,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0029-DC02,MCS-0029,DC02,Sydney Central DC,Distribution Centre,0,0,0,200,2026-12-16
+MCS-0029-ST05,MCS-0029,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0030-DC01,MCS-0030,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0030-DC03,MCS-0030,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0030-ST05,MCS-0030,ST05,Parramatta Store,Retail Store,0,0,0,217,2026-11-04
+MCS-0030-ST08,MCS-0030,ST08,Adelaide Store,Retail Store,6,1,5,194,2026-11-04
+MCS-0031-DC02,MCS-0031,DC02,Sydney Central DC,Distribution Centre,305,68,237,110,2026-11-11
+MCS-0031-DC03,MCS-0031,DC03,Brisbane North DC,Distribution Centre,393,42,351,0,
+MCS-0031-DC04,MCS-0031,DC04,Perth Metro DC,Distribution Centre,162,29,133,0,
+MCS-0031-ST01,MCS-0031,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0031-ST03,MCS-0031,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0031-ST04,MCS-0031,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0031-ST06,MCS-0031,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0032-DC02,MCS-0032,DC02,Sydney Central DC,Distribution Centre,364,84,280,0,
+MCS-0032-DC03,MCS-0032,DC03,Brisbane North DC,Distribution Centre,41,13,28,0,
+MCS-0032-DC04,MCS-0032,DC04,Perth Metro DC,Distribution Centre,317,52,265,0,
+MCS-0032-ST02,MCS-0032,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0032-ST03,MCS-0032,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0032-ST04,MCS-0032,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0033-DC01,MCS-0033,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0033-DC02,MCS-0033,DC02,Sydney Central DC,Distribution Centre,0,0,0,347,2027-02-17
+MCS-0033-DC04,MCS-0033,DC04,Perth Metro DC,Distribution Centre,0,0,0,183,2027-02-17
+MCS-0033-ST01,MCS-0033,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0033-ST08,MCS-0033,ST08,Adelaide Store,Retail Store,0,0,0,80,2027-02-24
+MCS-0034-DC01,MCS-0034,DC01,Melbourne West DC,Distribution Centre,414,123,291,0,
+MCS-0034-DC03,MCS-0034,DC03,Brisbane North DC,Distribution Centre,388,87,301,0,
+MCS-0034-ST06,MCS-0034,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0035-ST01,MCS-0035,ST01,Melbourne CBD Store,Retail Store,0,0,0,104,2026-09-30
+MCS-0035-ST08,MCS-0035,ST08,Adelaide Store,Retail Store,2,0,2,0,
+MCS-0036-DC01,MCS-0036,DC01,Melbourne West DC,Distribution Centre,359,125,234,0,
+MCS-0036-DC03,MCS-0036,DC03,Brisbane North DC,Distribution Centre,109,1,108,0,
+MCS-0036-DC04,MCS-0036,DC04,Perth Metro DC,Distribution Centre,71,7,64,159,2026-09-23
+MCS-0036-ST05,MCS-0036,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0037-DC01,MCS-0037,DC01,Melbourne West DC,Distribution Centre,20,1,19,171,2026-10-21
+MCS-0037-ST02,MCS-0037,ST02,Dandenong Store,Retail Store,0,0,0,180,2026-11-18
+MCS-0037-ST03,MCS-0037,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0037-ST04,MCS-0037,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0037-ST06,MCS-0037,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0038-ST03,MCS-0038,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0039-DC02,MCS-0039,DC02,Sydney Central DC,Distribution Centre,104,4,100,261,2026-10-07
+MCS-0039-ST03,MCS-0039,ST03,Geelong Store,Retail Store,14,3,11,0,
+MCS-0039-ST04,MCS-0039,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0039-ST06,MCS-0039,ST06,Newcastle Store,Retail Store,0,0,0,372,2026-09-30
+MCS-0039-ST07,MCS-0039,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0040-DC01,MCS-0040,DC01,Melbourne West DC,Distribution Centre,13,4,9,0,
+MCS-0040-DC02,MCS-0040,DC02,Sydney Central DC,Distribution Centre,248,46,202,0,
+MCS-0040-DC03,MCS-0040,DC03,Brisbane North DC,Distribution Centre,283,34,249,0,
+MCS-0040-DC04,MCS-0040,DC04,Perth Metro DC,Distribution Centre,333,60,273,0,
+MCS-0040-ST02,MCS-0040,ST02,Dandenong Store,Retail Store,0,0,0,49,2026-10-21
+MCS-0040-ST06,MCS-0040,ST06,Newcastle Store,Retail Store,4,0,4,0,
+MCS-0041-ST03,MCS-0041,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0041-ST04,MCS-0041,ST04,Ballarat Store,Retail Store,0,0,0,369,2026-10-07
+MCS-0041-ST07,MCS-0041,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0041-ST08,MCS-0041,ST08,Adelaide Store,Retail Store,1,0,1,277,2026-10-07
+MCS-0042-DC02,MCS-0042,DC02,Sydney Central DC,Distribution Centre,386,113,273,0,
+MCS-0042-DC03,MCS-0042,DC03,Brisbane North DC,Distribution Centre,241,12,229,137,2026-10-28
+MCS-0042-DC04,MCS-0042,DC04,Perth Metro DC,Distribution Centre,484,35,449,0,
+MCS-0043-DC01,MCS-0043,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0043-DC02,MCS-0043,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0043-DC03,MCS-0043,DC03,Brisbane North DC,Distribution Centre,14,4,10,339,2027-02-24
+MCS-0043-DC04,MCS-0043,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0043-ST01,MCS-0043,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0044-DC01,MCS-0044,DC01,Melbourne West DC,Distribution Centre,409,9,400,0,
+MCS-0045-DC02,MCS-0045,DC02,Sydney Central DC,Distribution Centre,357,94,263,381,2026-10-21
+MCS-0045-DC03,MCS-0045,DC03,Brisbane North DC,Distribution Centre,300,47,253,0,
+MCS-0045-ST02,MCS-0045,ST02,Dandenong Store,Retail Store,5,1,4,0,
+MCS-0045-ST03,MCS-0045,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0045-ST08,MCS-0045,ST08,Adelaide Store,Retail Store,13,4,9,0,
+MCS-0046-DC01,MCS-0046,DC01,Melbourne West DC,Distribution Centre,341,11,330,0,
+MCS-0046-DC02,MCS-0046,DC02,Sydney Central DC,Distribution Centre,303,101,202,0,
+MCS-0046-DC04,MCS-0046,DC04,Perth Metro DC,Distribution Centre,231,12,219,0,
+MCS-0046-ST06,MCS-0046,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0046-ST08,MCS-0046,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0047-DC04,MCS-0047,DC04,Perth Metro DC,Distribution Centre,0,0,0,317,2027-02-24
+MCS-0047-ST03,MCS-0047,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0047-ST04,MCS-0047,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0047-ST05,MCS-0047,ST05,Parramatta Store,Retail Store,3,0,3,0,
+MCS-0047-ST06,MCS-0047,ST06,Newcastle Store,Retail Store,3,0,3,0,
+MCS-0047-ST07,MCS-0047,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0048-DC02,MCS-0048,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0048-DC03,MCS-0048,DC03,Brisbane North DC,Distribution Centre,28,6,22,212,2026-11-18
+MCS-0048-ST03,MCS-0048,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0048-ST05,MCS-0048,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0049-DC02,MCS-0049,DC02,Sydney Central DC,Distribution Centre,172,27,145,177,2026-10-14
+MCS-0049-ST01,MCS-0049,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0049-ST03,MCS-0049,ST03,Geelong Store,Retail Store,6,0,6,0,
+MCS-0049-ST04,MCS-0049,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0049-ST05,MCS-0049,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0050-DC01,MCS-0050,DC01,Melbourne West DC,Distribution Centre,343,103,240,186,2026-10-21
+MCS-0050-DC02,MCS-0050,DC02,Sydney Central DC,Distribution Centre,361,7,354,0,
+MCS-0050-DC03,MCS-0050,DC03,Brisbane North DC,Distribution Centre,147,13,134,0,
+MCS-0050-ST01,MCS-0050,ST01,Melbourne CBD Store,Retail Store,2,0,2,0,
+MCS-0050-ST04,MCS-0050,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0050-ST08,MCS-0050,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0051-DC01,MCS-0051,DC01,Melbourne West DC,Distribution Centre,55,3,52,0,
+MCS-0051-DC02,MCS-0051,DC02,Sydney Central DC,Distribution Centre,0,0,0,175,2026-11-18
+MCS-0051-DC03,MCS-0051,DC03,Brisbane North DC,Distribution Centre,60,21,39,0,
+MCS-0051-ST04,MCS-0051,ST04,Ballarat Store,Retail Store,11,1,10,339,2026-12-16
+MCS-0051-ST05,MCS-0051,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0051-ST07,MCS-0051,ST07,Gold Coast Store,Retail Store,0,0,0,308,2026-11-18
+MCS-0052-DC01,MCS-0052,DC01,Melbourne West DC,Distribution Centre,21,2,19,0,
+MCS-0052-DC03,MCS-0052,DC03,Brisbane North DC,Distribution Centre,277,70,207,331,2026-11-18
+MCS-0052-DC04,MCS-0052,DC04,Perth Metro DC,Distribution Centre,396,67,329,0,
+MCS-0053-DC01,MCS-0053,DC01,Melbourne West DC,Distribution Centre,286,37,249,134,2026-10-07
+MCS-0053-DC02,MCS-0053,DC02,Sydney Central DC,Distribution Centre,72,8,64,0,
+MCS-0053-DC03,MCS-0053,DC03,Brisbane North DC,Distribution Centre,341,17,324,0,
+MCS-0053-ST03,MCS-0053,ST03,Geelong Store,Retail Store,0,0,0,376,2026-10-28
+MCS-0053-ST05,MCS-0053,ST05,Parramatta Store,Retail Store,6,0,6,0,
+MCS-0054-DC01,MCS-0054,DC01,Melbourne West DC,Distribution Centre,59,3,56,0,
+MCS-0054-DC02,MCS-0054,DC02,Sydney Central DC,Distribution Centre,363,73,290,0,
+MCS-0054-DC04,MCS-0054,DC04,Perth Metro DC,Distribution Centre,329,79,250,263,2026-11-04
+MCS-0054-ST01,MCS-0054,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0054-ST02,MCS-0054,ST02,Dandenong Store,Retail Store,0,0,0,211,2026-11-11
+MCS-0055-DC02,MCS-0055,DC02,Sydney Central DC,Distribution Centre,0,0,0,154,2027-01-13
+MCS-0055-DC03,MCS-0055,DC03,Brisbane North DC,Distribution Centre,10,3,7,0,
+MCS-0055-ST02,MCS-0055,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0055-ST05,MCS-0055,ST05,Parramatta Store,Retail Store,14,2,12,0,
+MCS-0055-ST08,MCS-0055,ST08,Adelaide Store,Retail Store,0,0,0,75,2027-01-06
+MCS-0056-DC01,MCS-0056,DC01,Melbourne West DC,Distribution Centre,143,44,99,0,
+MCS-0056-DC02,MCS-0056,DC02,Sydney Central DC,Distribution Centre,513,57,456,100,2026-09-30
+MCS-0056-ST04,MCS-0056,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0056-ST05,MCS-0056,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0056-ST06,MCS-0056,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0056-ST07,MCS-0056,ST07,Gold Coast Store,Retail Store,0,0,0,207,2026-10-14
+MCS-0057-DC01,MCS-0057,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0057-DC02,MCS-0057,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0057-DC04,MCS-0057,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0057-ST07,MCS-0057,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0058-DC02,MCS-0058,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0058-DC03,MCS-0058,DC03,Brisbane North DC,Distribution Centre,52,16,36,0,
+MCS-0058-DC04,MCS-0058,DC04,Perth Metro DC,Distribution Centre,43,1,42,0,
+MCS-0058-ST02,MCS-0058,ST02,Dandenong Store,Retail Store,0,0,0,283,2026-11-04
+MCS-0058-ST03,MCS-0058,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0058-ST07,MCS-0058,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0059-DC04,MCS-0059,DC04,Perth Metro DC,Distribution Centre,52,17,35,71,2026-10-28
+MCS-0059-ST06,MCS-0059,ST06,Newcastle Store,Retail Store,11,0,11,0,
+MCS-0060-DC03,MCS-0060,DC03,Brisbane North DC,Distribution Centre,82,9,73,0,
+MCS-0060-DC04,MCS-0060,DC04,Perth Metro DC,Distribution Centre,15,5,10,0,
+MCS-0060-ST01,MCS-0060,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0060-ST05,MCS-0060,ST05,Parramatta Store,Retail Store,10,3,7,0,
+MCS-0061-DC01,MCS-0061,DC01,Melbourne West DC,Distribution Centre,61,18,43,269,2026-10-14
+MCS-0061-ST04,MCS-0061,ST04,Ballarat Store,Retail Store,13,4,9,0,
+MCS-0061-ST05,MCS-0061,ST05,Parramatta Store,Retail Store,6,2,4,0,
+MCS-0061-ST07,MCS-0061,ST07,Gold Coast Store,Retail Store,0,0,0,179,2026-10-07
+MCS-0062-DC01,MCS-0062,DC01,Melbourne West DC,Distribution Centre,4,0,4,0,
+MCS-0062-DC02,MCS-0062,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0062-DC03,MCS-0062,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0062-ST02,MCS-0062,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0063-DC02,MCS-0063,DC02,Sydney Central DC,Distribution Centre,60,18,42,337,2026-09-23
+MCS-0063-DC03,MCS-0063,DC03,Brisbane North DC,Distribution Centre,126,29,97,206,2026-10-21
+MCS-0063-DC04,MCS-0063,DC04,Perth Metro DC,Distribution Centre,195,56,139,0,
+MCS-0063-ST02,MCS-0063,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0064-DC01,MCS-0064,DC01,Melbourne West DC,Distribution Centre,117,17,100,0,
+MCS-0064-DC03,MCS-0064,DC03,Brisbane North DC,Distribution Centre,125,12,113,0,
+MCS-0064-DC04,MCS-0064,DC04,Perth Metro DC,Distribution Centre,340,113,227,0,
+MCS-0064-ST05,MCS-0064,ST05,Parramatta Store,Retail Store,8,1,7,0,
+MCS-0065-DC02,MCS-0065,DC02,Sydney Central DC,Distribution Centre,78,23,55,0,
+MCS-0065-DC03,MCS-0065,DC03,Brisbane North DC,Distribution Centre,222,21,201,52,2026-10-21
+MCS-0065-ST01,MCS-0065,ST01,Melbourne CBD Store,Retail Store,13,1,12,0,
+MCS-0065-ST03,MCS-0065,ST03,Geelong Store,Retail Store,1,0,1,48,2026-10-28
+MCS-0065-ST04,MCS-0065,ST04,Ballarat Store,Retail Store,0,0,0,255,2026-10-28
+MCS-0065-ST06,MCS-0065,ST06,Newcastle Store,Retail Store,11,1,10,328,2026-11-04
+MCS-0065-ST08,MCS-0065,ST08,Adelaide Store,Retail Store,0,0,0,216,2026-10-28
+MCS-0066-DC01,MCS-0066,DC01,Melbourne West DC,Distribution Centre,281,15,266,0,
+MCS-0066-DC02,MCS-0066,DC02,Sydney Central DC,Distribution Centre,21,4,17,364,2026-11-11
+MCS-0066-ST06,MCS-0066,ST06,Newcastle Store,Retail Store,0,0,0,390,2026-10-28
+MCS-0066-ST08,MCS-0066,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0067-DC01,MCS-0067,DC01,Melbourne West DC,Distribution Centre,404,60,344,0,
+MCS-0067-DC02,MCS-0067,DC02,Sydney Central DC,Distribution Centre,189,45,144,0,
+MCS-0067-DC03,MCS-0067,DC03,Brisbane North DC,Distribution Centre,107,32,75,174,2026-10-14
+MCS-0067-DC04,MCS-0067,DC04,Perth Metro DC,Distribution Centre,62,10,52,222,2026-10-14
+MCS-0067-ST01,MCS-0067,ST01,Melbourne CBD Store,Retail Store,2,0,2,0,
+MCS-0067-ST07,MCS-0067,ST07,Gold Coast Store,Retail Store,0,0,0,232,2026-09-23
+MCS-0067-ST08,MCS-0067,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0068-DC02,MCS-0068,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0068-DC03,MCS-0068,DC03,Brisbane North DC,Distribution Centre,9,2,7,96,2027-01-06
+MCS-0068-DC04,MCS-0068,DC04,Perth Metro DC,Distribution Centre,37,8,29,0,
+MCS-0068-ST04,MCS-0068,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0069-DC01,MCS-0069,DC01,Melbourne West DC,Distribution Centre,33,0,33,0,
+MCS-0069-DC02,MCS-0069,DC02,Sydney Central DC,Distribution Centre,33,0,33,0,
+MCS-0069-DC03,MCS-0069,DC03,Brisbane North DC,Distribution Centre,33,0,33,0,
+MCS-0069-ST01,MCS-0069,ST01,Melbourne CBD Store,Retail Store,9,0,9,359,2026-09-23
+MCS-0069-ST07,MCS-0069,ST07,Gold Coast Store,Retail Store,9,3,6,186,2026-10-07
+MCS-0070-DC02,MCS-0070,DC02,Sydney Central DC,Distribution Centre,220,22,198,0,
+MCS-0070-DC04,MCS-0070,DC04,Perth Metro DC,Distribution Centre,379,78,301,360,2026-09-30
+MCS-0070-ST01,MCS-0070,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0070-ST04,MCS-0070,ST04,Ballarat Store,Retail Store,9,0,9,0,
+MCS-0070-ST06,MCS-0070,ST06,Newcastle Store,Retail Store,0,0,0,311,2026-09-30
+MCS-0071-DC02,MCS-0071,DC02,Sydney Central DC,Distribution Centre,265,8,257,0,
+MCS-0071-ST01,MCS-0071,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0071-ST08,MCS-0071,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0072-DC01,MCS-0072,DC01,Melbourne West DC,Distribution Centre,11,1,10,0,
+MCS-0072-DC03,MCS-0072,DC03,Brisbane North DC,Distribution Centre,0,0,0,126,2027-01-13
+MCS-0072-DC04,MCS-0072,DC04,Perth Metro DC,Distribution Centre,0,0,0,207,2027-02-10
+MCS-0072-ST02,MCS-0072,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0072-ST06,MCS-0072,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0073-DC01,MCS-0073,DC01,Melbourne West DC,Distribution Centre,490,111,379,315,2026-10-07
+MCS-0073-DC02,MCS-0073,DC02,Sydney Central DC,Distribution Centre,431,96,335,0,
+MCS-0073-DC03,MCS-0073,DC03,Brisbane North DC,Distribution Centre,96,13,83,0,
+MCS-0073-ST02,MCS-0073,ST02,Dandenong Store,Retail Store,6,1,5,219,2026-10-21
+MCS-0073-ST05,MCS-0073,ST05,Parramatta Store,Retail Store,10,0,10,0,
+MCS-0073-ST07,MCS-0073,ST07,Gold Coast Store,Retail Store,12,4,8,391,2026-10-07
+MCS-0073-ST08,MCS-0073,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0074-DC04,MCS-0074,DC04,Perth Metro DC,Distribution Centre,7,1,6,0,
+MCS-0074-ST02,MCS-0074,ST02,Dandenong Store,Retail Store,6,2,4,189,2027-04-07
+MCS-0074-ST06,MCS-0074,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0075-DC01,MCS-0075,DC01,Melbourne West DC,Distribution Centre,360,45,315,200,2026-10-21
+MCS-0075-DC04,MCS-0075,DC04,Perth Metro DC,Distribution Centre,168,25,143,0,
+MCS-0075-ST06,MCS-0075,ST06,Newcastle Store,Retail Store,12,4,8,0,
+MCS-0075-ST08,MCS-0075,ST08,Adelaide Store,Retail Store,7,1,6,0,
+MCS-0076-DC01,MCS-0076,DC01,Melbourne West DC,Distribution Centre,333,113,220,398,2026-12-02
+MCS-0076-DC03,MCS-0076,DC03,Brisbane North DC,Distribution Centre,105,36,69,0,
+MCS-0076-DC04,MCS-0076,DC04,Perth Metro DC,Distribution Centre,279,67,212,0,
+MCS-0076-ST02,MCS-0076,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0076-ST07,MCS-0076,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0077-DC04,MCS-0077,DC04,Perth Metro DC,Distribution Centre,498,168,330,0,
+MCS-0077-ST01,MCS-0077,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0077-ST03,MCS-0077,ST03,Geelong Store,Retail Store,0,0,0,338,2026-09-30
+MCS-0078-DC01,MCS-0078,DC01,Melbourne West DC,Distribution Centre,485,146,339,66,2026-11-11
+MCS-0078-DC02,MCS-0078,DC02,Sydney Central DC,Distribution Centre,360,50,310,0,
+MCS-0078-ST04,MCS-0078,ST04,Ballarat Store,Retail Store,6,0,6,321,2026-11-04
+MCS-0078-ST05,MCS-0078,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0078-ST08,MCS-0078,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0079-DC02,MCS-0079,DC02,Sydney Central DC,Distribution Centre,259,27,232,0,
+MCS-0079-DC03,MCS-0079,DC03,Brisbane North DC,Distribution Centre,391,114,277,0,
+MCS-0079-DC04,MCS-0079,DC04,Perth Metro DC,Distribution Centre,519,18,501,93,2026-11-18
+MCS-0079-ST02,MCS-0079,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0079-ST06,MCS-0079,ST06,Newcastle Store,Retail Store,6,1,5,309,2026-10-21
+MCS-0080-DC02,MCS-0080,DC02,Sydney Central DC,Distribution Centre,323,39,284,341,2026-11-04
+MCS-0080-DC03,MCS-0080,DC03,Brisbane North DC,Distribution Centre,146,37,109,0,
+MCS-0080-DC04,MCS-0080,DC04,Perth Metro DC,Distribution Centre,332,107,225,0,
+MCS-0080-ST04,MCS-0080,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0080-ST07,MCS-0080,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0081-DC03,MCS-0081,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0081-ST07,MCS-0081,ST07,Gold Coast Store,Retail Store,2,0,2,0,
+MCS-0082-DC01,MCS-0082,DC01,Melbourne West DC,Distribution Centre,141,24,117,0,
+MCS-0082-DC02,MCS-0082,DC02,Sydney Central DC,Distribution Centre,356,57,299,0,
+MCS-0082-DC04,MCS-0082,DC04,Perth Metro DC,Distribution Centre,500,113,387,325,2026-11-18
+MCS-0082-ST05,MCS-0082,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0082-ST07,MCS-0082,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0083-DC02,MCS-0083,DC02,Sydney Central DC,Distribution Centre,292,46,246,304,2026-10-21
+MCS-0083-DC03,MCS-0083,DC03,Brisbane North DC,Distribution Centre,332,58,274,46,2026-10-07
+MCS-0083-DC04,MCS-0083,DC04,Perth Metro DC,Distribution Centre,404,124,280,0,
+MCS-0083-ST03,MCS-0083,ST03,Geelong Store,Retail Store,12,3,9,0,
+MCS-0084-DC03,MCS-0084,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0084-ST02,MCS-0084,ST02,Dandenong Store,Retail Store,11,2,9,0,
+MCS-0084-ST03,MCS-0084,ST03,Geelong Store,Retail Store,7,0,7,0,
+MCS-0084-ST04,MCS-0084,ST04,Ballarat Store,Retail Store,0,0,0,122,2027-03-24
+MCS-0084-ST05,MCS-0084,ST05,Parramatta Store,Retail Store,13,1,12,354,2027-03-31
+MCS-0085-DC01,MCS-0085,DC01,Melbourne West DC,Distribution Centre,507,55,452,102,2026-11-04
+MCS-0085-DC02,MCS-0085,DC02,Sydney Central DC,Distribution Centre,372,118,254,0,
+MCS-0085-DC03,MCS-0085,DC03,Brisbane North DC,Distribution Centre,64,5,59,0,
+MCS-0085-DC04,MCS-0085,DC04,Perth Metro DC,Distribution Centre,56,13,43,0,
+MCS-0085-ST04,MCS-0085,ST04,Ballarat Store,Retail Store,1,0,1,0,
+MCS-0085-ST05,MCS-0085,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0085-ST07,MCS-0085,ST07,Gold Coast Store,Retail Store,12,2,10,0,
+MCS-0086-DC01,MCS-0086,DC01,Melbourne West DC,Distribution Centre,147,28,119,0,
+MCS-0086-DC02,MCS-0086,DC02,Sydney Central DC,Distribution Centre,144,31,113,254,2026-10-21
+MCS-0086-ST01,MCS-0086,ST01,Melbourne CBD Store,Retail Store,8,1,7,0,
+MCS-0086-ST05,MCS-0086,ST05,Parramatta Store,Retail Store,0,0,0,201,2026-10-14
+MCS-0087-DC01,MCS-0087,DC01,Melbourne West DC,Distribution Centre,208,27,181,0,
+MCS-0087-DC03,MCS-0087,DC03,Brisbane North DC,Distribution Centre,273,41,232,0,
+MCS-0087-DC04,MCS-0087,DC04,Perth Metro DC,Distribution Centre,20,3,17,0,
+MCS-0087-ST02,MCS-0087,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0088-DC02,MCS-0088,DC02,Sydney Central DC,Distribution Centre,249,54,195,281,2026-10-14
+MCS-0088-DC03,MCS-0088,DC03,Brisbane North DC,Distribution Centre,159,26,133,0,
+MCS-0088-ST02,MCS-0088,ST02,Dandenong Store,Retail Store,0,0,0,302,2026-10-14
+MCS-0088-ST04,MCS-0088,ST04,Ballarat Store,Retail Store,3,0,3,0,
+MCS-0088-ST05,MCS-0088,ST05,Parramatta Store,Retail Store,0,0,0,112,2026-09-23
+MCS-0089-DC01,MCS-0089,DC01,Melbourne West DC,Distribution Centre,461,7,454,366,2026-10-28
+MCS-0089-DC03,MCS-0089,DC03,Brisbane North DC,Distribution Centre,445,94,351,0,
+MCS-0089-ST01,MCS-0089,ST01,Melbourne CBD Store,Retail Store,5,0,5,161,2026-11-04
+MCS-0089-ST05,MCS-0089,ST05,Parramatta Store,Retail Store,0,0,0,44,2026-11-11
+MCS-0089-ST08,MCS-0089,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0090-DC01,MCS-0090,DC01,Melbourne West DC,Distribution Centre,516,50,466,0,
+MCS-0090-DC03,MCS-0090,DC03,Brisbane North DC,Distribution Centre,211,44,167,0,
+MCS-0090-DC04,MCS-0090,DC04,Perth Metro DC,Distribution Centre,445,16,429,173,2026-11-18
+MCS-0090-ST08,MCS-0090,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0091-DC01,MCS-0091,DC01,Melbourne West DC,Distribution Centre,417,34,383,0,
+MCS-0091-DC04,MCS-0091,DC04,Perth Metro DC,Distribution Centre,400,30,370,315,2026-10-07
+MCS-0091-ST03,MCS-0091,ST03,Geelong Store,Retail Store,0,0,0,315,2026-10-21
+MCS-0091-ST05,MCS-0091,ST05,Parramatta Store,Retail Store,0,0,0,133,2026-10-21
+MCS-0092-DC01,MCS-0092,DC01,Melbourne West DC,Distribution Centre,134,20,114,0,
+MCS-0092-DC04,MCS-0092,DC04,Perth Metro DC,Distribution Centre,435,100,335,0,
+MCS-0092-ST02,MCS-0092,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0092-ST03,MCS-0092,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0092-ST07,MCS-0092,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0092-ST08,MCS-0092,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0093-DC03,MCS-0093,DC03,Brisbane North DC,Distribution Centre,49,0,49,0,
+MCS-0093-DC04,MCS-0093,DC04,Perth Metro DC,Distribution Centre,49,0,49,0,
+MCS-0093-ST02,MCS-0093,ST02,Dandenong Store,Retail Store,9,0,9,389,2026-10-21
+MCS-0093-ST03,MCS-0093,ST03,Geelong Store,Retail Store,9,0,9,108,2026-10-21
+MCS-0093-ST06,MCS-0093,ST06,Newcastle Store,Retail Store,0,0,0,196,2026-10-21
+MCS-0093-ST07,MCS-0093,ST07,Gold Coast Store,Retail Store,12,3,9,0,
+MCS-0094-DC04,MCS-0094,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0094-ST03,MCS-0094,ST03,Geelong Store,Retail Store,10,2,8,0,
+MCS-0094-ST05,MCS-0094,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0094-ST08,MCS-0094,ST08,Adelaide Store,Retail Store,9,0,9,0,
+MCS-0095-DC02,MCS-0095,DC02,Sydney Central DC,Distribution Centre,199,24,175,0,
+MCS-0095-ST01,MCS-0095,ST01,Melbourne CBD Store,Retail Store,9,0,9,0,
+MCS-0095-ST02,MCS-0095,ST02,Dandenong Store,Retail Store,0,0,0,387,2026-10-14
+MCS-0095-ST04,MCS-0095,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0095-ST06,MCS-0095,ST06,Newcastle Store,Retail Store,11,0,11,0,
+MCS-0095-ST08,MCS-0095,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0096-DC01,MCS-0096,DC01,Melbourne West DC,Distribution Centre,0,0,0,88,2027-01-27
+MCS-0096-DC02,MCS-0096,DC02,Sydney Central DC,Distribution Centre,45,11,34,0,
+MCS-0096-DC03,MCS-0096,DC03,Brisbane North DC,Distribution Centre,51,8,43,0,
+MCS-0096-ST06,MCS-0096,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0097-DC01,MCS-0097,DC01,Melbourne West DC,Distribution Centre,352,74,278,0,
+MCS-0097-DC03,MCS-0097,DC03,Brisbane North DC,Distribution Centre,462,51,411,0,
+MCS-0097-ST03,MCS-0097,ST03,Geelong Store,Retail Store,14,0,14,114,2026-11-04
+MCS-0098-DC01,MCS-0098,DC01,Melbourne West DC,Distribution Centre,370,9,361,0,
+MCS-0098-DC02,MCS-0098,DC02,Sydney Central DC,Distribution Centre,480,77,403,0,
+MCS-0098-ST06,MCS-0098,ST06,Newcastle Store,Retail Store,8,1,7,0,
+MCS-0099-DC01,MCS-0099,DC01,Melbourne West DC,Distribution Centre,491,159,332,65,2026-10-07
+MCS-0099-DC02,MCS-0099,DC02,Sydney Central DC,Distribution Centre,511,149,362,0,
+MCS-0099-ST02,MCS-0099,ST02,Dandenong Store,Retail Store,8,0,8,0,
+MCS-0099-ST03,MCS-0099,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0099-ST04,MCS-0099,ST04,Ballarat Store,Retail Store,0,0,0,234,2026-10-21
+MCS-0099-ST08,MCS-0099,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0100-DC02,MCS-0100,DC02,Sydney Central DC,Distribution Centre,231,58,173,0,
+MCS-0100-DC03,MCS-0100,DC03,Brisbane North DC,Distribution Centre,267,60,207,201,2026-11-11
+MCS-0100-DC04,MCS-0100,DC04,Perth Metro DC,Distribution Centre,153,43,110,0,
+MCS-0100-ST05,MCS-0100,ST05,Parramatta Store,Retail Store,0,0,0,228,2026-12-02
+MCS-0100-ST06,MCS-0100,ST06,Newcastle Store,Retail Store,13,2,11,0,
+MCS-0101-DC01,MCS-0101,DC01,Melbourne West DC,Distribution Centre,409,118,291,50,2026-10-28
+MCS-0101-ST01,MCS-0101,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0101-ST04,MCS-0101,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0101-ST06,MCS-0101,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0101-ST07,MCS-0101,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0102-DC01,MCS-0102,DC01,Melbourne West DC,Distribution Centre,398,28,370,0,
+MCS-0102-DC02,MCS-0102,DC02,Sydney Central DC,Distribution Centre,507,12,495,205,2026-11-04
+MCS-0102-DC03,MCS-0102,DC03,Brisbane North DC,Distribution Centre,104,3,101,0,
+MCS-0102-DC04,MCS-0102,DC04,Perth Metro DC,Distribution Centre,76,21,55,0,
+MCS-0102-ST01,MCS-0102,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0102-ST02,MCS-0102,ST02,Dandenong Store,Retail Store,7,1,6,287,2026-11-04
+MCS-0102-ST04,MCS-0102,ST04,Ballarat Store,Retail Store,13,4,9,160,2026-10-28
+MCS-0102-ST06,MCS-0102,ST06,Newcastle Store,Retail Store,0,0,0,122,2026-10-28
+MCS-0103-DC01,MCS-0103,DC01,Melbourne West DC,Distribution Centre,0,0,0,225,2026-10-28
+MCS-0103-DC02,MCS-0103,DC02,Sydney Central DC,Distribution Centre,39,13,26,0,
+MCS-0103-DC03,MCS-0103,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0103-ST05,MCS-0103,ST05,Parramatta Store,Retail Store,11,1,10,301,2026-11-18
+MCS-0103-ST06,MCS-0103,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0104-DC02,MCS-0104,DC02,Sydney Central DC,Distribution Centre,419,114,305,0,
+MCS-0104-DC04,MCS-0104,DC04,Perth Metro DC,Distribution Centre,372,17,355,0,
+MCS-0104-ST05,MCS-0104,ST05,Parramatta Store,Retail Store,6,2,4,368,2026-09-23
+MCS-0105-DC03,MCS-0105,DC03,Brisbane North DC,Distribution Centre,0,0,0,306,2027-01-27
+MCS-0105-DC04,MCS-0105,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0106-DC01,MCS-0106,DC01,Melbourne West DC,Distribution Centre,5,0,5,317,2027-01-06
+MCS-0106-ST01,MCS-0106,ST01,Melbourne CBD Store,Retail Store,4,1,3,0,
+MCS-0106-ST08,MCS-0106,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0107-DC02,MCS-0107,DC02,Sydney Central DC,Distribution Centre,20,0,20,0,
+MCS-0107-DC03,MCS-0107,DC03,Brisbane North DC,Distribution Centre,223,50,173,96,2026-10-14
+MCS-0107-DC04,MCS-0107,DC04,Perth Metro DC,Distribution Centre,458,66,392,0,
+MCS-0107-ST05,MCS-0107,ST05,Parramatta Store,Retail Store,0,0,0,40,2026-09-30
+MCS-0107-ST06,MCS-0107,ST06,Newcastle Store,Retail Store,5,1,4,0,
+MCS-0107-ST08,MCS-0107,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0108-DC02,MCS-0108,DC02,Sydney Central DC,Distribution Centre,463,36,427,0,
+MCS-0108-DC03,MCS-0108,DC03,Brisbane North DC,Distribution Centre,240,2,238,86,2026-10-07
+MCS-0108-ST01,MCS-0108,ST01,Melbourne CBD Store,Retail Store,9,3,6,0,
+MCS-0108-ST04,MCS-0108,ST04,Ballarat Store,Retail Store,4,1,3,0,
+MCS-0108-ST05,MCS-0108,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0108-ST07,MCS-0108,ST07,Gold Coast Store,Retail Store,0,0,0,163,2026-09-23
+MCS-0109-DC01,MCS-0109,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0109-DC02,MCS-0109,DC02,Sydney Central DC,Distribution Centre,14,4,10,177,2026-12-16
+MCS-0109-DC03,MCS-0109,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0109-DC04,MCS-0109,DC04,Perth Metro DC,Distribution Centre,24,2,22,224,2027-01-13
+MCS-0109-ST02,MCS-0109,ST02,Dandenong Store,Retail Store,0,0,0,80,2026-12-23
+MCS-0109-ST04,MCS-0109,ST04,Ballarat Store,Retail Store,12,4,8,0,
+MCS-0109-ST07,MCS-0109,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0110-DC01,MCS-0110,DC01,Melbourne West DC,Distribution Centre,391,78,313,0,
+MCS-0110-DC02,MCS-0110,DC02,Sydney Central DC,Distribution Centre,336,81,255,0,
+MCS-0110-DC03,MCS-0110,DC03,Brisbane North DC,Distribution Centre,308,9,299,0,
+MCS-0110-ST02,MCS-0110,ST02,Dandenong Store,Retail Store,7,1,6,351,2026-10-21
+MCS-0110-ST08,MCS-0110,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0111-DC02,MCS-0111,DC02,Sydney Central DC,Distribution Centre,149,44,105,0,
+MCS-0111-DC04,MCS-0111,DC04,Perth Metro DC,Distribution Centre,12,1,11,224,2026-11-25
+MCS-0111-ST02,MCS-0111,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0111-ST04,MCS-0111,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0111-ST05,MCS-0111,ST05,Parramatta Store,Retail Store,9,3,6,361,2026-11-25
+MCS-0112-DC01,MCS-0112,DC01,Melbourne West DC,Distribution Centre,82,20,62,0,
+MCS-0112-DC02,MCS-0112,DC02,Sydney Central DC,Distribution Centre,164,42,122,0,
+MCS-0112-DC03,MCS-0112,DC03,Brisbane North DC,Distribution Centre,277,91,186,0,
+MCS-0112-ST04,MCS-0112,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0112-ST06,MCS-0112,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0112-ST07,MCS-0112,ST07,Gold Coast Store,Retail Store,5,0,5,0,
+MCS-0113-DC01,MCS-0113,DC01,Melbourne West DC,Distribution Centre,0,0,0,300,2027-03-24
+MCS-0113-DC03,MCS-0113,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0113-ST01,MCS-0113,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0113-ST06,MCS-0113,ST06,Newcastle Store,Retail Store,11,3,8,0,
+MCS-0113-ST07,MCS-0113,ST07,Gold Coast Store,Retail Store,0,0,0,306,2027-03-10
+MCS-0114-ST01,MCS-0114,ST01,Melbourne CBD Store,Retail Store,3,1,2,0,
+MCS-0114-ST06,MCS-0114,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0114-ST07,MCS-0114,ST07,Gold Coast Store,Retail Store,0,0,0,102,2026-10-14
+MCS-0115-DC01,MCS-0115,DC01,Melbourne West DC,Distribution Centre,259,60,199,314,2026-11-11
+MCS-0115-DC04,MCS-0115,DC04,Perth Metro DC,Distribution Centre,265,78,187,372,2026-10-28
+MCS-0115-ST05,MCS-0115,ST05,Parramatta Store,Retail Store,6,1,5,0,
+MCS-0116-DC02,MCS-0116,DC02,Sydney Central DC,Distribution Centre,388,66,322,280,2026-11-04
+MCS-0116-DC03,MCS-0116,DC03,Brisbane North DC,Distribution Centre,269,3,266,0,
+MCS-0116-DC04,MCS-0116,DC04,Perth Metro DC,Distribution Centre,98,27,71,398,2026-10-07
+MCS-0116-ST07,MCS-0116,ST07,Gold Coast Store,Retail Store,10,3,7,0,
+MCS-0116-ST08,MCS-0116,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0117-DC01,MCS-0117,DC01,Melbourne West DC,Distribution Centre,93,1,92,96,2026-09-23
+MCS-0117-DC04,MCS-0117,DC04,Perth Metro DC,Distribution Centre,152,47,105,0,
+MCS-0117-ST01,MCS-0117,ST01,Melbourne CBD Store,Retail Store,0,0,0,51,2026-10-14
+MCS-0118-DC01,MCS-0118,DC01,Melbourne West DC,Distribution Centre,122,17,105,0,
+MCS-0118-DC04,MCS-0118,DC04,Perth Metro DC,Distribution Centre,7,2,5,273,2026-09-23
+MCS-0118-ST02,MCS-0118,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0118-ST08,MCS-0118,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0119-DC01,MCS-0119,DC01,Melbourne West DC,Distribution Centre,211,32,179,378,2026-09-30
+MCS-0119-DC02,MCS-0119,DC02,Sydney Central DC,Distribution Centre,457,145,312,0,
+MCS-0119-DC04,MCS-0119,DC04,Perth Metro DC,Distribution Centre,226,28,198,294,2026-09-23
+MCS-0119-ST01,MCS-0119,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0119-ST04,MCS-0119,ST04,Ballarat Store,Retail Store,1,0,1,0,
+MCS-0119-ST06,MCS-0119,ST06,Newcastle Store,Retail Store,4,0,4,0,
+MCS-0119-ST07,MCS-0119,ST07,Gold Coast Store,Retail Store,2,0,2,0,
+MCS-0120-DC02,MCS-0120,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0120-DC03,MCS-0120,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0120-ST02,MCS-0120,ST02,Dandenong Store,Retail Store,0,0,0,338,2027-02-10
+MCS-0120-ST03,MCS-0120,ST03,Geelong Store,Retail Store,0,0,0,318,2027-01-27
+MCS-0120-ST06,MCS-0120,ST06,Newcastle Store,Retail Store,0,0,0,50,2027-01-27
+MCS-0120-ST07,MCS-0120,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0120-ST08,MCS-0120,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0121-DC03,MCS-0121,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0121-DC04,MCS-0121,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0121-ST04,MCS-0121,ST04,Ballarat Store,Retail Store,0,0,0,138,2027-03-31
+MCS-0121-ST05,MCS-0121,ST05,Parramatta Store,Retail Store,8,2,6,0,
+MCS-0121-ST06,MCS-0121,ST06,Newcastle Store,Retail Store,3,0,3,0,
+MCS-0122-DC02,MCS-0122,DC02,Sydney Central DC,Distribution Centre,375,43,332,0,
+MCS-0122-DC03,MCS-0122,DC03,Brisbane North DC,Distribution Centre,40,0,40,337,2026-10-28
+MCS-0122-DC04,MCS-0122,DC04,Perth Metro DC,Distribution Centre,505,106,399,344,2026-10-28
+MCS-0122-ST01,MCS-0122,ST01,Melbourne CBD Store,Retail Store,2,0,2,306,2026-11-11
+MCS-0122-ST02,MCS-0122,ST02,Dandenong Store,Retail Store,0,0,0,197,2026-11-18
+MCS-0122-ST03,MCS-0122,ST03,Geelong Store,Retail Store,0,0,0,152,2026-10-21
+MCS-0123-DC01,MCS-0123,DC01,Melbourne West DC,Distribution Centre,109,22,87,0,
+MCS-0123-DC04,MCS-0123,DC04,Perth Metro DC,Distribution Centre,146,6,140,70,2026-10-07
+MCS-0123-ST04,MCS-0123,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0123-ST05,MCS-0123,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0123-ST07,MCS-0123,ST07,Gold Coast Store,Retail Store,0,0,0,209,2026-10-28
+MCS-0124-DC01,MCS-0124,DC01,Melbourne West DC,Distribution Centre,58,0,58,143,2026-11-25
+MCS-0124-DC02,MCS-0124,DC02,Sydney Central DC,Distribution Centre,429,121,308,0,
+MCS-0124-DC03,MCS-0124,DC03,Brisbane North DC,Distribution Centre,279,0,279,0,
+MCS-0124-ST03,MCS-0124,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0124-ST05,MCS-0124,ST05,Parramatta Store,Retail Store,8,1,7,0,
+MCS-0125-DC01,MCS-0125,DC01,Melbourne West DC,Distribution Centre,22,3,19,0,
+MCS-0125-DC04,MCS-0125,DC04,Perth Metro DC,Distribution Centre,293,89,204,0,
+MCS-0125-ST03,MCS-0125,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0125-ST05,MCS-0125,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0125-ST08,MCS-0125,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0126-DC01,MCS-0126,DC01,Melbourne West DC,Distribution Centre,290,38,252,0,
+MCS-0126-DC03,MCS-0126,DC03,Brisbane North DC,Distribution Centre,123,39,84,0,
+MCS-0126-DC04,MCS-0126,DC04,Perth Metro DC,Distribution Centre,143,44,99,0,
+MCS-0127-DC01,MCS-0127,DC01,Melbourne West DC,Distribution Centre,242,11,231,0,
+MCS-0127-DC02,MCS-0127,DC02,Sydney Central DC,Distribution Centre,140,47,93,0,
+MCS-0127-DC04,MCS-0127,DC04,Perth Metro DC,Distribution Centre,131,38,93,64,2026-10-14
+MCS-0127-ST06,MCS-0127,ST06,Newcastle Store,Retail Store,0,0,0,101,2026-10-14
+MCS-0127-ST07,MCS-0127,ST07,Gold Coast Store,Retail Store,13,2,11,163,2026-10-21
+MCS-0128-DC02,MCS-0128,DC02,Sydney Central DC,Distribution Centre,442,17,425,0,
+MCS-0128-DC04,MCS-0128,DC04,Perth Metro DC,Distribution Centre,64,2,62,0,
+MCS-0128-ST03,MCS-0128,ST03,Geelong Store,Retail Store,9,3,6,0,
+MCS-0128-ST04,MCS-0128,ST04,Ballarat Store,Retail Store,0,0,0,127,2026-11-18
+MCS-0128-ST06,MCS-0128,ST06,Newcastle Store,Retail Store,14,0,14,0,
+MCS-0128-ST07,MCS-0128,ST07,Gold Coast Store,Retail Store,10,0,10,227,2026-12-02
+MCS-0129-DC02,MCS-0129,DC02,Sydney Central DC,Distribution Centre,337,34,303,0,
+MCS-0129-DC03,MCS-0129,DC03,Brisbane North DC,Distribution Centre,385,52,333,0,
+MCS-0129-ST06,MCS-0129,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0129-ST07,MCS-0129,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0130-DC01,MCS-0130,DC01,Melbourne West DC,Distribution Centre,410,98,312,0,
+MCS-0130-DC02,MCS-0130,DC02,Sydney Central DC,Distribution Centre,419,56,363,0,
+MCS-0130-DC03,MCS-0130,DC03,Brisbane North DC,Distribution Centre,285,89,196,164,2026-11-04
+MCS-0130-DC04,MCS-0130,DC04,Perth Metro DC,Distribution Centre,186,24,162,0,
+MCS-0130-ST02,MCS-0130,ST02,Dandenong Store,Retail Store,13,2,11,0,
+MCS-0130-ST06,MCS-0130,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0131-DC03,MCS-0131,DC03,Brisbane North DC,Distribution Centre,238,76,162,0,
+MCS-0132-DC03,MCS-0132,DC03,Brisbane North DC,Distribution Centre,245,14,231,0,
+MCS-0132-DC04,MCS-0132,DC04,Perth Metro DC,Distribution Centre,74,15,59,0,
+MCS-0132-ST01,MCS-0132,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0132-ST05,MCS-0132,ST05,Parramatta Store,Retail Store,0,0,0,215,2026-10-21
+MCS-0133-DC01,MCS-0133,DC01,Melbourne West DC,Distribution Centre,470,122,348,0,
+MCS-0133-DC02,MCS-0133,DC02,Sydney Central DC,Distribution Centre,250,29,221,95,2026-10-28
+MCS-0133-DC04,MCS-0133,DC04,Perth Metro DC,Distribution Centre,351,67,284,0,
+MCS-0133-ST06,MCS-0133,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0133-ST07,MCS-0133,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0134-DC01,MCS-0134,DC01,Melbourne West DC,Distribution Centre,131,18,113,0,
+MCS-0134-DC02,MCS-0134,DC02,Sydney Central DC,Distribution Centre,286,69,217,185,2026-10-14
+MCS-0134-DC04,MCS-0134,DC04,Perth Metro DC,Distribution Centre,120,13,107,0,
+MCS-0134-ST02,MCS-0134,ST02,Dandenong Store,Retail Store,0,0,0,241,2026-10-14
+MCS-0134-ST07,MCS-0134,ST07,Gold Coast Store,Retail Store,8,1,7,212,2026-10-14
+MCS-0135-DC03,MCS-0135,DC03,Brisbane North DC,Distribution Centre,343,66,277,361,2026-10-07
+MCS-0135-DC04,MCS-0135,DC04,Perth Metro DC,Distribution Centre,196,30,166,0,
+MCS-0135-ST03,MCS-0135,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0135-ST07,MCS-0135,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0135-ST08,MCS-0135,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0136-DC02,MCS-0136,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0136-DC03,MCS-0136,DC03,Brisbane North DC,Distribution Centre,37,5,32,0,
+MCS-0137-DC01,MCS-0137,DC01,Melbourne West DC,Distribution Centre,211,5,206,160,2026-10-14
+MCS-0137-ST02,MCS-0137,ST02,Dandenong Store,Retail Store,0,0,0,364,2026-09-30
+MCS-0137-ST06,MCS-0137,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0137-ST07,MCS-0137,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0138-DC01,MCS-0138,DC01,Melbourne West DC,Distribution Centre,102,24,78,0,
+MCS-0138-DC04,MCS-0138,DC04,Perth Metro DC,Distribution Centre,199,44,155,0,
+MCS-0138-ST07,MCS-0138,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0139-DC01,MCS-0139,DC01,Melbourne West DC,Distribution Centre,245,52,193,0,
+MCS-0139-DC03,MCS-0139,DC03,Brisbane North DC,Distribution Centre,449,86,363,73,2026-10-21
+MCS-0139-ST01,MCS-0139,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0139-ST03,MCS-0139,ST03,Geelong Store,Retail Store,0,0,0,118,2026-11-04
+MCS-0139-ST04,MCS-0139,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0139-ST06,MCS-0139,ST06,Newcastle Store,Retail Store,1,0,1,0,
+MCS-0139-ST07,MCS-0139,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0140-DC03,MCS-0140,DC03,Brisbane North DC,Distribution Centre,165,54,111,279,2026-10-28
+MCS-0140-ST07,MCS-0140,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0141-DC01,MCS-0141,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0142-DC01,MCS-0142,DC01,Melbourne West DC,Distribution Centre,244,21,223,366,2026-09-30
+MCS-0142-DC02,MCS-0142,DC02,Sydney Central DC,Distribution Centre,275,23,252,0,
+MCS-0142-DC03,MCS-0142,DC03,Brisbane North DC,Distribution Centre,280,9,271,314,2026-10-07
+MCS-0142-DC04,MCS-0142,DC04,Perth Metro DC,Distribution Centre,59,15,44,208,2026-10-07
+MCS-0142-ST03,MCS-0142,ST03,Geelong Store,Retail Store,11,0,11,0,
+MCS-0142-ST05,MCS-0142,ST05,Parramatta Store,Retail Store,10,3,7,290,2026-09-23
+MCS-0142-ST06,MCS-0142,ST06,Newcastle Store,Retail Store,13,3,10,0,
+MCS-0142-ST07,MCS-0142,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0143-DC01,MCS-0143,DC01,Melbourne West DC,Distribution Centre,373,103,270,0,
+MCS-0143-DC03,MCS-0143,DC03,Brisbane North DC,Distribution Centre,310,103,207,265,2026-10-07
+MCS-0143-DC04,MCS-0143,DC04,Perth Metro DC,Distribution Centre,249,66,183,145,2026-10-21
+MCS-0143-ST01,MCS-0143,ST01,Melbourne CBD Store,Retail Store,14,0,14,0,
+MCS-0143-ST08,MCS-0143,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0144-DC02,MCS-0144,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0144-DC04,MCS-0144,DC04,Perth Metro DC,Distribution Centre,22,4,18,0,
+MCS-0144-ST06,MCS-0144,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0144-ST07,MCS-0144,ST07,Gold Coast Store,Retail Store,0,0,0,358,2026-11-25
+MCS-0145-DC01,MCS-0145,DC01,Melbourne West DC,Distribution Centre,428,34,394,0,
+MCS-0145-DC02,MCS-0145,DC02,Sydney Central DC,Distribution Centre,104,11,93,0,
+MCS-0145-DC03,MCS-0145,DC03,Brisbane North DC,Distribution Centre,127,28,99,0,
+MCS-0145-DC04,MCS-0145,DC04,Perth Metro DC,Distribution Centre,376,120,256,213,2026-09-30
+MCS-0145-ST01,MCS-0145,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0145-ST08,MCS-0145,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0146-DC01,MCS-0146,DC01,Melbourne West DC,Distribution Centre,24,7,17,0,
+MCS-0146-DC03,MCS-0146,DC03,Brisbane North DC,Distribution Centre,224,9,215,0,
+MCS-0146-ST02,MCS-0146,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0146-ST07,MCS-0146,ST07,Gold Coast Store,Retail Store,1,0,1,0,
+MCS-0147-DC02,MCS-0147,DC02,Sydney Central DC,Distribution Centre,41,3,38,303,2026-10-14
+MCS-0147-ST02,MCS-0147,ST02,Dandenong Store,Retail Store,0,0,0,253,2026-10-14
+MCS-0148-DC01,MCS-0148,DC01,Melbourne West DC,Distribution Centre,46,12,34,229,2026-10-14
+MCS-0148-DC03,MCS-0148,DC03,Brisbane North DC,Distribution Centre,213,39,174,0,
+MCS-0148-ST06,MCS-0148,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0149-DC01,MCS-0149,DC01,Melbourne West DC,Distribution Centre,449,41,408,0,
+MCS-0149-DC02,MCS-0149,DC02,Sydney Central DC,Distribution Centre,486,141,345,149,2026-12-02
+MCS-0149-DC04,MCS-0149,DC04,Perth Metro DC,Distribution Centre,189,33,156,0,
+MCS-0149-ST01,MCS-0149,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0149-ST05,MCS-0149,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0149-ST08,MCS-0149,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0150-DC02,MCS-0150,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0150-DC03,MCS-0150,DC03,Brisbane North DC,Distribution Centre,60,9,51,264,2026-11-04
+MCS-0150-DC04,MCS-0150,DC04,Perth Metro DC,Distribution Centre,36,4,32,0,
+MCS-0151-DC02,MCS-0151,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0151-DC03,MCS-0151,DC03,Brisbane North DC,Distribution Centre,3,1,2,226,2027-01-13
+MCS-0151-DC04,MCS-0151,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0151-ST04,MCS-0151,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0151-ST05,MCS-0151,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0152-DC01,MCS-0152,DC01,Melbourne West DC,Distribution Centre,17,2,15,130,2026-09-23
+MCS-0152-ST04,MCS-0152,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0152-ST08,MCS-0152,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0153-DC01,MCS-0153,DC01,Melbourne West DC,Distribution Centre,422,9,413,0,
+MCS-0153-ST07,MCS-0153,ST07,Gold Coast Store,Retail Store,0,0,0,283,2026-10-21
+MCS-0153-ST08,MCS-0153,ST08,Adelaide Store,Retail Store,0,0,0,71,2026-10-28
+MCS-0154-DC01,MCS-0154,DC01,Melbourne West DC,Distribution Centre,420,55,365,152,2026-11-18
+MCS-0154-DC02,MCS-0154,DC02,Sydney Central DC,Distribution Centre,17,3,14,0,
+MCS-0154-ST04,MCS-0154,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0154-ST05,MCS-0154,ST05,Parramatta Store,Retail Store,0,0,0,112,2026-11-11
+MCS-0155-DC02,MCS-0155,DC02,Sydney Central DC,Distribution Centre,266,0,266,0,
+MCS-0155-ST01,MCS-0155,ST01,Melbourne CBD Store,Retail Store,0,0,0,313,2026-09-30
+MCS-0155-ST02,MCS-0155,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0155-ST04,MCS-0155,ST04,Ballarat Store,Retail Store,0,0,0,80,2026-10-21
+MCS-0156-DC01,MCS-0156,DC01,Melbourne West DC,Distribution Centre,168,51,117,0,
+MCS-0156-DC02,MCS-0156,DC02,Sydney Central DC,Distribution Centre,66,17,49,0,
+MCS-0156-DC03,MCS-0156,DC03,Brisbane North DC,Distribution Centre,133,21,112,127,2026-10-14
+MCS-0156-DC04,MCS-0156,DC04,Perth Metro DC,Distribution Centre,138,35,103,109,2026-10-07
+MCS-0156-ST01,MCS-0156,ST01,Melbourne CBD Store,Retail Store,0,0,0,354,2026-10-28
+MCS-0156-ST02,MCS-0156,ST02,Dandenong Store,Retail Store,3,1,2,0,
+MCS-0156-ST07,MCS-0156,ST07,Gold Coast Store,Retail Store,14,1,13,122,2026-10-07
+MCS-0157-DC02,MCS-0157,DC02,Sydney Central DC,Distribution Centre,0,0,0,230,2026-11-11
+MCS-0157-DC03,MCS-0157,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0157-DC04,MCS-0157,DC04,Perth Metro DC,Distribution Centre,42,9,33,176,2026-10-28
+MCS-0157-ST03,MCS-0157,ST03,Geelong Store,Retail Store,10,2,8,0,
+MCS-0157-ST05,MCS-0157,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0157-ST08,MCS-0157,ST08,Adelaide Store,Retail Store,3,1,2,0,
+MCS-0158-DC01,MCS-0158,DC01,Melbourne West DC,Distribution Centre,216,33,183,323,2026-10-14
+MCS-0158-DC03,MCS-0158,DC03,Brisbane North DC,Distribution Centre,477,70,407,0,
+MCS-0158-ST06,MCS-0158,ST06,Newcastle Store,Retail Store,14,0,14,0,
+MCS-0159-DC01,MCS-0159,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0160-DC01,MCS-0160,DC01,Melbourne West DC,Distribution Centre,451,143,308,0,
+MCS-0160-DC03,MCS-0160,DC03,Brisbane North DC,Distribution Centre,464,59,405,0,
+MCS-0160-ST03,MCS-0160,ST03,Geelong Store,Retail Store,5,1,4,0,
+MCS-0160-ST04,MCS-0160,ST04,Ballarat Store,Retail Store,1,0,1,0,
+MCS-0160-ST05,MCS-0160,ST05,Parramatta Store,Retail Store,0,0,0,159,2026-11-04
+MCS-0161-DC02,MCS-0161,DC02,Sydney Central DC,Distribution Centre,7,0,7,0,
+MCS-0161-DC03,MCS-0161,DC03,Brisbane North DC,Distribution Centre,226,0,226,357,2026-11-11
+MCS-0161-DC04,MCS-0161,DC04,Perth Metro DC,Distribution Centre,243,11,232,0,
+MCS-0161-ST01,MCS-0161,ST01,Melbourne CBD Store,Retail Store,1,0,1,0,
+MCS-0161-ST02,MCS-0161,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0161-ST07,MCS-0161,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0161-ST08,MCS-0161,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0162-DC01,MCS-0162,DC01,Melbourne West DC,Distribution Centre,88,14,74,331,2026-12-02
+MCS-0162-DC02,MCS-0162,DC02,Sydney Central DC,Distribution Centre,29,4,25,0,
+MCS-0162-DC03,MCS-0162,DC03,Brisbane North DC,Distribution Centre,460,126,334,0,
+MCS-0162-DC04,MCS-0162,DC04,Perth Metro DC,Distribution Centre,99,17,82,303,2026-11-11
+MCS-0162-ST01,MCS-0162,ST01,Melbourne CBD Store,Retail Store,0,0,0,193,2026-11-18
+MCS-0162-ST03,MCS-0162,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0162-ST07,MCS-0162,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0163-DC01,MCS-0163,DC01,Melbourne West DC,Distribution Centre,191,15,176,0,
+MCS-0163-DC02,MCS-0163,DC02,Sydney Central DC,Distribution Centre,188,46,142,0,
+MCS-0163-DC03,MCS-0163,DC03,Brisbane North DC,Distribution Centre,519,1,518,0,
+MCS-0163-DC04,MCS-0163,DC04,Perth Metro DC,Distribution Centre,500,141,359,394,2026-10-21
+MCS-0164-DC01,MCS-0164,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0164-DC02,MCS-0164,DC02,Sydney Central DC,Distribution Centre,0,0,0,276,2027-01-06
+MCS-0164-DC03,MCS-0164,DC03,Brisbane North DC,Distribution Centre,46,12,34,0,
+MCS-0164-ST03,MCS-0164,ST03,Geelong Store,Retail Store,0,0,0,157,2027-01-27
+MCS-0164-ST05,MCS-0164,ST05,Parramatta Store,Retail Store,0,0,0,188,2027-01-27
+MCS-0165-DC02,MCS-0165,DC02,Sydney Central DC,Distribution Centre,331,1,330,295,2026-10-07
+MCS-0165-DC03,MCS-0165,DC03,Brisbane North DC,Distribution Centre,283,49,234,0,
+MCS-0165-DC04,MCS-0165,DC04,Perth Metro DC,Distribution Centre,261,65,196,0,
+MCS-0165-ST01,MCS-0165,ST01,Melbourne CBD Store,Retail Store,14,2,12,0,
+MCS-0165-ST04,MCS-0165,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0165-ST06,MCS-0165,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0166-DC01,MCS-0166,DC01,Melbourne West DC,Distribution Centre,221,66,155,0,
+MCS-0166-DC02,MCS-0166,DC02,Sydney Central DC,Distribution Centre,218,58,160,275,2026-11-04
+MCS-0166-DC03,MCS-0166,DC03,Brisbane North DC,Distribution Centre,214,38,176,0,
+MCS-0166-ST04,MCS-0166,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0166-ST06,MCS-0166,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0167-DC01,MCS-0167,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0167-DC02,MCS-0167,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0167-ST01,MCS-0167,ST01,Melbourne CBD Store,Retail Store,4,0,4,0,
+MCS-0167-ST03,MCS-0167,ST03,Geelong Store,Retail Store,2,0,2,0,
+MCS-0167-ST06,MCS-0167,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0167-ST07,MCS-0167,ST07,Gold Coast Store,Retail Store,0,0,0,174,2027-02-24
+MCS-0168-DC01,MCS-0168,DC01,Melbourne West DC,Distribution Centre,0,0,0,351,2027-01-27
+MCS-0168-DC02,MCS-0168,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0168-DC03,MCS-0168,DC03,Brisbane North DC,Distribution Centre,0,0,0,233,2027-02-10
+MCS-0169-DC02,MCS-0169,DC02,Sydney Central DC,Distribution Centre,186,2,184,0,
+MCS-0169-DC04,MCS-0169,DC04,Perth Metro DC,Distribution Centre,395,39,356,0,
+MCS-0169-ST03,MCS-0169,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0169-ST08,MCS-0169,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0170-DC02,MCS-0170,DC02,Sydney Central DC,Distribution Centre,196,16,180,0,
+MCS-0170-DC03,MCS-0170,DC03,Brisbane North DC,Distribution Centre,493,71,422,346,2026-10-14
+MCS-0170-ST02,MCS-0170,ST02,Dandenong Store,Retail Store,9,0,9,0,
+MCS-0170-ST03,MCS-0170,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0170-ST04,MCS-0170,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0170-ST06,MCS-0170,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0171-DC01,MCS-0171,DC01,Melbourne West DC,Distribution Centre,87,6,81,0,
+MCS-0171-DC02,MCS-0171,DC02,Sydney Central DC,Distribution Centre,205,31,174,0,
+MCS-0171-DC03,MCS-0171,DC03,Brisbane North DC,Distribution Centre,413,89,324,118,2026-11-11
+MCS-0171-DC04,MCS-0171,DC04,Perth Metro DC,Distribution Centre,506,176,330,0,
+MCS-0171-ST03,MCS-0171,ST03,Geelong Store,Retail Store,0,0,0,204,2026-11-18
+MCS-0172-DC02,MCS-0172,DC02,Sydney Central DC,Distribution Centre,7,2,5,148,2027-01-13
+MCS-0172-DC04,MCS-0172,DC04,Perth Metro DC,Distribution Centre,22,4,18,0,
+MCS-0172-ST05,MCS-0172,ST05,Parramatta Store,Retail Store,3,0,3,0,
+MCS-0172-ST08,MCS-0172,ST08,Adelaide Store,Retail Store,0,0,0,314,2026-12-30
+MCS-0173-DC01,MCS-0173,DC01,Melbourne West DC,Distribution Centre,9,0,9,0,
+MCS-0173-DC03,MCS-0173,DC03,Brisbane North DC,Distribution Centre,211,67,144,149,2026-09-30
+MCS-0173-ST02,MCS-0173,ST02,Dandenong Store,Retail Store,12,4,8,327,2026-09-30
+MCS-0173-ST05,MCS-0173,ST05,Parramatta Store,Retail Store,0,0,0,341,2026-10-21
+MCS-0173-ST08,MCS-0173,ST08,Adelaide Store,Retail Store,8,0,8,127,2026-10-07
+MCS-0174-DC01,MCS-0174,DC01,Melbourne West DC,Distribution Centre,50,5,45,86,2027-01-06
+MCS-0174-DC02,MCS-0174,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0174-DC03,MCS-0174,DC03,Brisbane North DC,Distribution Centre,57,0,57,0,
+MCS-0174-DC04,MCS-0174,DC04,Perth Metro DC,Distribution Centre,55,6,49,0,
+MCS-0174-ST02,MCS-0174,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0174-ST04,MCS-0174,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0174-ST05,MCS-0174,ST05,Parramatta Store,Retail Store,1,0,1,0,
+MCS-0175-DC01,MCS-0175,DC01,Melbourne West DC,Distribution Centre,11,0,11,0,
+MCS-0175-DC02,MCS-0175,DC02,Sydney Central DC,Distribution Centre,157,42,115,0,
+MCS-0175-ST02,MCS-0175,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0175-ST04,MCS-0175,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0175-ST05,MCS-0175,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0176-DC02,MCS-0176,DC02,Sydney Central DC,Distribution Centre,310,94,216,0,
+MCS-0176-DC03,MCS-0176,DC03,Brisbane North DC,Distribution Centre,8,1,7,287,2026-10-14
+MCS-0176-ST01,MCS-0176,ST01,Melbourne CBD Store,Retail Store,4,0,4,324,2026-10-14
+MCS-0176-ST02,MCS-0176,ST02,Dandenong Store,Retail Store,0,0,0,122,2026-11-04
+MCS-0177-DC03,MCS-0177,DC03,Brisbane North DC,Distribution Centre,229,15,214,0,
+MCS-0177-DC04,MCS-0177,DC04,Perth Metro DC,Distribution Centre,287,78,209,187,2026-10-07
+MCS-0177-ST02,MCS-0177,ST02,Dandenong Store,Retail Store,0,0,0,378,2026-11-04
+MCS-0177-ST05,MCS-0177,ST05,Parramatta Store,Retail Store,0,0,0,317,2026-10-21
+MCS-0178-DC01,MCS-0178,DC01,Melbourne West DC,Distribution Centre,350,91,259,0,
+MCS-0178-DC02,MCS-0178,DC02,Sydney Central DC,Distribution Centre,76,1,75,0,
+MCS-0178-DC03,MCS-0178,DC03,Brisbane North DC,Distribution Centre,21,6,15,0,
+MCS-0178-DC04,MCS-0178,DC04,Perth Metro DC,Distribution Centre,462,152,310,369,2026-10-14
+MCS-0178-ST03,MCS-0178,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0178-ST07,MCS-0178,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0179-DC01,MCS-0179,DC01,Melbourne West DC,Distribution Centre,355,89,266,0,
+MCS-0179-DC03,MCS-0179,DC03,Brisbane North DC,Distribution Centre,128,28,100,0,
+MCS-0179-ST01,MCS-0179,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0179-ST04,MCS-0179,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0179-ST05,MCS-0179,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0180-DC01,MCS-0180,DC01,Melbourne West DC,Distribution Centre,17,0,17,0,
+MCS-0180-DC02,MCS-0180,DC02,Sydney Central DC,Distribution Centre,271,48,223,302,2026-09-30
+MCS-0180-DC03,MCS-0180,DC03,Brisbane North DC,Distribution Centre,23,7,16,0,
+MCS-0180-ST04,MCS-0180,ST04,Ballarat Store,Retail Store,2,0,2,141,2026-10-21
+MCS-0180-ST05,MCS-0180,ST05,Parramatta Store,Retail Store,13,0,13,139,2026-10-14
+MCS-0180-ST06,MCS-0180,ST06,Newcastle Store,Retail Store,0,0,0,125,2026-10-14
+MCS-0181-DC03,MCS-0181,DC03,Brisbane North DC,Distribution Centre,464,59,405,0,
+MCS-0181-DC04,MCS-0181,DC04,Perth Metro DC,Distribution Centre,3,0,3,0,
+MCS-0181-ST04,MCS-0181,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0181-ST06,MCS-0181,ST06,Newcastle Store,Retail Store,0,0,0,296,2026-11-11
+MCS-0182-DC02,MCS-0182,DC02,Sydney Central DC,Distribution Centre,94,14,80,161,2026-10-14
+MCS-0182-DC03,MCS-0182,DC03,Brisbane North DC,Distribution Centre,438,92,346,0,
+MCS-0182-DC04,MCS-0182,DC04,Perth Metro DC,Distribution Centre,190,38,152,322,2026-10-07
+MCS-0182-ST03,MCS-0182,ST03,Geelong Store,Retail Store,0,0,0,365,2026-10-21
+MCS-0183-DC02,MCS-0183,DC02,Sydney Central DC,Distribution Centre,507,63,444,0,
+MCS-0183-DC03,MCS-0183,DC03,Brisbane North DC,Distribution Centre,444,23,421,0,
+MCS-0183-DC04,MCS-0183,DC04,Perth Metro DC,Distribution Centre,305,46,259,0,
+MCS-0183-ST02,MCS-0183,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0183-ST07,MCS-0183,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0184-DC01,MCS-0184,DC01,Melbourne West DC,Distribution Centre,375,55,320,0,
+MCS-0184-ST03,MCS-0184,ST03,Geelong Store,Retail Store,0,0,0,328,2026-09-23
+MCS-0184-ST05,MCS-0184,ST05,Parramatta Store,Retail Store,0,0,0,372,2026-10-07
+MCS-0185-DC02,MCS-0185,DC02,Sydney Central DC,Distribution Centre,145,32,113,0,
+MCS-0185-DC03,MCS-0185,DC03,Brisbane North DC,Distribution Centre,24,8,16,0,
+MCS-0185-DC04,MCS-0185,DC04,Perth Metro DC,Distribution Centre,318,38,280,0,
+MCS-0185-ST03,MCS-0185,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0185-ST06,MCS-0185,ST06,Newcastle Store,Retail Store,12,1,11,0,
+MCS-0186-DC01,MCS-0186,DC01,Melbourne West DC,Distribution Centre,447,47,400,0,
+MCS-0186-DC03,MCS-0186,DC03,Brisbane North DC,Distribution Centre,244,36,208,0,
+MCS-0186-DC04,MCS-0186,DC04,Perth Metro DC,Distribution Centre,279,31,248,174,2026-11-18
+MCS-0186-ST03,MCS-0186,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0186-ST08,MCS-0186,ST08,Adelaide Store,Retail Store,9,3,6,0,
+MCS-0187-DC01,MCS-0187,DC01,Melbourne West DC,Distribution Centre,67,1,66,0,
+MCS-0187-DC02,MCS-0187,DC02,Sydney Central DC,Distribution Centre,469,153,316,0,
+MCS-0187-DC04,MCS-0187,DC04,Perth Metro DC,Distribution Centre,8,1,7,0,
+MCS-0187-ST04,MCS-0187,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0187-ST05,MCS-0187,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0187-ST06,MCS-0187,ST06,Newcastle Store,Retail Store,10,2,8,258,2026-11-11
+MCS-0187-ST07,MCS-0187,ST07,Gold Coast Store,Retail Store,5,1,4,0,
+MCS-0188-DC04,MCS-0188,DC04,Perth Metro DC,Distribution Centre,9,1,8,0,
+MCS-0188-ST03,MCS-0188,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0188-ST07,MCS-0188,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0189-DC01,MCS-0189,DC01,Melbourne West DC,Distribution Centre,254,0,254,0,
+MCS-0189-DC02,MCS-0189,DC02,Sydney Central DC,Distribution Centre,85,0,85,106,2026-11-04
+MCS-0189-DC03,MCS-0189,DC03,Brisbane North DC,Distribution Centre,463,91,372,294,2026-10-14
+MCS-0189-DC04,MCS-0189,DC04,Perth Metro DC,Distribution Centre,290,63,227,0,
+MCS-0189-ST03,MCS-0189,ST03,Geelong Store,Retail Store,8,2,6,0,
+MCS-0189-ST04,MCS-0189,ST04,Ballarat Store,Retail Store,1,0,1,198,2026-10-07
+MCS-0189-ST05,MCS-0189,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0189-ST06,MCS-0189,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0190-DC02,MCS-0190,DC02,Sydney Central DC,Distribution Centre,119,23,96,0,
+MCS-0190-DC04,MCS-0190,DC04,Perth Metro DC,Distribution Centre,515,130,385,232,2026-10-07
+MCS-0190-ST02,MCS-0190,ST02,Dandenong Store,Retail Store,2,0,2,0,
+MCS-0190-ST07,MCS-0190,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0191-DC01,MCS-0191,DC01,Melbourne West DC,Distribution Centre,349,60,289,0,
+MCS-0191-DC03,MCS-0191,DC03,Brisbane North DC,Distribution Centre,205,33,172,0,
+MCS-0191-DC04,MCS-0191,DC04,Perth Metro DC,Distribution Centre,381,98,283,0,
+MCS-0191-ST04,MCS-0191,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0192-DC02,MCS-0192,DC02,Sydney Central DC,Distribution Centre,6,0,6,0,
+MCS-0192-DC03,MCS-0192,DC03,Brisbane North DC,Distribution Centre,12,0,12,75,2027-03-10
+MCS-0192-DC04,MCS-0192,DC04,Perth Metro DC,Distribution Centre,11,0,11,0,
+MCS-0192-ST01,MCS-0192,ST01,Melbourne CBD Store,Retail Store,0,0,0,174,2027-03-24
+MCS-0192-ST03,MCS-0192,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0192-ST07,MCS-0192,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0192-ST08,MCS-0192,ST08,Adelaide Store,Retail Store,13,0,13,130,2027-03-03
+MCS-0193-DC04,MCS-0193,DC04,Perth Metro DC,Distribution Centre,495,60,435,0,
+MCS-0193-ST05,MCS-0193,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0193-ST06,MCS-0193,ST06,Newcastle Store,Retail Store,5,0,5,0,
+MCS-0194-DC02,MCS-0194,DC02,Sydney Central DC,Distribution Centre,141,43,98,0,
+MCS-0194-ST01,MCS-0194,ST01,Melbourne CBD Store,Retail Store,0,0,0,172,2026-10-07
+MCS-0194-ST04,MCS-0194,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0194-ST07,MCS-0194,ST07,Gold Coast Store,Retail Store,9,1,8,0,
+MCS-0195-DC01,MCS-0195,DC01,Melbourne West DC,Distribution Centre,497,48,449,0,
+MCS-0195-DC02,MCS-0195,DC02,Sydney Central DC,Distribution Centre,498,173,325,0,
+MCS-0195-DC04,MCS-0195,DC04,Perth Metro DC,Distribution Centre,238,3,235,0,
+MCS-0195-ST01,MCS-0195,ST01,Melbourne CBD Store,Retail Store,6,1,5,0,
+MCS-0196-DC01,MCS-0196,DC01,Melbourne West DC,Distribution Centre,456,100,356,0,
+MCS-0196-DC02,MCS-0196,DC02,Sydney Central DC,Distribution Centre,501,142,359,0,
+MCS-0196-DC03,MCS-0196,DC03,Brisbane North DC,Distribution Centre,343,68,275,0,
+MCS-0196-ST04,MCS-0196,ST04,Ballarat Store,Retail Store,4,0,4,0,
+MCS-0197-DC01,MCS-0197,DC01,Melbourne West DC,Distribution Centre,435,113,322,0,
+MCS-0198-DC01,MCS-0198,DC01,Melbourne West DC,Distribution Centre,347,18,329,42,2026-11-04
+MCS-0198-DC02,MCS-0198,DC02,Sydney Central DC,Distribution Centre,368,111,257,0,
+MCS-0198-DC03,MCS-0198,DC03,Brisbane North DC,Distribution Centre,317,1,316,0,
+MCS-0198-ST03,MCS-0198,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0198-ST07,MCS-0198,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0199-DC01,MCS-0199,DC01,Melbourne West DC,Distribution Centre,388,68,320,0,
+MCS-0199-DC02,MCS-0199,DC02,Sydney Central DC,Distribution Centre,313,75,238,0,
+MCS-0199-DC03,MCS-0199,DC03,Brisbane North DC,Distribution Centre,171,2,169,0,
+MCS-0199-DC04,MCS-0199,DC04,Perth Metro DC,Distribution Centre,314,37,277,351,2026-10-14
+MCS-0199-ST01,MCS-0199,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0199-ST06,MCS-0199,ST06,Newcastle Store,Retail Store,0,0,0,131,2026-10-28
+MCS-0200-DC02,MCS-0200,DC02,Sydney Central DC,Distribution Centre,486,92,394,67,2026-11-25
+MCS-0200-DC03,MCS-0200,DC03,Brisbane North DC,Distribution Centre,108,8,100,0,
+MCS-0200-ST01,MCS-0200,ST01,Melbourne CBD Store,Retail Store,7,2,5,390,2026-12-02
+MCS-0200-ST02,MCS-0200,ST02,Dandenong Store,Retail Store,3,0,3,0,
+MCS-0200-ST03,MCS-0200,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0200-ST04,MCS-0200,ST04,Ballarat Store,Retail Store,8,0,8,0,
+MCS-0201-DC01,MCS-0201,DC01,Melbourne West DC,Distribution Centre,377,37,340,0,
+MCS-0201-DC02,MCS-0201,DC02,Sydney Central DC,Distribution Centre,393,18,375,0,
+MCS-0201-DC03,MCS-0201,DC03,Brisbane North DC,Distribution Centre,103,33,70,0,
+MCS-0201-DC04,MCS-0201,DC04,Perth Metro DC,Distribution Centre,333,17,316,305,2026-11-11
+MCS-0201-ST02,MCS-0201,ST02,Dandenong Store,Retail Store,8,2,6,0,
+MCS-0202-DC01,MCS-0202,DC01,Melbourne West DC,Distribution Centre,54,8,46,0,
+MCS-0202-DC02,MCS-0202,DC02,Sydney Central DC,Distribution Centre,323,76,247,0,
+MCS-0202-ST02,MCS-0202,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0202-ST03,MCS-0202,ST03,Geelong Store,Retail Store,0,0,0,280,2026-11-25
+MCS-0202-ST05,MCS-0202,ST05,Parramatta Store,Retail Store,0,0,0,105,2026-12-02
+MCS-0203-DC03,MCS-0203,DC03,Brisbane North DC,Distribution Centre,2,0,2,0,
+MCS-0203-ST05,MCS-0203,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0203-ST06,MCS-0203,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0203-ST08,MCS-0203,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0204-DC01,MCS-0204,DC01,Melbourne West DC,Distribution Centre,411,86,325,0,
+MCS-0204-DC02,MCS-0204,DC02,Sydney Central DC,Distribution Centre,203,69,134,350,2026-09-23
+MCS-0204-ST01,MCS-0204,ST01,Melbourne CBD Store,Retail Store,0,0,0,309,2026-09-30
+MCS-0205-DC01,MCS-0205,DC01,Melbourne West DC,Distribution Centre,472,19,453,0,
+MCS-0205-DC02,MCS-0205,DC02,Sydney Central DC,Distribution Centre,478,75,403,0,
+MCS-0205-DC03,MCS-0205,DC03,Brisbane North DC,Distribution Centre,340,88,252,308,2026-10-14
+MCS-0205-ST06,MCS-0205,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0206-DC03,MCS-0206,DC03,Brisbane North DC,Distribution Centre,252,65,187,0,
+MCS-0206-ST04,MCS-0206,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0206-ST05,MCS-0206,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0206-ST07,MCS-0206,ST07,Gold Coast Store,Retail Store,1,0,1,388,2026-10-07
+MCS-0207-DC03,MCS-0207,DC03,Brisbane North DC,Distribution Centre,391,52,339,167,2026-10-21
+MCS-0207-ST03,MCS-0207,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0207-ST05,MCS-0207,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0208-DC01,MCS-0208,DC01,Melbourne West DC,Distribution Centre,303,25,278,0,
+MCS-0208-DC02,MCS-0208,DC02,Sydney Central DC,Distribution Centre,367,83,284,0,
+MCS-0208-DC03,MCS-0208,DC03,Brisbane North DC,Distribution Centre,144,29,115,0,
+MCS-0208-ST03,MCS-0208,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0208-ST04,MCS-0208,ST04,Ballarat Store,Retail Store,0,0,0,119,2026-10-14
+MCS-0209-DC01,MCS-0209,DC01,Melbourne West DC,Distribution Centre,247,32,215,0,
+MCS-0209-DC02,MCS-0209,DC02,Sydney Central DC,Distribution Centre,337,80,257,366,2026-10-21
+MCS-0209-ST03,MCS-0209,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0209-ST04,MCS-0209,ST04,Ballarat Store,Retail Store,0,0,0,221,2026-10-21
+MCS-0209-ST05,MCS-0209,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0210-ST01,MCS-0210,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0210-ST03,MCS-0210,ST03,Geelong Store,Retail Store,7,1,6,0,
+MCS-0211-DC01,MCS-0211,DC01,Melbourne West DC,Distribution Centre,348,97,251,355,2026-11-04
+MCS-0211-DC02,MCS-0211,DC02,Sydney Central DC,Distribution Centre,379,10,369,0,
+MCS-0211-DC04,MCS-0211,DC04,Perth Metro DC,Distribution Centre,268,68,200,380,2026-10-28
+MCS-0211-ST02,MCS-0211,ST02,Dandenong Store,Retail Store,1,0,1,0,
+MCS-0211-ST06,MCS-0211,ST06,Newcastle Store,Retail Store,4,0,4,0,
+MCS-0212-ST01,MCS-0212,ST01,Melbourne CBD Store,Retail Store,0,0,0,344,2026-09-30
+MCS-0212-ST06,MCS-0212,ST06,Newcastle Store,Retail Store,0,0,0,40,2026-10-21
+MCS-0212-ST07,MCS-0212,ST07,Gold Coast Store,Retail Store,5,1,4,76,2026-09-30
+MCS-0213-DC03,MCS-0213,DC03,Brisbane North DC,Distribution Centre,25,5,20,256,2026-11-11
+MCS-0213-DC04,MCS-0213,DC04,Perth Metro DC,Distribution Centre,33,6,27,215,2026-11-11
+MCS-0213-ST03,MCS-0213,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0213-ST04,MCS-0213,ST04,Ballarat Store,Retail Store,12,3,9,0,
+MCS-0213-ST05,MCS-0213,ST05,Parramatta Store,Retail Store,0,0,0,221,2026-11-11
+MCS-0214-DC01,MCS-0214,DC01,Melbourne West DC,Distribution Centre,17,5,12,0,
+MCS-0214-DC03,MCS-0214,DC03,Brisbane North DC,Distribution Centre,290,67,223,0,
+MCS-0214-ST02,MCS-0214,ST02,Dandenong Store,Retail Store,0,0,0,261,2026-10-07
+MCS-0215-DC03,MCS-0215,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0215-DC04,MCS-0215,DC04,Perth Metro DC,Distribution Centre,0,0,0,208,2027-01-06
+MCS-0215-ST03,MCS-0215,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0216-DC01,MCS-0216,DC01,Melbourne West DC,Distribution Centre,88,28,60,0,
+MCS-0216-ST01,MCS-0216,ST01,Melbourne CBD Store,Retail Store,11,0,11,0,
+MCS-0216-ST06,MCS-0216,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0216-ST07,MCS-0216,ST07,Gold Coast Store,Retail Store,11,0,11,0,
+MCS-0217-DC01,MCS-0217,DC01,Melbourne West DC,Distribution Centre,241,3,238,0,
+MCS-0217-DC02,MCS-0217,DC02,Sydney Central DC,Distribution Centre,450,45,405,0,
+MCS-0217-DC03,MCS-0217,DC03,Brisbane North DC,Distribution Centre,422,90,332,0,
+MCS-0217-ST02,MCS-0217,ST02,Dandenong Store,Retail Store,0,0,0,216,2026-11-18
+MCS-0217-ST03,MCS-0217,ST03,Geelong Store,Retail Store,1,0,1,0,
+MCS-0217-ST05,MCS-0217,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0218-DC01,MCS-0218,DC01,Melbourne West DC,Distribution Centre,451,51,400,383,2026-10-21
+MCS-0218-DC04,MCS-0218,DC04,Perth Metro DC,Distribution Centre,306,13,293,382,2026-10-28
+MCS-0218-ST05,MCS-0218,ST05,Parramatta Store,Retail Store,7,0,7,0,
+MCS-0219-DC01,MCS-0219,DC01,Melbourne West DC,Distribution Centre,402,21,381,155,2026-10-21
+MCS-0220-DC02,MCS-0220,DC02,Sydney Central DC,Distribution Centre,0,0,0,71,2027-03-17
+MCS-0220-DC03,MCS-0220,DC03,Brisbane North DC,Distribution Centre,0,0,0,187,2027-04-07
+MCS-0220-ST02,MCS-0220,ST02,Dandenong Store,Retail Store,0,0,0,374,2027-03-24
+MCS-0220-ST06,MCS-0220,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0220-ST07,MCS-0220,ST07,Gold Coast Store,Retail Store,0,0,0,322,2027-03-24
+MCS-0221-DC02,MCS-0221,DC02,Sydney Central DC,Distribution Centre,280,33,247,0,
+MCS-0221-DC04,MCS-0221,DC04,Perth Metro DC,Distribution Centre,393,121,272,0,
+MCS-0221-ST02,MCS-0221,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0221-ST05,MCS-0221,ST05,Parramatta Store,Retail Store,9,1,8,0,
+MCS-0221-ST06,MCS-0221,ST06,Newcastle Store,Retail Store,11,1,10,0,
+MCS-0222-DC01,MCS-0222,DC01,Melbourne West DC,Distribution Centre,25,5,20,0,
+MCS-0222-DC03,MCS-0222,DC03,Brisbane North DC,Distribution Centre,30,2,28,0,
+MCS-0222-ST02,MCS-0222,ST02,Dandenong Store,Retail Store,0,0,0,53,2026-12-02
+MCS-0222-ST08,MCS-0222,ST08,Adelaide Store,Retail Store,6,0,6,371,2026-12-02
+MCS-0223-DC01,MCS-0223,DC01,Melbourne West DC,Distribution Centre,454,114,340,0,
+MCS-0223-DC02,MCS-0223,DC02,Sydney Central DC,Distribution Centre,34,10,24,0,
+MCS-0223-DC03,MCS-0223,DC03,Brisbane North DC,Distribution Centre,73,20,53,0,
+MCS-0223-DC04,MCS-0223,DC04,Perth Metro DC,Distribution Centre,99,13,86,260,2026-11-18
+MCS-0223-ST03,MCS-0223,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0223-ST04,MCS-0223,ST04,Ballarat Store,Retail Store,11,0,11,305,2026-11-04
+MCS-0224-DC03,MCS-0224,DC03,Brisbane North DC,Distribution Centre,291,47,244,385,2026-09-23
+MCS-0224-ST01,MCS-0224,ST01,Melbourne CBD Store,Retail Store,13,3,10,204,2026-10-07
+MCS-0224-ST02,MCS-0224,ST02,Dandenong Store,Retail Store,8,0,8,0,
+MCS-0224-ST08,MCS-0224,ST08,Adelaide Store,Retail Store,0,0,0,134,2026-09-30
+MCS-0225-DC01,MCS-0225,DC01,Melbourne West DC,Distribution Centre,81,16,65,0,
+MCS-0225-ST03,MCS-0225,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0225-ST06,MCS-0225,ST06,Newcastle Store,Retail Store,14,3,11,0,
+MCS-0226-DC02,MCS-0226,DC02,Sydney Central DC,Distribution Centre,16,1,15,158,2026-11-11
+MCS-0226-ST01,MCS-0226,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0226-ST02,MCS-0226,ST02,Dandenong Store,Retail Store,0,0,0,122,2026-10-21
+MCS-0226-ST06,MCS-0226,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0227-DC01,MCS-0227,DC01,Melbourne West DC,Distribution Centre,247,78,169,0,
+MCS-0227-DC03,MCS-0227,DC03,Brisbane North DC,Distribution Centre,336,30,306,106,2026-10-21
+MCS-0227-DC04,MCS-0227,DC04,Perth Metro DC,Distribution Centre,488,141,347,0,
+MCS-0227-ST04,MCS-0227,ST04,Ballarat Store,Retail Store,7,0,7,0,
+MCS-0227-ST05,MCS-0227,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0228-DC01,MCS-0228,DC01,Melbourne West DC,Distribution Centre,520,102,418,180,2026-09-30
+MCS-0228-DC02,MCS-0228,DC02,Sydney Central DC,Distribution Centre,331,57,274,0,
+MCS-0228-DC04,MCS-0228,DC04,Perth Metro DC,Distribution Centre,223,32,191,319,2026-10-14
+MCS-0228-ST04,MCS-0228,ST04,Ballarat Store,Retail Store,0,0,0,277,2026-10-07
+MCS-0228-ST05,MCS-0228,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0229-DC02,MCS-0229,DC02,Sydney Central DC,Distribution Centre,0,0,0,224,2027-02-17
+MCS-0229-DC03,MCS-0229,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0229-DC04,MCS-0229,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0229-ST01,MCS-0229,ST01,Melbourne CBD Store,Retail Store,11,1,10,0,
+MCS-0230-DC01,MCS-0230,DC01,Melbourne West DC,Distribution Centre,483,155,328,60,2026-11-25
+MCS-0230-DC04,MCS-0230,DC04,Perth Metro DC,Distribution Centre,132,40,92,73,2026-11-11
+MCS-0230-ST03,MCS-0230,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0230-ST04,MCS-0230,ST04,Ballarat Store,Retail Store,5,0,5,0,
+MCS-0230-ST06,MCS-0230,ST06,Newcastle Store,Retail Store,4,1,3,0,
+MCS-0230-ST07,MCS-0230,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0231-DC01,MCS-0231,DC01,Melbourne West DC,Distribution Centre,177,54,123,0,
+MCS-0231-DC02,MCS-0231,DC02,Sydney Central DC,Distribution Centre,25,4,21,0,
+MCS-0231-ST01,MCS-0231,ST01,Melbourne CBD Store,Retail Store,8,1,7,0,
+MCS-0231-ST05,MCS-0231,ST05,Parramatta Store,Retail Store,5,0,5,0,
+MCS-0232-DC02,MCS-0232,DC02,Sydney Central DC,Distribution Centre,39,4,35,0,
+MCS-0232-ST02,MCS-0232,ST02,Dandenong Store,Retail Store,0,0,0,339,2026-10-21
+MCS-0232-ST05,MCS-0232,ST05,Parramatta Store,Retail Store,11,0,11,253,2026-09-30
+MCS-0232-ST06,MCS-0232,ST06,Newcastle Store,Retail Store,0,0,0,133,2026-10-28
+MCS-0233-DC01,MCS-0233,DC01,Melbourne West DC,Distribution Centre,480,68,412,0,
+MCS-0233-DC02,MCS-0233,DC02,Sydney Central DC,Distribution Centre,15,5,10,0,
+MCS-0233-DC03,MCS-0233,DC03,Brisbane North DC,Distribution Centre,497,159,338,0,
+MCS-0233-DC04,MCS-0233,DC04,Perth Metro DC,Distribution Centre,107,16,91,0,
+MCS-0233-ST03,MCS-0233,ST03,Geelong Store,Retail Store,3,1,2,171,2026-10-21
+MCS-0233-ST04,MCS-0233,ST04,Ballarat Store,Retail Store,9,3,6,215,2026-10-07
+MCS-0234-DC01,MCS-0234,DC01,Melbourne West DC,Distribution Centre,34,1,33,0,
+MCS-0234-DC02,MCS-0234,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0234-DC04,MCS-0234,DC04,Perth Metro DC,Distribution Centre,52,2,50,0,
+MCS-0234-ST03,MCS-0234,ST03,Geelong Store,Retail Store,4,1,3,0,
+MCS-0235-DC01,MCS-0235,DC01,Melbourne West DC,Distribution Centre,493,49,444,0,
+MCS-0235-DC04,MCS-0235,DC04,Perth Metro DC,Distribution Centre,206,1,205,0,
+MCS-0235-ST02,MCS-0235,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0235-ST05,MCS-0235,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0235-ST07,MCS-0235,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0236-DC02,MCS-0236,DC02,Sydney Central DC,Distribution Centre,105,4,101,0,
+MCS-0236-DC03,MCS-0236,DC03,Brisbane North DC,Distribution Centre,307,25,282,160,2026-09-23
+MCS-0236-DC04,MCS-0236,DC04,Perth Metro DC,Distribution Centre,149,21,128,0,
+MCS-0236-ST03,MCS-0236,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0237-DC01,MCS-0237,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0237-DC02,MCS-0237,DC02,Sydney Central DC,Distribution Centre,0,0,0,158,2027-01-13
+MCS-0237-ST03,MCS-0237,ST03,Geelong Store,Retail Store,2,0,2,0,
+MCS-0237-ST04,MCS-0237,ST04,Ballarat Store,Retail Store,0,0,0,233,2027-01-20
+MCS-0237-ST05,MCS-0237,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0237-ST08,MCS-0237,ST08,Adelaide Store,Retail Store,0,0,0,140,2027-01-27
+MCS-0238-DC01,MCS-0238,DC01,Melbourne West DC,Distribution Centre,418,58,360,0,
+MCS-0238-DC02,MCS-0238,DC02,Sydney Central DC,Distribution Centre,289,40,249,373,2026-11-04
+MCS-0238-DC03,MCS-0238,DC03,Brisbane North DC,Distribution Centre,216,68,148,207,2026-11-25
+MCS-0238-DC04,MCS-0238,DC04,Perth Metro DC,Distribution Centre,95,13,82,170,2026-11-11
+MCS-0238-ST02,MCS-0238,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0238-ST08,MCS-0238,ST08,Adelaide Store,Retail Store,9,1,8,232,2026-11-25
+MCS-0239-DC01,MCS-0239,DC01,Melbourne West DC,Distribution Centre,401,135,266,62,2026-11-11
+MCS-0239-DC02,MCS-0239,DC02,Sydney Central DC,Distribution Centre,192,16,176,0,
+MCS-0239-DC03,MCS-0239,DC03,Brisbane North DC,Distribution Centre,232,48,184,0,
+MCS-0239-ST06,MCS-0239,ST06,Newcastle Store,Retail Store,0,0,0,236,2026-11-18
+MCS-0240-DC01,MCS-0240,DC01,Melbourne West DC,Distribution Centre,357,87,270,247,2026-11-11
+MCS-0240-DC02,MCS-0240,DC02,Sydney Central DC,Distribution Centre,107,36,71,388,2026-11-18
+MCS-0240-DC03,MCS-0240,DC03,Brisbane North DC,Distribution Centre,63,5,58,0,
+MCS-0240-DC04,MCS-0240,DC04,Perth Metro DC,Distribution Centre,64,19,45,0,
+MCS-0240-ST02,MCS-0240,ST02,Dandenong Store,Retail Store,6,2,4,0,
+MCS-0240-ST04,MCS-0240,ST04,Ballarat Store,Retail Store,0,0,0,274,2026-12-02
+MCS-0240-ST05,MCS-0240,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0240-ST08,MCS-0240,ST08,Adelaide Store,Retail Store,8,2,6,0,
+MCS-0241-DC04,MCS-0241,DC04,Perth Metro DC,Distribution Centre,160,15,145,0,
+MCS-0241-ST07,MCS-0241,ST07,Gold Coast Store,Retail Store,7,1,6,0,
+MCS-0241-ST08,MCS-0241,ST08,Adelaide Store,Retail Store,0,0,0,151,2026-10-14
+MCS-0242-DC01,MCS-0242,DC01,Melbourne West DC,Distribution Centre,202,4,198,0,
+MCS-0242-DC02,MCS-0242,DC02,Sydney Central DC,Distribution Centre,518,40,478,362,2026-10-14
+MCS-0242-DC04,MCS-0242,DC04,Perth Metro DC,Distribution Centre,496,26,470,0,
+MCS-0242-ST02,MCS-0242,ST02,Dandenong Store,Retail Store,5,0,5,94,2026-10-07
+MCS-0243-DC01,MCS-0243,DC01,Melbourne West DC,Distribution Centre,60,4,56,356,2026-10-14
+MCS-0243-DC02,MCS-0243,DC02,Sydney Central DC,Distribution Centre,326,0,326,0,
+MCS-0243-DC03,MCS-0243,DC03,Brisbane North DC,Distribution Centre,324,76,248,362,2026-09-23
+MCS-0243-ST02,MCS-0243,ST02,Dandenong Store,Retail Store,13,3,10,102,2026-09-23
+MCS-0243-ST07,MCS-0243,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0244-DC01,MCS-0244,DC01,Melbourne West DC,Distribution Centre,58,2,56,355,2026-12-16
+MCS-0244-DC02,MCS-0244,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0244-DC04,MCS-0244,DC04,Perth Metro DC,Distribution Centre,53,6,47,0,
+MCS-0244-ST04,MCS-0244,ST04,Ballarat Store,Retail Store,0,0,0,171,2027-01-06
+MCS-0244-ST07,MCS-0244,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0245-DC03,MCS-0245,DC03,Brisbane North DC,Distribution Centre,277,80,197,0,
+MCS-0245-DC04,MCS-0245,DC04,Perth Metro DC,Distribution Centre,482,162,320,176,2026-10-07
+MCS-0245-ST04,MCS-0245,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0245-ST05,MCS-0245,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0245-ST06,MCS-0245,ST06,Newcastle Store,Retail Store,7,1,6,336,2026-10-14
+MCS-0246-DC03,MCS-0246,DC03,Brisbane North DC,Distribution Centre,316,85,231,0,
+MCS-0246-DC04,MCS-0246,DC04,Perth Metro DC,Distribution Centre,375,121,254,0,
+MCS-0246-ST01,MCS-0246,ST01,Melbourne CBD Store,Retail Store,8,1,7,0,
+MCS-0246-ST03,MCS-0246,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0246-ST08,MCS-0246,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0247-DC01,MCS-0247,DC01,Melbourne West DC,Distribution Centre,144,40,104,233,2026-11-18
+MCS-0247-ST06,MCS-0247,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0248-DC03,MCS-0248,DC03,Brisbane North DC,Distribution Centre,218,49,169,0,
+MCS-0248-ST05,MCS-0248,ST05,Parramatta Store,Retail Store,2,0,2,0,
+MCS-0248-ST07,MCS-0248,ST07,Gold Coast Store,Retail Store,4,0,4,378,2026-10-28
+MCS-0249-DC01,MCS-0249,DC01,Melbourne West DC,Distribution Centre,215,60,155,0,
+MCS-0249-DC02,MCS-0249,DC02,Sydney Central DC,Distribution Centre,419,132,287,186,2026-10-07
+MCS-0249-DC03,MCS-0249,DC03,Brisbane North DC,Distribution Centre,210,26,184,0,
+MCS-0249-ST01,MCS-0249,ST01,Melbourne CBD Store,Retail Store,2,0,2,0,
+MCS-0249-ST04,MCS-0249,ST04,Ballarat Store,Retail Store,3,1,2,0,
+MCS-0249-ST07,MCS-0249,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0250-DC02,MCS-0250,DC02,Sydney Central DC,Distribution Centre,27,2,25,0,
+MCS-0250-DC03,MCS-0250,DC03,Brisbane North DC,Distribution Centre,390,65,325,0,
+MCS-0250-ST01,MCS-0250,ST01,Melbourne CBD Store,Retail Store,0,0,0,238,2026-10-28
+MCS-0250-ST02,MCS-0250,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0250-ST04,MCS-0250,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0251-DC02,MCS-0251,DC02,Sydney Central DC,Distribution Centre,358,70,288,0,
+MCS-0251-DC04,MCS-0251,DC04,Perth Metro DC,Distribution Centre,257,32,225,0,
+MCS-0251-ST01,MCS-0251,ST01,Melbourne CBD Store,Retail Store,0,0,0,229,2026-10-14
+MCS-0251-ST03,MCS-0251,ST03,Geelong Store,Retail Store,2,0,2,0,
+MCS-0251-ST04,MCS-0251,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0252-DC02,MCS-0252,DC02,Sydney Central DC,Distribution Centre,150,5,145,248,2026-10-28
+MCS-0252-DC03,MCS-0252,DC03,Brisbane North DC,Distribution Centre,49,14,35,251,2026-11-04
+MCS-0252-DC04,MCS-0252,DC04,Perth Metro DC,Distribution Centre,396,135,261,125,2026-11-18
+MCS-0252-ST01,MCS-0252,ST01,Melbourne CBD Store,Retail Store,2,0,2,0,
+MCS-0252-ST08,MCS-0252,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0254-DC01,MCS-0254,DC01,Melbourne West DC,Distribution Centre,78,3,75,0,
+MCS-0254-ST04,MCS-0254,ST04,Ballarat Store,Retail Store,0,0,0,306,2026-10-07
+MCS-0254-ST05,MCS-0254,ST05,Parramatta Store,Retail Store,0,0,0,175,2026-11-04
+MCS-0255-DC01,MCS-0255,DC01,Melbourne West DC,Distribution Centre,364,3,361,0,
+MCS-0255-ST06,MCS-0255,ST06,Newcastle Store,Retail Store,0,0,0,350,2026-09-30
+MCS-0256-DC04,MCS-0256,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0256-ST01,MCS-0256,ST01,Melbourne CBD Store,Retail Store,10,1,9,307,2027-03-17
+MCS-0256-ST02,MCS-0256,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0256-ST03,MCS-0256,ST03,Geelong Store,Retail Store,0,0,0,355,2027-03-10
+MCS-0256-ST05,MCS-0256,ST05,Parramatta Store,Retail Store,0,0,0,165,2027-03-24
+MCS-0257-DC01,MCS-0257,DC01,Melbourne West DC,Distribution Centre,259,70,189,170,2026-11-11
+MCS-0257-DC02,MCS-0257,DC02,Sydney Central DC,Distribution Centre,278,84,194,0,
+MCS-0257-DC04,MCS-0257,DC04,Perth Metro DC,Distribution Centre,143,46,97,0,
+MCS-0257-ST04,MCS-0257,ST04,Ballarat Store,Retail Store,0,0,0,295,2026-11-11
+MCS-0257-ST06,MCS-0257,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0258-DC03,MCS-0258,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0258-DC04,MCS-0258,DC04,Perth Metro DC,Distribution Centre,8,1,7,0,
+MCS-0258-ST04,MCS-0258,ST04,Ballarat Store,Retail Store,10,0,10,166,2027-02-03
+MCS-0258-ST07,MCS-0258,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0259-DC01,MCS-0259,DC01,Melbourne West DC,Distribution Centre,303,44,259,0,
+MCS-0259-DC02,MCS-0259,DC02,Sydney Central DC,Distribution Centre,454,99,355,0,
+MCS-0259-DC03,MCS-0259,DC03,Brisbane North DC,Distribution Centre,335,86,249,0,
+MCS-0259-DC04,MCS-0259,DC04,Perth Metro DC,Distribution Centre,61,10,51,0,
+MCS-0259-ST02,MCS-0259,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0259-ST08,MCS-0259,ST08,Adelaide Store,Retail Store,0,0,0,331,2026-12-02
+MCS-0260-DC01,MCS-0260,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0260-DC02,MCS-0260,DC02,Sydney Central DC,Distribution Centre,32,1,31,0,
+MCS-0260-DC03,MCS-0260,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0260-DC04,MCS-0260,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0260-ST05,MCS-0260,ST05,Parramatta Store,Retail Store,2,0,2,105,2027-01-06
+MCS-0260-ST07,MCS-0260,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0261-DC03,MCS-0261,DC03,Brisbane North DC,Distribution Centre,427,125,302,297,2026-09-23
+MCS-0261-ST02,MCS-0261,ST02,Dandenong Store,Retail Store,8,0,8,0,
+MCS-0262-DC01,MCS-0262,DC01,Melbourne West DC,Distribution Centre,328,107,221,0,
+MCS-0262-DC03,MCS-0262,DC03,Brisbane North DC,Distribution Centre,191,15,176,323,2026-09-30
+MCS-0262-DC04,MCS-0262,DC04,Perth Metro DC,Distribution Centre,453,128,325,99,2026-10-28
+MCS-0262-ST02,MCS-0262,ST02,Dandenong Store,Retail Store,14,4,10,0,
+MCS-0262-ST04,MCS-0262,ST04,Ballarat Store,Retail Store,0,0,0,133,2026-10-28
+MCS-0262-ST05,MCS-0262,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0262-ST07,MCS-0262,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0263-DC02,MCS-0263,DC02,Sydney Central DC,Distribution Centre,432,113,319,0,
+MCS-0263-DC04,MCS-0263,DC04,Perth Metro DC,Distribution Centre,120,15,105,309,2026-11-04
+MCS-0263-ST01,MCS-0263,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0263-ST04,MCS-0263,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0263-ST08,MCS-0263,ST08,Adelaide Store,Retail Store,12,4,8,0,
+MCS-0264-DC01,MCS-0264,DC01,Melbourne West DC,Distribution Centre,141,45,96,0,
+MCS-0264-DC02,MCS-0264,DC02,Sydney Central DC,Distribution Centre,97,9,88,0,
+MCS-0264-DC04,MCS-0264,DC04,Perth Metro DC,Distribution Centre,520,89,431,0,
+MCS-0264-ST01,MCS-0264,ST01,Melbourne CBD Store,Retail Store,4,1,3,0,
+MCS-0264-ST02,MCS-0264,ST02,Dandenong Store,Retail Store,7,1,6,0,
+MCS-0264-ST06,MCS-0264,ST06,Newcastle Store,Retail Store,0,0,0,84,2026-11-04
+MCS-0264-ST07,MCS-0264,ST07,Gold Coast Store,Retail Store,3,0,3,0,
+MCS-0265-DC01,MCS-0265,DC01,Melbourne West DC,Distribution Centre,119,13,106,255,2026-11-04
+MCS-0265-DC02,MCS-0265,DC02,Sydney Central DC,Distribution Centre,310,45,265,0,
+MCS-0265-ST03,MCS-0265,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0266-DC02,MCS-0266,DC02,Sydney Central DC,Distribution Centre,0,0,0,335,2026-12-23
+MCS-0266-DC03,MCS-0266,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0266-ST04,MCS-0266,ST04,Ballarat Store,Retail Store,0,0,0,50,2026-12-30
+MCS-0267-ST01,MCS-0267,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0267-ST03,MCS-0267,ST03,Geelong Store,Retail Store,0,0,0,296,2027-04-07
+MCS-0267-ST04,MCS-0267,ST04,Ballarat Store,Retail Store,0,0,0,247,2027-03-10
+MCS-0267-ST06,MCS-0267,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0268-DC01,MCS-0268,DC01,Melbourne West DC,Distribution Centre,452,140,312,0,
+MCS-0268-DC02,MCS-0268,DC02,Sydney Central DC,Distribution Centre,67,19,48,0,
+MCS-0268-DC03,MCS-0268,DC03,Brisbane North DC,Distribution Centre,345,43,302,0,
+MCS-0268-DC04,MCS-0268,DC04,Perth Metro DC,Distribution Centre,62,6,56,0,
+MCS-0268-ST01,MCS-0268,ST01,Melbourne CBD Store,Retail Store,0,0,0,97,2026-10-21
+MCS-0268-ST04,MCS-0268,ST04,Ballarat Store,Retail Store,12,2,10,0,
+MCS-0268-ST08,MCS-0268,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0269-DC01,MCS-0269,DC01,Melbourne West DC,Distribution Centre,17,0,17,0,
+MCS-0269-DC02,MCS-0269,DC02,Sydney Central DC,Distribution Centre,38,13,25,0,
+MCS-0269-DC03,MCS-0269,DC03,Brisbane North DC,Distribution Centre,139,6,133,383,2026-10-14
+MCS-0269-DC04,MCS-0269,DC04,Perth Metro DC,Distribution Centre,510,20,490,0,
+MCS-0269-ST01,MCS-0269,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0269-ST08,MCS-0269,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0270-DC02,MCS-0270,DC02,Sydney Central DC,Distribution Centre,162,12,150,56,2026-09-23
+MCS-0270-DC03,MCS-0270,DC03,Brisbane North DC,Distribution Centre,291,92,199,0,
+MCS-0270-ST05,MCS-0270,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0270-ST08,MCS-0270,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0271-DC01,MCS-0271,DC01,Melbourne West DC,Distribution Centre,435,79,356,0,
+MCS-0271-DC02,MCS-0271,DC02,Sydney Central DC,Distribution Centre,133,28,105,0,
+MCS-0271-DC04,MCS-0271,DC04,Perth Metro DC,Distribution Centre,496,148,348,0,
+MCS-0271-ST01,MCS-0271,ST01,Melbourne CBD Store,Retail Store,11,3,8,363,2026-10-21
+MCS-0271-ST08,MCS-0271,ST08,Adelaide Store,Retail Store,0,0,0,199,2026-09-23
+MCS-0272-DC01,MCS-0272,DC01,Melbourne West DC,Distribution Centre,339,4,335,0,
+MCS-0272-DC02,MCS-0272,DC02,Sydney Central DC,Distribution Centre,94,0,94,0,
+MCS-0272-DC04,MCS-0272,DC04,Perth Metro DC,Distribution Centre,129,38,91,96,2026-10-28
+MCS-0272-ST02,MCS-0272,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0272-ST06,MCS-0272,ST06,Newcastle Store,Retail Store,12,0,12,0,
+MCS-0272-ST08,MCS-0272,ST08,Adelaide Store,Retail Store,10,2,8,0,
+MCS-0273-DC01,MCS-0273,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0273-DC04,MCS-0273,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0273-ST02,MCS-0273,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0273-ST08,MCS-0273,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0274-DC01,MCS-0274,DC01,Melbourne West DC,Distribution Centre,36,2,34,75,2026-10-07
+MCS-0274-DC02,MCS-0274,DC02,Sydney Central DC,Distribution Centre,451,50,401,367,2026-11-04
+MCS-0274-DC03,MCS-0274,DC03,Brisbane North DC,Distribution Centre,444,3,441,0,
+MCS-0274-DC04,MCS-0274,DC04,Perth Metro DC,Distribution Centre,149,50,99,0,
+MCS-0274-ST02,MCS-0274,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0275-DC03,MCS-0275,DC03,Brisbane North DC,Distribution Centre,504,175,329,360,2026-10-14
+MCS-0275-ST06,MCS-0275,ST06,Newcastle Store,Retail Store,0,0,0,380,2026-10-07
+MCS-0275-ST08,MCS-0275,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0276-DC01,MCS-0276,DC01,Melbourne West DC,Distribution Centre,379,3,376,0,
+MCS-0276-DC03,MCS-0276,DC03,Brisbane North DC,Distribution Centre,52,18,34,0,
+MCS-0276-DC04,MCS-0276,DC04,Perth Metro DC,Distribution Centre,114,39,75,0,
+MCS-0276-ST02,MCS-0276,ST02,Dandenong Store,Retail Store,7,1,6,0,
+MCS-0276-ST04,MCS-0276,ST04,Ballarat Store,Retail Store,13,2,11,0,
+MCS-0276-ST08,MCS-0276,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0277-DC01,MCS-0277,DC01,Melbourne West DC,Distribution Centre,289,5,284,271,2026-09-30
+MCS-0277-DC02,MCS-0277,DC02,Sydney Central DC,Distribution Centre,294,51,243,125,2026-10-07
+MCS-0277-DC04,MCS-0277,DC04,Perth Metro DC,Distribution Centre,254,2,252,193,2026-10-21
+MCS-0277-ST03,MCS-0277,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0278-DC03,MCS-0278,DC03,Brisbane North DC,Distribution Centre,404,116,288,266,2026-11-04
+MCS-0278-DC04,MCS-0278,DC04,Perth Metro DC,Distribution Centre,304,103,201,248,2026-11-18
+MCS-0278-ST01,MCS-0278,ST01,Melbourne CBD Store,Retail Store,5,1,4,0,
+MCS-0278-ST03,MCS-0278,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0278-ST05,MCS-0278,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0279-DC01,MCS-0279,DC01,Melbourne West DC,Distribution Centre,464,132,332,0,
+MCS-0279-DC04,MCS-0279,DC04,Perth Metro DC,Distribution Centre,477,28,449,231,2026-10-21
+MCS-0279-ST08,MCS-0279,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0280-DC02,MCS-0280,DC02,Sydney Central DC,Distribution Centre,140,45,95,0,
+MCS-0280-DC03,MCS-0280,DC03,Brisbane North DC,Distribution Centre,204,27,177,0,
+MCS-0280-DC04,MCS-0280,DC04,Perth Metro DC,Distribution Centre,236,31,205,0,
+MCS-0280-ST02,MCS-0280,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0280-ST05,MCS-0280,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0281-DC02,MCS-0281,DC02,Sydney Central DC,Distribution Centre,499,165,334,0,
+MCS-0281-DC03,MCS-0281,DC03,Brisbane North DC,Distribution Centre,26,2,24,0,
+MCS-0281-DC04,MCS-0281,DC04,Perth Metro DC,Distribution Centre,206,31,175,348,2026-11-04
+MCS-0281-ST02,MCS-0281,ST02,Dandenong Store,Retail Store,12,0,12,0,
+MCS-0281-ST05,MCS-0281,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0281-ST08,MCS-0281,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0282-DC01,MCS-0282,DC01,Melbourne West DC,Distribution Centre,469,143,326,0,
+MCS-0282-DC03,MCS-0282,DC03,Brisbane North DC,Distribution Centre,32,7,25,0,
+MCS-0282-ST07,MCS-0282,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0283-DC01,MCS-0283,DC01,Melbourne West DC,Distribution Centre,68,10,58,0,
+MCS-0283-DC02,MCS-0283,DC02,Sydney Central DC,Distribution Centre,3,0,3,63,2026-10-14
+MCS-0283-DC03,MCS-0283,DC03,Brisbane North DC,Distribution Centre,80,5,75,0,
+MCS-0283-DC04,MCS-0283,DC04,Perth Metro DC,Distribution Centre,376,83,293,0,
+MCS-0283-ST08,MCS-0283,ST08,Adelaide Store,Retail Store,11,1,10,81,2026-09-23
+MCS-0284-DC02,MCS-0284,DC02,Sydney Central DC,Distribution Centre,0,0,0,119,2027-02-24
+MCS-0284-DC04,MCS-0284,DC04,Perth Metro DC,Distribution Centre,0,0,0,290,2027-02-17
+MCS-0284-ST02,MCS-0284,ST02,Dandenong Store,Retail Store,13,2,11,0,
+MCS-0284-ST06,MCS-0284,ST06,Newcastle Store,Retail Store,14,2,12,0,
+MCS-0284-ST07,MCS-0284,ST07,Gold Coast Store,Retail Store,2,0,2,0,
+MCS-0285-DC01,MCS-0285,DC01,Melbourne West DC,Distribution Centre,385,26,359,0,
+MCS-0285-DC03,MCS-0285,DC03,Brisbane North DC,Distribution Centre,488,151,337,216,2026-10-14
+MCS-0285-DC04,MCS-0285,DC04,Perth Metro DC,Distribution Centre,301,92,209,0,
+MCS-0285-ST01,MCS-0285,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0285-ST03,MCS-0285,ST03,Geelong Store,Retail Store,7,2,5,0,
+MCS-0285-ST04,MCS-0285,ST04,Ballarat Store,Retail Store,1,0,1,169,2026-10-14
+MCS-0285-ST05,MCS-0285,ST05,Parramatta Store,Retail Store,9,3,6,0,
+MCS-0286-DC01,MCS-0286,DC01,Melbourne West DC,Distribution Centre,306,5,301,0,
+MCS-0286-ST05,MCS-0286,ST05,Parramatta Store,Retail Store,0,0,0,222,2026-09-30
+MCS-0286-ST06,MCS-0286,ST06,Newcastle Store,Retail Store,11,2,9,0,
+MCS-0286-ST07,MCS-0286,ST07,Gold Coast Store,Retail Store,14,4,10,0,
+MCS-0287-DC01,MCS-0287,DC01,Melbourne West DC,Distribution Centre,402,97,305,0,
+MCS-0287-DC02,MCS-0287,DC02,Sydney Central DC,Distribution Centre,133,33,100,106,2026-10-28
+MCS-0287-DC03,MCS-0287,DC03,Brisbane North DC,Distribution Centre,164,0,164,0,
+MCS-0287-DC04,MCS-0287,DC04,Perth Metro DC,Distribution Centre,466,88,378,0,
+MCS-0287-ST03,MCS-0287,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0287-ST04,MCS-0287,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0287-ST05,MCS-0287,ST05,Parramatta Store,Retail Store,4,0,4,0,
+MCS-0287-ST07,MCS-0287,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0288-DC01,MCS-0288,DC01,Melbourne West DC,Distribution Centre,93,5,88,0,
+MCS-0288-ST02,MCS-0288,ST02,Dandenong Store,Retail Store,11,1,10,0,
+MCS-0288-ST06,MCS-0288,ST06,Newcastle Store,Retail Store,10,2,8,0,
+MCS-0289-DC02,MCS-0289,DC02,Sydney Central DC,Distribution Centre,471,103,368,249,2026-09-23
+MCS-0289-ST03,MCS-0289,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0289-ST06,MCS-0289,ST06,Newcastle Store,Retail Store,0,0,0,183,2026-10-21
+MCS-0290-DC01,MCS-0290,DC01,Melbourne West DC,Distribution Centre,44,0,44,0,
+MCS-0290-DC02,MCS-0290,DC02,Sydney Central DC,Distribution Centre,233,16,217,0,
+MCS-0290-ST02,MCS-0290,ST02,Dandenong Store,Retail Store,13,0,13,0,
+MCS-0290-ST05,MCS-0290,ST05,Parramatta Store,Retail Store,2,0,2,0,
+MCS-0291-DC02,MCS-0291,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0291-DC03,MCS-0291,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0291-ST02,MCS-0291,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0291-ST03,MCS-0291,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0291-ST06,MCS-0291,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0292-DC02,MCS-0292,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0292-DC03,MCS-0292,DC03,Brisbane North DC,Distribution Centre,35,1,34,0,
+MCS-0292-DC04,MCS-0292,DC04,Perth Metro DC,Distribution Centre,43,8,35,249,2027-01-27
+MCS-0292-ST01,MCS-0292,ST01,Melbourne CBD Store,Retail Store,3,0,3,0,
+MCS-0292-ST05,MCS-0292,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0293-ST01,MCS-0293,ST01,Melbourne CBD Store,Retail Store,1,0,1,0,
+MCS-0293-ST03,MCS-0293,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0294-DC01,MCS-0294,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0294-DC02,MCS-0294,DC02,Sydney Central DC,Distribution Centre,0,0,0,210,2026-12-30
+MCS-0294-ST02,MCS-0294,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0294-ST07,MCS-0294,ST07,Gold Coast Store,Retail Store,7,0,7,0,
+MCS-0295-DC01,MCS-0295,DC01,Melbourne West DC,Distribution Centre,373,24,349,306,2026-10-14
+MCS-0295-DC02,MCS-0295,DC02,Sydney Central DC,Distribution Centre,242,32,210,0,
+MCS-0295-ST02,MCS-0295,ST02,Dandenong Store,Retail Store,0,0,0,333,2026-09-30
+MCS-0295-ST03,MCS-0295,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0295-ST08,MCS-0295,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0296-DC01,MCS-0296,DC01,Melbourne West DC,Distribution Centre,6,1,5,0,
+MCS-0296-DC03,MCS-0296,DC03,Brisbane North DC,Distribution Centre,0,0,0,398,2026-12-16
+MCS-0296-ST01,MCS-0296,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0296-ST02,MCS-0296,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0296-ST03,MCS-0296,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0296-ST08,MCS-0296,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0297-DC01,MCS-0297,DC01,Melbourne West DC,Distribution Centre,403,135,268,0,
+MCS-0297-DC04,MCS-0297,DC04,Perth Metro DC,Distribution Centre,325,19,306,41,2026-10-07
+MCS-0297-ST01,MCS-0297,ST01,Melbourne CBD Store,Retail Store,10,3,7,0,
+MCS-0297-ST05,MCS-0297,ST05,Parramatta Store,Retail Store,9,3,6,0,
+MCS-0298-DC01,MCS-0298,DC01,Melbourne West DC,Distribution Centre,18,2,16,0,
+MCS-0298-DC03,MCS-0298,DC03,Brisbane North DC,Distribution Centre,421,15,406,0,
+MCS-0298-ST01,MCS-0298,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0298-ST03,MCS-0298,ST03,Geelong Store,Retail Store,0,0,0,41,2026-11-04
+MCS-0298-ST05,MCS-0298,ST05,Parramatta Store,Retail Store,13,1,12,0,
+MCS-0298-ST06,MCS-0298,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0298-ST07,MCS-0298,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0298-ST08,MCS-0298,ST08,Adelaide Store,Retail Store,5,0,5,0,
+MCS-0299-DC01,MCS-0299,DC01,Melbourne West DC,Distribution Centre,0,0,0,263,2026-12-30
+MCS-0299-DC02,MCS-0299,DC02,Sydney Central DC,Distribution Centre,10,2,8,312,2026-12-30
+MCS-0299-DC03,MCS-0299,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0299-ST01,MCS-0299,ST01,Melbourne CBD Store,Retail Store,9,2,7,0,
+MCS-0299-ST03,MCS-0299,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0299-ST04,MCS-0299,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0300-DC02,MCS-0300,DC02,Sydney Central DC,Distribution Centre,474,56,418,0,
+MCS-0300-DC03,MCS-0300,DC03,Brisbane North DC,Distribution Centre,332,89,243,0,
+MCS-0300-DC04,MCS-0300,DC04,Perth Metro DC,Distribution Centre,170,35,135,302,2026-10-21
+MCS-0300-ST07,MCS-0300,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0301-DC01,MCS-0301,DC01,Melbourne West DC,Distribution Centre,8,1,7,257,2026-10-21
+MCS-0301-DC03,MCS-0301,DC03,Brisbane North DC,Distribution Centre,150,47,103,290,2026-10-07
+MCS-0301-DC04,MCS-0301,DC04,Perth Metro DC,Distribution Centre,133,29,104,166,2026-11-04
+MCS-0301-ST01,MCS-0301,ST01,Melbourne CBD Store,Retail Store,11,1,10,178,2026-10-21
+MCS-0301-ST05,MCS-0301,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0302-DC01,MCS-0302,DC01,Melbourne West DC,Distribution Centre,382,91,291,0,
+MCS-0302-DC04,MCS-0302,DC04,Perth Metro DC,Distribution Centre,17,4,13,206,2026-10-28
+MCS-0302-ST04,MCS-0302,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0302-ST05,MCS-0302,ST05,Parramatta Store,Retail Store,14,2,12,0,
+MCS-0302-ST06,MCS-0302,ST06,Newcastle Store,Retail Store,9,1,8,0,
+MCS-0303-DC01,MCS-0303,DC01,Melbourne West DC,Distribution Centre,438,102,336,0,
+MCS-0303-DC02,MCS-0303,DC02,Sydney Central DC,Distribution Centre,439,28,411,0,
+MCS-0303-ST02,MCS-0303,ST02,Dandenong Store,Retail Store,7,1,6,364,2026-10-21
+MCS-0303-ST04,MCS-0303,ST04,Ballarat Store,Retail Store,3,0,3,0,
+MCS-0303-ST05,MCS-0303,ST05,Parramatta Store,Retail Store,14,0,14,124,2026-10-07
+MCS-0304-DC01,MCS-0304,DC01,Melbourne West DC,Distribution Centre,243,67,176,0,
+MCS-0304-ST04,MCS-0304,ST04,Ballarat Store,Retail Store,11,3,8,0,
+MCS-0304-ST05,MCS-0304,ST05,Parramatta Store,Retail Store,0,0,0,393,2026-09-23
+MCS-0304-ST07,MCS-0304,ST07,Gold Coast Store,Retail Store,1,0,1,0,
+MCS-0304-ST08,MCS-0304,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0305-DC02,MCS-0305,DC02,Sydney Central DC,Distribution Centre,434,77,357,0,
+MCS-0305-DC03,MCS-0305,DC03,Brisbane North DC,Distribution Centre,316,87,229,202,2026-11-25
+MCS-0305-ST02,MCS-0305,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0305-ST03,MCS-0305,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0305-ST05,MCS-0305,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0305-ST08,MCS-0305,ST08,Adelaide Store,Retail Store,0,0,0,283,2026-11-04
+MCS-0306-DC02,MCS-0306,DC02,Sydney Central DC,Distribution Centre,79,27,52,0,
+MCS-0306-DC04,MCS-0306,DC04,Perth Metro DC,Distribution Centre,68,9,59,238,2026-11-04
+MCS-0306-ST01,MCS-0306,ST01,Melbourne CBD Store,Retail Store,0,0,0,359,2026-11-18
+MCS-0306-ST03,MCS-0306,ST03,Geelong Store,Retail Store,9,2,7,0,
+MCS-0306-ST06,MCS-0306,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0306-ST08,MCS-0306,ST08,Adelaide Store,Retail Store,10,1,9,56,2026-11-18
+MCS-0307-DC01,MCS-0307,DC01,Melbourne West DC,Distribution Centre,339,85,254,0,
+MCS-0307-DC02,MCS-0307,DC02,Sydney Central DC,Distribution Centre,400,1,399,349,2026-10-07
+MCS-0307-DC03,MCS-0307,DC03,Brisbane North DC,Distribution Centre,508,45,463,0,
+MCS-0307-ST01,MCS-0307,ST01,Melbourne CBD Store,Retail Store,0,0,0,361,2026-10-07
+MCS-0307-ST07,MCS-0307,ST07,Gold Coast Store,Retail Store,4,1,3,0,
+MCS-0308-DC02,MCS-0308,DC02,Sydney Central DC,Distribution Centre,122,22,100,0,
+MCS-0308-DC03,MCS-0308,DC03,Brisbane North DC,Distribution Centre,366,99,267,0,
+MCS-0308-DC04,MCS-0308,DC04,Perth Metro DC,Distribution Centre,240,22,218,209,2026-10-21
+MCS-0308-ST02,MCS-0308,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0308-ST05,MCS-0308,ST05,Parramatta Store,Retail Store,12,4,8,0,
+MCS-0308-ST07,MCS-0308,ST07,Gold Coast Store,Retail Store,5,1,4,0,
+MCS-0308-ST08,MCS-0308,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0309-DC02,MCS-0309,DC02,Sydney Central DC,Distribution Centre,105,11,94,120,2026-11-04
+MCS-0309-DC03,MCS-0309,DC03,Brisbane North DC,Distribution Centre,174,6,168,0,
+MCS-0309-ST04,MCS-0309,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0309-ST06,MCS-0309,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0309-ST08,MCS-0309,ST08,Adelaide Store,Retail Store,1,0,1,0,
+MCS-0310-DC01,MCS-0310,DC01,Melbourne West DC,Distribution Centre,15,4,11,249,2027-02-24
+MCS-0310-DC02,MCS-0310,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0310-DC04,MCS-0310,DC04,Perth Metro DC,Distribution Centre,5,1,4,0,
+MCS-0310-ST04,MCS-0310,ST04,Ballarat Store,Retail Store,4,1,3,0,
+MCS-0311-DC04,MCS-0311,DC04,Perth Metro DC,Distribution Centre,439,22,417,0,
+MCS-0311-ST03,MCS-0311,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0311-ST07,MCS-0311,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0312-DC03,MCS-0312,DC03,Brisbane North DC,Distribution Centre,307,73,234,386,2026-10-21
+MCS-0312-ST01,MCS-0312,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0312-ST02,MCS-0312,ST02,Dandenong Store,Retail Store,4,1,3,0,
+MCS-0312-ST03,MCS-0312,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0312-ST07,MCS-0312,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0312-ST08,MCS-0312,ST08,Adelaide Store,Retail Store,8,2,6,0,
+MCS-0313-DC01,MCS-0313,DC01,Melbourne West DC,Distribution Centre,512,28,484,100,2026-10-28
+MCS-0313-DC02,MCS-0313,DC02,Sydney Central DC,Distribution Centre,11,1,10,211,2026-10-28
+MCS-0313-DC04,MCS-0313,DC04,Perth Metro DC,Distribution Centre,48,4,44,342,2026-10-28
+MCS-0313-ST02,MCS-0313,ST02,Dandenong Store,Retail Store,0,0,0,145,2026-10-21
+MCS-0313-ST06,MCS-0313,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0313-ST08,MCS-0313,ST08,Adelaide Store,Retail Store,8,2,6,198,2026-10-28
+MCS-0314-DC01,MCS-0314,DC01,Melbourne West DC,Distribution Centre,386,58,328,224,2026-11-11
+MCS-0314-DC02,MCS-0314,DC02,Sydney Central DC,Distribution Centre,335,102,233,148,2026-10-28
+MCS-0314-DC04,MCS-0314,DC04,Perth Metro DC,Distribution Centre,82,26,56,0,
+MCS-0314-ST03,MCS-0314,ST03,Geelong Store,Retail Store,13,4,9,83,2026-10-21
+MCS-0314-ST04,MCS-0314,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0315-DC02,MCS-0315,DC02,Sydney Central DC,Distribution Centre,447,144,303,0,
+MCS-0315-DC03,MCS-0315,DC03,Brisbane North DC,Distribution Centre,101,12,89,242,2026-09-23
+MCS-0315-DC04,MCS-0315,DC04,Perth Metro DC,Distribution Centre,205,15,190,0,
+MCS-0315-ST03,MCS-0315,ST03,Geelong Store,Retail Store,8,1,7,0,
+MCS-0315-ST04,MCS-0315,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0315-ST05,MCS-0315,ST05,Parramatta Store,Retail Store,0,0,0,129,2026-10-21
+MCS-0316-DC02,MCS-0316,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0316-DC04,MCS-0316,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0316-ST03,MCS-0316,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0316-ST04,MCS-0316,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0316-ST05,MCS-0316,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0316-ST06,MCS-0316,ST06,Newcastle Store,Retail Store,0,0,0,196,2027-01-27
+MCS-0316-ST07,MCS-0316,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0317-DC01,MCS-0317,DC01,Melbourne West DC,Distribution Centre,23,4,19,0,
+MCS-0317-DC02,MCS-0317,DC02,Sydney Central DC,Distribution Centre,200,25,175,0,
+MCS-0317-DC03,MCS-0317,DC03,Brisbane North DC,Distribution Centre,74,23,51,216,2026-09-30
+MCS-0317-DC04,MCS-0317,DC04,Perth Metro DC,Distribution Centre,38,7,31,307,2026-10-14
+MCS-0317-ST01,MCS-0317,ST01,Melbourne CBD Store,Retail Store,0,0,0,217,2026-10-07
+MCS-0317-ST02,MCS-0317,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0317-ST07,MCS-0317,ST07,Gold Coast Store,Retail Store,0,0,0,352,2026-10-21
+MCS-0318-DC04,MCS-0318,DC04,Perth Metro DC,Distribution Centre,503,11,492,0,
+MCS-0318-ST01,MCS-0318,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0318-ST02,MCS-0318,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0318-ST08,MCS-0318,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0319-ST04,MCS-0319,ST04,Ballarat Store,Retail Store,7,1,6,0,
+MCS-0319-ST05,MCS-0319,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0320-DC01,MCS-0320,DC01,Melbourne West DC,Distribution Centre,17,4,13,0,
+MCS-0320-DC02,MCS-0320,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0320-DC03,MCS-0320,DC03,Brisbane North DC,Distribution Centre,58,17,41,0,
+MCS-0320-ST02,MCS-0320,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0320-ST03,MCS-0320,ST03,Geelong Store,Retail Store,0,0,0,268,2026-10-21
+MCS-0320-ST08,MCS-0320,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0321-DC01,MCS-0321,DC01,Melbourne West DC,Distribution Centre,425,24,401,0,
+MCS-0321-DC02,MCS-0321,DC02,Sydney Central DC,Distribution Centre,200,16,184,0,
+MCS-0321-DC03,MCS-0321,DC03,Brisbane North DC,Distribution Centre,386,68,318,0,
+MCS-0321-DC04,MCS-0321,DC04,Perth Metro DC,Distribution Centre,308,1,307,0,
+MCS-0321-ST03,MCS-0321,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0321-ST04,MCS-0321,ST04,Ballarat Store,Retail Store,10,1,9,0,
+MCS-0322-ST02,MCS-0322,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0322-ST07,MCS-0322,ST07,Gold Coast Store,Retail Store,3,1,2,0,
+MCS-0322-ST08,MCS-0322,ST08,Adelaide Store,Retail Store,9,0,9,0,
+MCS-0323-DC01,MCS-0323,DC01,Melbourne West DC,Distribution Centre,413,105,308,0,
+MCS-0323-DC04,MCS-0323,DC04,Perth Metro DC,Distribution Centre,151,46,105,0,
+MCS-0323-ST04,MCS-0323,ST04,Ballarat Store,Retail Store,0,0,0,398,2026-10-28
+MCS-0323-ST05,MCS-0323,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0323-ST07,MCS-0323,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0323-ST08,MCS-0323,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0324-DC02,MCS-0324,DC02,Sydney Central DC,Distribution Centre,279,66,213,0,
+MCS-0324-DC04,MCS-0324,DC04,Perth Metro DC,Distribution Centre,423,9,414,163,2026-11-04
+MCS-0324-ST04,MCS-0324,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0325-DC02,MCS-0325,DC02,Sydney Central DC,Distribution Centre,75,26,49,0,
+MCS-0325-ST01,MCS-0325,ST01,Melbourne CBD Store,Retail Store,0,0,0,346,2026-10-07
+MCS-0325-ST02,MCS-0325,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0325-ST08,MCS-0325,ST08,Adelaide Store,Retail Store,0,0,0,196,2026-10-21
+MCS-0326-DC01,MCS-0326,DC01,Melbourne West DC,Distribution Centre,103,15,88,0,
+MCS-0326-DC02,MCS-0326,DC02,Sydney Central DC,Distribution Centre,411,99,312,0,
+MCS-0326-DC03,MCS-0326,DC03,Brisbane North DC,Distribution Centre,486,54,432,0,
+MCS-0326-DC04,MCS-0326,DC04,Perth Metro DC,Distribution Centre,242,21,221,0,
+MCS-0326-ST01,MCS-0326,ST01,Melbourne CBD Store,Retail Store,1,0,1,159,2026-10-21
+MCS-0327-DC04,MCS-0327,DC04,Perth Metro DC,Distribution Centre,94,16,78,0,
+MCS-0327-ST02,MCS-0327,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0327-ST05,MCS-0327,ST05,Parramatta Store,Retail Store,0,0,0,178,2026-10-14
+MCS-0327-ST06,MCS-0327,ST06,Newcastle Store,Retail Store,0,0,0,223,2026-10-14
+MCS-0327-ST07,MCS-0327,ST07,Gold Coast Store,Retail Store,0,0,0,238,2026-10-28
+MCS-0328-DC03,MCS-0328,DC03,Brisbane North DC,Distribution Centre,158,28,130,0,
+MCS-0328-ST01,MCS-0328,ST01,Melbourne CBD Store,Retail Store,7,1,6,0,
+MCS-0328-ST02,MCS-0328,ST02,Dandenong Store,Retail Store,0,0,0,58,2026-10-28
+MCS-0328-ST05,MCS-0328,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0328-ST07,MCS-0328,ST07,Gold Coast Store,Retail Store,0,0,0,330,2026-11-04
+MCS-0329-DC01,MCS-0329,DC01,Melbourne West DC,Distribution Centre,4,0,4,0,
+MCS-0329-DC02,MCS-0329,DC02,Sydney Central DC,Distribution Centre,41,2,39,0,
+MCS-0329-DC03,MCS-0329,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0329-DC04,MCS-0329,DC04,Perth Metro DC,Distribution Centre,49,12,37,206,2026-10-28
+MCS-0329-ST07,MCS-0329,ST07,Gold Coast Store,Retail Store,10,2,8,0,
+MCS-0330-DC01,MCS-0330,DC01,Melbourne West DC,Distribution Centre,361,100,261,131,2026-10-21
+MCS-0330-DC02,MCS-0330,DC02,Sydney Central DC,Distribution Centre,47,7,40,0,
+MCS-0330-ST01,MCS-0330,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0330-ST02,MCS-0330,ST02,Dandenong Store,Retail Store,13,1,12,0,
+MCS-0330-ST03,MCS-0330,ST03,Geelong Store,Retail Store,0,0,0,278,2026-10-28
+MCS-0330-ST04,MCS-0330,ST04,Ballarat Store,Retail Store,0,0,0,384,2026-10-28
+MCS-0330-ST05,MCS-0330,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0330-ST06,MCS-0330,ST06,Newcastle Store,Retail Store,0,0,0,369,2026-09-30
+MCS-0331-DC02,MCS-0331,DC02,Sydney Central DC,Distribution Centre,420,6,414,0,
+MCS-0331-DC03,MCS-0331,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0331-ST06,MCS-0331,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0332-DC01,MCS-0332,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0332-DC02,MCS-0332,DC02,Sydney Central DC,Distribution Centre,39,10,29,147,2026-12-30
+MCS-0332-ST06,MCS-0332,ST06,Newcastle Store,Retail Store,9,2,7,148,2027-01-13
+MCS-0332-ST08,MCS-0332,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0333-DC04,MCS-0333,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0333-ST01,MCS-0333,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0333-ST06,MCS-0333,ST06,Newcastle Store,Retail Store,8,0,8,0,
+MCS-0333-ST07,MCS-0333,ST07,Gold Coast Store,Retail Store,5,0,5,0,
+MCS-0334-DC02,MCS-0334,DC02,Sydney Central DC,Distribution Centre,174,46,128,0,
+MCS-0334-ST01,MCS-0334,ST01,Melbourne CBD Store,Retail Store,3,0,3,0,
+MCS-0334-ST07,MCS-0334,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0334-ST08,MCS-0334,ST08,Adelaide Store,Retail Store,0,0,0,308,2026-09-30
+MCS-0335-DC01,MCS-0335,DC01,Melbourne West DC,Distribution Centre,501,115,386,0,
+MCS-0335-DC02,MCS-0335,DC02,Sydney Central DC,Distribution Centre,131,26,105,0,
+MCS-0335-DC03,MCS-0335,DC03,Brisbane North DC,Distribution Centre,91,20,71,0,
+MCS-0335-ST01,MCS-0335,ST01,Melbourne CBD Store,Retail Store,10,3,7,0,
+MCS-0335-ST03,MCS-0335,ST03,Geelong Store,Retail Store,14,3,11,231,2026-10-07
+MCS-0335-ST04,MCS-0335,ST04,Ballarat Store,Retail Store,6,0,6,384,2026-10-21
+MCS-0335-ST06,MCS-0335,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0335-ST08,MCS-0335,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0336-DC02,MCS-0336,DC02,Sydney Central DC,Distribution Centre,225,12,213,0,
+MCS-0336-DC04,MCS-0336,DC04,Perth Metro DC,Distribution Centre,23,3,20,71,2026-10-28
+MCS-0336-ST02,MCS-0336,ST02,Dandenong Store,Retail Store,8,0,8,0,
+MCS-0336-ST04,MCS-0336,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0336-ST05,MCS-0336,ST05,Parramatta Store,Retail Store,0,0,0,81,2026-11-04
+MCS-0336-ST07,MCS-0336,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0337-DC02,MCS-0337,DC02,Sydney Central DC,Distribution Centre,48,2,46,0,
+MCS-0337-DC03,MCS-0337,DC03,Brisbane North DC,Distribution Centre,507,170,337,0,
+MCS-0337-DC04,MCS-0337,DC04,Perth Metro DC,Distribution Centre,325,75,250,0,
+MCS-0337-ST04,MCS-0337,ST04,Ballarat Store,Retail Store,0,0,0,257,2026-11-25
+MCS-0337-ST07,MCS-0337,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0337-ST08,MCS-0337,ST08,Adelaide Store,Retail Store,8,0,8,0,
+MCS-0338-DC01,MCS-0338,DC01,Melbourne West DC,Distribution Centre,33,1,32,0,
+MCS-0338-DC03,MCS-0338,DC03,Brisbane North DC,Distribution Centre,60,12,48,0,
+MCS-0338-DC04,MCS-0338,DC04,Perth Metro DC,Distribution Centre,423,19,404,174,2026-09-30
+MCS-0338-ST02,MCS-0338,ST02,Dandenong Store,Retail Store,5,1,4,0,
+MCS-0338-ST04,MCS-0338,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0338-ST06,MCS-0338,ST06,Newcastle Store,Retail Store,0,0,0,178,2026-10-07
+MCS-0339-DC01,MCS-0339,DC01,Melbourne West DC,Distribution Centre,125,25,100,397,2026-10-21
+MCS-0339-DC03,MCS-0339,DC03,Brisbane North DC,Distribution Centre,186,49,137,0,
+MCS-0339-DC04,MCS-0339,DC04,Perth Metro DC,Distribution Centre,73,22,51,0,
+MCS-0339-ST01,MCS-0339,ST01,Melbourne CBD Store,Retail Store,8,1,7,0,
+MCS-0339-ST05,MCS-0339,ST05,Parramatta Store,Retail Store,0,0,0,278,2026-11-04
+MCS-0339-ST06,MCS-0339,ST06,Newcastle Store,Retail Store,0,0,0,140,2026-10-21
+MCS-0340-DC01,MCS-0340,DC01,Melbourne West DC,Distribution Centre,91,26,65,0,
+MCS-0340-DC02,MCS-0340,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0340-DC04,MCS-0340,DC04,Perth Metro DC,Distribution Centre,409,33,376,147,2026-11-11
+MCS-0340-ST01,MCS-0340,ST01,Melbourne CBD Store,Retail Store,0,0,0,291,2026-11-25
+MCS-0340-ST02,MCS-0340,ST02,Dandenong Store,Retail Store,5,0,5,280,2026-11-18
+MCS-0340-ST06,MCS-0340,ST06,Newcastle Store,Retail Store,11,1,10,272,2026-11-25
+MCS-0341-DC03,MCS-0341,DC03,Brisbane North DC,Distribution Centre,30,10,20,0,
+MCS-0341-DC04,MCS-0341,DC04,Perth Metro DC,Distribution Centre,0,0,0,271,2026-11-25
+MCS-0341-ST04,MCS-0341,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0341-ST05,MCS-0341,ST05,Parramatta Store,Retail Store,0,0,0,358,2026-12-09
+MCS-0342-DC03,MCS-0342,DC03,Brisbane North DC,Distribution Centre,9,1,8,208,2027-02-10
+MCS-0342-ST02,MCS-0342,ST02,Dandenong Store,Retail Store,0,0,0,188,2027-02-10
+MCS-0342-ST03,MCS-0342,ST03,Geelong Store,Retail Store,0,0,0,341,2027-01-20
+MCS-0343-DC02,MCS-0343,DC02,Sydney Central DC,Distribution Centre,116,4,112,228,2026-10-21
+MCS-0343-ST03,MCS-0343,ST03,Geelong Store,Retail Store,7,0,7,247,2026-10-14
+MCS-0343-ST04,MCS-0343,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0343-ST05,MCS-0343,ST05,Parramatta Store,Retail Store,0,0,0,104,2026-10-14
+MCS-0343-ST06,MCS-0343,ST06,Newcastle Store,Retail Store,9,1,8,0,
+MCS-0344-DC01,MCS-0344,DC01,Melbourne West DC,Distribution Centre,299,104,195,0,
+MCS-0344-DC03,MCS-0344,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0344-DC04,MCS-0344,DC04,Perth Metro DC,Distribution Centre,271,15,256,0,
+MCS-0344-ST03,MCS-0344,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0345-DC01,MCS-0345,DC01,Melbourne West DC,Distribution Centre,0,0,0,73,2027-03-03
+MCS-0345-DC04,MCS-0345,DC04,Perth Metro DC,Distribution Centre,0,0,0,273,2027-03-24
+MCS-0345-ST04,MCS-0345,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0345-ST06,MCS-0345,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0345-ST07,MCS-0345,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0345-ST08,MCS-0345,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0346-DC01,MCS-0346,DC01,Melbourne West DC,Distribution Centre,488,69,419,0,
+MCS-0346-DC03,MCS-0346,DC03,Brisbane North DC,Distribution Centre,241,53,188,0,
+MCS-0346-ST03,MCS-0346,ST03,Geelong Store,Retail Store,0,0,0,171,2026-10-21
+MCS-0346-ST06,MCS-0346,ST06,Newcastle Store,Retail Store,0,0,0,128,2026-09-30
+MCS-0346-ST08,MCS-0346,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0347-DC01,MCS-0347,DC01,Melbourne West DC,Distribution Centre,233,67,166,0,
+MCS-0347-DC02,MCS-0347,DC02,Sydney Central DC,Distribution Centre,107,12,95,0,
+MCS-0347-DC04,MCS-0347,DC04,Perth Metro DC,Distribution Centre,26,3,23,0,
+MCS-0347-ST06,MCS-0347,ST06,Newcastle Store,Retail Store,11,2,9,123,2026-10-28
+MCS-0347-ST07,MCS-0347,ST07,Gold Coast Store,Retail Store,2,0,2,0,
+MCS-0348-DC02,MCS-0348,DC02,Sydney Central DC,Distribution Centre,227,25,202,0,
+MCS-0348-DC04,MCS-0348,DC04,Perth Metro DC,Distribution Centre,467,152,315,0,
+MCS-0348-ST03,MCS-0348,ST03,Geelong Store,Retail Store,13,2,11,0,
+MCS-0348-ST08,MCS-0348,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0349-DC01,MCS-0349,DC01,Melbourne West DC,Distribution Centre,203,63,140,0,
+MCS-0349-DC02,MCS-0349,DC02,Sydney Central DC,Distribution Centre,138,39,99,0,
+MCS-0349-DC03,MCS-0349,DC03,Brisbane North DC,Distribution Centre,259,18,241,132,2026-10-21
+MCS-0349-ST02,MCS-0349,ST02,Dandenong Store,Retail Store,12,0,12,129,2026-10-28
+MCS-0349-ST04,MCS-0349,ST04,Ballarat Store,Retail Store,3,1,2,0,
+MCS-0350-DC01,MCS-0350,DC01,Melbourne West DC,Distribution Centre,8,2,6,0,
+MCS-0350-DC02,MCS-0350,DC02,Sydney Central DC,Distribution Centre,53,16,37,0,
+MCS-0350-DC03,MCS-0350,DC03,Brisbane North DC,Distribution Centre,504,67,437,0,
+MCS-0350-ST06,MCS-0350,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0350-ST08,MCS-0350,ST08,Adelaide Store,Retail Store,14,3,11,269,2026-12-02
+MCS-0351-DC01,MCS-0351,DC01,Melbourne West DC,Distribution Centre,431,108,323,0,
+MCS-0351-DC04,MCS-0351,DC04,Perth Metro DC,Distribution Centre,303,34,269,65,2026-10-28
+MCS-0351-ST01,MCS-0351,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0351-ST02,MCS-0351,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0352-DC03,MCS-0352,DC03,Brisbane North DC,Distribution Centre,463,73,390,0,
+MCS-0352-DC04,MCS-0352,DC04,Perth Metro DC,Distribution Centre,101,0,101,0,
+MCS-0352-ST01,MCS-0352,ST01,Melbourne CBD Store,Retail Store,0,0,0,348,2026-10-07
+MCS-0352-ST04,MCS-0352,ST04,Ballarat Store,Retail Store,13,3,10,0,
+MCS-0353-DC02,MCS-0353,DC02,Sydney Central DC,Distribution Centre,107,34,73,129,2026-10-14
+MCS-0353-DC04,MCS-0353,DC04,Perth Metro DC,Distribution Centre,293,32,261,0,
+MCS-0353-ST08,MCS-0353,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0354-DC02,MCS-0354,DC02,Sydney Central DC,Distribution Centre,173,28,145,0,
+MCS-0354-DC03,MCS-0354,DC03,Brisbane North DC,Distribution Centre,289,64,225,0,
+MCS-0354-ST01,MCS-0354,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0355-DC01,MCS-0355,DC01,Melbourne West DC,Distribution Centre,58,7,51,0,
+MCS-0355-DC02,MCS-0355,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0355-DC03,MCS-0355,DC03,Brisbane North DC,Distribution Centre,0,0,0,235,2026-10-28
+MCS-0355-DC04,MCS-0355,DC04,Perth Metro DC,Distribution Centre,31,3,28,56,2026-10-21
+MCS-0355-ST04,MCS-0355,ST04,Ballarat Store,Retail Store,0,0,0,393,2026-10-21
+MCS-0355-ST05,MCS-0355,ST05,Parramatta Store,Retail Store,3,1,2,193,2026-10-21
+MCS-0355-ST07,MCS-0355,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0355-ST08,MCS-0355,ST08,Adelaide Store,Retail Store,2,0,2,0,
+MCS-0356-DC02,MCS-0356,DC02,Sydney Central DC,Distribution Centre,140,7,133,0,
+MCS-0356-DC03,MCS-0356,DC03,Brisbane North DC,Distribution Centre,263,72,191,255,2026-10-07
+MCS-0356-DC04,MCS-0356,DC04,Perth Metro DC,Distribution Centre,347,18,329,0,
+MCS-0356-ST03,MCS-0356,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0356-ST05,MCS-0356,ST05,Parramatta Store,Retail Store,4,1,3,0,
+MCS-0356-ST08,MCS-0356,ST08,Adelaide Store,Retail Store,8,1,7,0,
+MCS-0357-DC01,MCS-0357,DC01,Melbourne West DC,Distribution Centre,430,149,281,181,2026-10-21
+MCS-0357-DC02,MCS-0357,DC02,Sydney Central DC,Distribution Centre,303,32,271,0,
+MCS-0357-ST01,MCS-0357,ST01,Melbourne CBD Store,Retail Store,8,1,7,374,2026-10-28
+MCS-0358-DC01,MCS-0358,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0358-DC02,MCS-0358,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0358-DC03,MCS-0358,DC03,Brisbane North DC,Distribution Centre,37,4,33,0,
+MCS-0358-ST02,MCS-0358,ST02,Dandenong Store,Retail Store,0,0,0,165,2026-12-09
+MCS-0358-ST05,MCS-0358,ST05,Parramatta Store,Retail Store,10,2,8,0,
+MCS-0358-ST07,MCS-0358,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0359-DC03,MCS-0359,DC03,Brisbane North DC,Distribution Centre,115,7,108,0,
+MCS-0359-DC04,MCS-0359,DC04,Perth Metro DC,Distribution Centre,467,99,368,0,
+MCS-0359-ST01,MCS-0359,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0359-ST07,MCS-0359,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0360-DC01,MCS-0360,DC01,Melbourne West DC,Distribution Centre,52,10,42,82,2026-10-21
+MCS-0360-DC03,MCS-0360,DC03,Brisbane North DC,Distribution Centre,330,100,230,0,
+MCS-0360-ST04,MCS-0360,ST04,Ballarat Store,Retail Store,0,0,0,56,2026-10-28
+MCS-0360-ST08,MCS-0360,ST08,Adelaide Store,Retail Store,0,0,0,378,2026-11-04
+MCS-0361-DC01,MCS-0361,DC01,Melbourne West DC,Distribution Centre,196,35,161,0,
+MCS-0361-DC02,MCS-0361,DC02,Sydney Central DC,Distribution Centre,426,67,359,0,
+MCS-0361-DC03,MCS-0361,DC03,Brisbane North DC,Distribution Centre,337,95,242,0,
+MCS-0361-DC04,MCS-0361,DC04,Perth Metro DC,Distribution Centre,360,58,302,157,2026-10-28
+MCS-0361-ST01,MCS-0361,ST01,Melbourne CBD Store,Retail Store,13,1,12,115,2026-10-07
+MCS-0361-ST04,MCS-0361,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0361-ST05,MCS-0361,ST05,Parramatta Store,Retail Store,4,0,4,0,
+MCS-0361-ST06,MCS-0361,ST06,Newcastle Store,Retail Store,0,0,0,67,2026-10-21
+MCS-0362-DC01,MCS-0362,DC01,Melbourne West DC,Distribution Centre,385,9,376,0,
+MCS-0362-DC04,MCS-0362,DC04,Perth Metro DC,Distribution Centre,158,45,113,0,
+MCS-0362-ST03,MCS-0362,ST03,Geelong Store,Retail Store,1,0,1,0,
+MCS-0362-ST04,MCS-0362,ST04,Ballarat Store,Retail Store,10,3,7,0,
+MCS-0362-ST05,MCS-0362,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0363-DC01,MCS-0363,DC01,Melbourne West DC,Distribution Centre,295,55,240,0,
+MCS-0363-ST01,MCS-0363,ST01,Melbourne CBD Store,Retail Store,0,0,0,100,2026-10-21
+MCS-0363-ST05,MCS-0363,ST05,Parramatta Store,Retail Store,12,2,10,262,2026-10-28
+MCS-0363-ST06,MCS-0363,ST06,Newcastle Store,Retail Store,1,0,1,0,
+MCS-0364-DC01,MCS-0364,DC01,Melbourne West DC,Distribution Centre,0,0,0,72,2026-11-04
+MCS-0364-DC02,MCS-0364,DC02,Sydney Central DC,Distribution Centre,54,3,51,280,2026-11-04
+MCS-0364-DC04,MCS-0364,DC04,Perth Metro DC,Distribution Centre,28,0,28,0,
+MCS-0365-DC01,MCS-0365,DC01,Melbourne West DC,Distribution Centre,387,42,345,0,
+MCS-0365-DC04,MCS-0365,DC04,Perth Metro DC,Distribution Centre,248,20,228,0,
+MCS-0366-DC03,MCS-0366,DC03,Brisbane North DC,Distribution Centre,457,98,359,0,
+MCS-0366-DC04,MCS-0366,DC04,Perth Metro DC,Distribution Centre,450,21,429,335,2026-11-11
+MCS-0367-DC02,MCS-0367,DC02,Sydney Central DC,Distribution Centre,403,98,305,0,
+MCS-0367-DC03,MCS-0367,DC03,Brisbane North DC,Distribution Centre,321,49,272,0,
+MCS-0367-DC04,MCS-0367,DC04,Perth Metro DC,Distribution Centre,241,58,183,0,
+MCS-0367-ST02,MCS-0367,ST02,Dandenong Store,Retail Store,9,3,6,0,
+MCS-0367-ST03,MCS-0367,ST03,Geelong Store,Retail Store,0,0,0,113,2026-10-07
+MCS-0368-DC02,MCS-0368,DC02,Sydney Central DC,Distribution Centre,492,158,334,0,
+MCS-0368-DC03,MCS-0368,DC03,Brisbane North DC,Distribution Centre,417,93,324,0,
+MCS-0368-DC04,MCS-0368,DC04,Perth Metro DC,Distribution Centre,206,58,148,0,
+MCS-0368-ST01,MCS-0368,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0369-DC01,MCS-0369,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0369-DC04,MCS-0369,DC04,Perth Metro DC,Distribution Centre,39,9,30,50,2026-10-21
+MCS-0369-ST01,MCS-0369,ST01,Melbourne CBD Store,Retail Store,7,2,5,59,2026-11-04
+MCS-0369-ST03,MCS-0369,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0369-ST06,MCS-0369,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0369-ST07,MCS-0369,ST07,Gold Coast Store,Retail Store,13,2,11,0,
+MCS-0370-DC03,MCS-0370,DC03,Brisbane North DC,Distribution Centre,0,0,0,204,2027-02-10
+MCS-0370-ST06,MCS-0370,ST06,Newcastle Store,Retail Store,1,0,1,0,
+MCS-0370-ST07,MCS-0370,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0370-ST08,MCS-0370,ST08,Adelaide Store,Retail Store,0,0,0,225,2027-02-10
+MCS-0371-DC02,MCS-0371,DC02,Sydney Central DC,Distribution Centre,94,4,90,140,2026-11-04
+MCS-0371-DC03,MCS-0371,DC03,Brisbane North DC,Distribution Centre,86,5,81,0,
+MCS-0371-DC04,MCS-0371,DC04,Perth Metro DC,Distribution Centre,383,95,288,0,
+MCS-0371-ST02,MCS-0371,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0371-ST04,MCS-0371,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0371-ST08,MCS-0371,ST08,Adelaide Store,Retail Store,4,0,4,0,
+MCS-0372-DC01,MCS-0372,DC01,Melbourne West DC,Distribution Centre,324,14,310,71,2026-10-07
+MCS-0372-ST08,MCS-0372,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0373-DC01,MCS-0373,DC01,Melbourne West DC,Distribution Centre,167,35,132,0,
+MCS-0373-DC02,MCS-0373,DC02,Sydney Central DC,Distribution Centre,229,35,194,0,
+MCS-0373-DC04,MCS-0373,DC04,Perth Metro DC,Distribution Centre,174,9,165,0,
+MCS-0374-DC02,MCS-0374,DC02,Sydney Central DC,Distribution Centre,191,6,185,0,
+MCS-0374-DC04,MCS-0374,DC04,Perth Metro DC,Distribution Centre,44,2,42,0,
+MCS-0374-ST01,MCS-0374,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0374-ST05,MCS-0374,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0374-ST06,MCS-0374,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0375-DC01,MCS-0375,DC01,Melbourne West DC,Distribution Centre,439,52,387,0,
+MCS-0375-DC02,MCS-0375,DC02,Sydney Central DC,Distribution Centre,24,5,19,274,2026-09-23
+MCS-0375-DC04,MCS-0375,DC04,Perth Metro DC,Distribution Centre,297,85,212,0,
+MCS-0375-ST04,MCS-0375,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0375-ST06,MCS-0375,ST06,Newcastle Store,Retail Store,4,1,3,0,
+MCS-0376-DC01,MCS-0376,DC01,Melbourne West DC,Distribution Centre,57,19,38,0,
+MCS-0376-ST01,MCS-0376,ST01,Melbourne CBD Store,Retail Store,0,0,0,79,2026-11-11
+MCS-0377-DC02,MCS-0377,DC02,Sydney Central DC,Distribution Centre,213,67,146,0,
+MCS-0377-DC04,MCS-0377,DC04,Perth Metro DC,Distribution Centre,310,22,288,0,
+MCS-0377-ST01,MCS-0377,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0377-ST02,MCS-0377,ST02,Dandenong Store,Retail Store,7,0,7,0,
+MCS-0377-ST03,MCS-0377,ST03,Geelong Store,Retail Store,0,0,0,88,2026-11-04
+MCS-0377-ST07,MCS-0377,ST07,Gold Coast Store,Retail Store,0,0,0,396,2026-11-25
+MCS-0378-DC01,MCS-0378,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0378-DC02,MCS-0378,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0378-DC04,MCS-0378,DC04,Perth Metro DC,Distribution Centre,0,0,0,297,2027-01-27
+MCS-0378-ST02,MCS-0378,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0378-ST04,MCS-0378,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0378-ST06,MCS-0378,ST06,Newcastle Store,Retail Store,0,0,0,132,2027-02-24
+MCS-0378-ST08,MCS-0378,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0379-DC04,MCS-0379,DC04,Perth Metro DC,Distribution Centre,157,35,122,175,2026-11-11
+MCS-0379-ST01,MCS-0379,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0379-ST03,MCS-0379,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0379-ST05,MCS-0379,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0379-ST08,MCS-0379,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0380-DC01,MCS-0380,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0380-DC02,MCS-0380,DC02,Sydney Central DC,Distribution Centre,0,0,0,298,2026-12-02
+MCS-0380-DC03,MCS-0380,DC03,Brisbane North DC,Distribution Centre,35,3,32,364,2026-12-09
+MCS-0380-DC04,MCS-0380,DC04,Perth Metro DC,Distribution Centre,4,0,4,0,
+MCS-0380-ST03,MCS-0380,ST03,Geelong Store,Retail Store,6,1,5,0,
+MCS-0380-ST06,MCS-0380,ST06,Newcastle Store,Retail Store,6,1,5,0,
+MCS-0380-ST07,MCS-0380,ST07,Gold Coast Store,Retail Store,14,2,12,0,
+MCS-0381-DC01,MCS-0381,DC01,Melbourne West DC,Distribution Centre,22,2,20,0,
+MCS-0381-DC03,MCS-0381,DC03,Brisbane North DC,Distribution Centre,446,88,358,0,
+MCS-0381-ST01,MCS-0381,ST01,Melbourne CBD Store,Retail Store,0,0,0,391,2026-10-07
+MCS-0381-ST04,MCS-0381,ST04,Ballarat Store,Retail Store,4,0,4,329,2026-09-23
+MCS-0382-DC01,MCS-0382,DC01,Melbourne West DC,Distribution Centre,77,0,77,317,2026-10-21
+MCS-0382-DC04,MCS-0382,DC04,Perth Metro DC,Distribution Centre,138,17,121,233,2026-10-21
+MCS-0382-ST01,MCS-0382,ST01,Melbourne CBD Store,Retail Store,7,2,5,177,2026-10-14
+MCS-0382-ST08,MCS-0382,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0383-DC03,MCS-0383,DC03,Brisbane North DC,Distribution Centre,225,45,180,175,2026-11-04
+MCS-0383-DC04,MCS-0383,DC04,Perth Metro DC,Distribution Centre,112,13,99,0,
+MCS-0383-ST02,MCS-0383,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0383-ST04,MCS-0383,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0383-ST05,MCS-0383,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0383-ST06,MCS-0383,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0384-DC02,MCS-0384,DC02,Sydney Central DC,Distribution Centre,6,2,4,86,2026-10-28
+MCS-0384-DC03,MCS-0384,DC03,Brisbane North DC,Distribution Centre,85,4,81,0,
+MCS-0384-DC04,MCS-0384,DC04,Perth Metro DC,Distribution Centre,20,5,15,95,2026-10-21
+MCS-0385-DC02,MCS-0385,DC02,Sydney Central DC,Distribution Centre,455,116,339,0,
+MCS-0385-DC03,MCS-0385,DC03,Brisbane North DC,Distribution Centre,57,8,49,0,
+MCS-0385-DC04,MCS-0385,DC04,Perth Metro DC,Distribution Centre,151,13,138,151,2026-10-07
+MCS-0386-DC01,MCS-0386,DC01,Melbourne West DC,Distribution Centre,84,23,61,257,2026-10-21
+MCS-0386-DC03,MCS-0386,DC03,Brisbane North DC,Distribution Centre,425,37,388,0,
+MCS-0386-DC04,MCS-0386,DC04,Perth Metro DC,Distribution Centre,380,76,304,379,2026-11-04
+MCS-0386-ST05,MCS-0386,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0387-DC01,MCS-0387,DC01,Melbourne West DC,Distribution Centre,44,7,37,0,
+MCS-0387-ST01,MCS-0387,ST01,Melbourne CBD Store,Retail Store,9,0,9,0,
+MCS-0387-ST02,MCS-0387,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0388-DC01,MCS-0388,DC01,Melbourne West DC,Distribution Centre,120,24,96,0,
+MCS-0388-ST01,MCS-0388,ST01,Melbourne CBD Store,Retail Store,0,0,0,270,2026-10-28
+MCS-0388-ST02,MCS-0388,ST02,Dandenong Store,Retail Store,0,0,0,107,2026-10-28
+MCS-0388-ST03,MCS-0388,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0388-ST05,MCS-0388,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0388-ST07,MCS-0388,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0389-DC02,MCS-0389,DC02,Sydney Central DC,Distribution Centre,0,0,0,309,2027-02-10
+MCS-0389-DC03,MCS-0389,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0389-DC04,MCS-0389,DC04,Perth Metro DC,Distribution Centre,0,0,0,212,2027-02-24
+MCS-0389-ST06,MCS-0389,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0390-DC02,MCS-0390,DC02,Sydney Central DC,Distribution Centre,1,0,1,0,
+MCS-0390-ST08,MCS-0390,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0391-DC01,MCS-0391,DC01,Melbourne West DC,Distribution Centre,126,40,86,0,
+MCS-0391-DC02,MCS-0391,DC02,Sydney Central DC,Distribution Centre,502,130,372,54,2026-10-21
+MCS-0391-DC03,MCS-0391,DC03,Brisbane North DC,Distribution Centre,29,5,24,0,
+MCS-0391-DC04,MCS-0391,DC04,Perth Metro DC,Distribution Centre,237,4,233,248,2026-11-04
+MCS-0391-ST03,MCS-0391,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0391-ST05,MCS-0391,ST05,Parramatta Store,Retail Store,0,0,0,311,2026-11-11
+MCS-0391-ST07,MCS-0391,ST07,Gold Coast Store,Retail Store,10,2,8,395,2026-10-21
+MCS-0392-DC02,MCS-0392,DC02,Sydney Central DC,Distribution Centre,149,17,132,0,
+MCS-0392-DC03,MCS-0392,DC03,Brisbane North DC,Distribution Centre,5,1,4,193,2026-10-14
+MCS-0392-DC04,MCS-0392,DC04,Perth Metro DC,Distribution Centre,515,21,494,0,
+MCS-0392-ST03,MCS-0392,ST03,Geelong Store,Retail Store,0,0,0,317,2026-10-07
+MCS-0393-ST02,MCS-0393,ST02,Dandenong Store,Retail Store,9,0,9,46,2026-10-21
+MCS-0393-ST07,MCS-0393,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0393-ST08,MCS-0393,ST08,Adelaide Store,Retail Store,1,0,1,0,
+MCS-0394-DC01,MCS-0394,DC01,Melbourne West DC,Distribution Centre,0,0,0,0,
+MCS-0394-DC04,MCS-0394,DC04,Perth Metro DC,Distribution Centre,0,0,0,337,2027-03-10
+MCS-0394-ST01,MCS-0394,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0394-ST02,MCS-0394,ST02,Dandenong Store,Retail Store,4,1,3,0,
+MCS-0394-ST04,MCS-0394,ST04,Ballarat Store,Retail Store,10,0,10,0,
+MCS-0394-ST06,MCS-0394,ST06,Newcastle Store,Retail Store,13,1,12,0,
+MCS-0394-ST07,MCS-0394,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0395-DC03,MCS-0395,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0395-ST02,MCS-0395,ST02,Dandenong Store,Retail Store,12,4,8,0,
+MCS-0395-ST05,MCS-0395,ST05,Parramatta Store,Retail Store,8,0,8,58,2027-01-06
+MCS-0396-DC03,MCS-0396,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0396-DC04,MCS-0396,DC04,Perth Metro DC,Distribution Centre,5,1,4,0,
+MCS-0396-ST01,MCS-0396,ST01,Melbourne CBD Store,Retail Store,11,2,9,0,
+MCS-0396-ST02,MCS-0396,ST02,Dandenong Store,Retail Store,11,0,11,0,
+MCS-0396-ST05,MCS-0396,ST05,Parramatta Store,Retail Store,0,0,0,214,2026-12-16
+MCS-0396-ST06,MCS-0396,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0396-ST07,MCS-0396,ST07,Gold Coast Store,Retail Store,13,4,9,60,2026-12-30
+MCS-0397-DC02,MCS-0397,DC02,Sydney Central DC,Distribution Centre,112,27,85,0,
+MCS-0397-DC03,MCS-0397,DC03,Brisbane North DC,Distribution Centre,99,25,74,0,
+MCS-0397-DC04,MCS-0397,DC04,Perth Metro DC,Distribution Centre,162,50,112,0,
+MCS-0398-DC01,MCS-0398,DC01,Melbourne West DC,Distribution Centre,254,60,194,0,
+MCS-0398-DC04,MCS-0398,DC04,Perth Metro DC,Distribution Centre,186,2,184,0,
+MCS-0398-ST02,MCS-0398,ST02,Dandenong Store,Retail Store,8,2,6,0,
+MCS-0399-DC04,MCS-0399,DC04,Perth Metro DC,Distribution Centre,369,84,285,0,
+MCS-0399-ST04,MCS-0399,ST04,Ballarat Store,Retail Store,0,0,0,71,2026-10-07
+MCS-0400-DC01,MCS-0400,DC01,Melbourne West DC,Distribution Centre,24,6,18,0,
+MCS-0400-DC03,MCS-0400,DC03,Brisbane North DC,Distribution Centre,47,0,47,0,
+MCS-0400-DC04,MCS-0400,DC04,Perth Metro DC,Distribution Centre,48,4,44,0,
+MCS-0400-ST01,MCS-0400,ST01,Melbourne CBD Store,Retail Store,0,0,0,312,2026-10-28
+MCS-0400-ST05,MCS-0400,ST05,Parramatta Store,Retail Store,10,2,8,0,
+MCS-0400-ST07,MCS-0400,ST07,Gold Coast Store,Retail Store,9,1,8,0,
+MCS-0400-ST08,MCS-0400,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0401-DC02,MCS-0401,DC02,Sydney Central DC,Distribution Centre,461,151,310,0,
+MCS-0401-DC03,MCS-0401,DC03,Brisbane North DC,Distribution Centre,199,47,152,0,
+MCS-0401-ST01,MCS-0401,ST01,Melbourne CBD Store,Retail Store,0,0,0,216,2026-10-21
+MCS-0401-ST05,MCS-0401,ST05,Parramatta Store,Retail Store,0,0,0,79,2026-10-14
+MCS-0401-ST06,MCS-0401,ST06,Newcastle Store,Retail Store,3,0,3,0,
+MCS-0402-DC01,MCS-0402,DC01,Melbourne West DC,Distribution Centre,216,18,198,0,
+MCS-0402-DC02,MCS-0402,DC02,Sydney Central DC,Distribution Centre,405,52,353,372,2026-11-11
+MCS-0402-DC03,MCS-0402,DC03,Brisbane North DC,Distribution Centre,89,31,58,0,
+MCS-0402-ST04,MCS-0402,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0402-ST05,MCS-0402,ST05,Parramatta Store,Retail Store,4,1,3,0,
+MCS-0402-ST08,MCS-0402,ST08,Adelaide Store,Retail Store,0,0,0,179,2026-10-28
+MCS-0403-DC02,MCS-0403,DC02,Sydney Central DC,Distribution Centre,7,1,6,0,
+MCS-0403-ST01,MCS-0403,ST01,Melbourne CBD Store,Retail Store,7,2,5,195,2026-11-04
+MCS-0403-ST03,MCS-0403,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0403-ST05,MCS-0403,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0403-ST06,MCS-0403,ST06,Newcastle Store,Retail Store,12,1,11,306,2026-10-07
+MCS-0403-ST08,MCS-0403,ST08,Adelaide Store,Retail Store,7,2,5,0,
+MCS-0404-ST01,MCS-0404,ST01,Melbourne CBD Store,Retail Store,0,0,0,195,2026-09-30
+MCS-0404-ST04,MCS-0404,ST04,Ballarat Store,Retail Store,7,1,6,0,
+MCS-0404-ST08,MCS-0404,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0405-ST08,MCS-0405,ST08,Adelaide Store,Retail Store,7,1,6,0,
+MCS-0406-DC01,MCS-0406,DC01,Melbourne West DC,Distribution Centre,465,32,433,0,
+MCS-0406-DC04,MCS-0406,DC04,Perth Metro DC,Distribution Centre,133,20,113,0,
+MCS-0406-ST04,MCS-0406,ST04,Ballarat Store,Retail Store,0,0,0,102,2026-10-28
+MCS-0406-ST06,MCS-0406,ST06,Newcastle Store,Retail Store,0,0,0,189,2026-10-07
+MCS-0406-ST07,MCS-0406,ST07,Gold Coast Store,Retail Store,14,0,14,162,2026-10-14
+MCS-0407-DC01,MCS-0407,DC01,Melbourne West DC,Distribution Centre,388,126,262,0,
+MCS-0407-DC04,MCS-0407,DC04,Perth Metro DC,Distribution Centre,371,85,286,0,
+MCS-0407-ST01,MCS-0407,ST01,Melbourne CBD Store,Retail Store,8,1,7,0,
+MCS-0407-ST02,MCS-0407,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0407-ST03,MCS-0407,ST03,Geelong Store,Retail Store,6,2,4,268,2026-10-28
+MCS-0407-ST07,MCS-0407,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0407-ST08,MCS-0407,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0408-DC01,MCS-0408,DC01,Melbourne West DC,Distribution Centre,463,14,449,89,2026-10-07
+MCS-0408-DC02,MCS-0408,DC02,Sydney Central DC,Distribution Centre,370,76,294,326,2026-10-14
+MCS-0408-DC04,MCS-0408,DC04,Perth Metro DC,Distribution Centre,137,31,106,0,
+MCS-0408-ST07,MCS-0408,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0408-ST08,MCS-0408,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0409-DC01,MCS-0409,DC01,Melbourne West DC,Distribution Centre,82,7,75,170,2026-09-30
+MCS-0409-DC02,MCS-0409,DC02,Sydney Central DC,Distribution Centre,74,2,72,0,
+MCS-0409-DC03,MCS-0409,DC03,Brisbane North DC,Distribution Centre,410,12,398,0,
+MCS-0409-DC04,MCS-0409,DC04,Perth Metro DC,Distribution Centre,256,69,187,0,
+MCS-0409-ST06,MCS-0409,ST06,Newcastle Store,Retail Store,0,0,0,208,2026-10-14
+MCS-0409-ST08,MCS-0409,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0410-DC03,MCS-0410,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0410-DC04,MCS-0410,DC04,Perth Metro DC,Distribution Centre,15,2,13,327,2026-12-09
+MCS-0410-ST01,MCS-0410,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0411-DC03,MCS-0411,DC03,Brisbane North DC,Distribution Centre,395,126,269,0,
+MCS-0411-ST01,MCS-0411,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0412-DC01,MCS-0412,DC01,Melbourne West DC,Distribution Centre,284,81,203,0,
+MCS-0412-DC02,MCS-0412,DC02,Sydney Central DC,Distribution Centre,481,132,349,0,
+MCS-0412-ST01,MCS-0412,ST01,Melbourne CBD Store,Retail Store,0,0,0,147,2026-10-14
+MCS-0412-ST03,MCS-0412,ST03,Geelong Store,Retail Store,5,1,4,0,
+MCS-0412-ST05,MCS-0412,ST05,Parramatta Store,Retail Store,14,3,11,284,2026-10-07
+MCS-0413-DC01,MCS-0413,DC01,Melbourne West DC,Distribution Centre,56,2,54,134,2026-10-21
+MCS-0413-DC02,MCS-0413,DC02,Sydney Central DC,Distribution Centre,0,0,0,53,2026-11-04
+MCS-0413-DC04,MCS-0413,DC04,Perth Metro DC,Distribution Centre,57,1,56,0,
+MCS-0413-ST02,MCS-0413,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0413-ST04,MCS-0413,ST04,Ballarat Store,Retail Store,5,0,5,0,
+MCS-0413-ST05,MCS-0413,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0413-ST06,MCS-0413,ST06,Newcastle Store,Retail Store,11,1,10,0,
+MCS-0414-DC04,MCS-0414,DC04,Perth Metro DC,Distribution Centre,424,109,315,0,
+MCS-0414-ST02,MCS-0414,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0414-ST03,MCS-0414,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0415-DC01,MCS-0415,DC01,Melbourne West DC,Distribution Centre,82,12,70,161,2026-11-04
+MCS-0415-DC02,MCS-0415,DC02,Sydney Central DC,Distribution Centre,492,139,353,0,
+MCS-0415-DC03,MCS-0415,DC03,Brisbane North DC,Distribution Centre,350,122,228,0,
+MCS-0415-ST08,MCS-0415,ST08,Adelaide Store,Retail Store,5,0,5,211,2026-11-18
+MCS-0416-DC01,MCS-0416,DC01,Melbourne West DC,Distribution Centre,72,2,70,0,
+MCS-0416-ST01,MCS-0416,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0416-ST02,MCS-0416,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0416-ST07,MCS-0416,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0416-ST08,MCS-0416,ST08,Adelaide Store,Retail Store,0,0,0,89,2026-10-07
+MCS-0417-DC02,MCS-0417,DC02,Sydney Central DC,Distribution Centre,123,8,115,281,2026-10-07
+MCS-0417-ST01,MCS-0417,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0417-ST08,MCS-0417,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0418-DC01,MCS-0418,DC01,Melbourne West DC,Distribution Centre,256,48,208,245,2026-11-11
+MCS-0418-ST06,MCS-0418,ST06,Newcastle Store,Retail Store,0,0,0,279,2026-10-21
+MCS-0418-ST07,MCS-0418,ST07,Gold Coast Store,Retail Store,0,0,0,366,2026-10-21
+MCS-0418-ST08,MCS-0418,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0419-DC01,MCS-0419,DC01,Melbourne West DC,Distribution Centre,296,82,214,0,
+MCS-0419-DC04,MCS-0419,DC04,Perth Metro DC,Distribution Centre,245,9,236,0,
+MCS-0420-DC03,MCS-0420,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0420-DC04,MCS-0420,DC04,Perth Metro DC,Distribution Centre,0,0,0,347,2027-02-17
+MCS-0420-ST04,MCS-0420,ST04,Ballarat Store,Retail Store,3,0,3,0,
+MCS-0421-DC01,MCS-0421,DC01,Melbourne West DC,Distribution Centre,322,106,216,0,
+MCS-0421-ST02,MCS-0421,ST02,Dandenong Store,Retail Store,3,0,3,0,
+MCS-0421-ST06,MCS-0421,ST06,Newcastle Store,Retail Store,12,4,8,192,2026-11-04
+MCS-0421-ST08,MCS-0421,ST08,Adelaide Store,Retail Store,0,0,0,198,2026-11-04
+MCS-0422-ST07,MCS-0422,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0422-ST08,MCS-0422,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0423-DC01,MCS-0423,DC01,Melbourne West DC,Distribution Centre,330,89,241,0,
+MCS-0423-DC02,MCS-0423,DC02,Sydney Central DC,Distribution Centre,356,31,325,0,
+MCS-0423-DC03,MCS-0423,DC03,Brisbane North DC,Distribution Centre,444,113,331,0,
+MCS-0423-ST03,MCS-0423,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0423-ST07,MCS-0423,ST07,Gold Coast Store,Retail Store,11,3,8,0,
+MCS-0424-DC01,MCS-0424,DC01,Melbourne West DC,Distribution Centre,246,35,211,306,2026-10-21
+MCS-0424-DC02,MCS-0424,DC02,Sydney Central DC,Distribution Centre,163,27,136,0,
+MCS-0424-DC04,MCS-0424,DC04,Perth Metro DC,Distribution Centre,354,3,351,0,
+MCS-0424-ST01,MCS-0424,ST01,Melbourne CBD Store,Retail Store,0,0,0,332,2026-10-14
+MCS-0424-ST02,MCS-0424,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0424-ST03,MCS-0424,ST03,Geelong Store,Retail Store,0,0,0,144,2026-11-04
+MCS-0424-ST04,MCS-0424,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0424-ST05,MCS-0424,ST05,Parramatta Store,Retail Store,3,1,2,0,
+MCS-0424-ST07,MCS-0424,ST07,Gold Coast Store,Retail Store,10,0,10,262,2026-10-07
+MCS-0425-DC01,MCS-0425,DC01,Melbourne West DC,Distribution Centre,35,10,25,0,
+MCS-0425-DC02,MCS-0425,DC02,Sydney Central DC,Distribution Centre,225,52,173,0,
+MCS-0425-DC03,MCS-0425,DC03,Brisbane North DC,Distribution Centre,342,82,260,0,
+MCS-0426-DC01,MCS-0426,DC01,Melbourne West DC,Distribution Centre,4,1,3,0,
+MCS-0426-DC04,MCS-0426,DC04,Perth Metro DC,Distribution Centre,13,2,11,0,
+MCS-0426-ST03,MCS-0426,ST03,Geelong Store,Retail Store,1,0,1,0,
+MCS-0427-DC01,MCS-0427,DC01,Melbourne West DC,Distribution Centre,54,16,38,91,2026-10-21
+MCS-0427-DC03,MCS-0427,DC03,Brisbane North DC,Distribution Centre,50,15,35,314,2026-10-21
+MCS-0427-ST05,MCS-0427,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0427-ST07,MCS-0427,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0428-DC01,MCS-0428,DC01,Melbourne West DC,Distribution Centre,283,20,263,0,
+MCS-0428-DC02,MCS-0428,DC02,Sydney Central DC,Distribution Centre,330,73,257,347,2026-11-04
+MCS-0428-DC04,MCS-0428,DC04,Perth Metro DC,Distribution Centre,336,18,318,179,2026-11-04
+MCS-0428-ST01,MCS-0428,ST01,Melbourne CBD Store,Retail Store,0,0,0,204,2026-11-04
+MCS-0428-ST04,MCS-0428,ST04,Ballarat Store,Retail Store,4,1,3,0,
+MCS-0429-DC02,MCS-0429,DC02,Sydney Central DC,Distribution Centre,366,67,299,277,2026-09-30
+MCS-0429-DC03,MCS-0429,DC03,Brisbane North DC,Distribution Centre,126,40,86,0,
+MCS-0429-ST02,MCS-0429,ST02,Dandenong Store,Retail Store,10,0,10,0,
+MCS-0429-ST04,MCS-0429,ST04,Ballarat Store,Retail Store,10,0,10,0,
+MCS-0429-ST06,MCS-0429,ST06,Newcastle Store,Retail Store,0,0,0,187,2026-09-30
+MCS-0430-DC03,MCS-0430,DC03,Brisbane North DC,Distribution Centre,31,4,27,0,
+MCS-0430-ST07,MCS-0430,ST07,Gold Coast Store,Retail Store,0,0,0,151,2026-10-28
+MCS-0431-DC01,MCS-0431,DC01,Melbourne West DC,Distribution Centre,408,139,269,0,
+MCS-0431-DC03,MCS-0431,DC03,Brisbane North DC,Distribution Centre,169,40,129,0,
+MCS-0431-DC04,MCS-0431,DC04,Perth Metro DC,Distribution Centre,446,37,409,365,2026-09-30
+MCS-0431-ST02,MCS-0431,ST02,Dandenong Store,Retail Store,7,0,7,0,
+MCS-0431-ST03,MCS-0431,ST03,Geelong Store,Retail Store,13,2,11,0,
+MCS-0431-ST04,MCS-0431,ST04,Ballarat Store,Retail Store,2,0,2,0,
+MCS-0431-ST05,MCS-0431,ST05,Parramatta Store,Retail Store,0,0,0,71,2026-10-14
+MCS-0431-ST06,MCS-0431,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0431-ST07,MCS-0431,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0432-DC03,MCS-0432,DC03,Brisbane North DC,Distribution Centre,103,11,92,0,
+MCS-0432-DC04,MCS-0432,DC04,Perth Metro DC,Distribution Centre,137,41,96,336,2026-11-04
+MCS-0432-ST01,MCS-0432,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0432-ST04,MCS-0432,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0432-ST08,MCS-0432,ST08,Adelaide Store,Retail Store,0,0,0,349,2026-11-11
+MCS-0433-DC01,MCS-0433,DC01,Melbourne West DC,Distribution Centre,384,34,350,0,
+MCS-0433-DC02,MCS-0433,DC02,Sydney Central DC,Distribution Centre,428,34,394,260,2026-11-04
+MCS-0433-ST01,MCS-0433,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0433-ST04,MCS-0433,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0433-ST07,MCS-0433,ST07,Gold Coast Store,Retail Store,5,1,4,0,
+MCS-0433-ST08,MCS-0433,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0434-DC01,MCS-0434,DC01,Melbourne West DC,Distribution Centre,468,40,428,0,
+MCS-0434-DC02,MCS-0434,DC02,Sydney Central DC,Distribution Centre,406,23,383,0,
+MCS-0434-ST01,MCS-0434,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0434-ST05,MCS-0434,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0434-ST06,MCS-0434,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0434-ST07,MCS-0434,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0435-DC01,MCS-0435,DC01,Melbourne West DC,Distribution Centre,323,46,277,274,2026-10-07
+MCS-0435-DC02,MCS-0435,DC02,Sydney Central DC,Distribution Centre,305,50,255,0,
+MCS-0435-DC03,MCS-0435,DC03,Brisbane North DC,Distribution Centre,38,6,32,0,
+MCS-0435-ST03,MCS-0435,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0435-ST08,MCS-0435,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0436-DC02,MCS-0436,DC02,Sydney Central DC,Distribution Centre,381,77,304,0,
+MCS-0436-ST01,MCS-0436,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0436-ST04,MCS-0436,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0436-ST05,MCS-0436,ST05,Parramatta Store,Retail Store,11,1,10,0,
+MCS-0436-ST06,MCS-0436,ST06,Newcastle Store,Retail Store,3,0,3,0,
+MCS-0437-DC03,MCS-0437,DC03,Brisbane North DC,Distribution Centre,123,30,93,0,
+MCS-0437-DC04,MCS-0437,DC04,Perth Metro DC,Distribution Centre,340,68,272,0,
+MCS-0437-ST03,MCS-0437,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0437-ST07,MCS-0437,ST07,Gold Coast Store,Retail Store,0,0,0,399,2026-11-04
+MCS-0438-DC04,MCS-0438,DC04,Perth Metro DC,Distribution Centre,104,24,80,324,2026-09-30
+MCS-0438-ST01,MCS-0438,ST01,Melbourne CBD Store,Retail Store,0,0,0,101,2026-10-07
+MCS-0438-ST03,MCS-0438,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0438-ST04,MCS-0438,ST04,Ballarat Store,Retail Store,0,0,0,73,2026-09-30
+MCS-0439-DC01,MCS-0439,DC01,Melbourne West DC,Distribution Centre,28,8,20,0,
+MCS-0439-DC03,MCS-0439,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0439-DC04,MCS-0439,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0439-ST02,MCS-0439,ST02,Dandenong Store,Retail Store,10,2,8,183,2026-12-23
+MCS-0439-ST03,MCS-0439,ST03,Geelong Store,Retail Store,0,0,0,206,2027-01-06
+MCS-0439-ST04,MCS-0439,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0440-DC03,MCS-0440,DC03,Brisbane North DC,Distribution Centre,183,23,160,0,
+MCS-0440-DC04,MCS-0440,DC04,Perth Metro DC,Distribution Centre,305,36,269,0,
+MCS-0440-ST07,MCS-0440,ST07,Gold Coast Store,Retail Store,14,1,13,49,2026-09-30
+MCS-0441-DC03,MCS-0441,DC03,Brisbane North DC,Distribution Centre,192,50,142,344,2026-09-23
+MCS-0441-DC04,MCS-0441,DC04,Perth Metro DC,Distribution Centre,116,31,85,0,
+MCS-0441-ST01,MCS-0441,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0441-ST03,MCS-0441,ST03,Geelong Store,Retail Store,8,2,6,0,
+MCS-0441-ST05,MCS-0441,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0441-ST07,MCS-0441,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0442-DC01,MCS-0442,DC01,Melbourne West DC,Distribution Centre,463,37,426,0,
+MCS-0442-DC02,MCS-0442,DC02,Sydney Central DC,Distribution Centre,149,11,138,0,
+MCS-0442-DC04,MCS-0442,DC04,Perth Metro DC,Distribution Centre,424,89,335,110,2026-11-11
+MCS-0442-ST01,MCS-0442,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0442-ST08,MCS-0442,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0443-DC02,MCS-0443,DC02,Sydney Central DC,Distribution Centre,295,57,238,0,
+MCS-0443-ST04,MCS-0443,ST04,Ballarat Store,Retail Store,0,0,0,190,2026-10-28
+MCS-0444-DC02,MCS-0444,DC02,Sydney Central DC,Distribution Centre,377,3,374,0,
+MCS-0444-DC03,MCS-0444,DC03,Brisbane North DC,Distribution Centre,313,69,244,0,
+MCS-0444-ST05,MCS-0444,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0444-ST08,MCS-0444,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0445-DC01,MCS-0445,DC01,Melbourne West DC,Distribution Centre,110,29,81,0,
+MCS-0445-DC02,MCS-0445,DC02,Sydney Central DC,Distribution Centre,13,2,11,0,
+MCS-0445-DC04,MCS-0445,DC04,Perth Metro DC,Distribution Centre,448,12,436,265,2026-11-04
+MCS-0445-ST01,MCS-0445,ST01,Melbourne CBD Store,Retail Store,11,3,8,108,2026-10-07
+MCS-0445-ST04,MCS-0445,ST04,Ballarat Store,Retail Store,12,2,10,0,
+MCS-0445-ST07,MCS-0445,ST07,Gold Coast Store,Retail Store,6,1,5,0,
+MCS-0445-ST08,MCS-0445,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0446-DC01,MCS-0446,DC01,Melbourne West DC,Distribution Centre,0,0,0,67,2027-02-03
+MCS-0446-ST05,MCS-0446,ST05,Parramatta Store,Retail Store,0,0,0,296,2027-01-13
+MCS-0446-ST06,MCS-0446,ST06,Newcastle Store,Retail Store,0,0,0,115,2027-02-03
+MCS-0447-DC01,MCS-0447,DC01,Melbourne West DC,Distribution Centre,272,64,208,0,
+MCS-0447-DC03,MCS-0447,DC03,Brisbane North DC,Distribution Centre,159,29,130,177,2026-09-23
+MCS-0447-DC04,MCS-0447,DC04,Perth Metro DC,Distribution Centre,217,50,167,0,
+MCS-0447-ST02,MCS-0447,ST02,Dandenong Store,Retail Store,12,4,8,0,
+MCS-0447-ST03,MCS-0447,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0448-DC04,MCS-0448,DC04,Perth Metro DC,Distribution Centre,65,4,61,0,
+MCS-0448-ST03,MCS-0448,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0449-DC01,MCS-0449,DC01,Melbourne West DC,Distribution Centre,277,8,269,326,2026-11-18
+MCS-0449-DC02,MCS-0449,DC02,Sydney Central DC,Distribution Centre,205,0,205,96,2026-11-11
+MCS-0449-DC03,MCS-0449,DC03,Brisbane North DC,Distribution Centre,228,6,222,233,2026-11-04
+MCS-0449-ST05,MCS-0449,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0450-DC03,MCS-0450,DC03,Brisbane North DC,Distribution Centre,134,9,125,0,
+MCS-0450-DC04,MCS-0450,DC04,Perth Metro DC,Distribution Centre,59,7,52,0,
+MCS-0450-ST05,MCS-0450,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0450-ST07,MCS-0450,ST07,Gold Coast Store,Retail Store,3,0,3,0,
+MCS-0451-DC01,MCS-0451,DC01,Melbourne West DC,Distribution Centre,320,77,243,0,
+MCS-0451-DC04,MCS-0451,DC04,Perth Metro DC,Distribution Centre,337,91,246,154,2026-09-30
+MCS-0451-ST03,MCS-0451,ST03,Geelong Store,Retail Store,13,3,10,0,
+MCS-0451-ST05,MCS-0451,ST05,Parramatta Store,Retail Store,0,0,0,82,2026-10-14
+MCS-0451-ST07,MCS-0451,ST07,Gold Coast Store,Retail Store,13,0,13,227,2026-10-21
+MCS-0451-ST08,MCS-0451,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0452-DC01,MCS-0452,DC01,Melbourne West DC,Distribution Centre,336,2,334,375,2026-11-04
+MCS-0452-DC02,MCS-0452,DC02,Sydney Central DC,Distribution Centre,426,118,308,0,
+MCS-0452-DC03,MCS-0452,DC03,Brisbane North DC,Distribution Centre,428,84,344,0,
+MCS-0452-DC04,MCS-0452,DC04,Perth Metro DC,Distribution Centre,180,56,124,0,
+MCS-0452-ST06,MCS-0452,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0453-DC01,MCS-0453,DC01,Melbourne West DC,Distribution Centre,0,0,0,181,2027-02-10
+MCS-0453-DC02,MCS-0453,DC02,Sydney Central DC,Distribution Centre,0,0,0,158,2027-01-27
+MCS-0453-DC04,MCS-0453,DC04,Perth Metro DC,Distribution Centre,1,0,1,0,
+MCS-0453-ST03,MCS-0453,ST03,Geelong Store,Retail Store,8,2,6,0,
+MCS-0453-ST05,MCS-0453,ST05,Parramatta Store,Retail Store,0,0,0,323,2027-02-10
+MCS-0454-DC01,MCS-0454,DC01,Melbourne West DC,Distribution Centre,220,1,219,0,
+MCS-0454-DC02,MCS-0454,DC02,Sydney Central DC,Distribution Centre,472,85,387,93,2026-09-30
+MCS-0454-DC04,MCS-0454,DC04,Perth Metro DC,Distribution Centre,268,22,246,0,
+MCS-0454-ST02,MCS-0454,ST02,Dandenong Store,Retail Store,2,0,2,0,
+MCS-0454-ST05,MCS-0454,ST05,Parramatta Store,Retail Store,1,0,1,0,
+MCS-0454-ST07,MCS-0454,ST07,Gold Coast Store,Retail Store,0,0,0,47,2026-10-14
+MCS-0454-ST08,MCS-0454,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0455-DC01,MCS-0455,DC01,Melbourne West DC,Distribution Centre,374,33,341,0,
+MCS-0455-DC02,MCS-0455,DC02,Sydney Central DC,Distribution Centre,370,68,302,0,
+MCS-0455-DC04,MCS-0455,DC04,Perth Metro DC,Distribution Centre,120,24,96,0,
+MCS-0455-ST01,MCS-0455,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0455-ST08,MCS-0455,ST08,Adelaide Store,Retail Store,10,0,10,0,
+MCS-0456-ST05,MCS-0456,ST05,Parramatta Store,Retail Store,6,1,5,0,
+MCS-0457-DC01,MCS-0457,DC01,Melbourne West DC,Distribution Centre,0,0,0,117,2027-02-10
+MCS-0457-DC03,MCS-0457,DC03,Brisbane North DC,Distribution Centre,0,0,0,201,2027-01-27
+MCS-0457-DC04,MCS-0457,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0457-ST01,MCS-0457,ST01,Melbourne CBD Store,Retail Store,1,0,1,129,2027-01-20
+MCS-0457-ST02,MCS-0457,ST02,Dandenong Store,Retail Store,0,0,0,48,2027-01-13
+MCS-0458-DC04,MCS-0458,DC04,Perth Metro DC,Distribution Centre,69,17,52,260,2026-10-28
+MCS-0458-ST05,MCS-0458,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0459-DC01,MCS-0459,DC01,Melbourne West DC,Distribution Centre,73,10,63,0,
+MCS-0459-DC03,MCS-0459,DC03,Brisbane North DC,Distribution Centre,173,39,134,0,
+MCS-0459-ST02,MCS-0459,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0459-ST03,MCS-0459,ST03,Geelong Store,Retail Store,0,0,0,293,2026-11-11
+MCS-0460-DC01,MCS-0460,DC01,Melbourne West DC,Distribution Centre,336,71,265,0,
+MCS-0460-DC02,MCS-0460,DC02,Sydney Central DC,Distribution Centre,493,84,409,0,
+MCS-0460-DC04,MCS-0460,DC04,Perth Metro DC,Distribution Centre,170,32,138,291,2026-09-23
+MCS-0460-ST02,MCS-0460,ST02,Dandenong Store,Retail Store,7,1,6,0,
+MCS-0460-ST03,MCS-0460,ST03,Geelong Store,Retail Store,12,1,11,0,
+MCS-0461-DC03,MCS-0461,DC03,Brisbane North DC,Distribution Centre,308,63,245,0,
+MCS-0461-DC04,MCS-0461,DC04,Perth Metro DC,Distribution Centre,344,104,240,0,
+MCS-0461-ST01,MCS-0461,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0461-ST05,MCS-0461,ST05,Parramatta Store,Retail Store,0,0,0,168,2026-10-07
+MCS-0461-ST08,MCS-0461,ST08,Adelaide Store,Retail Store,1,0,1,215,2026-10-28
+MCS-0462-DC02,MCS-0462,DC02,Sydney Central DC,Distribution Centre,0,0,0,264,2027-03-24
+MCS-0462-DC03,MCS-0462,DC03,Brisbane North DC,Distribution Centre,0,0,0,390,2027-03-17
+MCS-0462-ST01,MCS-0462,ST01,Melbourne CBD Store,Retail Store,0,0,0,94,2027-03-17
+MCS-0462-ST02,MCS-0462,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0462-ST05,MCS-0462,ST05,Parramatta Store,Retail Store,0,0,0,339,2027-03-31
+MCS-0463-DC02,MCS-0463,DC02,Sydney Central DC,Distribution Centre,82,19,63,0,
+MCS-0463-DC03,MCS-0463,DC03,Brisbane North DC,Distribution Centre,245,5,240,0,
+MCS-0463-ST01,MCS-0463,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0463-ST02,MCS-0463,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0463-ST05,MCS-0463,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0463-ST07,MCS-0463,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0464-DC03,MCS-0464,DC03,Brisbane North DC,Distribution Centre,275,89,186,317,2026-10-14
+MCS-0464-DC04,MCS-0464,DC04,Perth Metro DC,Distribution Centre,162,40,122,222,2026-10-14
+MCS-0464-ST04,MCS-0464,ST04,Ballarat Store,Retail Store,0,0,0,142,2026-10-14
+MCS-0464-ST07,MCS-0464,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0465-DC04,MCS-0465,DC04,Perth Metro DC,Distribution Centre,326,32,294,0,
+MCS-0465-ST08,MCS-0465,ST08,Adelaide Store,Retail Store,10,2,8,0,
+MCS-0466-DC02,MCS-0466,DC02,Sydney Central DC,Distribution Centre,239,5,234,0,
+MCS-0466-DC04,MCS-0466,DC04,Perth Metro DC,Distribution Centre,445,105,340,0,
+MCS-0466-ST05,MCS-0466,ST05,Parramatta Store,Retail Store,0,0,0,235,2026-11-25
+MCS-0466-ST07,MCS-0466,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0467-DC01,MCS-0467,DC01,Melbourne West DC,Distribution Centre,437,126,311,0,
+MCS-0467-DC02,MCS-0467,DC02,Sydney Central DC,Distribution Centre,69,0,69,0,
+MCS-0467-ST01,MCS-0467,ST01,Melbourne CBD Store,Retail Store,10,1,9,0,
+MCS-0468-DC02,MCS-0468,DC02,Sydney Central DC,Distribution Centre,324,67,257,157,2026-11-04
+MCS-0468-DC03,MCS-0468,DC03,Brisbane North DC,Distribution Centre,299,97,202,0,
+MCS-0468-ST06,MCS-0468,ST06,Newcastle Store,Retail Store,0,0,0,238,2026-11-04
+MCS-0469-DC02,MCS-0469,DC02,Sydney Central DC,Distribution Centre,444,142,302,0,
+MCS-0469-DC04,MCS-0469,DC04,Perth Metro DC,Distribution Centre,458,26,432,0,
+MCS-0469-ST01,MCS-0469,ST01,Melbourne CBD Store,Retail Store,3,1,2,0,
+MCS-0469-ST04,MCS-0469,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0469-ST07,MCS-0469,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0470-DC01,MCS-0470,DC01,Melbourne West DC,Distribution Centre,0,0,0,140,2027-02-24
+MCS-0470-DC03,MCS-0470,DC03,Brisbane North DC,Distribution Centre,0,0,0,0,
+MCS-0470-ST01,MCS-0470,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0471-DC01,MCS-0471,DC01,Melbourne West DC,Distribution Centre,323,43,280,0,
+MCS-0471-ST06,MCS-0471,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0472-DC02,MCS-0472,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0472-ST03,MCS-0472,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0473-DC01,MCS-0473,DC01,Melbourne West DC,Distribution Centre,396,79,317,0,
+MCS-0473-ST01,MCS-0473,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0473-ST02,MCS-0473,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0474-ST05,MCS-0474,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0475-DC02,MCS-0475,DC02,Sydney Central DC,Distribution Centre,268,49,219,0,
+MCS-0475-DC03,MCS-0475,DC03,Brisbane North DC,Distribution Centre,23,2,21,357,2026-10-28
+MCS-0475-DC04,MCS-0475,DC04,Perth Metro DC,Distribution Centre,252,58,194,316,2026-10-21
+MCS-0475-ST04,MCS-0475,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0476-DC01,MCS-0476,DC01,Melbourne West DC,Distribution Centre,241,83,158,0,
+MCS-0476-DC03,MCS-0476,DC03,Brisbane North DC,Distribution Centre,378,46,332,0,
+MCS-0476-DC04,MCS-0476,DC04,Perth Metro DC,Distribution Centre,209,18,191,0,
+MCS-0476-ST08,MCS-0476,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0477-DC02,MCS-0477,DC02,Sydney Central DC,Distribution Centre,354,33,321,0,
+MCS-0477-DC03,MCS-0477,DC03,Brisbane North DC,Distribution Centre,145,15,130,0,
+MCS-0477-ST02,MCS-0477,ST02,Dandenong Store,Retail Store,11,2,9,0,
+MCS-0477-ST03,MCS-0477,ST03,Geelong Store,Retail Store,0,0,0,301,2026-10-21
+MCS-0477-ST05,MCS-0477,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0477-ST06,MCS-0477,ST06,Newcastle Store,Retail Store,0,0,0,358,2026-09-30
+MCS-0478-DC01,MCS-0478,DC01,Melbourne West DC,Distribution Centre,469,44,425,0,
+MCS-0478-DC04,MCS-0478,DC04,Perth Metro DC,Distribution Centre,194,52,142,131,2026-10-14
+MCS-0478-ST01,MCS-0478,ST01,Melbourne CBD Store,Retail Store,14,4,10,0,
+MCS-0478-ST08,MCS-0478,ST08,Adelaide Store,Retail Store,11,1,10,0,
+MCS-0479-ST05,MCS-0479,ST05,Parramatta Store,Retail Store,2,0,2,0,
+MCS-0480-DC01,MCS-0480,DC01,Melbourne West DC,Distribution Centre,24,5,19,0,
+MCS-0480-DC03,MCS-0480,DC03,Brisbane North DC,Distribution Centre,498,83,415,347,2026-09-23
+MCS-0480-DC04,MCS-0480,DC04,Perth Metro DC,Distribution Centre,319,84,235,0,
+MCS-0480-ST06,MCS-0480,ST06,Newcastle Store,Retail Store,0,0,0,353,2026-10-14
+MCS-0481-DC01,MCS-0481,DC01,Melbourne West DC,Distribution Centre,2,0,2,0,
+MCS-0481-DC02,MCS-0481,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0481-DC03,MCS-0481,DC03,Brisbane North DC,Distribution Centre,14,3,11,0,
+MCS-0481-DC04,MCS-0481,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0481-ST01,MCS-0481,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0482-DC01,MCS-0482,DC01,Melbourne West DC,Distribution Centre,462,83,379,0,
+MCS-0482-DC02,MCS-0482,DC02,Sydney Central DC,Distribution Centre,190,41,149,0,
+MCS-0482-ST01,MCS-0482,ST01,Melbourne CBD Store,Retail Store,0,0,0,349,2026-10-14
+MCS-0483-DC01,MCS-0483,DC01,Melbourne West DC,Distribution Centre,100,20,80,0,
+MCS-0483-DC02,MCS-0483,DC02,Sydney Central DC,Distribution Centre,153,0,153,0,
+MCS-0483-DC04,MCS-0483,DC04,Perth Metro DC,Distribution Centre,445,144,301,0,
+MCS-0483-ST04,MCS-0483,ST04,Ballarat Store,Retail Store,9,0,9,0,
+MCS-0483-ST05,MCS-0483,ST05,Parramatta Store,Retail Store,14,4,10,0,
+MCS-0484-DC01,MCS-0484,DC01,Melbourne West DC,Distribution Centre,45,10,35,169,2026-11-04
+MCS-0484-DC02,MCS-0484,DC02,Sydney Central DC,Distribution Centre,211,0,211,0,
+MCS-0484-DC04,MCS-0484,DC04,Perth Metro DC,Distribution Centre,213,29,184,0,
+MCS-0484-ST01,MCS-0484,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0484-ST02,MCS-0484,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0484-ST08,MCS-0484,ST08,Adelaide Store,Retail Store,0,0,0,361,2026-10-28
+MCS-0485-DC02,MCS-0485,DC02,Sydney Central DC,Distribution Centre,136,26,110,87,2026-10-14
+MCS-0485-DC04,MCS-0485,DC04,Perth Metro DC,Distribution Centre,379,67,312,0,
+MCS-0485-ST06,MCS-0485,ST06,Newcastle Store,Retail Store,8,1,7,0,
+MCS-0485-ST07,MCS-0485,ST07,Gold Coast Store,Retail Store,0,0,0,0,
+MCS-0486-DC02,MCS-0486,DC02,Sydney Central DC,Distribution Centre,0,0,0,0,
+MCS-0486-DC04,MCS-0486,DC04,Perth Metro DC,Distribution Centre,0,0,0,0,
+MCS-0486-ST07,MCS-0486,ST07,Gold Coast Store,Retail Store,5,0,5,0,
+MCS-0486-ST08,MCS-0486,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0487-DC01,MCS-0487,DC01,Melbourne West DC,Distribution Centre,485,46,439,0,
+MCS-0487-DC03,MCS-0487,DC03,Brisbane North DC,Distribution Centre,264,17,247,0,
+MCS-0487-DC04,MCS-0487,DC04,Perth Metro DC,Distribution Centre,291,74,217,99,2026-10-21
+MCS-0487-ST02,MCS-0487,ST02,Dandenong Store,Retail Store,0,0,0,0,
+MCS-0488-DC01,MCS-0488,DC01,Melbourne West DC,Distribution Centre,176,57,119,142,2026-12-02
+MCS-0488-DC02,MCS-0488,DC02,Sydney Central DC,Distribution Centre,10,2,8,0,
+MCS-0488-DC03,MCS-0488,DC03,Brisbane North DC,Distribution Centre,60,19,41,366,2026-11-18
+MCS-0488-DC04,MCS-0488,DC04,Perth Metro DC,Distribution Centre,193,49,144,0,
+MCS-0488-ST07,MCS-0488,ST07,Gold Coast Store,Retail Store,0,0,0,394,2026-11-04
+MCS-0489-DC01,MCS-0489,DC01,Melbourne West DC,Distribution Centre,460,47,413,0,
+MCS-0489-DC02,MCS-0489,DC02,Sydney Central DC,Distribution Centre,228,53,175,0,
+MCS-0489-DC03,MCS-0489,DC03,Brisbane North DC,Distribution Centre,252,56,196,47,2026-10-14
+MCS-0489-DC04,MCS-0489,DC04,Perth Metro DC,Distribution Centre,44,3,41,0,
+MCS-0490-DC02,MCS-0490,DC02,Sydney Central DC,Distribution Centre,89,20,69,0,
+MCS-0490-DC03,MCS-0490,DC03,Brisbane North DC,Distribution Centre,196,42,154,0,
+MCS-0490-ST01,MCS-0490,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0490-ST05,MCS-0490,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0490-ST08,MCS-0490,ST08,Adelaide Store,Retail Store,0,0,0,302,2026-10-07
+MCS-0491-DC03,MCS-0491,DC03,Brisbane North DC,Distribution Centre,395,113,282,0,
+MCS-0491-DC04,MCS-0491,DC04,Perth Metro DC,Distribution Centre,435,3,432,0,
+MCS-0491-ST03,MCS-0491,ST03,Geelong Store,Retail Store,9,3,6,0,
+MCS-0491-ST05,MCS-0491,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0492-DC01,MCS-0492,DC01,Melbourne West DC,Distribution Centre,25,7,18,385,2026-10-28
+MCS-0492-DC03,MCS-0492,DC03,Brisbane North DC,Distribution Centre,147,22,125,0,
+MCS-0492-ST01,MCS-0492,ST01,Melbourne CBD Store,Retail Store,0,0,0,0,
+MCS-0492-ST03,MCS-0492,ST03,Geelong Store,Retail Store,0,0,0,0,
+MCS-0492-ST04,MCS-0492,ST04,Ballarat Store,Retail Store,0,0,0,0,
+MCS-0492-ST05,MCS-0492,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0492-ST08,MCS-0492,ST08,Adelaide Store,Retail Store,0,0,0,0,
+MCS-0493-DC02,MCS-0493,DC02,Sydney Central DC,Distribution Centre,373,0,373,0,
+MCS-0493-DC04,MCS-0493,DC04,Perth Metro DC,Distribution Centre,293,100,193,273,2026-10-28
+MCS-0493-ST05,MCS-0493,ST05,Parramatta Store,Retail Store,0,0,0,0,
+MCS-0493-ST06,MCS-0493,ST06,Newcastle Store,Retail Store,0,0,0,0,
+MCS-0494-DC02,MCS-0494,DC02,Sydney Central DC,Distribution Centre,211,7,204,0,
+MCS-0494-DC03,MCS-0494,DC03,Brisbane North DC,Distribution Centre,493,168,325,0,
+MCS-0093-ST01,MCS-0093,ST01,Melbourne CBD Store,Retail Store,9,0,9,0,
+MCS-0093-ST04,MCS-0093,ST04,Ballarat Store,Retail Store,9,0,9,0,
+MCS-0093-ST05,MCS-0093,ST05,Parramatta Store,Retail Store,10,0,10,0,
+MCS-0393-DC01,MCS-0393,DC01,Melbourne West DC,Distribution Centre,99,0,99,0,
+MCS-0393-ST01,MCS-0393,ST01,Melbourne CBD Store,Retail Store,9,0,9,0,
+MCS-0393-ST03,MCS-0393,ST03,Geelong Store,Retail Store,9,0,9,0,
+MCS-0393-ST04,MCS-0393,ST04,Ballarat Store,Retail Store,9,0,9,0,
+MCS-0393-ST05,MCS-0393,ST05,Parramatta Store,Retail Store,9,0,9,0,
+MCS-0069-ST02,MCS-0069,ST02,Dandenong Store,Retail Store,9,0,9,0,
+MCS-0069-ST03,MCS-0069,ST03,Geelong Store,Retail Store,9,0,9,0,
+MCS-0069-ST04,MCS-0069,ST04,Ballarat Store,Retail Store,9,0,9,0,
+MCS-0069-ST05,MCS-0069,ST05,Parramatta Store,Retail Store,9,0,9,0,

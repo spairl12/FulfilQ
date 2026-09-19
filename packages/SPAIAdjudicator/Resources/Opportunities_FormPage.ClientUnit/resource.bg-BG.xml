@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="bg-BG">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.OpportunityHistoryDS_EntityChangeType.Value" Value="Тип на промяната" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExpansionPanel_title.Value" Value="История на промените" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExportDataBtn_caption.Value" Value="Експортирай към Excel" />
+			<Item Name="LocalizableStrings.OpportunityHistoryRefreshBtn_caption.Value" Value="Опресни" />
+			<Item Name="LocalizableStrings.OpportunityHistorySearchFilter_placeholder.Value" Value="Търси" />
+			<Item Name="LocalizableStrings.OpportunityHistorySettingsBtn_caption.Value" Value="Действия" />
+			<Item Name="LocalizableStrings.addRecord_ih4zcqj_caption.Value" Value="Добави нова" />
+		</Items>
+	</Group>
+</Resources>

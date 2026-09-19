@@ -1,0 +1,26 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "e416dbe9-c34a-45db-b971-8210832c9977"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "1c2dfdcd-7952-4096-8aac-45373fd3abe7",
+          "DisplayValue": "Substitution rules"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 26
+        }
+      ]
+    }
+  ]
+}

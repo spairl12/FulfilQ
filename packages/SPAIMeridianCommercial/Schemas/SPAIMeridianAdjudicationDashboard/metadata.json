@@ -1,0 +1,101 @@
+= MetaData.Schema.UId "8712f2e7-9892-4cef-a649-c7b617db946c"
+= MetaData.Schema.A2 "SPAIMeridianAdjudicationDashboard"
+= MetaData.Schema.A5 "2c733b65-ff00-4670-a5e5-56e9b24d3193"
++ MetaData.Schema.B2 {
+  "UId": "6cc6c6eb-6d4f-4794-8374-25d7bb73dcea",
+  "A2": "SPAIDashLinesByReason_title",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "dcafdd36-f244-4017-8aae-9e6a7eec95d2",
+  "A2": "SPAIDashLinesByReason_series_0",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "58f3e4dc-4b04-4f4a-bebf-e521e86d6998",
+  "A2": "SPAIDashResolvedBy_title",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "1dd40479-74f0-4749-94b6-e2f8ed421313",
+  "A2": "SPAIDashResolvedBy_series_0",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "d7b0d8aa-ccd5-4566-a175-978287e2fafb",
+  "A2": "SPAIDashSubstByFamily_title",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "54577a69-ded4-47af-a765-a1c5a40ceb83",
+  "A2": "SPAIDashSubstByFamily_series_0",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "3bd2c16d-6787-49c5-8237-87ccb4ec8c23",
+  "A2": "SPAIDashSubstByFamily_series_1",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "106c4a45-b106-49a0-a43b-acf40e914a6e",
+  "A2": "SPAIDashValueByPhase_title",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "1351353a-13d0-46e5-be78-da51c7591577",
+  "A2": "SPAIDashValueByPhase_series_0",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "c6d76edb-f659-4c64-a383-44aa3c46f1ee",
+  "A2": "SPAIDashAllocByLocType_title",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
++ MetaData.Schema.B2 {
+  "UId": "d1713908-aaf0-46dc-a06f-87146c16b1cd",
+  "A2": "SPAIDashAllocByLocType_series_0",
+  "A3": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A4": "8712f2e7-9892-4cef-a649-c7b617db946c",
+  "A5": "2c733b65-ff00-4670-a5e5-56e9b24d3193"
+}
+~ MetaData.Schema.B2 [
+  "6cc6c6eb-6d4f-4794-8374-25d7bb73dcea",
+  "dcafdd36-f244-4017-8aae-9e6a7eec95d2",
+  "58f3e4dc-4b04-4f4a-bebf-e521e86d6998",
+  "1dd40479-74f0-4749-94b6-e2f8ed421313",
+  "d7b0d8aa-ccd5-4566-a175-978287e2fafb",
+  "54577a69-ded4-47af-a765-a1c5a40ceb83",
+  "3bd2c16d-6787-49c5-8237-87ccb4ec8c23",
+  "106c4a45-b106-49a0-a43b-acf40e914a6e",
+  "1351353a-13d0-46e5-be78-da51c7591577",
+  "c6d76edb-f659-4c64-a383-44aa3c46f1ee",
+  "d1713908-aaf0-46dc-a06f-87146c16b1cd"
+]
+= MetaData.Schema.B6 "36525f96-15e8-4984-83cf-51617a44f168"
+= MetaData.Schema.B8 "10.0.0.858"
++ MetaData.Schema.B10 "{\"DashboardsEntitySchemaName\":\"SPAIScheduleLine\",\"DashboardsElementName\":\"Dashboards\",\"DashboardsClientUnitSchemaUId\":\"7ea4bd52-d140-4e90-bd0f-56a5133d8295\"}"
+= MetaData.Schema.HD1 "eb4d4a67-25d8-fcfa-7851-c4c91efb7b9c"
++ MetaData.Schema.HD15 1
+= MetaData.Schema.HD6 "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.ANGULAR_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},parameters:{{}},schemaVersion:1,optionalProperties:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});"
+- MetaData.Schema.HD2
++ MetaData.Schema.B7 false

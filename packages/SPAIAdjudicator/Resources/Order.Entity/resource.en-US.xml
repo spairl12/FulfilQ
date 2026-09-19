@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.SPAIPhaseName.Caption" Value="Phase name" />
+			<Item Name="Columns.SPAIPhaseNumber.Caption" Value="Phase number" />
+			<Item Name="Columns.SPAIPrimaryLocation.Caption" Value="Primary location" />
+			<Item Name="Columns.SPAIScope.Caption" Value="Scope" />
+			<Item Name="Columns.SPAITargetDate.Caption" Value="Target date" />
+		</Items>
+	</Group>
+</Resources>

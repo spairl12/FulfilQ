@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAIAdjudicationNote.Caption" Value="Adjudication note" />
+			<Item Name="Columns.SPAICallOffOrder.Caption" Value="Call-off order" />
+			<Item Name="Columns.SPAIComplianceNotes.Caption" Value="Compliance notes" />
+			<Item Name="Columns.SPAIConfidence.Caption" Value="Confidence" />
+			<Item Name="Columns.SPAIEstimatorDecision.Caption" Value="Estimator decision" />
+			<Item Name="Columns.SPAILineMarginPct.Caption" Value="Line margin %" />
+			<Item Name="Columns.SPAILineNumber.Caption" Value="Line number" />
+			<Item Name="Columns.SPAILineStatus.Caption" Value="Line status" />
+			<Item Name="Columns.SPAILineTotal.Caption" Value="Line total" />
+			<Item Name="Columns.SPAIMatchedProduct.Caption" Value="Matched product" />
+			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
+			<Item Name="Columns.SPAIQtyShortfall.Caption" Value="Qty shortfall" />
+			<Item Name="Columns.SPAIQtySourced.Caption" Value="Qty sourced" />
+			<Item Name="Columns.SPAIQuantity.Caption" Value="Quantity" />
+			<Item Name="Columns.SPAIReasonCode.Caption" Value="Reason code" />
+			<Item Name="Columns.SPAIRequiredCutoutD.Caption" Value="Required cut-out D" />
+			<Item Name="Columns.SPAIRequiredCutoutH.Caption" Value="Required cut-out H" />
+			<Item Name="Columns.SPAIRequiredCutoutW.Caption" Value="Required cut-out W" />
+			<Item Name="Columns.SPAIResolvedBy.Caption" Value="Resolved by" />
+			<Item Name="Columns.SPAIRoomType.Caption" Value="Room type" />
+			<Item Name="Columns.SPAIScheduleNotes.Caption" Value="Schedule notes" />
+			<Item Name="Columns.SPAISpecifiedBrand.Caption" Value="Specified brand" />
+			<Item Name="Columns.SPAISpecifiedFinish.Caption" Value="Specified finish" />
+			<Item Name="Columns.SPAISpecifiedModel.Caption" Value="Specified model" />
+			<Item Name="Columns.SPAISpecifiedText.Caption" Value="Specified text" />
+			<Item Name="Columns.SPAIUnitCost.Caption" Value="Unit cost" />
+			<Item Name="Columns.SPAIUnitSell.Caption" Value="Unit sell" />
+			<Item Name="Columns.SPAIUnitTier.Caption" Value="Unit tier" />
+		</Items>
+	</Group>
+</Resources>

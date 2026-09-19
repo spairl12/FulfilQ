@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "6d922ecb-96c4-4c5e-910a-608edd8fe110",
+    "Name": "SPAIDeliveryStatus",
+    "ModifiedOnUtc": "\/Date(1789715053000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Delivery status",
+    "DependsOn": []
+  }
+}

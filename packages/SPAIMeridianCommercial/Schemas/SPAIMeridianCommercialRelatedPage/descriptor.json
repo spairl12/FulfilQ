@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "368c276f-98c9-44ba-8d52-3bfd59c3c612",
+    "Name": "SPAIMeridianCommercialRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789780555000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Meridian Commercial (Page settings)",
+    "DependsOn": []
+  }
+}

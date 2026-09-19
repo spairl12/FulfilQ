@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="de-DE">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.OpportunityHistoryDS_EntityChangeType.Value" Value="Typ ändern" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExpansionPanel_title.Value" Value="Änderungshistorie" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExportDataBtn_caption.Value" Value="Excel-Export" />
+			<Item Name="LocalizableStrings.OpportunityHistoryRefreshBtn_caption.Value" Value="Aktualisieren" />
+			<Item Name="LocalizableStrings.OpportunityHistorySearchFilter_placeholder.Value" Value="Suche" />
+			<Item Name="LocalizableStrings.OpportunityHistorySettingsBtn_caption.Value" Value="Aktionen" />
+			<Item Name="LocalizableStrings.addRecord_ih4zcqj_caption.Value" Value="Neu hinzufügen" />
+		</Items>
+	</Group>
+</Resources>

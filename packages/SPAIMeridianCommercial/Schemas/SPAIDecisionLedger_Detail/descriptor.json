@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "de698f2f-caa7-4e4b-a82e-8519d330f0b7",
+    "Name": "SPAIDecisionLedger_Detail",
+    "ModifiedOnUtc": "\/Date(1789781145000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Decision ledger detail",
+    "DependsOn": []
+  }
+}

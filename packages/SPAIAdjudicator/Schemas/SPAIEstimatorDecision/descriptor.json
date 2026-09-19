@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "49a384da-1d98-4f39-ada6-e1f82eafea5e",
+    "Name": "SPAIEstimatorDecision",
+    "ModifiedOnUtc": "\/Date(1789714964000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Estimator decision",
+    "DependsOn": []
+  }
+}

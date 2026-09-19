@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.SPAIBrand.Caption" Value="Brand (Meridian)" />
+			<Item Name="Columns.SPAIComplianceVerifiedOn.Caption" Value="Compliance verified on" />
+			<Item Name="Columns.SPAICutoutDepthMm.Caption" Value="Cut-out depth (mm)" />
+			<Item Name="Columns.SPAICutoutHeightMm.Caption" Value="Cut-out height (mm)" />
+			<Item Name="Columns.SPAICutoutWidthMm.Caption" Value="Cut-out width (mm)" />
+			<Item Name="Columns.SPAIEnergyStarRating.Caption" Value="Energy star rating" />
+			<Item Name="Columns.SPAIFinish.Caption" Value="Finish" />
+			<Item Name="Columns.SPAIGemsRegistrationNo.Caption" Value="GEMS registration no." />
+			<Item Name="Columns.SPAILeadTimeWeeks.Caption" Value="Lead time (weeks)" />
+			<Item Name="Columns.SPAILifecycleStatus.Caption" Value="Lifecycle status" />
+			<Item Name="Columns.SPAIModelCode.Caption" Value="Model code" />
+			<Item Name="Columns.SPAIProductFamily.Caption" Value="Product family" />
+			<Item Name="Columns.SPAIProjectApproved.Caption" Value="Project approved" />
+			<Item Name="Columns.SPAISupersededBy.Caption" Value="Superseded by" />
+			<Item Name="Columns.SPAITradeSellPrice.Caption" Value="Trade sell price" />
+			<Item Name="Columns.SPAIWELSRating.Caption" Value="WELS rating" />
+			<Item Name="Columns.SPAIWaterMarkCertNo.Caption" Value="WaterMark certificate no." />
+			<Item Name="Columns.SPAIWelsRegistrationNo.Caption" Value="WELS registration no." />
+			<Item Name="Columns.SPAIWholesaleCost.Caption" Value="Wholesale cost" />
+		</Items>
+	</Group>
+</Resources>

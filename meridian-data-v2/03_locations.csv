@@ -1,0 +1,13 @@
+Code,Name,LocationType,State,Suburb,SourcingRank
+DC01,Melbourne West DC,Distribution Centre,VIC,Truganina,1
+DC02,Sydney Central DC,Distribution Centre,NSW,Erskine Park,2
+DC03,Brisbane North DC,Distribution Centre,QLD,Brendale,3
+DC04,Perth Metro DC,Distribution Centre,WA,Jandakot,4
+ST01,Melbourne CBD Store,Retail Store,VIC,Docklands,5
+ST02,Dandenong Store,Retail Store,VIC,Dandenong,6
+ST03,Geelong Store,Retail Store,VIC,North Geelong,7
+ST04,Ballarat Store,Retail Store,VIC,Wendouree,8
+ST05,Parramatta Store,Retail Store,NSW,Parramatta,9
+ST06,Newcastle Store,Retail Store,NSW,Kotara,10
+ST07,Gold Coast Store,Retail Store,QLD,Bundall,11
+ST08,Adelaide Store,Retail Store,SA,Mile End,12

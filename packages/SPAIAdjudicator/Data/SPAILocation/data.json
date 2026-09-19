@@ -1,0 +1,448 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "22a591d9-4a73-578d-bf63-4e081f09b42d"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "VIC"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "North Geelong"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 7
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST03"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Geelong Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "2ce08c88-4f08-5dc9-a403-e16aaed5176d"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "QLD"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Bundall"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 11
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST07"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Gold Coast Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "32764f61-4c2b-5524-8385-13c0464a2513"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "VIC"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Dandenong"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 6
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST02"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Dandenong Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "3da8dddf-1be4-599e-aa2a-0687631e7753"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "2d7aed70-43db-4af3-af98-8e19c509317c",
+          "DisplayValue": "Distribution Centre"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "WA"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Jandakot"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 4
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "DC04"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Perth Metro DC"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4aea3e17-8d15-575f-83ba-1a175a0410cd"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "2d7aed70-43db-4af3-af98-8e19c509317c",
+          "DisplayValue": "Distribution Centre"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "NSW"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Erskine Park"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 2
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "DC02"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Sydney Central DC"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "54a5ccc0-484d-564a-8a4a-20dcd5614694"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "2d7aed70-43db-4af3-af98-8e19c509317c",
+          "DisplayValue": "Distribution Centre"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "VIC"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Truganina"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 1
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "DC01"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Melbourne West DC"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "78e01f57-3ab9-59d9-93b8-e3532ce275fd"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "SA"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Mile End"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 12
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST08"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Adelaide Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "807f5ab8-3fb2-5bb2-a85c-38c537badee8"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "NSW"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Parramatta"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 9
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST05"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Parramatta Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a81c84dd-f12c-5ee1-af12-96706aeb6f30"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "NSW"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Kotara"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 10
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST06"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Newcastle Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "a8cb524a-2142-597d-8dce-65dd5450fae2"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "VIC"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Docklands"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 5
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST01"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Melbourne CBD Store"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "bf660046-f98e-573c-9dfa-c10826ec072b"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "2d7aed70-43db-4af3-af98-8e19c509317c",
+          "DisplayValue": "Distribution Centre"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "QLD"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Brendale"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 3
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "DC03"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Brisbane North DC"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "df06c52b-1546-5f55-be22-0e83f598529f"
+        },
+        {
+          "SchemaColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+          "Value": true
+        },
+        {
+          "SchemaColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+          "Value": "9587a2c7-9ae5-4a0b-8ce5-bbd563977c41",
+          "DisplayValue": "Retail Store"
+        },
+        {
+          "SchemaColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+          "Value": "VIC"
+        },
+        {
+          "SchemaColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+          "Value": "Wendouree"
+        },
+        {
+          "SchemaColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+          "Value": 8
+        },
+        {
+          "SchemaColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+          "Value": "ST04"
+        },
+        {
+          "SchemaColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+          "Value": "Ballarat Store"
+        }
+      ]
+    }
+  ]
+}

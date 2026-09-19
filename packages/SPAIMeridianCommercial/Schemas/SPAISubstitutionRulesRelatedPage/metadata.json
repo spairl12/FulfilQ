@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "7750302d-ae57-4099-a971-edeffe9b02dd",
+      "A2": "SPAISubstitutionRulesRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "61014b8e-7904-450d-a6e1-8ac05d0a4a33",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "77be4ed1-5d86-44f2-98bc-3314067540e3",
+            "PageSchemaUId": "9b0e13ea-c940-4e4d-8a6d-eb2f21fd821f",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

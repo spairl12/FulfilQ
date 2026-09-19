@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "f2c0330e-203c-4ebd-bb3c-25dda848facf",
+    "Name": "SPAILineStatus",
+    "ModifiedOnUtc": "\/Date(1789783441000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Line status",
+    "DependsOn": []
+  }
+}

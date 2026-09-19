@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "74445353-fddf-4601-904e-e0f29f18d75b",
+    "Name": "SPAIDecisionLedger_FormPage",
+    "ModifiedOnUtc": "\/Date(1789782254000)\/",
+    "Parent": {
+      "UId": "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9",
+      "Name": "PageWithTabsFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Decision ledger form page",
+    "DependsOn": []
+  }
+}

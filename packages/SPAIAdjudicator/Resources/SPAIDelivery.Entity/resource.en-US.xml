@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Delivery" />
+			<Item Name="Columns.SPAIDriver.Caption" Value="Driver" />
+			<Item Name="Columns.SPAIFromLocation.Caption" Value="From location" />
+			<Item Name="Columns.SPAILineCount.Caption" Value="Line count" />
+			<Item Name="Columns.SPAIOrder.Caption" Value="Order" />
+			<Item Name="Columns.SPAIScheduledOn.Caption" Value="Scheduled on" />
+			<Item Name="Columns.SPAIStatus.Caption" Value="Status" />
+			<Item Name="Columns.SPAIValue.Caption" Value="Value" />
+		</Items>
+	</Group>
+</Resources>

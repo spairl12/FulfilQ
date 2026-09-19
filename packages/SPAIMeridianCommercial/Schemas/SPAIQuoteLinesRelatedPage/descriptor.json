@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "13ed0aa1-6cbd-4c1d-9ecb-65506a02d9d6",
+    "Name": "SPAIQuoteLinesRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789784166000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Quote lines (Page settings)",
+    "DependsOn": []
+  }
+}

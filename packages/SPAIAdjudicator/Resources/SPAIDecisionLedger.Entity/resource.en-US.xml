@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Decision ledger" />
+			<Item Name="Columns.SPAIActor.Caption" Value="Actor" />
+			<Item Name="Columns.SPAIComplianceChecks.Caption" Value="Compliance checks" />
+			<Item Name="Columns.SPAIConfidence.Caption" Value="Confidence" />
+			<Item Name="Columns.SPAIDecisionType.Caption" Value="Decision type" />
+			<Item Name="Columns.SPAINewValue.Caption" Value="New value" />
+			<Item Name="Columns.SPAIOccurredOn.Caption" Value="Occurred on" />
+			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
+			<Item Name="Columns.SPAIPriorValue.Caption" Value="Prior value" />
+			<Item Name="Columns.SPAIProposedProduct.Caption" Value="Proposed product" />
+			<Item Name="Columns.SPAIReasonCode.Caption" Value="Reason code" />
+			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAISequence.Caption" Value="Sequence" />
+		</Items>
+	</Group>
+</Resources>

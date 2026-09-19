@@ -1,0 +1,94 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a1c0003-0000-4000-8000-000000000001"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "d641d42f-739e-441e-aad5-aff7891dddf9",
+          "DisplayValue": "Opportunities"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a1c0003-0000-4000-8000-000000000002"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "ee586f85-5e21-4247-9ab2-1d906f0f0b46",
+          "DisplayValue": "Accounts"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a1c0003-0000-4000-8000-000000000003"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "24e07446-3a40-49f5-81d1-c20cb4c0cdc4",
+          "DisplayValue": "Contacts"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a1c0003-0000-4000-8000-000000000004"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "e8590ec1-7071-4e4a-a23a-e35dff467349",
+          "DisplayValue": "Products"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "5a1c0003-0000-4000-8000-000000000005"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "cded354a-aef7-495a-a82e-823ba0986ee3",
+          "DisplayValue": "Orders"
+        }
+      ]
+    }
+  ]
+}

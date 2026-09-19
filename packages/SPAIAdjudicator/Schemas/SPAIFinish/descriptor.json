@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "79ed5d70-5d02-41e7-9dae-c9250c581ab8",
+    "Name": "SPAIFinish",
+    "ModifiedOnUtc": "\/Date(1789714667000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Finish",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,204 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "21a5c8c4-269a-5cdb-a6b6-9e6826a50e31"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Italy"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Premium"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "2e49bf56-f7fb-5aeb-ae49-ff12a86a414b"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "United Kingdom"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Mid"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "307c9f61-2d64-5d66-bdd1-e351c0e12276"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Australia"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Trade"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "4b9a11db-d18d-5a17-b2cb-d8ee54187470"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Italy"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Luxury"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "652b7cdc-8d6f-53f1-9c2e-799371d14480"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Sanitaryware"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Germany"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Premium"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ce7062ae-b6e0-575a-b7da-53cdf7f0960c"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Italy"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Mid"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "d516a559-3f14-5b8c-91be-52f1aabf303b"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Tapware"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Spain"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Premium"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "ec518e98-57ac-50cc-9832-6def239002b4"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Sanitaryware"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Australia"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Mid"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "f229e89a-c2f6-5072-a2e2-fa5e4821f1c6"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Appliances"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Denmark"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Premium"
+        }
+      ]
+    },
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fae5c9d3-fa30-5682-92db-d07ea4c1ef9e"
+        },
+        {
+          "SchemaColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+          "Value": "Tapware"
+        },
+        {
+          "SchemaColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+          "Value": "Australia"
+        },
+        {
+          "SchemaColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+          "Value": "Mid"
+        }
+      ]
+    }
+  ]
+}

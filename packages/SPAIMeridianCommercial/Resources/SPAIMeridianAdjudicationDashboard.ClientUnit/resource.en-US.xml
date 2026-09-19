@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Adjudication overview" />
+			<Item Name="LocalizableStrings.SPAIDashAllocByLocType_series_0.Value" Value="Qty allocated" />
+			<Item Name="LocalizableStrings.SPAIDashAllocByLocType_title.Value" Value="Stock allocation by location type" />
+			<Item Name="LocalizableStrings.SPAIDashLinesByReason_series_0.Value" Value="Lines" />
+			<Item Name="LocalizableStrings.SPAIDashLinesByReason_title.Value" Value="Lines by reason code" />
+			<Item Name="LocalizableStrings.SPAIDashResolvedBy_series_0.Value" Value="Lines" />
+			<Item Name="LocalizableStrings.SPAIDashResolvedBy_title.Value" Value="Resolved deterministically vs by AI" />
+			<Item Name="LocalizableStrings.SPAIDashSubstByFamily_series_0.Value" Value="All matched lines" />
+			<Item Name="LocalizableStrings.SPAIDashSubstByFamily_series_1.Value" Value="Substituted lines" />
+			<Item Name="LocalizableStrings.SPAIDashSubstByFamily_title.Value" Value="Substitution rate by product family" />
+			<Item Name="LocalizableStrings.SPAIDashValueByPhase_series_0.Value" Value="Line total" />
+			<Item Name="LocalizableStrings.SPAIDashValueByPhase_title.Value" Value="Tender value by call-off phase" />
+		</Items>
+	</Group>
+</Resources>

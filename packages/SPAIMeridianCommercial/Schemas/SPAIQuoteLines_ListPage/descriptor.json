@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "3186db63-2655-4354-af9a-2f600e1c86ac",
+    "Name": "SPAIQuoteLines_ListPage",
+    "ModifiedOnUtc": "\/Date(1789785101000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Quote lines list page",
+    "DependsOn": []
+  }
+}

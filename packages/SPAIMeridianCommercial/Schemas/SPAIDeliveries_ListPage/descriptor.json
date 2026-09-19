@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "55c01aec-93b5-45ab-9824-8d2cfa6a2024",
+    "Name": "SPAIDeliveries_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782240000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Deliveries list page",
+    "DependsOn": []
+  }
+}

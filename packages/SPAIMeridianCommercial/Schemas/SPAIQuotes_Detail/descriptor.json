@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "df2242b2-f2c6-4890-afb7-de29226e9d1f",
+    "Name": "SPAIQuotes_Detail",
+    "ModifiedOnUtc": "\/Date(1789783950000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Quotes detail",
+    "DependsOn": []
+  }
+}

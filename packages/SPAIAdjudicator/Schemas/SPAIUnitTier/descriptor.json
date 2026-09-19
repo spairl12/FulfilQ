@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "ca8066fb-1387-488d-a51b-89ec43c663ad",
+    "Name": "SPAIUnitTier",
+    "ModifiedOnUtc": "\/Date(1789714745000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Unit tier",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,9 @@
+ContactCode,FullName,AccountCode,JobTitle,Role
+CON-001,Dana Whitlock,ACC-001,Contracts Manager,Builder contact
+CON-002,Idris Fanshawe,ACC-001,Project Manager,Builder contact
+CON-003,Marguerite Sol,ACC-004,Principal Architect,Specifier
+CON-004,Tobias Renn,ACC-005,Commercial Estimator,Gate 1 approver
+CON-005,Priya Anand,ACC-005,Commercial Manager,Gate 2 approver
+CON-006,Karl Oyelaran,ACC-005,Warehouse Manager,Constraint owner
+CON-007,Nell Braithwood,ACC-002,Procurement Lead,Builder contact
+CON-008,Aurel Danecki,ACC-003,Site Manager,Builder contact

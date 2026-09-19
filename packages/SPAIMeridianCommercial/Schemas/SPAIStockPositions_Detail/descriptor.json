@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "bb850a69-ee54-477e-ad05-88d43fd41e0e",
+    "Name": "SPAIStockPositions_Detail",
+    "ModifiedOnUtc": "\/Date(1789780792000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Stock positions detail",
+    "DependsOn": []
+  }
+}

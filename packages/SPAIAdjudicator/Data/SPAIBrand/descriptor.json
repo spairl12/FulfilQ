@@ -1,0 +1,49 @@
+﻿{
+  "Descriptor": {
+    "UId": "4a2c0bae-0586-465c-a1bf-9de990158948",
+    "Name": "SPAIBrand",
+    "ModifiedOnUtc": "\/Date(1789800192000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "52b755cb-2b3e-4dea-87b2-1981925b6fbf",
+      "Name": "SPAIBrand"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "0977c177-a036-4a4d-91c6-5df637d85316",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAICategory",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "320beba1-2382-4117-a507-b843a0033edb",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAICountryOfOrigin",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "b774a58c-42fa-4874-801e-fab6c32ca2a3",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAITier",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      }
+    ]
+  }
+}

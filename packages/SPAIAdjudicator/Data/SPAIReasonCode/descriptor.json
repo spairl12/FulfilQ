@@ -1,0 +1,42 @@
+﻿{
+  "Descriptor": {
+    "UId": "a0a9a219-c8ff-4355-810e-2da287be29f6",
+    "Name": "SPAIReasonCode",
+    "ModifiedOnUtc": "\/Date(1789715118000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "ca836c94-10d3-4f8b-9087-b71b2fdb2af7",
+      "Name": "SPAIReasonCode"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "7deb27c8-3989-464d-a048-c34ad15e23f0",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIRequiresHuman",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "d9fe2b6e-09e0-469b-b541-c326df41238b",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAICode",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      }
+    ]
+  }
+}

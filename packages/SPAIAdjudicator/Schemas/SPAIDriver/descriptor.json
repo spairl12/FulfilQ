@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c246ab95-acd2-466d-99cb-b7ef04e699f9",
+    "Name": "SPAIDriver",
+    "ModifiedOnUtc": "\/Date(1789715007000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Driver",
+    "DependsOn": []
+  }
+}

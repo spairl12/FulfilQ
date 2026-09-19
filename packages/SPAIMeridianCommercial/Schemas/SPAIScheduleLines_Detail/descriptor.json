@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "2368e0e6-adb7-4250-b18a-99366892fc83",
+    "Name": "SPAIScheduleLines_Detail",
+    "ModifiedOnUtc": "\/Date(1789781045000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Schedule lines detail",
+    "DependsOn": []
+  }
+}

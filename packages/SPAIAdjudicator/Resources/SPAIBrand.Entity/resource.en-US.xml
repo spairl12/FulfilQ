@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Brand" />
+			<Item Name="Columns.SPAICategory.Caption" Value="Category" />
+			<Item Name="Columns.SPAICountryOfOrigin.Caption" Value="Country of origin" />
+			<Item Name="Columns.SPAITier.Caption" Value="Tier" />
+			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
+		</Items>
+	</Group>
+</Resources>

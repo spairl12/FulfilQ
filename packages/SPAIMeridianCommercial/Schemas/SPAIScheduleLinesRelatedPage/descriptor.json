@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "e1d48357-3e6b-4cb8-b88f-86c22fa45404",
+    "Name": "SPAIScheduleLinesRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789781045000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Schedule lines (Page settings)",
+    "DependsOn": []
+  }
+}

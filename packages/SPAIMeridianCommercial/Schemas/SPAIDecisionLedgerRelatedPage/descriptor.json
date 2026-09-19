@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "77cde955-cfd0-48a1-bcf8-a45cd923a394",
+    "Name": "SPAIDecisionLedgerRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789781145000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Decision ledger (Page settings)",
+    "DependsOn": []
+  }
+}

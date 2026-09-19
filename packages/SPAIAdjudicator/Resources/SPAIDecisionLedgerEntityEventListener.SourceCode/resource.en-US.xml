@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Decision ledger insert-only guard" />
+			<Item Name="Description" Value="Refuses every update and delete on SPAIDecisionLedger, for all users including administrators." />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Substitution rule" />
+			<Item Name="Columns.SPAIApprovedBy.Caption" Value="Approved by" />
+			<Item Name="Columns.SPAIApprovedOn.Caption" Value="Approved on" />
+			<Item Name="Columns.SPAIEquivalenceBasis.Caption" Value="Equivalence basis" />
+			<Item Name="Columns.SPAIFinishMatch.Caption" Value="Finish match" />
+			<Item Name="Columns.SPAIFromProduct.Caption" Value="From product" />
+			<Item Name="Columns.SPAIIsActive.Caption" Value="Is active" />
+			<Item Name="Columns.SPAIRuleCode.Caption" Value="Rule code" />
+			<Item Name="Columns.SPAIToProduct.Caption" Value="To product" />
+		</Items>
+	</Group>
+</Resources>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Schedule lines form page" />
+			<Item Name="LocalizableStrings.SPAILineSourcesExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAILineSourcesImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAILineSourcesPanel_title.Value" Value="Line sources" />
+			<Item Name="LocalizableStrings.SPAILineSourcesSearch_placeholder.Value" Value="Search" />
+		</Items>
+	</Group>
+</Resources>

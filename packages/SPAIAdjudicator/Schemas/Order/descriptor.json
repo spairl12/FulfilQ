@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "d27816cf-7924-46c3-bb20-9c0b03c290f2",
+    "Name": "Order",
+    "ModifiedOnUtc": "\/Date(1789799453000)\/",
+    "Parent": {
+      "UId": "80294582-06b5-4faa-a85f-3323e5536b71",
+      "Name": "Order"
+    },
+    "ExtendParent": true,
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Order",
+    "DependsOn": []
+  }
+}

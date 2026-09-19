@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "af1f6920-49c7-4cb5-b99f-72e4988ca659",
+    "Name": "SPAIDecisionLedger",
+    "ModifiedOnUtc": "\/Date(1789800109000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Decision ledger",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "dce5ecf7-641d-4b0c-8663-38df1d0803f9",
+    "Name": "SPAIStockPositionsRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789780792000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Stock positions (Page settings)",
+    "DependsOn": []
+  }
+}

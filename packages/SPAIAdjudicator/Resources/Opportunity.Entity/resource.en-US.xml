@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Columns.SPAIAdjudicationStatus.Caption" Value="Adjudication status" />
+			<Item Name="Columns.SPAIAiCallCount.Caption" Value="AI calls" />
+			<Item Name="Columns.SPAIDeterministicCount.Caption" Value="Resolved without AI" />
+			<Item Name="Columns.SPAIDwellingCount.Caption" Value="Dwelling count" />
+			<Item Name="Columns.SPAIEscalationCount.Caption" Value="Escalated" />
+			<Item Name="Columns.SPAIExactMatchCount.Caption" Value="Exact match" />
+			<Item Name="Columns.SPAIGate1ApprovedBy.Caption" Value="Gate 1 approved by" />
+			<Item Name="Columns.SPAIGate1ApprovedOn.Caption" Value="Gate 1 approved on" />
+			<Item Name="Columns.SPAIGate2ApprovedBy.Caption" Value="Gate 2 approved by" />
+			<Item Name="Columns.SPAIGate2ApprovedOn.Caption" Value="Gate 2 approved on" />
+			<Item Name="Columns.SPAIGrossMarginPct.Caption" Value="Gross margin %" />
+			<Item Name="Columns.SPAIHoursToClose.Caption" Value="Hours to close" />
+			<Item Name="Columns.SPAILineCount.Caption" Value="Lines" />
+			<Item Name="Columns.SPAIMultiSourceCount.Caption" Value="Multi-source" />
+			<Item Name="Columns.SPAIProjectName.Caption" Value="Project name" />
+			<Item Name="Columns.SPAIScheduleReceivedOn.Caption" Value="Schedule received on" />
+			<Item Name="Columns.SPAISubstitutionCount.Caption" Value="Substituted" />
+			<Item Name="Columns.SPAITenderCloseOn.Caption" Value="Tender close on" />
+			<Item Name="Columns.SPAITenderCode.Caption" Value="Tender code" />
+			<Item Name="Columns.SPAITotalCost.Caption" Value="Total cost" />
+			<Item Name="Columns.SPAITotalSell.Caption" Value="Total sell" />
+		</Items>
+	</Group>
+</Resources>

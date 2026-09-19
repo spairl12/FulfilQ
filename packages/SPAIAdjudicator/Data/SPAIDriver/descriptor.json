@@ -1,0 +1,28 @@
+﻿{
+  "Descriptor": {
+    "UId": "59e13578-f534-4dc5-b1d0-a10fd1c6df4b",
+    "Name": "SPAIDriver",
+    "ModifiedOnUtc": "\/Date(1789800203000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "c246ab95-acd2-466d-99cb-b7ef04e699f9",
+      "Name": "SPAIDriver"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "2bc5725d-fa5c-4cff-b10f-8082f216189a",
+    "Name": "SPAIDecisionLedger_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782268000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Decision ledger list page",
+    "DependsOn": []
+  }
+}

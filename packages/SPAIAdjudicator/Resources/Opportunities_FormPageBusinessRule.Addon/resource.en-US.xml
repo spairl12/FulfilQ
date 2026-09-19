@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.0fbc6c69-9a41-4c4e-9842-09838c2edcac.Caption" Value="SPAI: hide Submit for Gate 2 otherwise" />
+			<Item Name="AddonConfig.Rules.5c98d983-d9ef-45a3-aaca-eb5c4d7d8a77.Caption" Value="SPAI: hide Approve Gate 1 otherwise" />
+			<Item Name="AddonConfig.Rules.6bbd0558-473a-4c4d-b278-a7ff464afa86.Caption" Value="SPAI: show Submit for Gate 2 when awaiting Gate 2" />
+			<Item Name="AddonConfig.Rules.91119151-461a-4a1b-bb53-2e6b6560f60a.Caption" Value="SPAI: show Run adjudication when not started or re-adjudicating" />
+			<Item Name="AddonConfig.Rules.cc5fc94d-29da-4e25-9f7d-072a49993ea6.Caption" Value="SPAI: hide Run adjudication once a run is in progress or done" />
+			<Item Name="AddonConfig.Rules.d5637363-51eb-4f6d-b69b-ef2bba457eb4.Caption" Value="SPAI: show Approve Gate 1 when awaiting Gate 1" />
+		</Items>
+	</Group>
+</Resources>

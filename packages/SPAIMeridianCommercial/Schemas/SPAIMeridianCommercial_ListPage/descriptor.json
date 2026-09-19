@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "cb887fd8-3bcf-47e4-bcc4-2292477534c8",
+    "Name": "SPAIMeridianCommercial_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782153000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Meridian Commercial list page",
+    "DependsOn": []
+  }
+}

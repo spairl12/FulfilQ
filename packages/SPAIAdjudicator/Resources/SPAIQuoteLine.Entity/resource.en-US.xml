@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Quote line" />
+			<Item Name="Columns.SPAIAmount.Caption" Value="Amount" />
+			<Item Name="Columns.SPAIPrice.Caption" Value="Price" />
+			<Item Name="Columns.SPAIProduct.Caption" Value="Product" />
+			<Item Name="Columns.SPAIQuantity.Caption" Value="Quantity" />
+			<Item Name="Columns.SPAIQuote.Caption" Value="Quote" />
+		</Items>
+	</Group>
+</Resources>

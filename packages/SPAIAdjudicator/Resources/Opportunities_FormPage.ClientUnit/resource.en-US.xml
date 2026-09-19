@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.MeddpiccTab_caption.Value" Value="MEDDPICC" />
+			<Item Name="LocalizableStrings.OpportunityHistoryDS_EntityChangeType.Value" Value="Change Type" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExpansionPanel_title.Value" Value="History of changes" />
+			<Item Name="LocalizableStrings.OpportunityHistoryExportDataBtn_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.OpportunityHistoryRefreshBtn_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.OpportunityHistorySearchFilter_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.OpportunityHistorySettingsBtn_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.PDS_SPAIAdjudicationStatus_spai.Value" Value="Adjudication status" />
+			<Item Name="LocalizableStrings.SPAIAdjudicationTab_caption.Value" Value="Adjudication" />
+			<Item Name="LocalizableStrings.SPAIApproveGate1Button_caption.Value" Value="Approve Gate 1" />
+			<Item Name="LocalizableStrings.SPAIRunAdjudicationButton_caption.Value" Value="Run adjudication" />
+			<Item Name="LocalizableStrings.SPAIScheduleLinesExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIScheduleLinesImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIScheduleLinesPanel_title.Value" Value="Schedule lines" />
+			<Item Name="LocalizableStrings.SPAIScheduleLinesSearch_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.SPAISubmitGate2Button_caption.Value" Value="Submit for Gate 2" />
+			<Item Name="LocalizableStrings.SPAITile_AICalls_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_AICalls_title.Value" Value="AI calls" />
+			<Item Name="LocalizableStrings.SPAITile_Escal_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Escal_title.Value" Value="Escalated" />
+			<Item Name="LocalizableStrings.SPAITile_Exact_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Exact_title.Value" Value="Exact match" />
+			<Item Name="LocalizableStrings.SPAITile_Hours_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Hours_title.Value" Value="Hours to close" />
+			<Item Name="LocalizableStrings.SPAITile_Lines_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Lines_title.Value" Value="Lines" />
+			<Item Name="LocalizableStrings.SPAITile_Margin_template.Value" Value="{0}%" />
+			<Item Name="LocalizableStrings.SPAITile_Margin_title.Value" Value="Gross margin %" />
+			<Item Name="LocalizableStrings.SPAITile_Multi_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Multi_title.Value" Value="Multi-source" />
+			<Item Name="LocalizableStrings.SPAITile_NoAI_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_NoAI_title.Value" Value="Resolved without AI" />
+			<Item Name="LocalizableStrings.SPAITile_Subst_template.Value" Value="{0}" />
+			<Item Name="LocalizableStrings.SPAITile_Subst_title.Value" Value="Substituted" />
+			<Item Name="LocalizableStrings.addRecord_ih4zcqj_caption.Value" Value="Add new" />
+		</Items>
+	</Group>
+</Resources>

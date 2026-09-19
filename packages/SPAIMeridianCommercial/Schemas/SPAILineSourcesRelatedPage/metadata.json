@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "b25a678b-4bb4-4d73-895e-a81d996e8d75",
+      "A2": "SPAILineSourcesRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "95449116-a8b0-4480-bd66-f83002435d54",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "b9ff6736-3418-4daf-9209-4f346f549b93",
+            "PageSchemaUId": "3ceb2666-995a-46e2-8826-cc4364e68cc2",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

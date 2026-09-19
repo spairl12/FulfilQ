@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "dd49286d-73f5-4e11-a49e-fe20bb0fd866",
+    "Name": "SPAIDeliveries_Detail",
+    "ModifiedOnUtc": "\/Date(1789781095000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Deliveries detail",
+    "DependsOn": []
+  }
+}

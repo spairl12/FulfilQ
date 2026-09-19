@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "8d462997-1de3-49b0-bd13-201318a7b78b",
+    "Name": "SPAISubstitutionRules_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782211000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Substitution rules list page",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "dce5ecf7-641d-4b0c-8663-38df1d0803f9",
+      "A2": "SPAIStockPositionsRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "e373cd3e-43ba-4916-a433-152ed0468014",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "af38df7d-18c0-45c2-8f43-f2be077c9b67",
+            "PageSchemaUId": "5f6a1737-f547-424a-8b84-0b11c5de5219",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

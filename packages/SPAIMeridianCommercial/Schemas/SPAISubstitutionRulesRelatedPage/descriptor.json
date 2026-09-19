@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "7750302d-ae57-4099-a971-edeffe9b02dd",
+    "Name": "SPAISubstitutionRulesRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789780721000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Substitution rules (Page settings)",
+    "DependsOn": []
+  }
+}

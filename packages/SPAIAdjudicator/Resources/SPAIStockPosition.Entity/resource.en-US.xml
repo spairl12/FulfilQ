@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Stock position" />
+			<Item Name="Columns.SPAILocation.Caption" Value="Location" />
+			<Item Name="Columns.SPAINextInboundDate.Caption" Value="Next inbound date" />
+			<Item Name="Columns.SPAINextInboundQty.Caption" Value="Next inbound qty" />
+			<Item Name="Columns.SPAIProduct.Caption" Value="Product" />
+			<Item Name="Columns.SPAIQtyAllocated.Caption" Value="Qty allocated" />
+			<Item Name="Columns.SPAIQtyAvailable.Caption" Value="Qty available" />
+			<Item Name="Columns.SPAIQtyOnHand.Caption" Value="Qty on hand" />
+		</Items>
+	</Group>
+</Resources>

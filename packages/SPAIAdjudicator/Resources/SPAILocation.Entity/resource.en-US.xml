@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Location" />
+			<Item Name="Columns.SPAIAcceptingFrom.Caption" Value="Accepting from" />
+			<Item Name="Columns.SPAIAcceptingUntil.Caption" Value="Accepting until" />
+			<Item Name="Columns.SPAICode.Caption" Value="Code" />
+			<Item Name="Columns.SPAIIsAvailable.Caption" Value="Is available" />
+			<Item Name="Columns.SPAILocationType.Caption" Value="Location type" />
+			<Item Name="Columns.SPAIName.Caption" Value="Name" />
+			<Item Name="Columns.SPAISourcingRank.Caption" Value="Sourcing rank" />
+			<Item Name="Columns.SPAIState.Caption" Value="State" />
+			<Item Name="Columns.SPAISuburb.Caption" Value="Suburb" />
+		</Items>
+	</Group>
+</Resources>

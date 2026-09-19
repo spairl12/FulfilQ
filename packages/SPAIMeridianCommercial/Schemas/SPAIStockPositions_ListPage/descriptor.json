@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "6aa9e921-34fb-4f56-8b4f-6bbd322afcaa",
+    "Name": "SPAIStockPositions_ListPage",
+    "ModifiedOnUtc": "\/Date(1789782182000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Stock positions list page",
+    "DependsOn": []
+  }
+}

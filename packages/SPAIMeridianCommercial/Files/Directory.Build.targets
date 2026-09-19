@@ -1,0 +1,19 @@
+<Project>
+	<ItemGroup Condition="'$(PkgPath)' != ''">
+		<Compile Remove="$(PkgPath)/SPAIMeridianCommercial/Assemblies/**" />
+		<Compile Remove="$(PkgPath)/SPAIMeridianCommercial/Data/**" />
+		<Compile Remove="$(PkgPath)/SPAIMeridianCommercial/SqlScripts/**" />
+		<Compile Remove="$(PkgPath)/SPAIMeridianCommercial/Schemas\**" />
+		<Compile Remove="$(PkgPath)/SPAIMeridianCommercial/Resources/**" />
+		<EmbeddedResource Remove="$(PkgPath)/SPAIMeridianCommercial/Assemblies/**" />
+		<EmbeddedResource Remove="$(PkgPath)/SPAIMeridianCommercial/Data/**" />
+		<EmbeddedResource Remove="$(PkgPath)/SPAIMeridianCommercial/SqlScripts/**" />
+		<EmbeddedResource Remove="$(PkgPath)/SPAIMeridianCommercial/Schemas/**" />
+		<EmbeddedResource Remove="$(PkgPath)/SPAIMeridianCommercial/Resources/**" />
+		<None Remove="$(PkgPath)/SPAIMeridianCommercial/Assemblies/**" />
+		<None Remove="$(PkgPath)/SPAIMeridianCommercial/Data/**" />
+		<None Remove="$(PkgPath)/SPAIMeridianCommercial/SqlScripts/**" />
+		<None Remove="$(PkgPath)/SPAIMeridianCommercial/Schemas/**" />
+		<None Remove="$(PkgPath)/SPAIMeridianCommercial/Resources/**" />
+  </ItemGroup>
+</Project>

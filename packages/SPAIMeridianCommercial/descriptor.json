@@ -1,0 +1,23 @@
+﻿{
+  "Descriptor": {
+    "UId": "36525f96-15e8-4984-83cf-51617a44f168",
+    "Name": "SPAIMeridianCommercial",
+    "Type": 1,
+    "ModifiedOnUtc": "\/Date(1789780612000)\/",
+    "Maintainer": "Customer",
+    "ProjectPath": "Files/SPAIMeridianCommercial.csproj",
+    "DependsOn": [
+      {
+        "UId": "012e2e14-082b-ac2b-da5a-2fc87bad41d4",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtCore",
+        "Type": 1
+      },
+      {
+        "UId": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+        "PackageVersion": "7.8.0",
+        "Name": "SPAIAdjudicator"
+      }
+    ]
+  }
+}

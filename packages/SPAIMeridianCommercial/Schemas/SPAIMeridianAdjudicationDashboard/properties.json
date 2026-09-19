@@ -1,0 +1,8 @@
+﻿{
+  "Properties": {
+    "CreatedInVersion": "10.0.0.858",
+    "Group": "DashboardPage",
+    "OptionalProperties": "{\"DashboardsEntitySchemaName\":\"SPAIScheduleLine\",\"DashboardsElementName\":\"Dashboards\",\"DashboardsClientUnitSchemaUId\":\"7ea4bd52-d140-4e90-bd0f-56a5133d8295\"}",
+    "SchemaType": "AngularSchema"
+  }
+}

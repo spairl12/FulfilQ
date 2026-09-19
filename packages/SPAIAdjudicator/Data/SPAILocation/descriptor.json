@@ -1,0 +1,70 @@
+﻿{
+  "Descriptor": {
+    "UId": "7a2f2c26-42fb-4b21-9fd3-ec2ef5bf83cd",
+    "Name": "SPAILocation",
+    "ModifiedOnUtc": "\/Date(1789800222000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "6a13dbd4-5b7c-4336-82c1-1eba8afe1313",
+      "Name": "SPAILocation"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "621c3809-e58c-4106-a170-ac1e541fe4bf",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIIsAvailable",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      },
+      {
+        "ColumnUId": "8d9771b8-3610-4abd-a70d-2b8adade2082",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAILocationType",
+        "DataTypeValueUId": "b295071f-7ea9-4e62-8d1a-919bf3732ff2"
+      },
+      {
+        "ColumnUId": "90f89482-9075-4447-817e-16c4820e2e1a",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIState",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "a3dc7e65-0a47-4000-a646-c500d135fafe",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAISuburb",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "a618d093-4631-4f07-9ea7-1c520d8fb153",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAISourcingRank",
+        "DataTypeValueUId": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0"
+      },
+      {
+        "ColumnUId": "a86d0a59-6624-4a87-8370-9a010e57fc15",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAICode",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "d0ae9a23-713a-4771-aea0-06cf243275ac",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIName",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      }
+    ]
+  }
+}

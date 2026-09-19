@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "1f885651-696d-4509-a819-99cf0d3413ff",
+    "Name": "SPAIAdjudicationStatus",
+    "ModifiedOnUtc": "\/Date(1789714831000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Adjudication status",
+    "DependsOn": []
+  }
+}

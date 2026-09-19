@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Line source" />
+			<Item Name="Columns.SPAIAllocatedOn.Caption" Value="Allocated on" />
+			<Item Name="Columns.SPAIInterstateFreight.Caption" Value="Interstate freight" />
+			<Item Name="Columns.SPAILocation.Caption" Value="Location" />
+			<Item Name="Columns.SPAIQtyAllocated.Caption" Value="Qty allocated" />
+			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAISourceTier.Caption" Value="Source tier" />
+		</Items>
+	</Group>
+</Resources>

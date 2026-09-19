@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "c90e9d81-de53-460c-83b2-88cc9059b127",
+    "Name": "Opportunities_FormPageBusinessRule",
+    "ModifiedOnUtc": "\/Date(1789799824000)\/",
+    "Parent": {
+      "UId": "b19581f2-9891-45c3-8545-284bf4d3ff75",
+      "Name": "Opportunities_FormPageBusinessRule"
+    },
+    "ExtendParent": true,
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Opportunities form page (Business rules)",
+    "DependsOn": []
+  }
+}

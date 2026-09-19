@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b25a678b-4bb4-4d73-895e-a81d996e8d75",
+    "Name": "SPAILineSourcesRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789784384000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Line sources (Page settings)",
+    "DependsOn": []
+  }
+}

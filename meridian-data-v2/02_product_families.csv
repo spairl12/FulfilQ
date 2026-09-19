@@ -1,0 +1,11 @@
+Code,Name,Category,HasCutout
+FM01,Wall Oven,Appliances,Yes
+FM02,Cooktop,Appliances,Yes
+FM03,Dishwasher,Appliances,Yes
+FM04,Rangehood,Appliances,Yes
+FM05,Microwave,Appliances,Yes
+FM06,Basin,Sanitaryware,No
+FM07,Toilet Suite,Sanitaryware,No
+FM08,Basin Mixer,Tapware,No
+FM09,Shower Set,Tapware,No
+FM10,Kitchen Sink Mixer,Tapware,No

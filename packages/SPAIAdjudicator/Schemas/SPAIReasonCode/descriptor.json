@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "ca836c94-10d3-4f8b-9087-b71b2fdb2af7",
+    "Name": "SPAIReasonCode",
+    "ModifiedOnUtc": "\/Date(1789715090000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Reason code",
+    "DependsOn": []
+  }
+}

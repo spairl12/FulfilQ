@@ -1,0 +1,11 @@
+# clio exports: packages/ holds the unzipped, diffable copy
+backup/
+*.gz
+# local clio page caches
+.clio-pages/
+__pycache__/
+.DS_Store
+# The Build Plan 2 scoring fixture must never ship with the solution
+*ANSWER_KEY*
+# the original seed archive contains the answer key; commit only the extracted CSVs
+meridian-seed-data-v2.zip

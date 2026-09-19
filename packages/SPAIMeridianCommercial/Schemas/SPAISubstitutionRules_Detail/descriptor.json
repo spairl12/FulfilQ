@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "3005ca65-012a-4dd1-95e0-553b172bd76f",
+    "Name": "SPAISubstitutionRules_Detail",
+    "ModifiedOnUtc": "\/Date(1789780721000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Substitution rules detail",
+    "DependsOn": []
+  }
+}

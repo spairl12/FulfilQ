@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "2dcf0ab4-e3a7-406d-adc4-f42f4355b81e",
+    "Name": "SPAILifecycleStatus",
+    "ModifiedOnUtc": "\/Date(1789714634000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Lifecycle status",
+    "DependsOn": []
+  }
+}

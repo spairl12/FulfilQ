@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "962a7e11-8d32-4f61-85b9-9afee2fe7801",
+    "Name": "SPAIProductFamily",
+    "ModifiedOnUtc": "\/Date(1789714576000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Product family",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "77cde955-cfd0-48a1-bcf8-a45cd923a394",
+      "A2": "SPAIDecisionLedgerRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "af1f6920-49c7-4cb5-b99f-72e4988ca659",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "4b4cd3dd-0d47-4673-949c-47b32d0b9e80",
+            "PageSchemaUId": "74445353-fddf-4601-904e-e0f29f18d75b",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

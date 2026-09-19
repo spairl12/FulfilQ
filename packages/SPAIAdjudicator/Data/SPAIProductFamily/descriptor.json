@@ -1,0 +1,42 @@
+﻿{
+  "Descriptor": {
+    "UId": "9bb8d44c-8a48-4b28-bfce-a7d324a44efc",
+    "Name": "SPAIProductFamily",
+    "ModifiedOnUtc": "\/Date(1789800199000)\/",
+    "InstallType": 0,
+    "Schema": {
+      "UId": "962a7e11-8d32-4f61-85b9-9afee2fe7801",
+      "Name": "SPAIProductFamily"
+    },
+    "Columns": [
+      {
+        "ColumnUId": "736c30a7-c0ec-4fa9-b034-2552b319b633",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "Name",
+        "DataTypeValueUId": "ddb3a1ee-07e8-4d62-b7a9-d0e618b00fbd"
+      },
+      {
+        "ColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+        "IsForceUpdate": false,
+        "IsKey": true,
+        "ColumnName": "Id",
+        "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "e1c49379-47cf-4c60-868a-120cb2ce4a3e",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAICategory",
+        "DataTypeValueUId": "325a73b8-0f47-44a0-8412-7606f78003ac"
+      },
+      {
+        "ColumnUId": "fc249f76-5efb-4c31-a8cf-d4a6004802c4",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIHasCutout",
+        "DataTypeValueUId": "90b65bf8-0ffc-4141-8779-2420877af907"
+      }
+    ]
+  }
+}

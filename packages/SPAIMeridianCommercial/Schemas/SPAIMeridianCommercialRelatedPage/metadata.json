@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "368c276f-98c9-44ba-8d52-3bfd59c3c612",
+      "A2": "SPAIMeridianCommercialRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "6a13dbd4-5b7c-4336-82c1-1eba8afe1313",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "0df839a2-03fd-4b2a-80be-2c544ab34b37",
+            "PageSchemaUId": "53360be9-3c83-4b72-8c75-23f2feb5cfbf",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

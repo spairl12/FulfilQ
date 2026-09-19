@@ -1,0 +1,26 @@
+﻿{
+  "PackageData": [
+    {
+      "Row": [
+        {
+          "SchemaColumnUId": "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
+          "Value": "fc89e573-4540-44d6-8990-234b59f1f558"
+        },
+        {
+          "SchemaColumnUId": "0e3d3857-2203-40e4-b1ec-8e972007650e",
+          "Value": "5a1c0002-0000-4000-8000-000000000001",
+          "DisplayValue": "Meridian Commercial"
+        },
+        {
+          "SchemaColumnUId": "991cf5ef-ffb8-49a5-add3-074a595f6c43",
+          "Value": "f4272683-e5af-4e1e-8b93-7a50fd13b0fb",
+          "DisplayValue": "Stock positions"
+        },
+        {
+          "SchemaColumnUId": "bd12ea8e-2bc2-42bf-925a-3ab766cc0b9f",
+          "Value": 26
+        }
+      ]
+    }
+  ]
+}

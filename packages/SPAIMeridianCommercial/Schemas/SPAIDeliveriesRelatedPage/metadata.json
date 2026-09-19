@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "a6e64303-b000-4d1d-a537-e622cb9f15e5",
+      "A2": "SPAIDeliveriesRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "326b5f40-7d8e-413e-9704-2942cc78e6b1",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "ab81c18b-8a20-4357-a349-4b37a620b2d6",
+            "PageSchemaUId": "a9ff3f45-5972-4d6d-8e65-6c73d62c2e9c",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

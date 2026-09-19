@@ -1,0 +1,33 @@
+﻿{
+  "Descriptor": {
+    "UId": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+    "PackageVersion": "7.8.0",
+    "Name": "SPAIAdjudicator",
+    "ModifiedOnUtc": "\/Date(1789798843000)\/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+      {
+        "UId": "06d9ef10-51d8-122c-8933-9212e84236c9",
+        "PackageVersion": "7.8.0",
+        "Name": "CrtBase"
+      },
+      {
+        "UId": "18c3a820-dd54-4dbe-8500-c0984e40766e",
+        "Name": "CrtMeddpiccInLeadOppMgmt",
+        "Type": 1,
+        "InstallBehavior": 1
+      },
+      {
+        "UId": "3f299622-2079-4a62-ba18-6d32c1d0d6af",
+        "PackageVersion": "7.8.0",
+        "Name": "SalesEnterprise_Marketing_ServiceEnt"
+      },
+      {
+        "UId": "6ad60148-18a4-5212-c84f-e197f71228c5",
+        "Name": "CrtChangeTrackingInLeadOppMgmt",
+        "Type": 1,
+        "InstallBehavior": 1
+      }
+    ]
+  }
+}

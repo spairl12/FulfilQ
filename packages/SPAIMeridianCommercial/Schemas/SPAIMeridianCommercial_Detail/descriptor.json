@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "391ac1a2-1512-4108-9de9-05e9b2f4926a",
+    "Name": "SPAIMeridianCommercial_Detail",
+    "ModifiedOnUtc": "\/Date(1789780555000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Meridian Commercial detail",
+    "DependsOn": []
+  }
+}
