@@ -1,0 +1,29 @@
+{
+  "extractionStatus": "success",
+  "documentRevision": "C",
+  "lineCount": 44,
+  "lines": [
+    {
+      "lineNumber": 7, "itemRef": "", "isAlternate": false, "alternateVariant": "", "productFamily": "",
+      "roomType": "Main Bathroom", "unitTier": "Penthouse",
+      "specifiedText": "Havelock Basin", "specifiedBrand": "Havelock", "specifiedModel": "09BN002",
+      "specifiedFinish": "Gunmetal", "quantity": 12,
+      "cutoutW": 0, "cutoutH": 0, "cutoutD": 0, "notes": "", "extractionConfidence": 0.98
+    },
+    {
+      "lineNumber": 23, "itemRef": "", "isAlternate": false, "alternateVariant": "", "productFamily": "",
+      "roomType": "Butlers Pantry", "unitTier": "Standard",
+      "specifiedText": "600mm Microwave, stainless steel, or equal approved",
+      "specifiedBrand": "", "specifiedModel": "",
+      "specifiedFinish": "Stainless Steel", "quantity": 138,
+      "cutoutW": 600, "cutoutH": 600, "cutoutD": 580, "notes": "", "extractionConfidence": 0.95
+    },
+    {
+      "lineNumber": 28, "itemRef": "", "isAlternate": false, "alternateVariant": "", "productFamily": "",
+      "roomType": "Kitchen", "unitTier": "Standard",
+      "specifiedText": "Cassini 600mm Dishwasher", "specifiedBrand": "Cassini", "specifiedModel": "05DW6000Q",
+      "specifiedFinish": "Stainless Steel", "quantity": 138,
+      "cutoutW": 600, "cutoutH": 600, "cutoutD": 560, "notes": "", "extractionConfidence": 0.96
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "spai-schedule-extractor/output",
+  "title": "Schedule Extractor output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["extractionStatus", "documentRevision", "lineCount", "lines"],
+  "properties": {
+    "extractionStatus": { "type": "string", "enum": ["success", "partial", "failed"] },
+    "documentRevision": { "type": "string" },
+    "lineCount": { "type": "integer", "minimum": 0 },
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lineNumber", "itemRef", "isAlternate", "alternateVariant", "productFamily",
+                     "roomType", "unitTier", "specifiedText", "specifiedBrand", "specifiedModel",
+                     "specifiedFinish", "quantity", "cutoutW", "cutoutH", "cutoutD", "notes",
+                     "extractionConfidence"],
+        "properties": {
+          "lineNumber": { "type": "integer", "minimum": 1 },
+          "itemRef": { "type": "string" },
+          "isAlternate": { "type": "boolean" },
+          "alternateVariant": { "type": "string" },
+          "productFamily": { "type": "string" },
+          "roomType": { "type": "string" },
+          "unitTier": { "type": "string" },
+          "specifiedText": { "type": "string" },
+          "specifiedBrand": { "type": "string" },
+          "specifiedModel": { "type": "string" },
+          "specifiedFinish": { "type": "string" },
+          "quantity": { "type": "integer", "minimum": 0 },
+          "cutoutW": { "type": "integer", "minimum": 0 },
+          "cutoutH": { "type": "integer", "minimum": 0 },
+          "cutoutD": { "type": "integer", "minimum": 0 },
+          "notes": { "type": "string" },
+          "extractionConfidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    }
+  }
+}

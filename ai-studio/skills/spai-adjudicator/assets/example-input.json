@@ -1,0 +1,239 @@
+{
+  "unresolvedLines": [
+    {
+      "lineNumber": 36,
+      "itemRef": "",
+      "isAlternate": false,
+      "productFamily": "Rangehood",
+      "roomType": "Kitchen",
+      "unitTier": "Premium",
+      "specifiedText": "Thornbury 750mm Rangehood",
+      "specifiedBrand": "Thornbury",
+      "specifiedModel": "04RH75002",
+      "specifiedFinish": "Gloss White",
+      "quantity": 36,
+      "cutoutW": 750,
+      "cutoutH": 605,
+      "cutoutD": 560,
+      "notes": "Cut-out confirmed on ARCH-DET-114.",
+      "regimes": {
+        "cutout": true,
+        "wels": false,
+        "gems": false,
+        "waterMark": false
+      },
+      "specifiedProduct": {
+        "productCode": "MCS-0258",
+        "lifecycleStatus": "Discontinued",
+        "supersededByCode": "MCS-0231",
+        "leadTimeWeeks": 18,
+        "welsRating": null,
+        "energyStarRating": null,
+        "networkQtyAvailable": 7
+      },
+      "floorDiagnostics": {
+        "familyCandidates": 41,
+        "cutoutFit": 0,
+        "cutoutFitFloorFail": 0,
+        "eligible": 0
+      }
+    },
+    {
+      "lineNumber": 40,
+      "itemRef": "",
+      "isAlternate": false,
+      "productFamily": "Basin",
+      "roomType": "Main Bathroom",
+      "unitTier": "Standard",
+      "specifiedText": "Havelock Basin",
+      "specifiedBrand": "Havelock",
+      "specifiedModel": "09BN001",
+      "specifiedFinish": "Stainless Steel",
+      "quantity": 6,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "notes": "",
+      "regimes": {
+        "cutout": false,
+        "wels": false,
+        "gems": false,
+        "waterMark": true
+      },
+      "specifiedProduct": {
+        "productCode": "MCS-0370",
+        "lifecycleStatus": "Discontinued",
+        "supersededByCode": "MCS-0372",
+        "leadTimeWeeks": 20,
+        "welsRating": null,
+        "energyStarRating": null,
+        "networkQtyAvailable": 24
+      },
+      "floorDiagnostics": {
+        "familyCandidates": 13,
+        "cutoutFit": 13,
+        "cutoutFitFloorFail": 0,
+        "eligible": 13
+      }
+    }
+  ],
+  "candidateProducts": [
+    {
+      "productCode": "MCS-0372",
+      "name": "Havelock Basin",
+      "modelCode": "09BN003",
+      "brand": "Havelock",
+      "productFamily": "Basin",
+      "lifecycleStatus": "Current",
+      "projectApproved": true,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "welsRegistrationNo": "",
+      "welsRating": null,
+      "gemsRegistrationNo": "",
+      "energyStarRating": null,
+      "waterMarkCertNo": "WMKA29652",
+      "finish": "Brushed Brass",
+      "leadTimeWeeks": 2,
+      "marginPct": 19.9,
+      "eligibleLines": [
+        {
+          "lineNumber": 40,
+          "preRank": 1
+        }
+      ]
+    },
+    {
+      "productCode": "MCS-0383",
+      "name": "Havelock Basin",
+      "modelCode": "09BN014",
+      "brand": "Havelock",
+      "productFamily": "Basin",
+      "lifecycleStatus": "Current",
+      "projectApproved": true,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "welsRegistrationNo": "",
+      "welsRating": null,
+      "gemsRegistrationNo": "",
+      "energyStarRating": null,
+      "waterMarkCertNo": "WMKA20305",
+      "finish": "Stainless Steel",
+      "leadTimeWeeks": 4,
+      "marginPct": 25.0,
+      "eligibleLines": [
+        {
+          "lineNumber": 40,
+          "preRank": 2
+        }
+      ]
+    }
+  ],
+  "substitutionRules": [
+    {
+      "ruleCode": "SR-0011",
+      "fromProductCode": "MCS-0258",
+      "toProductCode": "MCS-0231",
+      "equivalenceBasis": "cut-out 750x590x560mm match; same family (Rangehood)",
+      "finishMatch": false,
+      "targetEligibleForLines": []
+    },
+    {
+      "ruleCode": "SR-0022",
+      "fromProductCode": "MCS-0370",
+      "toProductCode": "MCS-0372",
+      "equivalenceBasis": "same family (Basin)",
+      "finishMatch": false,
+      "targetEligibleForLines": [
+        40
+      ]
+    }
+  ],
+  "networkStock": [
+    {
+      "productCode": "MCS-0372",
+      "locationCode": "DC01",
+      "locationName": "Melbourne West DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 1,
+      "qtyOnHand": 387,
+      "qtyAvailable": 345,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0372",
+      "locationCode": "DC04",
+      "locationName": "Perth Metro DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 4,
+      "qtyOnHand": 248,
+      "qtyAvailable": 228,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0383",
+      "locationCode": "DC01",
+      "locationName": "Melbourne West DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 1,
+      "qtyOnHand": 440,
+      "qtyAvailable": 422,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0383",
+      "locationCode": "DC04",
+      "locationName": "Perth Metro DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 4,
+      "qtyOnHand": 213,
+      "qtyAvailable": 146,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0383",
+      "locationCode": "ST03",
+      "locationName": "Geelong Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 7,
+      "qtyOnHand": 0,
+      "qtyAvailable": 0,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0383",
+      "locationCode": "ST07",
+      "locationName": "Gold Coast Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 11,
+      "qtyOnHand": 0,
+      "qtyAvailable": 0,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0383",
+      "locationCode": "ST08",
+      "locationName": "Adelaide Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 12,
+      "qtyOnHand": 0,
+      "qtyAvailable": 0,
+      "nextInboundQty": 88,
+      "nextInboundDate": "2026-10-07"
+    }
+  ],
+  "policyContext": {
+    "policy": "Meridian Substitution Governance Policy v1.0 (knowledge source KS1)",
+    "leadTimeLimitWeeks": 12,
+    "candidateCap": 60,
+    "regimeSource": "KS2 Regulatory Compliance Reference, section 7"
+  }
+}

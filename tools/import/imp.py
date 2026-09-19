@@ -359,11 +359,19 @@ def s_retire_phases():
     ids = [gid("ord", f'{r["TenderCode"]}-P{r["PhaseNumber"]}') for r in rows("08_calloff_phases.csv")]
     run_batch("Order", [delete_q("Order", i) for i in existing_ids("Order", ids)], "retire phase orders")
 
+def s_dishwasher_wels():
+    """Master-data fix (tools/data/fix_dishwasher_wels.py): dishwashers are WELS-regulated, so load their
+    WELS registration and water rating from 04_products.csv."""
+    run_batch("Product", [update_q("Product", gid("prd", r["ProductCode"]), {"SPAIWelsRegistrationNo": T(r["WelsRegistrationNo"]),
+        "SPAIWELSRating": F(r["WELSRating"])}) for r in rows("04_products.csv") if r["ProductFamily"] == "Dishwasher"],
+        "dishwasher WELS registration + rating")
+
 STEPS = {"brands": s_brands, "families": s_families, "locations": s_locations, "drivers": s_drivers, "accounts": s_accounts,
          "contacts": s_contacts, "products": s_products, "superseded": s_superseded, "stock": s_stock, "rules": s_rules,
          "tenders": s_tenders, "alignment": s_alignment, "fulfilment": s_fulfilment,
          "callup_lookups": s_callup_lookups, "corvina_programme": s_corvina_programme, "kelmore_programme": s_kelmore_programme,
          "kelmore_subpos": s_kelmore_subpos, "kelmore_lines": s_kelmore_lines, "kelmore_callups": s_kelmore_callups,
-         "rules_v2fix": s_rules_v2fix, "retire_phases": s_retire_phases, "retire_v3": s_retire_v3}
+         "rules_v2fix": s_rules_v2fix, "retire_phases": s_retire_phases, "retire_v3": s_retire_v3,
+         "dishwasher_wels": s_dishwasher_wels}
 if __name__ == "__main__":
     for s in sys.argv[1:]: STEPS[s]()
