@@ -1,7 +1,0 @@
-SubPORef,BlanketPORef,ScheduleRef,WindowCode,LocationCode,LocationName,LocationType,LineCount,TotalQty
-SPO-0438-01,BPO-0438,SCH-0438-01,W2,DC01,Melbourne West DC,Distribution Centre,23,359
-SPO-0438-02,BPO-0438,SCH-0438-02,W2,DC01,Melbourne West DC,Distribution Centre,19,357
-SPO-0438-03,BPO-0438,SCH-0438-01,W1,DC01,Melbourne West DC,Distribution Centre,10,417
-SPO-0438-04,BPO-0438,SCH-0438-01,W2,DC02,Sydney Central DC,Distribution Centre,9,63
-SPO-0438-05,BPO-0438,SCH-0438-02,W1,DC01,Melbourne West DC,Distribution Centre,7,279
-SPO-0438-06,BPO-0438,SCH-0438-02,W2,DC02,Sydney Central DC,Distribution Centre,6,42

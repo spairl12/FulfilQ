@@ -1,100 +1,46 @@
-RuleCode,FromProductCode,FromProductName,ToProductCode,ToProductName,EquivalenceBasis,FinishMatch,ApprovedBy,ApprovedOn,IsActive
-SR-0001,MCS-0002,Valdora 900mm Wall Oven,MCS-0025,Ambrisi 900mm Wall Oven,cut-out 900x600x560mm match; energy rating 2.5 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2026-07-27,Yes
-SR-0002,MCS-0029,Ambrisi 900mm Wall Oven,MCS-0011,Nordveld 900mm Wall Oven,cut-out 900x590x570mm match; energy rating 4.5 vs 5.0; same family (Wall Oven),No,Technical Product Manager,2026-07-29,Yes
-SR-0003,MCS-0030,Ambrisi 450mm Wall Oven,MCS-0024,Ambrisi 450mm Wall Oven,cut-out 450x590x570mm match; energy rating 4.5 vs 4.5; same family (Wall Oven),No,Technical Product Manager,2026-08-15,Yes
-SR-0005,MCS-0043,Thornbury 750mm Wall Oven,MCS-0038,Thornbury 750mm Wall Oven,cut-out 750x590x550mm match; energy rating 4.0 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2026-03-17,Yes
-SR-0006,MCS-0047,Cassini 750mm Wall Oven,MCS-0040,Thornbury 750mm Wall Oven,cut-out 750x560x570mm match; energy rating 5.0 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2026-04-01,Yes
-SR-0007,MCS-0048,Cassini 900mm Wall Oven,MCS-0067,Garrow 900mm Wall Oven,cut-out 900x560x550mm match; energy rating 2.5 vs 3.5; same family (Wall Oven),No,Technical Product Manager,2026-04-07,Yes
-SR-0008,MCS-0051,Cassini 900mm Wall Oven,MCS-0006,Valdora 900mm Wall Oven,cut-out 900x590x570mm match; energy rating 3.5 vs 2.0; same family (Wall Oven),No,Technical Product Manager,2025-10-28,Yes
-SR-0009,MCS-0055,Cassini 600mm Wall Oven,MCS-0007,Valdora 600mm Wall Oven,cut-out 600x590x570mm match; energy rating 2.5 vs 2.5; same family (Wall Oven),No,Technical Product Manager,2026-07-16,Yes
-SR-0010,MCS-0057,Cassini 600mm Wall Oven,MCS-0036,Thornbury 600mm Wall Oven,cut-out 600x595x580mm match; energy rating 2.5 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2026-03-07,Yes
-SR-0011,MCS-0058,Cassini 450mm Wall Oven,MCS-0064,Garrow 450mm Wall Oven,cut-out 450x595x570mm match; energy rating 4.5 vs 4.5; same family (Wall Oven),No,Technical Product Manager,2026-05-09,Yes
-SR-0012,MCS-0059,Cassini 600mm Wall Oven,MCS-0020,Nordveld 600mm Wall Oven,cut-out 600x560x550mm match; energy rating 2.5 vs 3.0; same family (Wall Oven),No,Technical Product Manager,2026-07-01,Yes
-SR-0013,MCS-0062,Garrow 600mm Wall Oven,MCS-0020,Nordveld 600mm Wall Oven,cut-out 600x600x580mm match; energy rating 2.5 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2025-12-30,Yes
-SR-0014,MCS-0068,Garrow 600mm Wall Oven,MCS-0020,Nordveld 600mm Wall Oven,cut-out 600x560x560mm match; energy rating 2.5 vs 5.0; same family (Wall Oven),No,Technical Product Manager,2025-12-11,Yes
-SR-0015,MCS-0072,Valdora 450mm Cooktop,MCS-0126,Cassini 450mm Cooktop,cut-out 450x590x570mm match; energy rating 3.5 vs 5.0; same family (Cooktop),Yes,Technical Product Manager,2026-03-12,Yes
-SR-0016,MCS-0074,Valdora 450mm Cooktop,MCS-0114,Thornbury 450mm Cooktop,cut-out 450x560x580mm match; energy rating 3.0 vs 5.0; same family (Cooktop),No,Technical Product Manager,2026-02-11,Yes
-SR-0017,MCS-0081,Valdora 900mm Cooktop,MCS-0087,Nordveld 900mm Cooktop,cut-out 900x590x560mm match; energy rating 4.5 vs 3.0; same family (Cooktop),No,Technical Product Manager,2025-12-17,Yes
-SR-0018,MCS-0084,Valdora 750mm Cooktop,MCS-0137,Garrow 750mm Cooktop,cut-out 750x595x570mm match; energy rating 3.5 vs 4.5; same family (Cooktop),No,Technical Product Manager,2026-01-06,Yes
-SR-0019,MCS-0094,Nordveld 750mm Cooktop,MCS-0130,Garrow 750mm Cooktop,cut-out 750x590x560mm match; energy rating 5.0 vs 3.5; same family (Cooktop),No,Technical Product Manager,2025-10-14,Yes
-SR-0020,MCS-0096,Ambrisi 450mm Cooktop,MCS-0134,Garrow 450mm Cooktop,cut-out 450x595x580mm match; energy rating 3.0 vs 2.5; same family (Cooktop),Yes,Technical Product Manager,2025-09-25,Yes
-SR-0021,MCS-0103,Ambrisi 600mm Cooktop,MCS-0098,Ambrisi 600mm Cooktop,cut-out 600x600x560mm match; energy rating 4.5 vs 2.0; same family (Cooktop),Yes,Technical Product Manager,2026-06-15,Yes
-SR-0022,MCS-0105,Thornbury 750mm Cooktop,MCS-0099,Ambrisi 750mm Cooktop,cut-out 750x590x560mm match; energy rating 3.5 vs 2.5; same family (Cooktop),Yes,Technical Product Manager,2026-03-22,Yes
-SR-0023,MCS-0106,Thornbury 450mm Cooktop,MCS-0123,Cassini 450mm Cooktop,cut-out 450x600x580mm match; energy rating 4.5 vs 3.5; same family (Cooktop),No,Technical Product Manager,2025-09-30,Yes
-SR-0024,MCS-0109,Thornbury 600mm Cooktop,MCS-0142,Garrow 600mm Cooktop,cut-out 600x595x550mm match; energy rating 3.5 vs 3.5; same family (Cooktop),No,Technical Product Manager,2025-11-30,Yes
-SR-0025,MCS-0113,Thornbury 450mm Cooktop,MCS-0085,Valdora 450mm Cooktop,cut-out 450x560x550mm match; energy rating 3.5 vs 4.5; same family (Cooktop),Yes,Technical Product Manager,2025-12-04,Yes
-SR-0026,MCS-0120,Cassini 750mm Cooktop,MCS-0132,Garrow 750mm Cooktop,cut-out 750x595x570mm match; energy rating 5.0 vs 4.0; same family (Cooktop),Yes,Technical Product Manager,2026-03-26,Yes
-SR-0027,MCS-0121,Cassini 750mm Cooktop,MCS-0130,Garrow 750mm Cooktop,cut-out 750x560x570mm match; energy rating 5.0 vs 4.0; same family (Cooktop),No,Technical Product Manager,2026-05-13,Yes
-SR-0028,MCS-0136,Garrow 600mm Cooktop,MCS-0102,Ambrisi 600mm Cooktop,cut-out 600x595x580mm match; energy rating 3.5 vs 4.5; same family (Cooktop),No,Technical Product Manager,2026-01-19,Yes
-SR-0029,MCS-0141,Garrow 900mm Cooktop,MCS-0087,Nordveld 900mm Cooktop,cut-out 900x560x560mm match; energy rating 4.5 vs 2.5; same family (Cooktop),No,Technical Product Manager,2026-01-29,Yes
-SR-0030,MCS-0144,Valdora 900mm Dishwasher,MCS-0153,Valdora 900mm Dishwasher,cut-out 900x600x580mm match; energy rating 2.5 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2025-11-13,Yes
-SR-0031,MCS-0150,Valdora 750mm Dishwasher,MCS-0207,Cassini 750mm Dishwasher,cut-out 750x595x560mm match; energy rating 3.5 vs 3.0; same family (Dishwasher),No,Technical Product Manager,2026-04-22,Yes
-SR-0032,MCS-0151,Valdora 450mm Dishwasher,MCS-0209,Cassini 450mm Dishwasher,cut-out 450x595x580mm match; energy rating 2.5 vs 2.5; same family (Dishwasher),Yes,Technical Product Manager,2025-10-12,Yes
-SR-0033,MCS-0157,Valdora 750mm Dishwasher,MCS-0146,Valdora 750mm Dishwasher,cut-out 750x560x580mm match; energy rating 3.0 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2025-08-25,Yes
-SR-0034,MCS-0159,Nordveld 450mm Dishwasher,MCS-0166,Nordveld 450mm Dishwasher,cut-out 450x590x560mm match; energy rating 3.0 vs 4.0; same family (Dishwasher),No,Technical Product Manager,2026-06-07,Yes
-SR-0035,MCS-0164,Nordveld 600mm Dishwasher,MCS-0147,Valdora 600mm Dishwasher,cut-out 600x600x580mm match; energy rating 3.5 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2026-01-16,Yes
-SR-0036,MCS-0167,Nordveld 600mm Dishwasher,MCS-0187,Thornbury 600mm Dishwasher,cut-out 600x595x570mm match; energy rating 4.0 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2026-04-16,Yes
-SR-0037,MCS-0168,Nordveld 450mm Dishwasher,MCS-0197,Thornbury 450mm Dishwasher,cut-out 450x595x550mm match; energy rating 3.5 vs 5.0; same family (Dishwasher),Yes,Technical Product Manager,2025-10-31,Yes
-SR-0038,MCS-0172,Nordveld 600mm Dishwasher,MCS-0148,Valdora 600mm Dishwasher,cut-out 600x560x570mm match; energy rating 3.5 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2025-10-03,Yes
-SR-0039,MCS-0174,Ambrisi 750mm Dishwasher,MCS-0216,Garrow 750mm Dishwasher,cut-out 750x600x580mm match; energy rating 2.5 vs 4.5; same family (Dishwasher),Yes,Technical Product Manager,2026-08-17,Yes
-SR-0040,MCS-0188,Thornbury 900mm Dishwasher,MCS-0175,Ambrisi 900mm Dishwasher,cut-out 900x595x550mm match; energy rating 4.5 vs 4.0; same family (Dishwasher),No,Technical Product Manager,2026-04-21,Yes
-SR-0041,MCS-0192,Thornbury 750mm Dishwasher,MCS-0165,Nordveld 750mm Dishwasher,cut-out 750x560x570mm match; energy rating 3.0 vs 2.5; same family (Dishwasher),No,Technical Product Manager,2025-08-12,Yes
-SR-0042,MCS-0203,Cassini 750mm Dishwasher,MCS-0146,Valdora 750mm Dishwasher,cut-out 750x590x560mm match; energy rating 3.0 vs 4.5; same family (Dishwasher),No,Technical Product Manager,2026-03-30,Yes
-SR-0043,MCS-0213,Garrow 750mm Dishwasher,MCS-0183,Thornbury 750mm Dishwasher,cut-out 750x595x550mm match; energy rating 2.5 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2025-10-16,Yes
-SR-0044,MCS-0215,Garrow 600mm Dishwasher,MCS-0201,Cassini 600mm Dishwasher,cut-out 600x595x550mm match; energy rating 4.0 vs 5.0; same family (Dishwasher),No,Technical Product Manager,2026-03-05,Yes
-SR-0045,MCS-0220,Valdora 900mm Rangehood,MCS-0245,Ambrisi 900mm Rangehood,cut-out 900x590x560mm match; same family (Rangehood),No,Technical Product Manager,2026-05-24,Yes
-SR-0046,MCS-0222,Valdora 750mm Rangehood,MCS-0247,Ambrisi 750mm Rangehood,cut-out 750x595x560mm match; same family (Rangehood),No,Technical Product Manager,2026-02-01,Yes
-SR-0047,MCS-0226,Valdora 750mm Rangehood,MCS-0280,Cassini 750mm Rangehood,cut-out 750x590x560mm match; same family (Rangehood),No,Technical Product Manager,2026-02-19,Yes
-SR-0048,MCS-0229,Valdora 900mm Rangehood,MCS-0271,Cassini 900mm Rangehood,cut-out 900x600x560mm match; same family (Rangehood),No,Technical Product Manager,2025-10-17,Yes
-SR-0049,MCS-0234,Nordveld 450mm Rangehood,MCS-0236,Nordveld 450mm Rangehood,cut-out 450x560x570mm match; same family (Rangehood),Yes,Technical Product Manager,2026-05-10,Yes
-SR-0050,MCS-0237,Nordveld 600mm Rangehood,MCS-0281,Cassini 600mm Rangehood,cut-out 600x600x550mm match; same family (Rangehood),No,Technical Product Manager,2026-05-18,Yes
-SR-0051,MCS-0244,Ambrisi 750mm Rangehood,MCS-0250,Ambrisi 750mm Rangehood,cut-out 750x560x550mm match; same family (Rangehood),No,Technical Product Manager,2026-06-18,Yes
-SR-0052,MCS-0256,Ambrisi 900mm Rangehood,MCS-0276,Cassini 900mm Rangehood,cut-out 900x560x550mm match; same family (Rangehood),No,Technical Product Manager,2026-05-20,Yes
-SR-0053,MCS-0258,Thornbury 750mm Rangehood,MCS-0231,Valdora 750mm Rangehood,cut-out 750x590x560mm match; same family (Rangehood),No,Technical Product Manager,2026-01-19,Yes
-SR-0054,MCS-0260,Thornbury 600mm Rangehood,MCS-0261,Thornbury 600mm Rangehood,cut-out 600x600x560mm match; same family (Rangehood),Yes,Technical Product Manager,2025-08-14,Yes
-SR-0055,MCS-0266,Thornbury 450mm Rangehood,MCS-0236,Nordveld 450mm Rangehood,cut-out 450x595x580mm match; same family (Rangehood),Yes,Technical Product Manager,2026-03-15,Yes
-SR-0056,MCS-0267,Thornbury 450mm Rangehood,MCS-0251,Ambrisi 450mm Rangehood,cut-out 450x600x550mm match; same family (Rangehood),No,Technical Product Manager,2026-05-30,Yes
-SR-0057,MCS-0273,Cassini 600mm Rangehood,MCS-0230,Valdora 600mm Rangehood,cut-out 600x560x560mm match; same family (Rangehood),No,Technical Product Manager,2025-12-27,Yes
-SR-0058,MCS-0284,Garrow 900mm Rangehood,MCS-0269,Cassini 900mm Rangehood,cut-out 900x595x550mm match; same family (Rangehood),No,Technical Product Manager,2026-06-07,Yes
-SR-0059,MCS-0291,Garrow 600mm Rangehood,MCS-0274,Cassini 600mm Rangehood,cut-out 600x595x580mm match; same family (Rangehood),Yes,Technical Product Manager,2026-05-26,Yes
-SR-0060,MCS-0292,Garrow 750mm Rangehood,MCS-0221,Valdora 750mm Rangehood,cut-out 750x600x570mm match; same family (Rangehood),Yes,Technical Product Manager,2026-07-12,Yes
-SR-0061,MCS-0294,Garrow 450mm Rangehood,MCS-0282,Garrow 450mm Rangehood,cut-out 450x590x560mm match; same family (Rangehood),No,Technical Product Manager,2025-09-08,Yes
-SR-0062,MCS-0296,Valdora 750mm Microwave,MCS-0335,Thornbury 750mm Microwave,cut-out 750x595x550mm match; same family (Microwave),Yes,Technical Product Manager,2026-06-03,Yes
-SR-0063,MCS-0299,Valdora 900mm Microwave,MCS-0297,Valdora 900mm Microwave,cut-out 900x595x560mm match; same family (Microwave),No,Technical Product Manager,2026-01-12,Yes
-SR-0064,MCS-0310,Nordveld 450mm Microwave,MCS-0326,Thornbury 450mm Microwave,cut-out 450x590x580mm match; same family (Microwave),No,Technical Product Manager,2026-05-12,Yes
-SR-0065,MCS-0316,Ambrisi 600mm Microwave,MCS-0331,Thornbury 600mm Microwave,cut-out 600x595x570mm match; same family (Microwave),Yes,Technical Product Manager,2026-06-07,Yes
-SR-0066,MCS-0320,Ambrisi 600mm Microwave,MCS-0298,Valdora 600mm Microwave,cut-out 600x590x570mm match; same family (Microwave),No,Technical Product Manager,2026-07-11,Yes
-SR-0067,MCS-0329,Thornbury 900mm Microwave,MCS-0337,Thornbury 900mm Microwave,cut-out 900x600x570mm match; same family (Microwave),Yes,Technical Product Manager,2026-04-13,Yes
-SR-0068,MCS-0332,Thornbury 900mm Microwave,MCS-0346,Cassini 900mm Microwave,cut-out 900x600x560mm match; same family (Microwave),No,Technical Product Manager,2026-05-16,Yes
-SR-0069,MCS-0333,Thornbury 750mm Microwave,MCS-0322,Ambrisi 750mm Microwave,cut-out 750x590x550mm match; same family (Microwave),No,Technical Product Manager,2026-01-01,Yes
-SR-0070,MCS-0341,Cassini 750mm Microwave,MCS-0365,Garrow 750mm Microwave,cut-out 750x590x580mm match; same family (Microwave),No,Technical Product Manager,2026-06-19,Yes
-SR-0071,MCS-0342,Cassini 600mm Microwave,MCS-0308,Nordveld 600mm Microwave,cut-out 600x595x580mm match; same family (Microwave),No,Technical Product Manager,2026-03-25,Yes
-SR-0072,MCS-0345,Cassini 600mm Microwave,MCS-0325,Thornbury 600mm Microwave,cut-out 600x560x560mm match; same family (Microwave),No,Technical Product Manager,2025-12-21,Yes
-SR-0073,MCS-0355,Cassini 450mm Microwave,MCS-0321,Ambrisi 450mm Microwave,cut-out 450x590x570mm match; same family (Microwave),No,Technical Product Manager,2026-03-10,Yes
-SR-0074,MCS-0358,Garrow 750mm Microwave,MCS-0322,Ambrisi 750mm Microwave,cut-out 750x595x580mm match; same family (Microwave),Yes,Technical Product Manager,2026-06-05,Yes
-SR-0075,MCS-0364,Garrow 900mm Microwave,MCS-0336,Thornbury 900mm Microwave,cut-out 900x590x560mm match; same family (Microwave),No,Technical Product Manager,2026-01-10,Yes
-SR-0076,MCS-0369,Garrow 600mm Microwave,MCS-0331,Thornbury 600mm Microwave,cut-out 600x560x560mm match; same family (Microwave),No,Technical Product Manager,2025-12-02,Yes
-SR-0077,MCS-0370,Havelock Basin,MCS-0385,Lumenware Basin,same family (Basin),No,Technical Product Manager,2025-10-22,Yes
-SR-0078,MCS-0376,Havelock Basin,MCS-0391,Lumenware Basin,same family (Basin),Yes,Technical Product Manager,2026-02-07,Yes
-SR-0079,MCS-0378,Havelock Basin,MCS-0381,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-08-23,Yes
-SR-0080,MCS-0380,Havelock Basin,MCS-0384,Lumenware Basin,same family (Basin),No,Technical Product Manager,2026-03-26,Yes
-SR-0081,MCS-0387,Lumenware Basin,MCS-0386,Lumenware Basin,same family (Basin),No,Technical Product Manager,2026-07-15,Yes
-SR-0082,MCS-0389,Lumenware Basin,MCS-0379,Havelock Basin,same family (Basin),No,Technical Product Manager,2026-04-22,Yes
-SR-0083,MCS-0394,Lumenware Basin,MCS-0373,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-09-05,Yes
-SR-0084,MCS-0395,Lumenware Basin,MCS-0386,Lumenware Basin,same family (Basin),No,Technical Product Manager,2026-03-17,Yes
-SR-0085,MCS-0396,Lumenware Basin,MCS-0371,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-12-03,Yes
-SR-0086,MCS-0400,Havelock Toilet Suite,MCS-0424,Lumenware Toilet Suite,WELS 5.5 vs 3.5; same family (Toilet Suite),Yes,Technical Product Manager,2026-03-07,Yes
-SR-0087,MCS-0410,Havelock Toilet Suite,MCS-0426,Lumenware Toilet Suite,WELS 5.0 vs 3.5; same family (Toilet Suite),No,Technical Product Manager,2025-08-29,Yes
-SR-0088,MCS-0413,Lumenware Toilet Suite,MCS-0419,Lumenware Toilet Suite,WELS 5.0 vs 5.5; same family (Toilet Suite),No,Technical Product Manager,2025-11-05,Yes
-SR-0089,MCS-0420,Lumenware Toilet Suite,MCS-0414,Lumenware Toilet Suite,WELS 5.0 vs 4.0; same family (Toilet Suite),No,Technical Product Manager,2026-02-14,Yes
-SR-0090,MCS-0427,Brightwater Basin Mixer,MCS-0436,Brightwater Basin Mixer,WELS 5.5 vs 5.5; same family (Basin Mixer),No,Technical Product Manager,2026-06-26,Yes
-SR-0091,MCS-0439,Peralta Basin Mixer,MCS-0435,Brightwater Basin Mixer,WELS 6.0 vs 4.0; same family (Basin Mixer),No,Technical Product Manager,2025-11-30,Yes
-SR-0092,MCS-0446,Peralta Basin Mixer,MCS-0434,Brightwater Basin Mixer,WELS 4.0 vs 5.0; same family (Basin Mixer),No,Technical Product Manager,2026-04-30,Yes
-SR-0093,MCS-0453,Peralta Basin Mixer,MCS-0450,Peralta Basin Mixer,WELS 6.0 vs 5.5; same family (Basin Mixer),No,Technical Product Manager,2026-07-04,Yes
-SR-0094,MCS-0456,Brightwater Shower Set,MCS-0464,Brightwater Shower Set,WELS 4.5 vs 4.5; same family (Shower Set),No,Technical Product Manager,2025-11-12,Yes
-SR-0095,MCS-0457,Brightwater Shower Set,MCS-0461,Brightwater Shower Set,WELS 3.5 vs 5.5; same family (Shower Set),Yes,Technical Product Manager,2026-01-10,Yes
-SR-0096,MCS-0462,Brightwater Shower Set,MCS-0455,Brightwater Shower Set,WELS 3.0 vs 4.0; same family (Shower Set),No,Technical Product Manager,2026-07-15,Yes
-SR-0097,MCS-0470,Peralta Shower Set,MCS-0477,Peralta Shower Set,WELS 5.5 vs 5.5; same family (Shower Set),Yes,Technical Product Manager,2026-02-28,Yes
-SR-0098,MCS-0472,Peralta Shower Set,MCS-0474,Peralta Shower Set,WELS 5.0 vs 5.0; same family (Shower Set),No,Technical Product Manager,2025-09-03,Yes
-SR-0099,MCS-0481,Brightwater Kitchen Sink Mixer,MCS-0489,Peralta Kitchen Sink Mixer,WELS 4.0 vs 4.0; same family (Kitchen Sink Mixer),No,Technical Product Manager,2026-03-18,Yes
-SR-0100,MCS-0486,Brightwater Kitchen Sink Mixer,MCS-0485,Brightwater Kitchen Sink Mixer,WELS 5.5 vs 5.0; same family (Kitchen Sink Mixer),No,Technical Product Manager,2026-03-05,Yes
+RuleCode,FromProductCode,FromProductName,ToProductCode,ToProductName,EquivalenceBasis,FinishMatch,ApprovedBy,ApprovedOn,IsActive,StaleReason
+SR-0001,MCS-0047,Cassini 750mm Wall Oven,MCS-0040,Thornbury 750mm Wall Oven,cut-out 750x560x570mm match; energy rating 5.0 vs 4.0; same family (Wall Oven),No,Technical Product Manager,2026-04-11,Yes,
+SR-0002,MCS-0059,Cassini 600mm Wall Oven,MCS-0060,Cassini 600mm Wall Oven,cut-out 600x560x550mm match; energy rating 3.5 vs 3.0; same family (Wall Oven),No,Technical Product Manager,2026-07-27,Yes,
+SR-0003,MCS-0081,Valdora 900mm Cooktop,MCS-0140,Garrow 900mm Cooktop,cut-out 900x590x560mm match; energy rating 4.5 vs 3.0; same family (Cooktop),No,Technical Product Manager,2026-06-29,Yes,manufacturer running change altered cut-out depth
+SR-0004,MCS-0103,Ambrisi 600mm Cooktop,MCS-0076,Valdora 600mm Cooktop,cut-out 600x600x560mm match; energy rating 3.5 vs 2.0; same family (Cooktop),Yes,Technical Product Manager,2026-07-29,Yes,
+SR-0005,MCS-0151,Valdora 450mm Dishwasher,MCS-0166,Nordveld 450mm Dishwasher,cut-out 450x595x580mm match; energy rating 3.0 vs 2.5; same family (Dishwasher),No,Technical Product Manager,2026-02-13,Yes,
+SR-0006,MCS-0159,Nordveld 450mm Dishwasher,MCS-0193,Thornbury 450mm Dishwasher,cut-out 450x590x560mm match; energy rating 4.5 vs 4.0; same family (Dishwasher),No,Technical Product Manager,2026-08-15,Yes,
+SR-0007,MCS-0192,Thornbury 750mm Dishwasher,MCS-0172,Nordveld 600mm Dishwasher,cut-out 750x560x570mm match; energy rating 4.0 vs 2.5; same family (Dishwasher),No,Technical Product Manager,2025-12-16,Yes,"target itself superseded, now beyond lead-time threshold"
+SR-0008,MCS-0222,Valdora 750mm Rangehood,MCS-0227,Valdora 750mm Rangehood,cut-out 750x595x560mm match; same family (Rangehood),Yes,Technical Product Manager,2026-01-02,Yes,
+SR-0009,MCS-0226,Valdora 750mm Rangehood,MCS-0277,Cassini 750mm Rangehood,cut-out 750x590x560mm match; same family (Rangehood),No,Technical Product Manager,2025-12-30,Yes,manufacturer running change altered cut-out depth
+SR-0010,MCS-0234,Nordveld 450mm Rangehood,MCS-0232,Nordveld 450mm Rangehood,cut-out 450x560x570mm match; same family (Rangehood),No,Technical Product Manager,2026-03-17,Yes,
+SR-0011,MCS-0258,Thornbury 750mm Rangehood,MCS-0231,Valdora 750mm Rangehood,cut-out 750x590x560mm match; same family (Rangehood),No,Technical Product Manager,2025-10-24,Yes,
+SR-0012,MCS-0260,Thornbury 600mm Rangehood,MCS-0262,Thornbury 600mm Rangehood,cut-out 600x600x560mm match; same family (Rangehood),No,Technical Product Manager,2026-04-01,Yes,
+SR-0013,MCS-0273,Cassini 600mm Rangehood,MCS-0268,Thornbury 600mm Rangehood,cut-out 600x560x560mm match; same family (Rangehood),Yes,Technical Product Manager,2025-12-02,Yes,
+SR-0014,MCS-0292,Garrow 750mm Rangehood,MCS-0255,Ambrisi 750mm Rangehood,cut-out 750x600x570mm match; same family (Rangehood),No,Technical Product Manager,2026-04-07,Yes,
+SR-0015,MCS-0294,Garrow 450mm Rangehood,MCS-0259,Thornbury 450mm Rangehood,cut-out 450x590x560mm match; same family (Rangehood),Yes,Technical Product Manager,2025-11-18,Yes,manufacturer running change altered cut-out depth
+SR-0016,MCS-0296,Valdora 750mm Microwave,MCS-0332,Thornbury 900mm Microwave,cut-out 750x595x550mm match; same family (Microwave),No,Technical Product Manager,2026-07-22,Yes,"target itself superseded, now beyond lead-time threshold"
+SR-0017,MCS-0316,Ambrisi 600mm Microwave,MCS-0344,Cassini 600mm Microwave,cut-out 600x595x570mm match; same family (Microwave),No,Technical Product Manager,2025-10-28,Yes,
+SR-0018,MCS-0329,Thornbury 900mm Microwave,MCS-0354,Cassini 900mm Microwave,cut-out 900x600x570mm match; same family (Microwave),No,Technical Product Manager,2026-06-20,Yes,
+SR-0019,MCS-0345,Cassini 600mm Microwave,MCS-0301,Valdora 600mm Microwave,cut-out 600x560x560mm match; same family (Microwave),Yes,Technical Product Manager,2026-07-16,Yes,
+SR-0020,MCS-0355,Cassini 450mm Microwave,MCS-0348,Cassini 450mm Microwave,cut-out 450x590x570mm match; same family (Microwave),No,Technical Product Manager,2026-01-20,Yes,
+SR-0021,MCS-0369,Garrow 600mm Microwave,MCS-0301,Valdora 600mm Microwave,cut-out 600x560x560mm match; same family (Microwave),Yes,Technical Product Manager,2026-03-07,Yes,
+SR-0022,MCS-0370,Havelock Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2026-05-09,Yes,
+SR-0023,MCS-0376,Havelock Basin,MCS-0372,Havelock Basin,same family (Basin),Yes,Technical Product Manager,2026-04-05,Yes,
+SR-0024,MCS-0378,Havelock Basin,MCS-0372,Havelock Basin,same family (Basin),Yes,Technical Product Manager,2026-07-01,Yes,
+SR-0025,MCS-0380,Havelock Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2026-04-11,Yes,
+SR-0026,MCS-0387,Lumenware Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-12-30,Yes,
+SR-0027,MCS-0389,Lumenware Basin,MCS-0396,Lumenware Basin,same family (Basin),No,Technical Product Manager,2026-03-18,Yes,target de-listed from project-approved catalogue
+SR-0028,MCS-0394,Lumenware Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-12-11,Yes,
+SR-0029,MCS-0395,Lumenware Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2025-08-22,Yes,
+SR-0030,MCS-0396,Lumenware Basin,MCS-0372,Havelock Basin,same family (Basin),No,Technical Product Manager,2026-03-12,Yes,
+SR-0031,MCS-0400,Havelock Toilet Suite,MCS-0404,Havelock Toilet Suite,WELS 5.5 vs 3.5; same family (Toilet Suite),Yes,Technical Product Manager,2026-01-28,Yes,
+SR-0032,MCS-0410,Havelock Toilet Suite,MCS-0412,Havelock Toilet Suite,WELS 5.5 vs 3.5; same family (Toilet Suite),Yes,Technical Product Manager,2026-02-11,Yes,target de-listed from project-approved catalogue
+SR-0033,MCS-0413,Lumenware Toilet Suite,MCS-0404,Havelock Toilet Suite,WELS 5.5 vs 5.5; same family (Toilet Suite),No,Technical Product Manager,2026-07-15,Yes,
+SR-0034,MCS-0420,Lumenware Toilet Suite,MCS-0421,Lumenware Toilet Suite,WELS 5.5 vs 4.0; same family (Toilet Suite),No,Technical Product Manager,2025-12-17,Yes,target de-listed from project-approved catalogue
+SR-0035,MCS-0427,Brightwater Basin Mixer,MCS-0435,Brightwater Basin Mixer,WELS 6.0 vs 5.5; same family (Basin Mixer),No,Technical Product Manager,2026-01-06,Yes,
+SR-0036,MCS-0439,Peralta Basin Mixer,MCS-0451,Peralta Basin Mixer,WELS 6.0 vs 4.0; same family (Basin Mixer),No,Technical Product Manager,2025-08-18,Yes,target de-listed from project-approved catalogue
+SR-0037,MCS-0446,Peralta Basin Mixer,MCS-0435,Brightwater Basin Mixer,WELS 6.0 vs 5.0; same family (Basin Mixer),No,Technical Product Manager,2025-10-14,Yes,
+SR-0038,MCS-0453,Peralta Basin Mixer,MCS-0435,Brightwater Basin Mixer,WELS 6.0 vs 5.5; same family (Basin Mixer),No,Technical Product Manager,2025-09-25,Yes,
+SR-0039,MCS-0456,Brightwater Shower Set,MCS-0462,Brightwater Shower Set,WELS 6.0 vs 4.5; same family (Shower Set),No,Technical Product Manager,2026-01-16,Yes,target rating below the specified minimum
+SR-0040,MCS-0457,Brightwater Shower Set,MCS-0473,Peralta Shower Set,WELS 6.0 vs 5.5; same family (Shower Set),No,Technical Product Manager,2026-06-15,Yes,
+SR-0041,MCS-0462,Brightwater Shower Set,MCS-0465,Brightwater Shower Set,WELS 6.0 vs 4.0; same family (Shower Set),No,Technical Product Manager,2026-02-24,Yes,target rating below the specified minimum
+SR-0042,MCS-0470,Peralta Shower Set,MCS-0473,Peralta Shower Set,WELS 6.0 vs 5.5; same family (Shower Set),Yes,Technical Product Manager,2026-03-22,Yes,
+SR-0043,MCS-0472,Peralta Shower Set,MCS-0473,Peralta Shower Set,WELS 6.0 vs 5.0; same family (Shower Set),No,Technical Product Manager,2025-09-25,Yes,
+SR-0044,MCS-0481,Brightwater Kitchen Sink Mixer,MCS-0478,Brightwater Kitchen Sink Mixer,WELS 5.5 vs 4.0; same family (Kitchen Sink Mixer),No,Technical Product Manager,2025-09-30,Yes,target rating below the specified minimum
+SR-0045,MCS-0486,Brightwater Kitchen Sink Mixer,MCS-0479,Brightwater Kitchen Sink Mixer,WELS 5.5 vs 5.0; same family (Kitchen Sink Mixer),No,Technical Product Manager,2025-09-30,Yes,

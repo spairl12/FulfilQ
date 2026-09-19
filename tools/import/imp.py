@@ -4,7 +4,7 @@ Usage: python3 imp.py <step>   (steps listed in STEPS)"""
 import csv, json, os, subprocess, sys, uuid, tempfile, datetime
 
 DATA = "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/meridian-data-v2"
-DATA3 = os.path.join(os.path.dirname(DATA), "meridian-data-v3")  # delivery programme only (13-17)
+DATA4 = os.path.join(os.path.dirname(DATA), "meridian-data-v4")  # delivery programme + Kelmore fulfilment (20-27)
 NS = uuid.UUID("6d1b5c1e-2f0a-4b8e-9d7a-5a1a00000000")
 ENV = "meridian"
 AUD = "908f7166-d8da-49a9-80dd-a2958fc3fabf"
@@ -209,12 +209,13 @@ def s_fulfilment():
                                      for old, (new, col) in DELIVERY_RENAME.items() if old in ds], "delivery status rename + colour")
     insert_rows("SPAIDeliveryStatus", [(i, {"Name": T(n), "SPAIColor": (18, c)}) for i, n, c in DELIVERY_STATUS], "delivery status add")
 
-# ---------------- Foundation Change Spec: delivery events ----------------
-def rows3(f): return list(csv.DictReader(open(os.path.join(DATA3, f), encoding="utf-8-sig")))
+# ---------------- Foundation Change Spec + Addendum A: delivery programme (meridian-data-v4) ----------------
+def rows4(f): return list(csv.DictReader(open(os.path.join(DATA4, f), encoding="utf-8-sig")))
 
 EVENT_TYPE = {"Prototype": "5a1c0008-0000-4000-8000-000000000001", "Level rollout": "5a1c0008-0000-4000-8000-000000000002",
               "Handover": "5a1c0008-0000-4000-8000-000000000003"}
 SOURCE_PLAN = {"Indicative": "5a1c0009-0000-4000-8000-000000000001", "Committed": "5a1c0009-0000-4000-8000-000000000002"}
+SOURCE_TIER = {"1": "1 Home DC", "2": "2 Other DC", "3": "3 Retail store", "4": "4 Inbound supply"}
 ORDER_TYPE_BLANKET = "43014545-cd78-4496-bdda-953a976fe891"
 ORDER_STATUS = {"in progress": "c8742634-ea8b-46d9-ba71-1989b951772d", "completed": "40de86ee-274d-4098-9b92-9ebdcf83d4fc"}
 NATIVE_DELIVERY = {"Scheduled": "867ca155-bfa5-4aaa-9172-7813dd4e85f5", "Overdue": "867ca155-bfa5-4aaa-9172-7813dd4e85f5",
@@ -222,72 +223,10 @@ NATIVE_DELIVERY = {"Scheduled": "867ca155-bfa5-4aaa-9172-7813dd4e85f5", "Overdue
 STAGE_CLOSED_WON = "60d5310c-5be6-df11-971b-001d60e938c6"
 KELMORE, KELMORE_BPO = "TND-2026-0138", "BPO-0438"
 
-def s_callup_lookups():
-    insert_rows("SPAIDeliveryEventType", [(i, {"Name": T(n)}) for n, i in EVENT_TYPE.items()], "delivery event types")
-    insert_rows("SPAISourcePlanType", [(i, {"Name": T(n)}) for n, i in SOURCE_PLAN.items()], "source plan types")
-    insert_rows("SPAIDeliveryWindow", [(gid("win", r["Code"]), {"Name": T(r["Name"]), "SPAICode": T(r["Code"]),
-        "SPAISequence": I(r["Sequence"]), "SPAILevelFrom": I(r["LevelFrom"]), "SPAILevelTo": I(r["LevelTo"])})
-        for r in rows3("14_delivery_windows.csv")], "14 delivery windows")
-
-def s_callup():
-    """Call-up schedules and delivery events for both projects: programme dates only, nothing committed."""
-    ds = lookup_map("SPAIDeliveryStatus")
-    insert_rows("SPAICallUpSchedule", [(gid("sch", r["ScheduleRef"]), {"SPAIScheduleRef": T(r["ScheduleRef"]),
-        "SPAIDescription": T(r["Description"]), "SPAIOpportunity": L(gid("opp", r["TenderCode"]))})
-        for r in rows3("13_delivery_schedules.csv")], "13 call-up schedules")
-    insert_rows("SPAIDeliveryEvent", [(gid("evt", r["EventCode"]), {"SPAILabel": T(r["Label"]), "SPAIEventCode": T(r["EventCode"]),
-        "SPAICallUpSchedule": L(gid("sch", r["ScheduleRef"])), "SPAISequence": I(r["Sequence"]),
-        "SPAIEventType": L(EVENT_TYPE[r["EventType"]]), "SPAIScheduledOn": D(r["ScheduledOn"]),
-        "SPAIDeliveryWindow": L(gid("win", r["WindowCode"])), "SPAIStatus": L(ds[r["Status"]])})
-        for r in rows3("15_delivery_events.csv")], "15 delivery events")
-    # window date span, rolled up from the live job (windows are shared reference data across projects)
-    ev = [e for e in rows3("15_delivery_events.csv") if e["ScheduleRef"].startswith("SCH-0438")]
-    upd = []
-    for w in rows3("14_delivery_windows.csv"):
-        d = sorted(e["ScheduledOn"] for e in ev if e["WindowCode"] == w["Code"])
-        if d: upd.append(update_q("SPAIDeliveryWindow", gid("win", w["Code"]), {"SPAIFromDate": D(d[0]), "SPAIToDate": D(d[-1])}))
-    run_batch("SPAIDeliveryWindow", upd, "window date span (Kelmore)")
-
-def s_kelmore_award():
-    """Kelmore is the live job: awarded, blanket PO, one sub-PO per delivery event, shipments per fulfilling location."""
-    ten = next(t for t in rows("07_tenders.csv") if t["TenderCode"] == KELMORE)
-    acc = {r["Name"]: gid("acc", r["AccountCode"]) for r in rows("10_accounts.csv")}[ten["HeadContractor"]]
-    opp, blanket = gid("opp", KELMORE), gid("ord", KELMORE_BPO)
-    ast = lookup_map("SPAIAdjudicationStatus")
-    run_batch("Opportunity", [update_q("Opportunity", opp, {"Stage": (10, STAGE_CLOSED_WON),
-        "SPAIAdjudicationStatus": (10, ast["Submitted"])})], "Kelmore closed won")
-    events = [e for e in rows3("15_delivery_events.csv") if e["ScheduleRef"].startswith("SCH-0438")]
-    lines = rows3("17_callup_lines.csv")
-    loc_of = {p["SubPORef"]: p["LocationCode"] for p in rows3("16_subpos.csv")}
-    base = {"Opportunity": L(opp), "Account": L(acc), "Owner": L(SUPERVISOR_CONTACT), "Currency": L(AUD), "CurrencyRate": F("1")}
-    first = min(e["ScheduledOn"] for e in events)
-    orders = [(blanket, dict(base, Number=T(KELMORE_BPO), SPAIPurchaseOrderNo=T(KELMORE_BPO), SPAIOrderType=L(ORDER_TYPE_BLANKET),
-               Date=D(first), Status=L(ORDER_STATUS["in progress"]), SPAITargetDate=D(max(e["ScheduledOn"] for e in events))))]
-    deliveries = []
-    n = 0
-    for e in sorted(events, key=lambda e: (e["ScheduledOn"], e["EventCode"])):
-        ev_lines = [l for l in lines if l["EventCode"] == e["EventCode"]]
-        if not ev_lines: continue  # an event with nothing called up gets no sub-PO
-        n += 1
-        ref = f"{KELMORE_BPO}-{n:02d}"; oid = gid("ord", ref); received = e["Status"] == "Received on site"
-        orders.append((oid, dict(base, Number=T(ref), SPAIPurchaseOrderNo=T(ref), SPAIOrderType=L(ORDER_TYPE_CALLOFF),
-            SPAIBlanketOrder=L(blanket), SPAIDeliveryEvent=L(gid("evt", e["EventCode"])), Date=D(first),
-            SPAITargetDate=D(e["ScheduledOn"]), Status=L(ORDER_STATUS["completed" if received else "in progress"]),
-            DeliveryStatus=L(NATIVE_DELIVERY[e["Status"]]))))
-        for loc in sorted({loc_of[l["SubPORef"]] for l in ev_lines}):
-            deliveries.append((gid("dlv", f"{ref}:{loc}"), {"SPAIOrder": L(oid), "SPAIFromLocation": L(gid("loc", loc)),
-                "SPAIScheduledOn": D(e["ScheduledOn"]), "SPAIReceivedOn": D(e["ScheduledOn"]) if received else None,
-                "SPAIStatus": L(lookup_map_cache("SPAIDeliveryStatus")[e["Status"]]),
-                "SPAILineCount": I(sum(1 for l in ev_lines if loc_of[l["SubPORef"]] == loc))}))
-    insert_rows("Order", orders, "Kelmore blanket + sub-POs")
-    run_batch("SPAICallUpSchedule", [update_q("SPAICallUpSchedule", gid("sch", s["ScheduleRef"]), {"SPAIBlanketOrder": (10, blanket)})
-        for s in rows3("13_delivery_schedules.csv") if s["BlanketPORef"] == KELMORE_BPO], "Kelmore schedules -> blanket")
-    insert_rows("SPAIDelivery", deliveries, "Kelmore deliveries")
-
 _LM = {}
-def lookup_map_cache(schema):
-    if schema not in _LM: _LM[schema] = lookup_map(schema)
-    return _LM[schema]
+def lookup_map_cache(schema, keycol="Name"):
+    if (schema, keycol) not in _LM: _LM[(schema, keycol)] = lookup_map(schema, keycol)
+    return _LM[(schema, keycol)]
 
 def delete_q(schema, rid):
     return {"__type": "Terrasoft.Nui.ServiceModel.DataContract.DeleteQuery, Terrasoft.Nui.ServiceModel",
@@ -297,6 +236,124 @@ def delete_q(schema, rid):
                 "leftExpression": {"expressionType": 0, "columnPath": "Id"},
                 "rightExpression": {"expressionType": 2, "parameter": {"dataValueType": 0, "value": rid}}}}}}
 
+def s_callup_lookups():
+    insert_rows("SPAIDeliveryEventType", [(i, {"Name": T(n)}) for n, i in EVENT_TYPE.items()], "delivery event types")
+    insert_rows("SPAISourcePlanType", [(i, {"Name": T(n)}) for n, i in SOURCE_PLAN.items()], "source plan types")
+    insert_rows("SPAIDeliveryWindow", [(gid("win", r["Code"]), {"Name": T(r["Name"]), "SPAICode": T(r["Code"]),
+        "SPAISequence": I(r["Sequence"]), "SPAILevelFrom": I(r["LevelFrom"]), "SPAILevelTo": I(r["LevelTo"])})
+        for r in rows4("22_delivery_windows.csv")], "22 delivery windows")
+
+def _schedule(r):
+    return {"SPAIScheduleRef": T(r["ScheduleRef"]), "SPAIDescription": T(r["Description"]),
+            "SPAIOpportunity": L(gid("opp", r["TenderCode"])),
+            "SPAIBlanketOrder": L(gid("ord", r["BlanketPORef"]) if r["BlanketPORef"] else None)}
+
+def _event(r, ds):
+    return {"SPAILabel": T(r["Label"]), "SPAIEventCode": T(r["EventCode"]), "SPAICallUpSchedule": L(gid("sch", r["ScheduleRef"])),
+            "SPAISequence": I(r["Sequence"]), "SPAIEventType": L(EVENT_TYPE[r["EventType"]]), "SPAIScheduledOn": D(r["ScheduledOn"]),
+            "SPAIDeliveryWindow": L(gid("win", r["WindowCode"])), "SPAIStatus": L(ds.get(r["Status"]))}
+
+def s_corvina_programme():
+    """A1: Corvina holds only the builder's construction programme - no blanket PO, no status, no lines, no sub-POs."""
+    ds = lookup_map_cache("SPAIDeliveryStatus")
+    insert_rows("SPAICallUpSchedule", [(gid("sch", r["ScheduleRef"]), _schedule(r)) for r in rows4("20_corvina_schedules.csv")],
+                "20 Corvina schedules")
+    insert_rows("SPAIDeliveryEvent", [(gid("evt", r["EventCode"]), _event(r, ds)) for r in rows4("21_corvina_events.csv")],
+                "21 Corvina events")
+
+def s_kelmore_programme():
+    """Kelmore (awarded Jan 2026, in delivery): Closed won, blanket BPO-0438, schedules and events with live status."""
+    ten = next(t for t in rows("07_tenders.csv") if t["TenderCode"] == KELMORE)
+    acc = {r["Name"]: gid("acc", r["AccountCode"]) for r in rows("10_accounts.csv")}[ten["HeadContractor"]]
+    opp, blanket = gid("opp", KELMORE), gid("ord", KELMORE_BPO)
+    ast, ds = lookup_map("SPAIAdjudicationStatus"), lookup_map_cache("SPAIDeliveryStatus")
+    run_batch("Opportunity", [update_q("Opportunity", opp, {"Stage": (10, STAGE_CLOSED_WON),
+        "SPAIAdjudicationStatus": (10, ast["Submitted"])})], "Kelmore closed won")
+    events = rows4("25_kelmore_events.csv")
+    blanket_vals = {"Opportunity": L(opp), "Account": L(acc), "Owner": L(SUPERVISOR_CONTACT), "Currency": L(AUD),
+        "CurrencyRate": F("1"), "Number": T(KELMORE_BPO), "SPAIPurchaseOrderNo": T(KELMORE_BPO), "SPAIOrderType": L(ORDER_TYPE_BLANKET),
+        "Date": D(min(e["ScheduledOn"] for e in events)), "Status": L(ORDER_STATUS["in progress"]),
+        "SPAITargetDate": D(max(e["ScheduledOn"] for e in events))}
+    insert_rows("Order", [(blanket, blanket_vals)], "Kelmore blanket")
+    run_batch("Order", [update_q("Order", blanket, {k: v for k, v in blanket_vals.items() if k in ("Date", "SPAITargetDate")})],
+              "Kelmore blanket dates")
+    scheds = rows4("23_kelmore_schedules.csv")
+    insert_rows("SPAICallUpSchedule", [(gid("sch", r["ScheduleRef"]), _schedule(r)) for r in scheds], "23 Kelmore schedules")
+    run_batch("SPAICallUpSchedule", [update_q("SPAICallUpSchedule", gid("sch", r["ScheduleRef"]),
+        {k: v for k, v in _schedule(r).items() if v is not None}) for r in scheds], "23 Kelmore schedules refresh")
+    insert_rows("SPAIDeliveryEvent", [(gid("evt", r["EventCode"]), _event(r, ds)) for r in events], "25 Kelmore events")
+    run_batch("SPAIDeliveryEvent", [update_q("SPAIDeliveryEvent", gid("evt", r["EventCode"]),
+        {k: v for k, v in _event(r, ds).items() if v is not None}) for r in events], "25 Kelmore events refresh (dates, status)")
+    upd = []
+    for w in rows4("22_delivery_windows.csv"):  # window span, rolled up from the live job
+        d = sorted(e["ScheduledOn"] for e in events if e["WindowCode"] == w["Code"])
+        if d: upd.append(update_q("SPAIDeliveryWindow", gid("win", w["Code"]), {"SPAIFromDate": D(d[0]), "SPAIToDate": D(d[-1])}))
+    run_batch("SPAIDeliveryWindow", upd, "window date span (Kelmore)")
+
+def s_retire_v3():
+    """Addendum A: remove what the superseded v3 load created (Corvina SCH-0441-*, Kelmore BPO-0438-NN sub-POs and deliveries)."""
+    sch = [gid("sch", f"SCH-0441-0{i}") for i in (1, 2)]
+    run_batch("SPAICallUpSchedule", [delete_q("SPAICallUpSchedule", i) for i in existing_ids("SPAICallUpSchedule", sch)],
+              "retire v3 Corvina schedules (events cascade)")
+    old = [o["Id"] for o in select("Order", ["Number"]) if o["Number"].startswith(KELMORE_BPO + "-")]
+    dl = [d["Id"] for d in select("SPAIDelivery", ["SPAIOrder.Number"]) if (d["SPAIOrder.Number"] or "").startswith(KELMORE_BPO + "-")]
+    run_batch("SPAIDelivery", [delete_q("SPAIDelivery", i) for i in dl], "retire v3 Kelmore deliveries")
+    run_batch("Order", [delete_q("Order", i) for i in old], "retire v3 Kelmore sub-POs")
+
+def s_kelmore_subpos():
+    """A3: one sub-PO per delivery event, each with its fulfilling location and source tier, plus its shipment."""
+    ten = next(t for t in rows("07_tenders.csv") if t["TenderCode"] == KELMORE)
+    acc = {r["Name"]: gid("acc", r["AccountCode"]) for r in rows("10_accounts.csv")}[ten["HeadContractor"]]
+    ds, tier = lookup_map_cache("SPAIDeliveryStatus"), lookup_map_cache("SPAISourceTier")
+    first = min(e["ScheduledOn"] for e in rows4("25_kelmore_events.csv"))
+    orders, deliveries = [], []
+    for p in rows4("26_kelmore_subpos.csv"):
+        oid, received = gid("ord", p["SubPORef"]), p["Status"] == "Received on site"
+        orders.append((oid, {"Opportunity": L(gid("opp", KELMORE)), "Account": L(acc), "Owner": L(SUPERVISOR_CONTACT),
+            "Currency": L(AUD), "CurrencyRate": F("1"), "Date": D(first), "Number": T(p["SubPORef"]), "SPAIPurchaseOrderNo": T(p["SubPORef"]),
+            "SPAIOrderType": L(ORDER_TYPE_CALLOFF), "SPAIBlanketOrder": L(gid("ord", p["BlanketPORef"])),
+            "SPAIDeliveryEvent": L(gid("evt", p["EventCode"])), "SPAIPrimaryLocation": L(gid("loc", p["LocationCode"])),
+            "SPAISourceTier": L(tier[SOURCE_TIER[p["SourceTier"]]]), "SPAITargetDate": D(p["ScheduledOn"]),
+            "Status": L(ORDER_STATUS["completed" if received else "in progress"]), "DeliveryStatus": L(NATIVE_DELIVERY[p["Status"]])}))
+        deliveries.append((gid("dlv", p["SubPORef"]), {"SPAIOrder": L(oid), "SPAIFromLocation": L(gid("loc", p["LocationCode"])),
+            "SPAIScheduledOn": D(p["ScheduledOn"]), "SPAIReceivedOn": D(p["ScheduledOn"]) if received else None,
+            "SPAIStatus": L(ds[p["Status"]]), "SPAILineCount": I(p["LineCount"])}))
+    insert_rows("Order", orders, "26 Kelmore sub-POs")
+    insert_rows("SPAIDelivery", deliveries, "26 Kelmore deliveries")
+
+def s_kelmore_lines():
+    """A4: Kelmore's own schedule lines (adjudicated Dec 2025); ALT lines carry their written equivalence basis."""
+    room, utier, ls, ed = (lookup_map_cache(s) for s in ("SPAIRoomType", "SPAIUnitTier", "SPAILineStatus", "SPAIEstimatorDecision"))
+    rc = lookup_map_cache("SPAIReasonCode", "SPAICode")
+    recs = []
+    for r in rows4("24_kelmore_schedule_lines.csv"):
+        alt = yn(r["IsAlternate"])
+        recs.append((gid("sl", f'{r["TenderCode"]}:{r["ItemRef"]}'), {"SPAIOpportunity": L(gid("opp", r["TenderCode"])),
+            "SPAILineNumber": I(r["LineNumber"]), "SPAIItemCode": T(r["ItemRef"]), "SPAIIsAlternative": B(alt),
+            "SPAIAlternateVariant": T(r["AlternateVariant"]), "SPAIDisplayRef": T(r["DisplayRef"]), "SPAIRoomType": L(room[r["RoomType"]]),
+            "SPAIUnitTier": L(utier[r["UnitTier"]]), "SPAISpecifiedText": T(r["SpecifiedText"]), "SPAISpecifiedBrand": T(r["SpecifiedBrand"]),
+            "SPAISpecifiedModel": T(r["SpecifiedModel"]), "SPAISpecifiedFinish": T(r["SpecifiedFinish"]),
+            "SPAIMatchedProduct": L(gid("prd", r["MatchedProductCode"])), "SPAIQuantity": I(r["OrderQty"]),
+            "SPAIRequiredCutoutW": I(r["CutoutW"]), "SPAIRequiredCutoutH": I(r["CutoutH"]), "SPAIRequiredCutoutD": I(r["CutoutD"]),
+            "SPAIAdjudicationNote": T(r["AdjudicationNote"]), "SPAIReasonCode": L(rc[r["ReasonCode"]]),
+            "SPAIQtyReceived": I(r["DeliveredQty"]), "SPAIQtyRemaining": I(r["RemainingQty"]),
+            "SPAILineStatus": L(ls["Substitution approved" if alt else "Exact match"]), "SPAIEstimatorDecision": L(ed["Accepted"])}))
+    insert_rows("SPAIScheduleLine", recs, "24 Kelmore schedule lines")
+
+def s_kelmore_callups():
+    ds = lookup_map_cache("SPAIDeliveryStatus")
+    insert_rows("SPAICallUpLine", [(gid("cul", r["CallUpRef"]), {"SPAIScheduleLine": L(gid("sl", f'{r["TenderCode"]}:{r["ItemRef"]}')),
+        "SPAIDeliveryEvent": L(gid("evt", r["EventCode"])), "SPAISubPO": L(gid("ord", r["SubPORef"])),
+        "SPAIQtyRequired": I(r["QtyRequired"]), "SPAIQtyDelivered": I(r["QtyDelivered"]), "SPAIStatus": L(ds[r["Status"]])})
+        for r in rows4("27_kelmore_callup_lines.csv")], "27 Kelmore call-up lines")
+
+def s_rules_v2fix():
+    """Addendum A2: replace the original 99-rule register with the corrected 45 (height and depth now matched).
+    StaleReason is deliberately not loaded: which rules are stale is for the agent to discover."""
+    old = [r["Id"] for r in select("SPAISubstitutionRule", ["Id"])]
+    run_batch("SPAISubstitutionRule", [delete_q("SPAISubstitutionRule", i) for i in old], "retire original rule register")
+    s_rules()
+
 def s_retire_phases():
     """Spec change 1: the three trade-phase orders are replaced by delivery events (they carry no order lines)."""
     ids = [gid("ord", f'{r["TenderCode"]}-P{r["PhaseNumber"]}') for r in rows("08_calloff_phases.csv")]
@@ -305,6 +362,8 @@ def s_retire_phases():
 STEPS = {"brands": s_brands, "families": s_families, "locations": s_locations, "drivers": s_drivers, "accounts": s_accounts,
          "contacts": s_contacts, "products": s_products, "superseded": s_superseded, "stock": s_stock, "rules": s_rules,
          "tenders": s_tenders, "alignment": s_alignment, "fulfilment": s_fulfilment,
-         "callup_lookups": s_callup_lookups, "callup": s_callup, "kelmore_award": s_kelmore_award, "retire_phases": s_retire_phases}
+         "callup_lookups": s_callup_lookups, "corvina_programme": s_corvina_programme, "kelmore_programme": s_kelmore_programme,
+         "kelmore_subpos": s_kelmore_subpos, "kelmore_lines": s_kelmore_lines, "kelmore_callups": s_kelmore_callups,
+         "rules_v2fix": s_rules_v2fix, "retire_phases": s_retire_phases, "retire_v3": s_retire_v3}
 if __name__ == "__main__":
     for s in sys.argv[1:]: STEPS[s]()

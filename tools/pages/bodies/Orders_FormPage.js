@@ -160,10 +160,31 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAISourceQuote",
+				"name": "SPAIField_SPAISourceTier",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
+						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAISourceTier",
+					"control": "$PDS_SPAISourceTier",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true
+				},
+				"parentName": "SPAIFulfilmentFields",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAISourceQuote",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
 						"row": 4,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -177,7 +198,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				},
 				"parentName": "SPAIFulfilmentFields",
 				"propertyName": "items",
-				"index": 6
+				"index": 7
 			},
 			{
 				"operation": "insert",
@@ -279,6 +300,22 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 							"caption": "#ResourceString(SPAICallOffsGridDS_SPAITargetDate)#",
 							"dataValueType": 8,
 							"width": 120
+						},
+						{
+							"id": "7cca300b-84e2-5dde-9416-b73579847d95",
+							"code": "SPAICallOffsGridDS_SPAIPrimaryLocation",
+							"path": "SPAIPrimaryLocation",
+							"caption": "#ResourceString(SPAICallOffsGridDS_SPAIPrimaryLocation)#",
+							"dataValueType": 10,
+							"width": 170
+						},
+						{
+							"id": "0980160d-55a6-5927-8a7d-491df6c506e6",
+							"code": "SPAICallOffsGridDS_SPAISourceTier",
+							"path": "SPAISourceTier",
+							"caption": "#ResourceString(SPAICallOffsGridDS_SPAISourceTier)#",
+							"dataValueType": 10,
+							"width": 130
 						},
 						{
 							"id": "712f9763-34ce-581d-a4e2-72d9ff1fc533",
@@ -1092,6 +1129,11 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 							"path": "PDS.SPAIPrimaryLocation"
 						}
 					},
+					"PDS_SPAISourceTier": {
+						"modelConfig": {
+							"path": "PDS.SPAISourceTier"
+						}
+					},
 					"PDS_SPAISourceQuote": {
 						"modelConfig": {
 							"path": "PDS.SPAISourceQuote"
@@ -1133,6 +1175,16 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 								"SPAICallOffsGridDS_SPAITargetDate": {
 									"modelConfig": {
 										"path": "SPAICallOffsGridDS.SPAITargetDate"
+									}
+								},
+								"SPAICallOffsGridDS_SPAIPrimaryLocation": {
+									"modelConfig": {
+										"path": "SPAICallOffsGridDS.SPAIPrimaryLocation"
+									}
+								},
+								"SPAICallOffsGridDS_SPAISourceTier": {
+									"modelConfig": {
+										"path": "SPAICallOffsGridDS.SPAISourceTier"
 									}
 								},
 								"SPAICallOffsGridDS_Status": {
@@ -1282,6 +1334,12 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 								},
 								"SPAITargetDate": {
 									"path": "SPAITargetDate"
+								},
+								"SPAIPrimaryLocation": {
+									"path": "SPAIPrimaryLocation"
+								},
+								"SPAISourceTier": {
+									"path": "SPAISourceTier"
 								},
 								"Status": {
 									"path": "Status"

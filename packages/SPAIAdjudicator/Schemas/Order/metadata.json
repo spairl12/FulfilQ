@@ -332,6 +332,19 @@
   "E17": "SPAIDeliveryEventId",
   "E18": "SPAIDeliveryEventSPAILabel"
 }
++ MetaData.Schema.D2 {
+  "UId": "bc9b0ec9-1f5e-4c87-b400-a9f733608ada",
+  "A2": "SPAISourceTier",
+  "A3": "d27816cf-7924-46c3-bb20-9c0b03c290f2",
+  "A4": "d27816cf-7924-46c3-bb20-9c0b03c290f2",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "2c29aada-72cd-4f0f-88b9-295348df6f9b",
+  "E5": false,
+  "E6": true,
+  "E17": "SPAISourceTierId",
+  "E18": "SPAISourceTierName"
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "e80190a5-03b2-4095-90f7-a193a960adee",
@@ -371,7 +384,8 @@
   "a3a27b45-d91a-497f-9125-304f875f954d",
   "bb542632-a0dc-4065-8d0b-52f2cd6be071",
   "d67289af-8bac-43df-987c-a794d2f7cad3",
-  "9e27880f-3f6a-41a0-a581-397a09d9044b"
+  "9e27880f-3f6a-41a0-a581-397a09d9044b",
+  "bc9b0ec9-1f5e-4c87-b400-a9f733608ada"
 ]
 + MetaData.Schema.D20.FA1 false
 + MetaData.Schema.D20.FA2 false

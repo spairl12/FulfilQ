@@ -5,10 +5,10 @@ from gen_pages import control, expanded_list, dump
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bodies", "Orders_FormPage.js")
 FIELDS = [("SPAIOrderType", "K"), ("SPAIPurchaseOrderNo", "T"), ("SPAIBlanketOrder", "K"), ("SPAIDeliveryEvent", "K"),
-          ("SPAITargetDate", "D"), ("SPAIPrimaryLocation", "K"), ("SPAISourceQuote", "K")]
+          ("SPAITargetDate", "D"), ("SPAIPrimaryLocation", "K"), ("SPAISourceTier", "K"), ("SPAISourceQuote", "K")]
 CALL_OFFS = dict(prefix="SPAICallOffs", entity="Order", fk="SPAIBlanketOrder", title="Call-off orders (sub-POs)",
                  cols=[("Number", "T", 150), ("SPAIPurchaseOrderNo", "T", 140), ("SPAIDeliveryEvent", "K", 180),
-                       ("SPAITargetDate", "D", 120), ("Status", "K", 140),
+                       ("SPAITargetDate", "D", 120), ("SPAIPrimaryLocation", "K", 170), ("SPAISourceTier", "K", 130), ("Status", "K", 140),
                        ("DeliveryStatus", "K", 150), ("Amount", "M", 130)])
 DELIVERIES = dict(prefix="SPAIOrderDeliveries", entity="SPAIDelivery", fk="SPAIOrder", title="Deliveries",
                   cols=[("SPAIFromLocation", "K", 180), ("SPAIScheduledOn", "D", 120), ("SPAIReceivedOn", "D", 130),

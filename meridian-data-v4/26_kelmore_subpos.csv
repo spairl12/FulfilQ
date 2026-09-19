@@ -1,0 +1,26 @@
+SubPORef,BlanketPORef,ScheduleRef,EventCode,EventLabel,WindowCode,LocationCode,LocationName,LocationType,SourceTier,ScheduledOn,Status,LineCount,TotalQty
+SPO-0438-01,BPO-0438,SCH-0438-01,SCH-0438-01-E00,Onsite prototype,W0,DC01,Melbourne West DC,Distribution Centre,1,2026-02-10,Received on site,10,20
+SPO-0438-02,BPO-0438,SCH-0438-01,SCH-0438-01-E01,Level 1,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-05-18,Received on site,5,30
+SPO-0438-03,BPO-0438,SCH-0438-01,SCH-0438-01-E02,Level 2,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-06-11,Received on site,5,30
+SPO-0438-04,BPO-0438,SCH-0438-01,SCH-0438-01-E03,Level 3,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-07-05,Received on site,5,30
+SPO-0438-05,BPO-0438,SCH-0438-01,SCH-0438-01-E04,Level 4,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-07-29,Received on site,10,45
+SPO-0438-06,BPO-0438,SCH-0438-01,SCH-0438-01-E05,Level 5,W1,DC02,Sydney Central DC,Distribution Centre,2,2026-08-22,Received on site,10,45
+SPO-0438-07,BPO-0438,SCH-0438-01,SCH-0438-01-E06,Level 6,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-09-15,Overdue,10,45
+SPO-0438-08,BPO-0438,SCH-0438-01,SCH-0438-01-E07,Level 7,W2,DC01,Melbourne West DC,Distribution Centre,1,2026-10-09,Dispatched,10,45
+SPO-0438-09,BPO-0438,SCH-0438-01,SCH-0438-01-E08,Level 8,W2,DC01,Melbourne West DC,Distribution Centre,1,2026-11-02,Scheduled,10,40
+SPO-0438-10,BPO-0438,SCH-0438-01,SCH-0438-01-E09,Level 9,W2,ST02,Dandenong Store,Retail Store,3,2026-11-26,Scheduled,10,40
+SPO-0438-11,BPO-0438,SCH-0438-01,SCH-0438-01-E10,Level 10,W2,DC02,Sydney Central DC,Distribution Centre,2,2026-12-20,Scheduled,10,40
+SPO-0438-12,BPO-0438,SCH-0438-01,SCH-0438-01-E11,Level 11,W2,DC01,Melbourne West DC,Distribution Centre,1,2027-01-13,Scheduled,10,35
+SPO-0438-13,BPO-0438,SCH-0438-01,SCH-0438-01-E12,Level 12,W2,ST05,Parramatta Store,Retail Store,3,2027-02-06,Scheduled,10,35
+SPO-0438-14,BPO-0438,SCH-0438-02,SCH-0438-02-E01,Level 1,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-04-13,Received on site,9,54
+SPO-0438-15,BPO-0438,SCH-0438-02,SCH-0438-02-E02,Level 2,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-05-07,Received on site,9,54
+SPO-0438-16,BPO-0438,SCH-0438-02,SCH-0438-02-E03,Level 3,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-05-31,Received on site,9,54
+SPO-0438-17,BPO-0438,SCH-0438-02,SCH-0438-02-E04,Level 4,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-06-24,Received on site,16,75
+SPO-0438-18,BPO-0438,SCH-0438-02,SCH-0438-02-E05,Level 5,W1,DC02,Sydney Central DC,Distribution Centre,2,2026-07-18,Received on site,16,75
+SPO-0438-19,BPO-0438,SCH-0438-02,SCH-0438-02-E06,Level 6,W1,DC01,Melbourne West DC,Distribution Centre,1,2026-08-11,Received on site,16,75
+SPO-0438-20,BPO-0438,SCH-0438-02,SCH-0438-02-E07,Level 7,W2,DC01,Melbourne West DC,Distribution Centre,1,2026-09-04,Received on site,16,75
+SPO-0438-21,BPO-0438,SCH-0438-02,SCH-0438-02-E08,Level 8,W2,DC01,Melbourne West DC,Distribution Centre,1,2026-09-28,Dispatched,16,75
+SPO-0438-22,BPO-0438,SCH-0438-02,SCH-0438-02-E09,Level 9,W2,ST02,Dandenong Store,Retail Store,3,2026-10-22,Scheduled,16,75
+SPO-0438-23,BPO-0438,SCH-0438-02,SCH-0438-02-E10,Level 10,W2,DC02,Sydney Central DC,Distribution Centre,2,2026-11-15,Scheduled,16,68
+SPO-0438-24,BPO-0438,SCH-0438-02,SCH-0438-02-E11,Level 11,W2,DC01,Melbourne West DC,Distribution Centre,1,2026-12-09,Scheduled,16,68
+SPO-0438-25,BPO-0438,SCH-0438-02,SCH-0438-02-E12,Level 12,W2,ST05,Parramatta Store,Retail Store,3,2027-01-02,Scheduled,16,68

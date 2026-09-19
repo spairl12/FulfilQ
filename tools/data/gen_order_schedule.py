@@ -1,7 +1,7 @@
 """Generates the fictionalised inbound order-fulfilment documents for Corvina Quarter Stage 2:
   1. <PO>_Order_Schedule.xlsx - a call-up style order schedule (blanket PO, a sub-PO per delivery event, per-level delivery
      dates on two call-up schedules, grouped by delivery window), modelled on the layout of a real commercial call-up sheet.
-     The programme (events, dates, windows) comes from meridian-data-v3 files 13-15.
+     The programme (events, dates, windows) is the builder's programme in meridian-data-v4 files 21-22.
   2. <PO>_email.eml          - the customer's PO email that carries it.
 All parties, addresses, numbers and contacts are fictional. Items are evolved from the tender schedule
 (Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx); "ALT" marks an approved alternative, derived only from the
@@ -45,11 +45,11 @@ for r in range(header_row + 1, ws.max_row + 1):
     items.append(dict(item=f"{ref}{' ALT' if alt else ''}", tender_item=str(v[0]), model=model or "(unconfirmed)",
                       desc=str(v[3])[:60], tier=str(v[2]), qty=int(v[8]), group=group))
 
-# ---- delivery programme: the v3 call-up schedules for Corvina, one sub-PO per delivery event ----
-V3 = os.path.normpath(os.path.join(HERE, "..", "..", "meridian-data-v3"))
-SCHEDULE = {"Appliances": "SCH-0441-01", "Tapware & Sanitaryware": "SCH-0441-02"}
-windows = {w["Code"]: w["Name"] for w in csv.DictReader(open(os.path.join(V3, "14_delivery_windows.csv"), encoding="utf-8-sig"))}
-events = [e for e in csv.DictReader(open(os.path.join(V3, "15_delivery_events.csv"), encoding="utf-8-sig")) if e["ScheduleRef"] in SCHEDULE.values()]
+# ---- delivery programme: Corvina's call-up schedules (builder programme, v4), one sub-PO per delivery event ----
+V4 = os.path.normpath(os.path.join(HERE, "..", "..", "meridian-data-v4"))
+SCHEDULE = {"Appliances": "SCH-0141-01", "Tapware & Sanitaryware": "SCH-0141-02"}
+windows = {w["Code"]: w["Name"] for w in csv.DictReader(open(os.path.join(V4, "22_delivery_windows.csv"), encoding="utf-8-sig"))}
+events = [e for e in csv.DictReader(open(os.path.join(V4, "21_corvina_events.csv"), encoding="utf-8-sig")) if e["ScheduleRef"] in SCHEDULE.values()]
 for n, e in enumerate(sorted(events, key=lambda e: (e["ScheduledOn"], e["EventCode"])), start=1):
     e["subpo"] = f"{PO}-{n:02d}"
     e["date"] = dt.date.fromisoformat(e["ScheduledOn"])

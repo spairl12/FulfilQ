@@ -8,6 +8,7 @@
 			<Item Name="Columns.SPAIPrimaryLocation.Caption" Value="Primary location" />
 			<Item Name="Columns.SPAIPurchaseOrderNo.Caption" Value="Customer PO no." />
 			<Item Name="Columns.SPAISourceQuote.Caption" Value="Source quote" />
+			<Item Name="Columns.SPAISourceTier.Caption" Value="Source tier" />
 			<Item Name="Columns.SPAITargetDate.Caption" Value="Target date" />
 		</Items>
 	</Group>
