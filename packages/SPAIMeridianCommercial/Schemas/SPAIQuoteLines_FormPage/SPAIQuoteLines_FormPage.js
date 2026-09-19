@@ -45,11 +45,72 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIQuantity",
+				"name": "SPAIField_SPAILineNumber",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAILineNumber",
+					"control": "$PDS_SPAILineNumber",
+					"labelPosition": "auto",
+					"type": "crt.NumberInput"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIScheduleLine",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIScheduleLine",
+					"control": "$PDS_SPAIScheduleLine",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAICallOffOrder",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAICallOffOrder",
+					"control": "$PDS_SPAICallOffOrder",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIQuantity",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -60,7 +121,7 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 2
 			},
 			{
 				"operation": "insert",
@@ -68,7 +129,7 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				"values": {
 					"layoutConfig": {
 						"column": 2,
-						"row": 1,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -79,15 +140,34 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 3
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIUnitCost",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIUnitCost",
+					"control": "$PDS_SPAIUnitCost",
+					"labelPosition": "auto",
+					"type": "crt.NumberInput"
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 4
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAIAmount",
 				"values": {
 					"layoutConfig": {
-						"column": 1,
-						"row": 2,
+						"column": 2,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -98,7 +178,45 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 5
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIMarginPct",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIMarginPct",
+					"control": "$PDS_SPAIMarginPct",
+					"labelPosition": "auto",
+					"type": "crt.NumberInput"
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 6
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIIsSubstitution",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIIsSubstitution",
+					"control": "$PDS_SPAIIsSubstitution",
+					"labelPosition": "auto",
+					"type": "crt.Checkbox"
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 7
 			},
 			{
 				"operation": "merge",
@@ -164,6 +282,21 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 						"path": "PDS.SPAIQuote"
 					}
 				},
+				"PDS_SPAILineNumber": {
+					"modelConfig": {
+						"path": "PDS.SPAILineNumber"
+					}
+				},
+				"PDS_SPAIScheduleLine": {
+					"modelConfig": {
+						"path": "PDS.SPAIScheduleLine"
+					}
+				},
+				"PDS_SPAICallOffOrder": {
+					"modelConfig": {
+						"path": "PDS.SPAICallOffOrder"
+					}
+				},
 				"PDS_SPAIQuantity": {
 					"modelConfig": {
 						"path": "PDS.SPAIQuantity"
@@ -174,9 +307,24 @@ define("SPAIQuoteLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 						"path": "PDS.SPAIPrice"
 					}
 				},
+				"PDS_SPAIUnitCost": {
+					"modelConfig": {
+						"path": "PDS.SPAIUnitCost"
+					}
+				},
 				"PDS_SPAIAmount": {
 					"modelConfig": {
 						"path": "PDS.SPAIAmount"
+					}
+				},
+				"PDS_SPAIMarginPct": {
+					"modelConfig": {
+						"path": "PDS.SPAIMarginPct"
+					}
+				},
+				"PDS_SPAIIsSubstitution": {
+					"modelConfig": {
+						"path": "PDS.SPAIIsSubstitution"
 					}
 				}
 			}

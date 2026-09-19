@@ -33,6 +33,12 @@ define("SPAIQuoteLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 							"dataValueType": 10
 						},
 						{
+							"id": "2007b136-c305-54fa-bfdd-faa11416bac5",
+							"code": "PDS_SPAILineNumber",
+							"caption": "#ResourceString(PDS_SPAILineNumber)#",
+							"dataValueType": 4
+						},
+						{
 							"id": "29743c99-dbab-5457-8889-fa828445d5b4",
 							"code": "PDS_SPAIProduct",
 							"caption": "#ResourceString(PDS_SPAIProduct)#",
@@ -55,6 +61,18 @@ define("SPAIQuoteLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 							"code": "PDS_SPAIAmount",
 							"caption": "#ResourceString(PDS_SPAIAmount)#",
 							"dataValueType": 6
+						},
+						{
+							"id": "4c5615e0-5df2-520c-a43e-98a3295aaad9",
+							"code": "PDS_SPAIMarginPct",
+							"caption": "#ResourceString(PDS_SPAIMarginPct)#",
+							"dataValueType": 5
+						},
+						{
+							"id": "e2d5e24e-ec45-567e-9131-854aa8bde34c",
+							"code": "PDS_SPAIIsSubstitution",
+							"caption": "#ResourceString(PDS_SPAIIsSubstitution)#",
+							"dataValueType": 12
 						}
 					]
 				}
@@ -91,6 +109,11 @@ define("SPAIQuoteLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 							"path": "PDS.SPAIQuote"
 						}
 					},
+					"PDS_SPAILineNumber": {
+						"modelConfig": {
+							"path": "PDS.SPAILineNumber"
+						}
+					},
 					"PDS_SPAIProduct": {
 						"modelConfig": {
 							"path": "PDS.SPAIProduct"
@@ -109,6 +132,16 @@ define("SPAIQuoteLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 					"PDS_SPAIAmount": {
 						"modelConfig": {
 							"path": "PDS.SPAIAmount"
+						}
+					},
+					"PDS_SPAIMarginPct": {
+						"modelConfig": {
+							"path": "PDS.SPAIMarginPct"
+						}
+					},
+					"PDS_SPAIIsSubstitution": {
+						"modelConfig": {
+							"path": "PDS.SPAIIsSubstitution"
 						}
 					}
 				}

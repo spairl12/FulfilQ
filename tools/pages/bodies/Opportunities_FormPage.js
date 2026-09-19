@@ -1189,6 +1189,303 @@ define("Opportunities_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 				"parentName": "SPAIAdjButtonsRow",
 				"propertyName": "items",
 				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesPanel",
+				"parentName": "SPAIAdjudicationTab",
+				"propertyName": "items",
+				"index": 3,
+				"values": {
+					"type": "crt.ExpansionPanel",
+					"title": "#ResourceString(SPAIOppQuotesPanel_title)#",
+					"expanded": true,
+					"togglePosition": "before",
+					"titleWidth": 20,
+					"fullWidthHeader": true,
+					"fitContent": true,
+					"items": [],
+					"tools": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesGridWrap",
+				"parentName": "SPAIOppQuotesPanel",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesGrid",
+				"parentName": "SPAIOppQuotesGridWrap",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.DataGrid",
+					"items": "$SPAIOppQuotesGrid",
+					"activeRow": "$SPAIOppQuotesGrid_ActiveRow",
+					"primaryColumnName": "SPAIOppQuotesGridDS_Id",
+					"fitContent": true,
+					"visible": true,
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						}
+					},
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 2,
+						"rowSpan": 6
+					},
+					"columns": [
+						{
+							"id": "fa28b8b2-c0ea-5922-84d4-f0dbcc48d10b",
+							"code": "SPAIOppQuotesGridDS_SPAINumber",
+							"path": "SPAINumber",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAINumber)#",
+							"dataValueType": 1,
+							"width": 150
+						},
+						{
+							"id": "03802b6f-bec3-5457-8c1c-63a62b45b4db",
+							"code": "SPAIOppQuotesGridDS_SPAIRevision",
+							"path": "SPAIRevision",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIRevision)#",
+							"dataValueType": 4,
+							"width": 90
+						},
+						{
+							"id": "6b4a2326-af25-567a-9856-170f1bf94ee3",
+							"code": "SPAIOppQuotesGridDS_SPAIStatus",
+							"path": "SPAIStatus",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIStatus)#",
+							"dataValueType": 10,
+							"width": 140
+						},
+						{
+							"id": "01d45514-c614-5f25-adae-ee6bb443e369",
+							"code": "SPAIOppQuotesGridDS_SPAIQuoteDate",
+							"path": "SPAIQuoteDate",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIQuoteDate)#",
+							"dataValueType": 8,
+							"width": 120
+						},
+						{
+							"id": "fa283436-0c8b-57c4-add3-93a96be5fd53",
+							"code": "SPAIOppQuotesGridDS_SPAIValidUntil",
+							"path": "SPAIValidUntil",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIValidUntil)#",
+							"dataValueType": 8,
+							"width": 120
+						},
+						{
+							"id": "87baa30d-0c8d-54d0-9aa7-1bb6f45fe721",
+							"code": "SPAIOppQuotesGridDS_SPAIAmount",
+							"path": "SPAIAmount",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIAmount)#",
+							"dataValueType": 6,
+							"width": 140
+						},
+						{
+							"id": "5f71e2ed-e447-5b96-a27d-e118700ed23a",
+							"code": "SPAIOppQuotesGridDS_SPAIGrossMarginPct",
+							"path": "SPAIGrossMarginPct",
+							"caption": "#ResourceString(SPAIOppQuotesGridDS_SPAIGrossMarginPct)#",
+							"dataValueType": 5,
+							"width": 110
+						}
+					]
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesToolsContainer",
+				"parentName": "SPAIOppQuotesPanel",
+				"propertyName": "tools",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"color": "transparent",
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesToolsRow",
+				"parentName": "SPAIOppQuotesToolsContainer",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"alignItems": "center",
+					"gap": "none",
+					"items": [],
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesAddButton",
+				"parentName": "SPAIOppQuotesToolsRow",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.Button",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "SPAIQuote",
+							"defaultValues": [
+								{
+									"attributeName": "SPAIOpportunity",
+									"value": "$Id"
+								}
+							]
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesRefreshButton",
+				"parentName": "SPAIOppQuotesToolsRow",
+				"propertyName": "items",
+				"index": 1,
+				"values": {
+					"type": "crt.Button",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "SPAIOppQuotesGridDS"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesSettingsButton",
+				"parentName": "SPAIOppQuotesToolsRow",
+				"propertyName": "items",
+				"index": 2,
+				"values": {
+					"type": "crt.Button",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clickMode": "menu",
+					"menuItems": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesExport",
+				"parentName": "SPAIOppQuotesSettingsButton",
+				"propertyName": "menuItems",
+				"index": 0,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "export-button-icon",
+					"caption": "#ResourceString(SPAIOppQuotesExport_caption)#",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "SPAIOppQuotesGrid"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesImport",
+				"parentName": "SPAIOppQuotesSettingsButton",
+				"propertyName": "menuItems",
+				"index": 1,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "import-button-icon",
+					"caption": "#ResourceString(SPAIOppQuotesImport_caption)#",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "SPAIQuote"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOppQuotesSearch",
+				"parentName": "SPAIOppQuotesToolsRow",
+				"propertyName": "items",
+				"index": 3,
+				"values": {
+					"type": "crt.SearchFilter",
+					"iconOnly": true,
+					"placeholder": "#ResourceString(SPAIOppQuotesSearch_placeholder)#",
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "SPAIOppQuotesSearch_SPAIOppQuotesGrid",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"SPAIOppQuotesGrid"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"SPAIOppQuotesSearch_SearchValue",
+							"SPAIOppQuotesSearch_FilteredColumnsGroups"
+						]
+					}
+				}
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -1293,85 +1590,177 @@ define("Opportunities_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 								}
 							}
 						}
+					},
+					"SPAIOppQuotesGrid": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "SPAIOppQuotesGridDS",
+							"filterAttributes": [
+								{
+									"name": "SPAIOppQuotesSearch_SPAIOppQuotesGrid",
+									"loadOnChange": true
+								}
+							]
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"SPAIOppQuotesGridDS_Id": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.Id"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAINumber": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAINumber"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIRevision": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIRevision"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIStatus": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIStatus"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIQuoteDate": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIQuoteDate"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIValidUntil": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIValidUntil"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIAmount": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIAmount"
+									}
+								},
+								"SPAIOppQuotesGridDS_SPAIGrossMarginPct": {
+									"modelConfig": {
+										"path": "SPAIOppQuotesGridDS.SPAIGrossMarginPct"
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 		]/**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/,
 		modelConfigDiff: /**SCHEMA_MODEL_CONFIG_DIFF*/[
-  {
-    "operation": "merge",
-    "path": [
-      "dataSources"
-    ],
-    "values": {
-      "SPAIScheduleLinesGridDS": {
-        "type": "crt.EntityDataSource",
-        "scope": "viewElement",
-        "config": {
-          "entitySchemaName": "SPAIScheduleLine",
-          "attributes": {
-            "SPAILineNumber": {
-              "path": "SPAILineNumber"
-            },
-            "SPAIRoomType": {
-              "path": "SPAIRoomType"
-            },
-            "SPAIUnitTier": {
-              "path": "SPAIUnitTier"
-            },
-            "SPAISpecifiedText": {
-              "path": "SPAISpecifiedText"
-            },
-            "SPAISpecifiedModel": {
-              "path": "SPAISpecifiedModel"
-            },
-            "SPAIQuantity": {
-              "path": "SPAIQuantity"
-            },
-            "SPAIMatchedProduct": {
-              "path": "SPAIMatchedProduct"
-            },
-            "SPAILineStatus": {
-              "path": "SPAILineStatus"
-            },
-            "SPAIReasonCode": {
-              "path": "SPAIReasonCode"
-            },
-            "SPAIAdjudicationNote": {
-              "path": "SPAIAdjudicationNote"
-            },
-            "SPAIComplianceNotes": {
-              "path": "SPAIComplianceNotes"
-            },
-            "SPAILineMarginPct": {
-              "path": "SPAILineMarginPct"
-            },
-            "SPAICallOffOrder": {
-              "path": "SPAICallOffOrder"
-            },
-            "SPAIEstimatorDecision": {
-              "path": "SPAIEstimatorDecision"
-            }
-          }
-        }
-      }
-    }
-  },
-  {
-    "operation": "merge",
-    "path": [
-      "dependencies"
-    ],
-    "values": {
-      "SPAIScheduleLinesGridDS": [
-        {
-          "attributePath": "SPAIOpportunity",
-          "relationPath": "PDS.Id"
-        }
-      ]
-    }
-  }
-]/**SCHEMA_MODEL_CONFIG_DIFF*/,
+			{
+				"operation": "merge",
+				"path": [
+					"dataSources"
+				],
+				"values": {
+					"SPAIScheduleLinesGridDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "SPAIScheduleLine",
+							"attributes": {
+								"SPAILineNumber": {
+									"path": "SPAILineNumber"
+								},
+								"SPAIRoomType": {
+									"path": "SPAIRoomType"
+								},
+								"SPAIUnitTier": {
+									"path": "SPAIUnitTier"
+								},
+								"SPAISpecifiedText": {
+									"path": "SPAISpecifiedText"
+								},
+								"SPAISpecifiedModel": {
+									"path": "SPAISpecifiedModel"
+								},
+								"SPAIQuantity": {
+									"path": "SPAIQuantity"
+								},
+								"SPAIMatchedProduct": {
+									"path": "SPAIMatchedProduct"
+								},
+								"SPAILineStatus": {
+									"path": "SPAILineStatus"
+								},
+								"SPAIReasonCode": {
+									"path": "SPAIReasonCode"
+								},
+								"SPAIAdjudicationNote": {
+									"path": "SPAIAdjudicationNote"
+								},
+								"SPAIComplianceNotes": {
+									"path": "SPAIComplianceNotes"
+								},
+								"SPAILineMarginPct": {
+									"path": "SPAILineMarginPct"
+								},
+								"SPAICallOffOrder": {
+									"path": "SPAICallOffOrder"
+								},
+								"SPAIEstimatorDecision": {
+									"path": "SPAIEstimatorDecision"
+								}
+							}
+						}
+					},
+					"SPAIOppQuotesGridDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "SPAIQuote",
+							"attributes": {
+								"SPAINumber": {
+									"path": "SPAINumber"
+								},
+								"SPAIRevision": {
+									"path": "SPAIRevision"
+								},
+								"SPAIStatus": {
+									"path": "SPAIStatus"
+								},
+								"SPAIQuoteDate": {
+									"path": "SPAIQuoteDate"
+								},
+								"SPAIValidUntil": {
+									"path": "SPAIValidUntil"
+								},
+								"SPAIAmount": {
+									"path": "SPAIAmount"
+								},
+								"SPAIGrossMarginPct": {
+									"path": "SPAIGrossMarginPct"
+								}
+							}
+						}
+					}
+				}
+			},
+			{
+				"operation": "merge",
+				"path": [
+					"dependencies"
+				],
+				"values": {
+					"SPAIScheduleLinesGridDS": [
+						{
+							"attributePath": "SPAIOpportunity",
+							"relationPath": "PDS.Id"
+						}
+					],
+					"SPAIOppQuotesGridDS": [
+						{
+							"attributePath": "SPAIOpportunity",
+							"relationPath": "PDS.Id"
+						}
+					]
+				}
+			}
+		]/**SCHEMA_MODEL_CONFIG_DIFF*/,
 		handlers: /**SCHEMA_HANDLERS*/[
 			{
 				request: "spai.SetAdjudicationStatusRequest",

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "823be670-92a6-4ab0-b0a8-c64e4a9a9ee0",
+    "Name": "SPAIOrderType",
+    "ModifiedOnUtc": "\/Date(1789801582000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Order type",
+    "DependsOn": []
+  }
+}

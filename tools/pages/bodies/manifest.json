@@ -1,0 +1,102 @@
+[
+ {
+  "schema-name": "SPAIMeridianCommercial_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIMeridianCommercial_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIMeridianCommercial_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIMeridianCommercial_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIStockPositions_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIStockPositions_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIStockPositions_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIStockPositions_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAISubstitutionRules_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAISubstitutionRules_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAISubstitutionRules_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAISubstitutionRules_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIScheduleLines_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIScheduleLines_FormPage.js",
+  "resources": {
+   "SPAILineSourcesPanel_title": "Line sources",
+   "SPAILineSourcesExport_caption": "Export to Excel",
+   "SPAILineSourcesImport_caption": "Import data",
+   "SPAILineSourcesSearch_placeholder": "Search"
+  }
+ },
+ {
+  "schema-name": "SPAIScheduleLines_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIScheduleLines_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIDeliveries_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDeliveries_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIDeliveries_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDeliveries_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIDecisionLedger_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDecisionLedger_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIDecisionLedger_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDecisionLedger_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIQuotes_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIQuotes_FormPage.js",
+  "resources": {
+   "SPAIQuoteLinesPanel_title": "Quote lines",
+   "SPAIQuoteLinesExport_caption": "Export to Excel",
+   "SPAIQuoteLinesImport_caption": "Import data",
+   "SPAIQuoteLinesSearch_placeholder": "Search"
+  }
+ },
+ {
+  "schema-name": "SPAIQuotes_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIQuotes_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIQuoteLines_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIQuoteLines_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIQuoteLines_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIQuoteLines_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAILineSources_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAILineSources_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAILineSources_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAILineSources_ListPage.js",
+  "resources": {}
+ }
+]

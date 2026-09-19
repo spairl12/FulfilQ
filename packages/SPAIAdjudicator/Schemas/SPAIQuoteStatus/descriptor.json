@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c5f4884a-3d75-4b8e-8238-19774323a210",
+    "Name": "SPAIQuoteStatus",
+    "ModifiedOnUtc": "\/Date(1789801614000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Quote status",
+    "DependsOn": []
+  }
+}

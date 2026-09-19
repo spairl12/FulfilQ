@@ -7,6 +7,7 @@
 			<Item Name="Columns.SPAIFromLocation.Caption" Value="From location" />
 			<Item Name="Columns.SPAILineCount.Caption" Value="Line count" />
 			<Item Name="Columns.SPAIOrder.Caption" Value="Order" />
+			<Item Name="Columns.SPAIReceivedOn.Caption" Value="Received on site" />
 			<Item Name="Columns.SPAIScheduledOn.Caption" Value="Scheduled on" />
 			<Item Name="Columns.SPAIStatus.Caption" Value="Status" />
 			<Item Name="Columns.SPAIValue.Caption" Value="Value" />

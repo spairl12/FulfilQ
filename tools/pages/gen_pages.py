@@ -28,26 +28,28 @@ PAGES = {
     columns=[("SPAIRuleCode", "T"), ("SPAIFromProduct", "K"), ("SPAIToProduct", "K"), ("SPAIFinishMatch", "B"),
              ("SPAIEquivalenceBasis", "L"), ("SPAIApprovedBy", "T"), ("SPAIApprovedOn", "D"), ("SPAIIsActive", "B")]),
   "SPAIScheduleLine": dict(form="SPAIScheduleLines_FormPage", list="SPAIScheduleLines_ListPage",
-    profile=[("SPAISpecifiedText", "L"), ("SPAILineStatus", "K"), ("SPAIReasonCode", "K")],
+    profile=[("SPAIItemCode", "T"), ("SPAISpecifiedText", "L"), ("SPAILineStatus", "K"), ("SPAIReasonCode", "K"),
+             ("SPAIIsAlternative", "B")],
     general=[("SPAIOpportunity", "K"), ("SPAILineNumber", "I"), ("SPAIRoomType", "K"), ("SPAIUnitTier", "K"),
              ("SPAISpecifiedBrand", "T"), ("SPAISpecifiedModel", "T"), ("SPAISpecifiedFinish", "T"), ("SPAIQuantity", "I"),
-             ("SPAIRequiredCutoutW", "I"), ("SPAIRequiredCutoutH", "I"), ("SPAIRequiredCutoutD", "I"), ("SPAIMatchedProduct", "K"),
+             ("SPAIRequiredCutoutW", "I"), ("SPAIRequiredCutoutH", "I"), ("SPAIRequiredCutoutD", "I"), ("SPAIQtyReceived", "I"), ("SPAIQtyRemaining", "I"), ("SPAIMatchedProduct", "K"),
              ("SPAIResolvedBy", "T"), ("SPAIConfidence", "N"), ("SPAIQtySourced", "I"), ("SPAIQtyShortfall", "I"),
              ("SPAIUnitCost", "M"), ("SPAIUnitSell", "M"), ("SPAILineTotal", "M"), ("SPAILineMarginPct", "N"),
              ("SPAICallOffOrder", "K"), ("SPAIEstimatorDecision", "K"), ("SPAIScheduleNotes", "L"),
              ("SPAIAdjudicationNote", "L"), ("SPAIComplianceNotes", "L")],
-    columns=[("SPAIOpportunity", "K"), ("SPAILineNumber", "I"), ("SPAIRoomType", "K"), ("SPAIUnitTier", "K"),
+    columns=[("SPAIOpportunity", "K"), ("SPAIItemCode", "T"), ("SPAILineNumber", "I"), ("SPAIRoomType", "K"), ("SPAIUnitTier", "K"),
              ("SPAISpecifiedText", "L"), ("SPAISpecifiedModel", "T"), ("SPAIQuantity", "I"), ("SPAIMatchedProduct", "K"),
              ("SPAILineStatus", "K"), ("SPAIReasonCode", "K"), ("SPAILineMarginPct", "N"), ("SPAICallOffOrder", "K"),
              ("SPAIEstimatorDecision", "K")],
-    detail=dict(entity="SPAILineSource", fk="SPAIScheduleLine", title="Line sources",
+    detail=dict(prefix="SPAILineSources", entity="SPAILineSource", fk="SPAIScheduleLine", title="Line sources",
                 cols=[("SPAILocation", "K", 200), ("SPAISourceTier", "K", 160), ("SPAIQtyAllocated", "I", 120),
                       ("SPAIInterstateFreight", "B", 140), ("SPAIAllocatedOn", "DT", 170)]),
     gate1_lock=True),
   "SPAIDelivery": dict(form="SPAIDeliveries_FormPage", list="SPAIDeliveries_ListPage",
     profile=[("SPAIOrder", "K"), ("SPAIStatus", "K")],
-    general=[("SPAIFromLocation", "K"), ("SPAIScheduledOn", "D"), ("SPAIDriver", "K"), ("SPAILineCount", "I"), ("SPAIValue", "M")],
-    columns=[("SPAIOrder", "K"), ("SPAIFromLocation", "K"), ("SPAIScheduledOn", "D"), ("SPAIDriver", "K"), ("SPAIStatus", "K"),
+    general=[("SPAIFromLocation", "K"), ("SPAIScheduledOn", "D"), ("SPAIReceivedOn", "D"), ("SPAIDriver", "K"),
+             ("SPAILineCount", "I"), ("SPAIValue", "M")],
+    columns=[("SPAIOrder", "K"), ("SPAIFromLocation", "K"), ("SPAIScheduledOn", "D"), ("SPAIReceivedOn", "D"), ("SPAIDriver", "K"), ("SPAIStatus", "K"),
              ("SPAILineCount", "I"), ("SPAIValue", "M")]),
   "SPAIDecisionLedger": dict(form="SPAIDecisionLedger_FormPage", list="SPAIDecisionLedger_ListPage",
     profile=[("SPAIActor", "T"), ("SPAIDecisionType", "K"), ("SPAIOccurredOn", "DT")],
@@ -58,7 +60,79 @@ PAGES = {
              ("SPAIDecisionType", "K"), ("SPAIActor", "T"), ("SPAIProposedProduct", "K"), ("SPAIReasonCode", "K"),
              ("SPAIConfidence", "N"), ("SPAIPriorValue", "T"), ("SPAINewValue", "T")],
     readonly=True),
+  "SPAIQuote": dict(form="SPAIQuotes_FormPage", list="SPAIQuotes_ListPage",
+    profile=[("SPAINumber", "T"), ("SPAIStatus", "K"), ("SPAIRevision", "I"), ("SPAIOpportunity", "K")],
+    general=[("SPAIAccount", "K"), ("SPAIContact", "K"), ("SPAIOwner", "K"), ("SPAICurrency", "K"), ("SPAIQuoteDate", "D"),
+             ("SPAIValidUntil", "D"), ("SPAISubmittedOn", "D"), ("SPAIAmount", "M"), ("SPAITotalCost", "M"),
+             ("SPAIGrossMarginPct", "N"), ("SPAITerms", "L")],
+    columns=[("SPAINumber", "T"), ("SPAIRevision", "I"), ("SPAIStatus", "K"), ("SPAIOpportunity", "K"), ("SPAIAccount", "K"),
+             ("SPAIQuoteDate", "D"), ("SPAIAmount", "M"), ("SPAIGrossMarginPct", "N")],
+    detail=dict(prefix="SPAIQuoteLines", entity="SPAIQuoteLine", fk="SPAIQuote", title="Quote lines",
+                cols=[("SPAILineNumber", "I", 80), ("SPAIProduct", "K", 220), ("SPAIQuantity", "N", 100), ("SPAIPrice", "M", 120),
+                      ("SPAIAmount", "M", 130), ("SPAIMarginPct", "N", 100), ("SPAIIsSubstitution", "B", 110),
+                      ("SPAICallOffOrder", "K", 170)])),
+  "SPAIQuoteLine": dict(form="SPAIQuoteLines_FormPage", list="SPAIQuoteLines_ListPage",
+    profile=[("SPAIProduct", "K"), ("SPAIQuote", "K"), ("SPAILineNumber", "I")],
+    general=[("SPAIScheduleLine", "K"), ("SPAICallOffOrder", "K"), ("SPAIQuantity", "N"), ("SPAIPrice", "M"), ("SPAIUnitCost", "M"),
+             ("SPAIAmount", "M"), ("SPAIMarginPct", "N"), ("SPAIIsSubstitution", "B")],
+    columns=[("SPAIQuote", "K"), ("SPAILineNumber", "I"), ("SPAIProduct", "K"), ("SPAIQuantity", "N"), ("SPAIPrice", "M"),
+             ("SPAIAmount", "M"), ("SPAIMarginPct", "N"), ("SPAIIsSubstitution", "B")]),
+  "SPAILineSource": dict(form="SPAILineSources_FormPage", list="SPAILineSources_ListPage",
+    profile=[("SPAILocation", "K"), ("SPAIScheduleLine", "K")],
+    general=[("SPAIQtyAllocated", "I"), ("SPAISourceTier", "K"), ("SPAIInterstateFreight", "B"), ("SPAIAllocatedOn", "DT")],
+    columns=[("SPAIScheduleLine", "K"), ("SPAILocation", "K"), ("SPAISourceTier", "K"), ("SPAIQtyAllocated", "I"),
+             ("SPAIInterstateFreight", "B"), ("SPAIAllocatedOn", "DT")]),
 }
+
+def expanded_list(d, parent, index):
+    """Freedom UI "Expanded list" detail scoped to the page record (PDS.Id) via modelConfig.dependencies.
+    d = dict(prefix, entity, fk, title, cols=[(column, type, width)]). Returns (view ops, attributes, datasources, deps, resources)."""
+    vc, attrs, ds, deps, res = [], {}, {}, {}, {}
+    X = d["prefix"]
+    G, DS, SF, P = f"{X}Grid", f"{X}GridDS", f"{X}Search", f"{X}Panel"
+    res.update({f"{P}_title": d["title"], f"{X}Export_caption": "Export to Excel",
+                f"{X}Import_caption": "Import data", f"{SF}_placeholder": "Search"})
+    def ins(name, parent, idx, values, prop="items"):
+        vc.append({"operation": "insert", "name": name, "parentName": parent, "propertyName": prop, "index": idx, "values": values})
+    ins(P, parent, index, {"type": "crt.ExpansionPanel", "title": f"#ResourceString({P}_title)#", "expanded": True,
+        "togglePosition": "before", "titleWidth": 20, "fullWidthHeader": True, "fitContent": True, "items": [], "tools": []})
+    ins(f"{X}GridWrap", P, 0, {"type": "crt.GridContainer", "columns": ["minmax(32px, 1fr)", "minmax(32px, 1fr)"],
+        "rows": "minmax(max-content, 32px)", "gap": {"columnGap": "large", "rowGap": 0}, "styles": {"overflow-x": "hidden"}, "items": []})
+    ins(G, f"{X}GridWrap", 0, {"type": "crt.DataGrid", "items": f"${G}", "activeRow": f"${G}_ActiveRow",
+        "primaryColumnName": f"{DS}_Id", "fitContent": True, "visible": True,
+        "features": {"rows": {"selection": {"enable": True, "multiple": True}}},
+        "layoutConfig": {"column": 1, "row": 1, "colSpan": 2, "rowSpan": 6},
+        "columns": [{"id": gid(f"{X}:{c}"), "code": f"{DS}_{c}", "path": c, "caption": f"#ResourceString({DS}_{c})#",
+                     "dataValueType": LIST_DVT[t], "width": w} for c, t, w in d["cols"]]})
+    ins(f"{X}ToolsContainer", P, 0, {"type": "crt.GridContainer", "rows": "minmax(max-content, 24px)",
+        "columns": ["minmax(32px, 1fr)"], "gap": {"columnGap": "large", "rowGap": "none"}, "color": "transparent", "items": []}, "tools")
+    ins(f"{X}ToolsRow", f"{X}ToolsContainer", 0, {"type": "crt.FlexContainer", "direction": "row",
+        "alignItems": "center", "gap": "none", "items": [], "layoutConfig": {"column": 1, "row": 1, "colSpan": 1, "rowSpan": 1}})
+    ins(f"{X}AddButton", f"{X}ToolsRow", 0, {"type": "crt.Button", "icon": "add-button-icon",
+        "iconPosition": "only-icon", "color": "default",
+        "clicked": {"request": "crt.CreateRecordRequest", "params": {"entityName": d["entity"],
+                    "defaultValues": [{"attributeName": d["fk"], "value": "$Id"}]}}})
+    ins(f"{X}RefreshButton", f"{X}ToolsRow", 1, {"type": "crt.Button", "icon": "reload-icon",
+        "iconPosition": "only-icon", "color": "default",
+        "clicked": {"request": "crt.LoadDataRequest", "params": {"config": {"loadType": "reload"}, "dataSourceName": DS}}})
+    ins(f"{X}SettingsButton", f"{X}ToolsRow", 2, {"type": "crt.Button", "icon": "actions-button-icon",
+        "iconPosition": "only-icon", "color": "default", "clickMode": "menu", "menuItems": []})
+    ins(f"{X}Export", f"{X}SettingsButton", 0, {"type": "crt.MenuItem", "icon": "export-button-icon",
+        "caption": f"#ResourceString({X}Export_caption)#",
+        "clicked": {"request": "crt.ExportDataGridToExcelRequest", "params": {"viewName": G}}}, "menuItems")
+    ins(f"{X}Import", f"{X}SettingsButton", 1, {"type": "crt.MenuItem", "icon": "import-button-icon",
+        "caption": f"#ResourceString({X}Import_caption)#",
+        "clicked": {"request": "crt.ImportDataRequest", "params": {"entitySchemaName": d["entity"]}}}, "menuItems")
+    ins(SF, f"{X}ToolsRow", 3, {"type": "crt.SearchFilter", "iconOnly": True, "placeholder": f"#ResourceString({SF}_placeholder)#",
+        "_filterOptions": {"expose": [{"attribute": f"{SF}_{G}", "converters": [{"converter": "crt.SearchFilterAttributeConverter", "args": [G]}]}],
+                           "from": [f"{SF}_SearchValue", f"{SF}_FilteredColumnsGroups"]}})
+    attrs[G] = {"isCollection": True, "modelConfig": {"path": DS, "filterAttributes": [{"name": f"{SF}_{G}", "loadOnChange": True}]},
+                "viewModelConfig": {"attributes": dict([(f"{DS}_Id", {"modelConfig": {"path": f"{DS}.Id"}})] +
+                    [(f"{DS}_{c}", {"modelConfig": {"path": f"{DS}.{c}"}}) for c, _, _ in d["cols"]])}}
+    ds[DS] = {"type": "crt.EntityDataSource", "scope": "viewElement",
+              "config": {"entitySchemaName": d["entity"], "attributes": {c: {"path": c} for c, _, _ in d["cols"]}}}
+    deps[DS] = [{"attributePath": d["fk"], "relationPath": "PDS.Id"}]
+    return vc, attrs, ds, deps, res
 
 def control(col, t, parent, idx, layout, readonly=False):
     attr = f"PDS_{col}"
@@ -104,49 +178,8 @@ def form_body(entity, p):
         attrs["PDS_SPAIOppGate1ApprovedOn"] = {"modelConfig": {"path": "PDS.SPAIOppGate1ApprovedOn"}}
     d = p.get("detail")
     if d:
-        G, DS, SF, P = "SPAILineSourcesGrid", "SPAILineSourcesGridDS", "SPAILineSourcesSearch", "SPAILineSourcesPanel"
-        res.update({f"{P}_title": d["title"], "SPAILineSourcesExport_caption": "Export to Excel",
-                    "SPAILineSourcesImport_caption": "Import data", f"{SF}_placeholder": "Search"})
-        def ins(name, parent, idx, values, prop="items"):
-            vc.append({"operation": "insert", "name": name, "parentName": parent, "propertyName": prop, "index": idx, "values": values})
-        ins(P, "GeneralInfoTab", 1, {"type": "crt.ExpansionPanel", "title": f"#ResourceString({P}_title)#", "expanded": True,
-            "togglePosition": "before", "titleWidth": 20, "fullWidthHeader": True, "fitContent": True, "items": [], "tools": []})
-        ins("SPAILineSourcesGridWrap", P, 0, {"type": "crt.GridContainer", "columns": ["minmax(32px, 1fr)", "minmax(32px, 1fr)"],
-            "rows": "minmax(max-content, 32px)", "gap": {"columnGap": "large", "rowGap": 0}, "styles": {"overflow-x": "hidden"}, "items": []})
-        ins(G, "SPAILineSourcesGridWrap", 0, {"type": "crt.DataGrid", "items": f"${G}", "activeRow": f"${G}_ActiveRow",
-            "primaryColumnName": f"{DS}_Id", "fitContent": True, "visible": True,
-            "features": {"rows": {"selection": {"enable": True, "multiple": True}}},
-            "layoutConfig": {"column": 1, "row": 1, "colSpan": 2, "rowSpan": 6},
-            "columns": [{"id": gid(f"ls:{c}"), "code": f"{DS}_{c}", "path": c, "caption": f"#ResourceString({DS}_{c})#",
-                         "dataValueType": LIST_DVT[t], "width": w} for c, t, w in d["cols"]]})
-        ins("SPAILineSourcesToolsContainer", P, 0, {"type": "crt.GridContainer", "rows": "minmax(max-content, 24px)",
-            "columns": ["minmax(32px, 1fr)"], "gap": {"columnGap": "large", "rowGap": "none"}, "color": "transparent", "items": []}, "tools")
-        ins("SPAILineSourcesToolsRow", "SPAILineSourcesToolsContainer", 0, {"type": "crt.FlexContainer", "direction": "row",
-            "alignItems": "center", "gap": "none", "items": [], "layoutConfig": {"column": 1, "row": 1, "colSpan": 1, "rowSpan": 1}})
-        ins("SPAILineSourcesAddButton", "SPAILineSourcesToolsRow", 0, {"type": "crt.Button", "icon": "add-button-icon",
-            "iconPosition": "only-icon", "color": "default",
-            "clicked": {"request": "crt.CreateRecordRequest", "params": {"entityName": d["entity"],
-                        "defaultValues": [{"attributeName": d["fk"], "value": "$Id"}]}}})
-        ins("SPAILineSourcesRefreshButton", "SPAILineSourcesToolsRow", 1, {"type": "crt.Button", "icon": "reload-icon",
-            "iconPosition": "only-icon", "color": "default",
-            "clicked": {"request": "crt.LoadDataRequest", "params": {"config": {"loadType": "reload"}, "dataSourceName": DS}}})
-        ins("SPAILineSourcesSettingsButton", "SPAILineSourcesToolsRow", 2, {"type": "crt.Button", "icon": "actions-button-icon",
-            "iconPosition": "only-icon", "color": "default", "clickMode": "menu", "menuItems": []})
-        ins("SPAILineSourcesExport", "SPAILineSourcesSettingsButton", 0, {"type": "crt.MenuItem", "icon": "export-button-icon",
-            "caption": "#ResourceString(SPAILineSourcesExport_caption)#",
-            "clicked": {"request": "crt.ExportDataGridToExcelRequest", "params": {"viewName": G}}}, "menuItems")
-        ins("SPAILineSourcesImport", "SPAILineSourcesSettingsButton", 1, {"type": "crt.MenuItem", "icon": "import-button-icon",
-            "caption": "#ResourceString(SPAILineSourcesImport_caption)#",
-            "clicked": {"request": "crt.ImportDataRequest", "params": {"entitySchemaName": d["entity"]}}}, "menuItems")
-        ins(SF, "SPAILineSourcesToolsRow", 3, {"type": "crt.SearchFilter", "iconOnly": True, "placeholder": f"#ResourceString({SF}_placeholder)#",
-            "_filterOptions": {"expose": [{"attribute": f"{SF}_{G}", "converters": [{"converter": "crt.SearchFilterAttributeConverter", "args": [G]}]}],
-                               "from": [f"{SF}_SearchValue", f"{SF}_FilteredColumnsGroups"]}})
-        attrs[G] = {"isCollection": True, "modelConfig": {"path": DS, "filterAttributes": [{"name": f"{SF}_{G}", "loadOnChange": True}]},
-                    "viewModelConfig": {"attributes": dict([(f"{DS}_Id", {"modelConfig": {"path": f"{DS}.Id"}})] +
-                        [(f"{DS}_{c}", {"modelConfig": {"path": f"{DS}.{c}"}}) for c, _, _ in d["cols"]])}}
-        ds[DS] = {"type": "crt.EntityDataSource", "scope": "viewElement",
-                  "config": {"entitySchemaName": d["entity"], "attributes": {c: {"path": c} for c, _, _ in d["cols"]}}}
-        deps[DS] = [{"attributePath": d["fk"], "relationPath": "PDS.Id"}]
+        dvc, dattrs, dds, ddeps, dres = expanded_list(d, "GeneralInfoTab", 1)
+        vc += dvc; attrs.update(dattrs); ds.update(dds); deps.update(ddeps); res.update(dres)
     # keep the template-generated Feed / Attachments merges
     vc.append({"operation": "merge", "name": "AttachmentList", "values": {"type": "crt.FileList", "masterRecordColumnValue": "$Id",
         "recordColumnName": "RecordId", "layoutConfig": {"colSpan": 2, "column": 1, "row": 1, "rowSpan": 6},
@@ -200,12 +233,13 @@ def list_body(entity, p):
 }});
 '''
 
-manifest = []
-for entity, p in PAGES.items():
-    fb, fres = form_body(entity, p)
-    open(f"{D}/{p['form']}.js", "w").write(fb)
-    open(f"{D}/{p['list']}.js", "w").write(list_body(entity, p))
-    manifest.append({"schema-name": p["form"], "body-file": f"{D}/{p['form']}.js", "resources": fres})
-    manifest.append({"schema-name": p["list"], "body-file": f"{D}/{p['list']}.js", "resources": {}})
-json.dump(manifest, open(f"{D}/manifest.json", "w"), indent=1)
-print("\n".join(m["schema-name"] for m in manifest))
+if __name__ == "__main__":
+    manifest = []
+    for entity, p in PAGES.items():
+        fb, fres = form_body(entity, p)
+        open(f"{D}/{p['form']}.js", "w").write(fb)
+        open(f"{D}/{p['list']}.js", "w").write(list_body(entity, p))
+        manifest.append({"schema-name": p["form"], "body-file": f"{D}/{p['form']}.js", "resources": fres})
+        manifest.append({"schema-name": p["list"], "body-file": f"{D}/{p['list']}.js", "resources": {}})
+    json.dump(manifest, open(f"{D}/manifest.json", "w"), indent=1)
+    print("\n".join(m["schema-name"] for m in manifest))

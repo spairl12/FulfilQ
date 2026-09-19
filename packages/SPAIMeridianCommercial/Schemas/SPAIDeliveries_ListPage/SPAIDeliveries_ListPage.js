@@ -45,6 +45,12 @@ define("SPAIDeliveries_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 							"dataValueType": 8
 						},
 						{
+							"id": "42c91122-66b8-5216-afcf-982073f489c2",
+							"code": "PDS_SPAIReceivedOn",
+							"caption": "#ResourceString(PDS_SPAIReceivedOn)#",
+							"dataValueType": 8
+						},
+						{
 							"id": "9912967b-09a7-5b0d-824f-e420d98f581e",
 							"code": "PDS_SPAIDriver",
 							"caption": "#ResourceString(PDS_SPAIDriver)#",
@@ -111,6 +117,11 @@ define("SPAIDeliveries_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 					"PDS_SPAIScheduledOn": {
 						"modelConfig": {
 							"path": "PDS.SPAIScheduledOn"
+						}
+					},
+					"PDS_SPAIReceivedOn": {
+						"modelConfig": {
+							"path": "PDS.SPAIReceivedOn"
 						}
 					},
 					"PDS_SPAIDriver": {

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="LocalizableStrings.SPAICallOffsExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAICallOffsImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAICallOffsPanel_title.Value" Value="Call-off orders (sub-POs)" />
+			<Item Name="LocalizableStrings.SPAICallOffsSearch_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.SPAIFulfilmentTab_caption.Value" Value="Fulfilment" />
+			<Item Name="LocalizableStrings.SPAIOrderDeliveriesExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIOrderDeliveriesImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIOrderDeliveriesPanel_title.Value" Value="Deliveries" />
+			<Item Name="LocalizableStrings.SPAIOrderDeliveriesSearch_placeholder.Value" Value="Search" />
+		</Items>
+	</Group>
+</Resources>

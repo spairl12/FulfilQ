@@ -461,8 +461,34 @@
 = MetaData.Schema.B2.["4aa9734c-8128-04cc-2bbd-cc0eeedb9513"].A5 "9cf60252-99fd-409f-b81f-5c8bb51eadfb"
 = MetaData.Schema.B2.["0cec93c7-0b5d-cf55-4e25-f5150eb1a019"].A4 "f3561d78-48d5-4b12-91ac-d5a0a39478cf"
 = MetaData.Schema.B2.["0cec93c7-0b5d-cf55-4e25-f5150eb1a019"].A5 "9cf60252-99fd-409f-b81f-5c8bb51eadfb"
-- MetaData.Schema.B2.["2ae04f8e-fbc9-36b3-647d-76eee1addf23"]
-- MetaData.Schema.B2.["bd341a97-7a06-9a87-d7e2-1375c5b727af"]
++ MetaData.Schema.B2 {
+  "UId": "e5239858-2d4c-486d-9159-c174c681e320",
+  "A2": "SPAIOppQuotesPanel_title",
+  "A3": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A4": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871"
+}
++ MetaData.Schema.B2 {
+  "UId": "d5072582-3c66-4978-b1ac-7b7f6d8dc529",
+  "A2": "SPAIOppQuotesExport_caption",
+  "A3": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A4": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871"
+}
++ MetaData.Schema.B2 {
+  "UId": "860c25d0-9f11-48fd-8eb7-5a8277e387a2",
+  "A2": "SPAIOppQuotesImport_caption",
+  "A3": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A4": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871"
+}
++ MetaData.Schema.B2 {
+  "UId": "f878834b-d981-4d5f-842a-20ae4dc5b15d",
+  "A2": "SPAIOppQuotesSearch_placeholder",
+  "A3": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A4": "f3561d78-48d5-4b12-91ac-d5a0a39478cf",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871"
+}
 - MetaData.Schema.B2.["998a0eb0-f351-c002-9200-81707719beaa"]
 - MetaData.Schema.B2.["c7ef43e8-ae0c-bc10-c9fd-494aee6432bf"]
 - MetaData.Schema.B2.["2d1b5639-76ba-d3a2-fd2e-e53573a8e651"]
@@ -485,9 +511,11 @@
 - MetaData.Schema.B2.["ef59b3e5-dfd7-c5cb-98ca-ea36a80adef3"]
 - MetaData.Schema.B2.["62d0705c-98fd-4989-0593-4117517919c2"]
 - MetaData.Schema.B2.["93875c93-7570-85c9-a350-ec46628813c6"]
+- MetaData.Schema.B2.["2ae04f8e-fbc9-36b3-647d-76eee1addf23"]
 - MetaData.Schema.B2.["b24fb486-bd4a-4f4c-01fd-77883cea7ab0"]
 - MetaData.Schema.B2.["b22551b2-0860-1490-f781-b5d9c39ecef9"]
 - MetaData.Schema.B2.["7d4cff8f-06e9-b209-a85e-4d7894ac46a4"]
+- MetaData.Schema.B2.["bd341a97-7a06-9a87-d7e2-1375c5b727af"]
 ~ MetaData.Schema.B2 [
   "38baf1b8-bbde-4861-b3fb-489b99a75b09",
   "86ada69c-3566-40af-86d4-04278084a106",
@@ -661,7 +689,11 @@
   "c3c71526-da8c-159f-597e-2a60ddf2ebee",
   "7acb4bd4-1658-ae1a-c7cc-b961120685ec",
   "4aa9734c-8128-04cc-2bbd-cc0eeedb9513",
-  "0cec93c7-0b5d-cf55-4e25-f5150eb1a019"
+  "0cec93c7-0b5d-cf55-4e25-f5150eb1a019",
+  "e5239858-2d4c-486d-9159-c174c681e320",
+  "d5072582-3c66-4978-b1ac-7b7f6d8dc529",
+  "860c25d0-9f11-48fd-8eb7-5a8277e387a2",
+  "f878834b-d981-4d5f-842a-20ae4dc5b15d"
 ]
 = MetaData.Schema.B6 "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355"
 = MetaData.Schema.B8 "10.0.0.858"

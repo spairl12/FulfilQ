@@ -209,8 +209,23 @@ def s_alignment():
     run_batch("Contact", [update_q("Contact", gid("con", c["ContactCode"]), {"DecisionRole": (10, None)})
                           for c in contacts if c["Role"] in CUSTOM_DECISION_ROLES], "clear custom contact decision roles")
 
+DELIVERY_STATUS = [  # (Id, Name, colour) - aligned to the customer call-up sheet legend
+    ("5a1c0007-0000-4000-8000-000000000004", "Overdue", "#FF4013")]
+DELIVERY_RENAME = {"Planned": ("Scheduled", "#0058EF"), "Dispatched": ("Dispatched", "#FFAC07"),
+                   "Delivered": ("Received on site", "#22AC14")}
+ORDER_TYPE_CALLOFF = "d2c1d49c-1bdc-4435-8551-d00e45737564"
+
+def s_fulfilment():
+    """Order-fulfilment reframe: delivery statuses match the call-up legend; seeded phase orders are call-offs."""
+    ds = lookup_map("SPAIDeliveryStatus")
+    run_batch("SPAIDeliveryStatus", [update_q("SPAIDeliveryStatus", ds[old], {"Name": T(new), "SPAIColor": (18, col)})
+                                     for old, (new, col) in DELIVERY_RENAME.items() if old in ds], "delivery status rename + colour")
+    insert_rows("SPAIDeliveryStatus", [(i, {"Name": T(n), "SPAIColor": (18, c)}) for i, n, c in DELIVERY_STATUS], "delivery status add")
+    run_batch("Order", [update_q("Order", gid("ord", f'{r["TenderCode"]}-P{r["PhaseNumber"]}'), {"SPAIOrderType": (10, ORDER_TYPE_CALLOFF)})
+                        for r in rows("08_calloff_phases.csv")], "phase orders typed call-off")
+
 STEPS = {"brands": s_brands, "families": s_families, "locations": s_locations, "drivers": s_drivers, "accounts": s_accounts,
          "contacts": s_contacts, "products": s_products, "superseded": s_superseded, "stock": s_stock, "rules": s_rules,
-         "tenders": s_tenders, "phases": s_phases, "alignment": s_alignment}
+         "tenders": s_tenders, "phases": s_phases, "alignment": s_alignment, "fulfilment": s_fulfilment}
 if __name__ == "__main__":
     for s in sys.argv[1:]: STEPS[s]()

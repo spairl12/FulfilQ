@@ -106,6 +106,15 @@
   "S2": "969093e2-2b4e-463b-883a-3d3b8c61f0cd",
   "E5": false
 }
++ MetaData.Schema.D2 {
+  "UId": "47cdce88-946c-4c28-b127-2a96d19c720c",
+  "A2": "SPAIReceivedOn",
+  "A3": "326b5f40-7d8e-413e-9704-2942cc78e6b1",
+  "A4": "326b5f40-7d8e-413e-9704-2942cc78e6b1",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44",
+  "E5": false
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "e80190a5-03b2-4095-90f7-a193a960adee",
@@ -119,7 +128,8 @@
   "8b684ac6-29e0-47fa-9ac2-5a373f7fc7ce",
   "505bf529-0146-4d8a-afbd-a2014e4116aa",
   "6bcada58-45ee-4e25-a047-195cf2b8dfb5",
-  "670523db-0a71-4eaf-bd07-296124ca3eb5"
+  "670523db-0a71-4eaf-bd07-296124ca3eb5",
+  "47cdce88-946c-4c28-b127-2a96d19c720c"
 ]
 = MetaData.Schema.D20.A2 "SPAIDeliveryEvents"
 + MetaData.Schema.D20.FA1 false

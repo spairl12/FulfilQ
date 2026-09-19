@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "44eb921c-12ce-445b-a627-b2c8515154af",
     "Name": "SPAIDeliveryStatus",
-    "ModifiedOnUtc": "\/Date(1789715070000)\/",
+    "ModifiedOnUtc": "\/Date(1789801908000)\/",
     "InstallType": 0,
     "Schema": {
       "UId": "6d922ecb-96c4-4c5e-910a-608edd8fe110",
@@ -22,6 +22,13 @@
         "IsKey": true,
         "ColumnName": "Id",
         "DataTypeValueUId": "23018567-a13c-4320-8687-fd6f9e3699bd"
+      },
+      {
+        "ColumnUId": "e5c142cf-b2c7-41ac-b360-40ccb6b18b0d",
+        "IsForceUpdate": false,
+        "IsKey": false,
+        "ColumnName": "SPAIColor",
+        "DataTypeValueUId": "dafb71f9-ee9f-4e0b-a4d7-37aa15987155"
       }
     ]
   }

@@ -4,10 +4,16 @@
 		<Items>
 			<Item Name="Caption" Value="Quote line" />
 			<Item Name="Columns.SPAIAmount.Caption" Value="Amount" />
+			<Item Name="Columns.SPAICallOffOrder.Caption" Value="Call-off order" />
+			<Item Name="Columns.SPAIIsSubstitution.Caption" Value="Substitution" />
+			<Item Name="Columns.SPAILineNumber.Caption" Value="Line number" />
+			<Item Name="Columns.SPAIMarginPct.Caption" Value="Margin %" />
 			<Item Name="Columns.SPAIPrice.Caption" Value="Price" />
 			<Item Name="Columns.SPAIProduct.Caption" Value="Product" />
 			<Item Name="Columns.SPAIQuantity.Caption" Value="Quantity" />
 			<Item Name="Columns.SPAIQuote.Caption" Value="Quote" />
+			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAIUnitCost.Caption" Value="Unit cost" />
 		</Items>
 	</Group>
 </Resources>

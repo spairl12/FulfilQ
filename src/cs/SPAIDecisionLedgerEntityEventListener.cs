@@ -2,6 +2,7 @@ namespace SPAIAdjudicator.EntryPoints.EntityEventListeners
 {
 	using System;
 	using Terrasoft.Core;
+	using Terrasoft.Core.Configuration;
 	using Terrasoft.Core.DB;
 	using Terrasoft.Core.Entities;
 	using Terrasoft.Core.Entities.Events;
@@ -12,13 +13,15 @@ namespace SPAIAdjudicator.EntryPoints.EntityEventListeners
 	/// operations held by administrators; this listener cannot.
 	/// - Updates are refused for every user, including Supervisor.
 	/// - Deletes are refused for every user except members of the "Ledger Administrators"
-	///   break-glass role, and every permitted delete is itself recorded as a new ledger entry.
+	///   break-glass role named by the SPAILedgerAdministratorsRole system setting (empty setting = nobody),
+	///   and every permitted delete is itself recorded as a new ledger entry.
 	/// Inserts are untouched.
 	/// </summary>
 	[EntityEventListener(SchemaName = "SPAIDecisionLedger")]
 	public class SPAIDecisionLedgerEntityEventListener : BaseEntityEventListener
 	{
-		private static readonly Guid LedgerAdministratorsRoleId = new Guid("7531c8da-2b8f-4853-ba0b-419df03807a7");
+		private const string LedgerAdministratorsRoleSetting = "SPAILedgerAdministratorsRole";
+		// SPAIDecisionType "Human override": seeded and bound in SPAIAdjudicator, so its Id is identical on every install.
 		private static readonly Guid HumanOverrideDecisionTypeId = new Guid("a145dd29-a894-4fbe-9f5e-99f5cdf6cbfa");
 
 		private const string UpdateRefused =
@@ -44,11 +47,15 @@ namespace SPAIAdjudicator.EntryPoints.EntityEventListeners
 		}
 
 		private static bool IsLedgerAdministrator(UserConnection userConnection) {
+			Guid roleId = SysSettings.GetValue(userConnection, LedgerAdministratorsRoleSetting, Guid.Empty);
+			if (roleId == Guid.Empty) {
+				return false;
+			}
 			var select = new Select(userConnection)
 				.Column(Func.Count("Id"))
 				.From("SysAdminUnitInRole")
 				.Where("SysAdminUnitId").IsEqual(Column.Parameter(userConnection.CurrentUser.Id))
-				.And("SysAdminUnitRoleId").IsEqual(Column.Parameter(LedgerAdministratorsRoleId)) as Select;
+				.And("SysAdminUnitRoleId").IsEqual(Column.Parameter(roleId)) as Select;
 			return select.ExecuteScalar<int>() > 0;
 		}
 

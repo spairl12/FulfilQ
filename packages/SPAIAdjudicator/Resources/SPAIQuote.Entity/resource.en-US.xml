@@ -5,8 +5,19 @@
 			<Item Name="Caption" Value="Quote" />
 			<Item Name="Columns.SPAIAccount.Caption" Value="Account" />
 			<Item Name="Columns.SPAIAmount.Caption" Value="Amount" />
+			<Item Name="Columns.SPAIContact.Caption" Value="Customer contact" />
+			<Item Name="Columns.SPAICurrency.Caption" Value="Currency" />
+			<Item Name="Columns.SPAIGrossMarginPct.Caption" Value="Gross margin %" />
 			<Item Name="Columns.SPAINumber.Caption" Value="Number" />
 			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
+			<Item Name="Columns.SPAIOwner.Caption" Value="Owner" />
+			<Item Name="Columns.SPAIQuoteDate.Caption" Value="Quote date" />
+			<Item Name="Columns.SPAIRevision.Caption" Value="Revision" />
+			<Item Name="Columns.SPAIStatus.Caption" Value="Status" />
+			<Item Name="Columns.SPAISubmittedOn.Caption" Value="Submitted on" />
+			<Item Name="Columns.SPAITerms.Caption" Value="Terms" />
+			<Item Name="Columns.SPAITotalCost.Caption" Value="Total cost" />
+			<Item Name="Columns.SPAIValidUntil.Caption" Value="Valid until" />
 		</Items>
 	</Group>
 </Resources>

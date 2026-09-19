@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="AddonConfig.Rules.0390b4d4-41bb-49d2-b1b0-48d385b5ac9c.Caption" Value="SPAI: blanket order shows its call-offs, not a parent" />
+			<Item Name="AddonConfig.Rules.7105435f-e4d7-4d15-9eaa-a3830995cfee.Caption" Value="SPAI: non-blanket order shows its parent, not call-offs" />
+		</Items>
+	</Group>
+</Resources>

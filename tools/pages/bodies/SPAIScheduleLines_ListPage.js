@@ -33,6 +33,12 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"dataValueType": 10
 						},
 						{
+							"id": "899e6554-d764-58b7-83a8-121b070b7321",
+							"code": "PDS_SPAIItemCode",
+							"caption": "#ResourceString(PDS_SPAIItemCode)#",
+							"dataValueType": 1
+						},
+						{
 							"id": "ed08815b-b10d-591b-a3c2-21d082b62487",
 							"code": "PDS_SPAILineNumber",
 							"caption": "#ResourceString(PDS_SPAILineNumber)#",
@@ -137,6 +143,11 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 					"PDS_SPAIOpportunity": {
 						"modelConfig": {
 							"path": "PDS.SPAIOpportunity"
+						}
+					},
+					"PDS_SPAIItemCode": {
+						"modelConfig": {
+							"path": "PDS.SPAIItemCode"
 						}
 					},
 					"PDS_SPAILineNumber": {

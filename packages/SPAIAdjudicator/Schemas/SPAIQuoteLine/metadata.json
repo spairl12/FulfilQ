@@ -83,6 +83,67 @@
   "S2": "969093e2-2b4e-463b-883a-3d3b8c61f0cd",
   "E5": false
 }
++ MetaData.Schema.D2 {
+  "UId": "c82b4145-57cf-4682-ad8d-49956ee46c51",
+  "A2": "SPAILineNumber",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "81b42d6f-03ef-40d8-968c-1b5eb343956b",
+  "A2": "SPAIScheduleLine",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "da27baaa-69ac-40e5-b008-96bd96ef4825",
+  "E5": false,
+  "E6": true,
+  "E17": "SPAIScheduleLineId",
+  "E18": "SPAIScheduleLineSPAISpecifiedText"
+}
++ MetaData.Schema.D2 {
+  "UId": "dc2e5d3a-35a5-4941-bfb5-753181fa22c8",
+  "A2": "SPAIUnitCost",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "969093e2-2b4e-463b-883a-3d3b8c61f0cd",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "54c040cd-1edb-43e6-8b06-d03d7e41d317",
+  "A2": "SPAIMarginPct",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "07ba84ce-0bf7-44b4-9f2c-7b15032eb98c",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "91acbf62-c35b-48cd-8aac-91819a269e59",
+  "A2": "SPAIIsSubstitution",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "90b65bf8-0ffc-4141-8779-2420877af907",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "562a693f-bfcb-4132-8e26-3a94c96184aa",
+  "A2": "SPAICallOffOrder",
+  "A3": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A4": "f24e26fb-594d-4869-9869-9aaedb753470",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
+  "S4": "80294582-06b5-4faa-a85f-3323e5536b71",
+  "E5": false,
+  "E17": "SPAICallOffOrderId",
+  "E18": "SPAICallOffOrderNumber"
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "e80190a5-03b2-4095-90f7-a193a960adee",
@@ -94,7 +155,13 @@
   "387f9f09-0a3c-4315-98f8-c6fab201a990",
   "6aa5832b-860d-4d07-acab-1e6dbb1e5744",
   "741f9000-29f6-4fd9-8f93-3c373061760a",
-  "c7a82127-1297-4bdd-9980-392e4ce33a2b"
+  "c7a82127-1297-4bdd-9980-392e4ce33a2b",
+  "c82b4145-57cf-4682-ad8d-49956ee46c51",
+  "81b42d6f-03ef-40d8-968c-1b5eb343956b",
+  "dc2e5d3a-35a5-4941-bfb5-753181fa22c8",
+  "54c040cd-1edb-43e6-8b06-d03d7e41d317",
+  "91acbf62-c35b-48cd-8aac-91819a269e59",
+  "562a693f-bfcb-4132-8e26-3a94c96184aa"
 ]
 = MetaData.Schema.D20.A2 "SPAIQuoteLineEvents"
 + MetaData.Schema.D20.FA1 false

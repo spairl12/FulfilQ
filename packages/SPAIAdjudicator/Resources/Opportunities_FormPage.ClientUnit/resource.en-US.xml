@@ -12,6 +12,10 @@
 			<Item Name="LocalizableStrings.PDS_SPAIAdjudicationStatus_spai.Value" Value="Adjudication status" />
 			<Item Name="LocalizableStrings.SPAIAdjudicationTab_caption.Value" Value="Adjudication" />
 			<Item Name="LocalizableStrings.SPAIApproveGate1Button_caption.Value" Value="Approve Gate 1" />
+			<Item Name="LocalizableStrings.SPAIOppQuotesExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIOppQuotesImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIOppQuotesPanel_title.Value" Value="Quotes" />
+			<Item Name="LocalizableStrings.SPAIOppQuotesSearch_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.SPAIRunAdjudicationButton_caption.Value" Value="Run adjudication" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesExport_caption.Value" Value="Export to Excel" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesImport_caption.Value" Value="Import data" />

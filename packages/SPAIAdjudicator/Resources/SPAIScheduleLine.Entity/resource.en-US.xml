@@ -8,12 +8,16 @@
 			<Item Name="Columns.SPAIComplianceNotes.Caption" Value="Compliance notes" />
 			<Item Name="Columns.SPAIConfidence.Caption" Value="Confidence" />
 			<Item Name="Columns.SPAIEstimatorDecision.Caption" Value="Estimator decision" />
+			<Item Name="Columns.SPAIIsAlternative.Caption" Value="Approved alternative (ALT)" />
+			<Item Name="Columns.SPAIItemCode.Caption" Value="Item code" />
 			<Item Name="Columns.SPAILineMarginPct.Caption" Value="Line margin %" />
 			<Item Name="Columns.SPAILineNumber.Caption" Value="Line number" />
 			<Item Name="Columns.SPAILineStatus.Caption" Value="Line status" />
 			<Item Name="Columns.SPAILineTotal.Caption" Value="Line total" />
 			<Item Name="Columns.SPAIMatchedProduct.Caption" Value="Matched product" />
 			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
+			<Item Name="Columns.SPAIQtyReceived.Caption" Value="Qty received" />
+			<Item Name="Columns.SPAIQtyRemaining.Caption" Value="Qty remaining" />
 			<Item Name="Columns.SPAIQtyShortfall.Caption" Value="Qty shortfall" />
 			<Item Name="Columns.SPAIQtySourced.Caption" Value="Qty sourced" />
 			<Item Name="Columns.SPAIQuantity.Caption" Value="Quantity" />

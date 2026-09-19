@@ -1,0 +1,15 @@
+﻿{
+  "Descriptor": {
+    "UId": "644ded70-da38-4e95-8a50-2c9851407fb9",
+    "Name": "Orders_FormPageBusinessRule",
+    "ModifiedOnUtc": "\/Date(1789802321000)\/",
+    "Parent": {
+      "UId": "3bf48773-0200-4b6e-b052-4224c4913368",
+      "Name": "Orders_FormPageBusinessRule"
+    },
+    "ExtendParent": true,
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Orders form page (Business rules)",
+    "DependsOn": []
+  }
+}

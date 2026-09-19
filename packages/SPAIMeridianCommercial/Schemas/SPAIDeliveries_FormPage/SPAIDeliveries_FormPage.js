@@ -86,10 +86,30 @@ define("SPAIDeliveries_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIDriver",
+				"name": "SPAIField_SPAIReceivedOn",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
+						"row": 2,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIReceivedOn",
+					"control": "$PDS_SPAIReceivedOn",
+					"labelPosition": "auto",
+					"type": "crt.DateTimePicker",
+					"pickerType": "date"
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIDriver",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
 						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -103,15 +123,15 @@ define("SPAIDeliveries_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAILineCount",
 				"values": {
 					"layoutConfig": {
-						"column": 2,
-						"row": 2,
+						"column": 1,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -122,14 +142,14 @@ define("SPAIDeliveries_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAIValue",
 				"values": {
 					"layoutConfig": {
-						"column": 1,
+						"column": 2,
 						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -141,7 +161,7 @@ define("SPAIDeliveries_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 4
+				"index": 5
 			},
 			{
 				"operation": "merge",
@@ -215,6 +235,11 @@ define("SPAIDeliveries_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/*
 				"PDS_SPAIScheduledOn": {
 					"modelConfig": {
 						"path": "PDS.SPAIScheduledOn"
+					}
+				},
+				"PDS_SPAIReceivedOn": {
+					"modelConfig": {
+						"path": "PDS.SPAIReceivedOn"
 					}
 				},
 				"PDS_SPAIDriver": {
