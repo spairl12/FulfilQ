@@ -9,7 +9,7 @@ print("Product total", len(P), "with SPAI model code", len(mine))
 print("sample", {k: mine[0][k] for k in ["Code","SPAIModelCode","SPAIWELSRating","SPAIComplianceVerifiedOn","SPAIWholesaleCost"]})
 print("Opportunities w/ tender code", len([o for o in select("Opportunity",["SPAITenderCode"]) if o["SPAITenderCode"]]))
 print("Orders w/ phase", len([o for o in select("Order",["SPAIPhaseNumber"]) if o["SPAIPhaseNumber"]]))
-print("Contacts w/ SPAI accounts", len([c for c in select("Contact",["Account.Name","DecisionRole.Name"]) if c.get("DecisionRole.Name") in ("Builder contact","Constraint owner","Gate 1 approver","Gate 2 approver","Specifier")]))
+print("Tender contact roles (native OpportunityContact)", len([c for c in select("OpportunityContact",["Opportunity.SPAITenderCode"]) if c["Opportunity.SPAITenderCode"]]))
 # Q1
 R = select("SPAISubstitutionRule", ["SPAIFromProduct","SPAIToProduct"])
 def lid(v): return (v or {}).get("value") if isinstance(v, dict) else v
