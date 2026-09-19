@@ -3,7 +3,7 @@
 //
 // Serialises stock by location for the candidate products only (never the whole catalogue).
 // Only locations flagged SPAILocation.SPAIIsAvailable = true are sent. That is the same availability
-// signal BP7 SPAIConstraintChange reacts to.
+// signal BP7 SPAIConstraintChange reacts to. Rows with nothing available and nothing inbound are dropped.
 //
 // Process parameters:
 //   CandidateProductCodesJson  Unlimited text  in   from BP3_BuildCandidateSet
@@ -37,6 +37,10 @@ if (codes.Length > 0) {
 		.OrderBy(e => e.GetTypedColumnValue<string>(c["SPAIProduct.Code"]), StringComparer.Ordinal)
 		.ThenBy(e => e.GetTypedColumnValue<int>(c["SPAILocation.SPAISourcingRank"]));
 	foreach (Entity e in rows) {
+		// Gap 3 (token spend): a row with nothing available and nothing inbound cannot change a decision.
+		if (e.GetTypedColumnValue<int>(c["SPAIQtyAvailable"]) <= 0 && e.GetTypedColumnValue<int>(c["SPAINextInboundQty"]) <= 0) {
+			continue;
+		}
 		DateTime inbound = e.GetTypedColumnValue<DateTime>(c["SPAINextInboundDate"]);
 		stock.Add(new JObject {
 			["productCode"] = e.GetTypedColumnValue<string>(c["SPAIProduct.Code"]),

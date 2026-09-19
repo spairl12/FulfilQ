@@ -72,7 +72,7 @@ These are active `SPAISubstitutionRule` records (`SPAIIsActive` = true) whose `S
 | `qtyOnHand`, `qtyAvailable` | `SPAIQtyOnHand`, `SPAIQtyAvailable` |
 | `nextInboundQty`, `nextInboundDate` | `SPAINextInboundQty`, `SPAINextInboundDate` (yyyy-MM-dd) |
 
-Only locations with `SPAILocation.SPAIIsAvailable` = true are sent.
+Only locations with `SPAILocation.SPAIIsAvailable` = true are sent. Rows where `qtyAvailable` and `nextInboundQty` are both 0 are dropped, because they cannot change a ranking. Availability totals in `specifiedProduct.networkQtyAvailable` and in the BP pre-rank are unaffected (Gap 3, token spend, 2026-09-20).
 
 ## 5. `policyContext`: object
 

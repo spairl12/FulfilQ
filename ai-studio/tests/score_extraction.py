@@ -13,26 +13,40 @@ Gate items (02 §2, verbatim):
   - Penthouse basin lines show 12, not 2 (Total Qty, not per-unit)
   - Valid JSON on five consecutive runs
 
-Data reconciliation (recorded in 02a §7): `04DW9001X` does not appear in either RevC workbook. The
-planted typo in meridian-data-v3 is line 028 `05DW6000Q` (answer key `_planted` = TYPO). The typo item
-is scored against every TYPO line in the answer key, and the report names the code it actually checked.
+Data reconciliation (recorded in 02a §9): `04DW9001X` does not appear in the RevC workbook. The planted
+typo in meridian-data-v2 (the dataset loaded into the instance) is line 017 `04DW4501X` (answer key
+`_planted` = TYPO). The typo item is scored against every TYPO line in the answer key, and the report
+names the code it actually checked.
 """
 import argparse
 import csv
+import io
 import json
 import sys
+import zipfile
 from pathlib import Path
 
 import openpyxl
 
 REPO = Path(__file__).resolve().parents[2]
-DATA = REPO.parent / "meridian-data-v3"
+DATA = REPO / "meridian-data-v2"  # the dataset loaded into the instance
+ANSWER_KEY = REPO / "meridian-seed-data-v2.zip"  # holds the v2 answer key; deliberately not committed
 REQUIRED = {
     "lineNumber": int, "itemRef": str, "isAlternate": bool, "alternateVariant": str, "productFamily": str,
     "roomType": str, "unitTier": str, "specifiedText": str, "specifiedBrand": str, "specifiedModel": str,
     "specifiedFinish": str, "quantity": int, "cutoutW": int, "cutoutH": int, "cutoutD": int, "notes": str,
     "extractionConfidence": (int, float),
 }
+
+
+def read_answer_key(path):
+    """Answer key from a CSV, or straight from the seed zip (never extracted, never committed)."""
+    if path.endswith(".zip"):
+        with zipfile.ZipFile(path) as z:
+            member = next(n for n in z.namelist() if n.endswith("09_hero_schedule_ANSWER_KEY.csv"))
+            text = z.read(member).decode("utf-8-sig")
+        return list(csv.DictReader(io.StringIO(text)))
+    return list(csv.DictReader(open(path, newline="", encoding="utf-8-sig")))
 
 
 def read_workbook(path):
@@ -115,10 +129,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("runs", nargs="+", help="raw Extractor reply files, in run order")
     ap.add_argument("--workbook", default=str(DATA / "Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx"))
-    ap.add_argument("--answer-key", default=str(DATA / "09_hero_schedule_ANSWER_KEY.csv"))
+    ap.add_argument("--answer-key", default=str(ANSWER_KEY), help="answer-key CSV, or the seed zip that contains it")
     args = ap.parse_args()
     workbook = read_workbook(args.workbook)
-    key_rows = list(csv.DictReader(open(args.answer_key, newline="")))
+    key_rows = read_answer_key(args.answer_key)
 
     all_pass, valid_streak, best_streak = True, 0, 0
     for i, path in enumerate(args.runs, 1):

@@ -11,19 +11,24 @@ The floor re-check applies Governance Block 2 with the KS2 §7 Combined eligibil
 workbook's cut-outs, and the specified product's ratings (products CSV, matched by model code). The same
 logic runs in BP3_ApplyVerdicts.cs. If product data is fixed in the instance (for example dishwasher WELS
 registrations), export Product to CSV with the 04_products.csv headers and pass --products.
+Defaults: meridian-data-v2 (the dataset loaded into the instance, including the 2026-09-20 dishwasher WELS
+fix) and the answer key read from meridian-seed-data-v2.zip.
 """
 import argparse
 import csv
+import io
 import json
 import re
 import sys
+import zipfile
 from collections import defaultdict
 from pathlib import Path
 
 import openpyxl
 
 REPO = Path(__file__).resolve().parents[2]
-DATA = REPO.parent / "meridian-data-v3"
+DATA = REPO / "meridian-data-v2"  # the dataset loaded into the instance
+ANSWER_KEY = REPO / "meridian-seed-data-v2.zip"  # holds the v2 answer key; deliberately not committed
 LEAD_LIMIT = 12
 # KS2 §7 Combined eligibility matrix: cut-out, WELS, GEMS, WaterMark. Keep identical to BP3_BuildCandidateSet.cs.
 REGIMES = {
@@ -38,17 +43,29 @@ EXPECTED = {  # 02 §3 table: planted -> (lines, expected code)
 }
 
 
+def read_answer_key(path):
+    """Answer key from a CSV, or straight from the seed zip (never extracted, never committed)."""
+    if path.endswith(".zip"):
+        with zipfile.ZipFile(path) as z:
+            member = next(n for n in z.namelist() if n.endswith("09_hero_schedule_ANSWER_KEY.csv"))
+            text = z.read(member).decode("utf-8-sig")
+        return list(csv.DictReader(io.StringIO(text)))
+    return list(csv.DictReader(open(path, newline="", encoding="utf-8-sig")))
+
+
 def fnum(v):
     return float(v) if v not in (None, "") else None
 
 
 def load(args):
-    products = {r["ProductCode"]: r for r in csv.DictReader(open(args.products, newline=""))}
+    products = {r["ProductCode"]: r for r in csv.DictReader(open(args.products, newline="", encoding="utf-8-sig"))}
     by_model = {r["ModelCode"]: r for r in products.values()}
     stock = defaultdict(int)
-    for s in csv.DictReader(open(args.stock, newline="")):
+    for s in csv.DictReader(open(args.stock, newline="", encoding="utf-8-sig")):
         stock[s["ProductCode"]] += int(s["QtyAvailable"] or 0)
-    key = {int(r["Item"]): r for r in csv.DictReader(open(args.answer_key, newline=""))}
+    key = {int(r["Item"]): r for r in read_answer_key(args.answer_key)}
+    for r in key.values():  # the v2 key has no ProductFamily column: take it from the source product
+        r.setdefault("ProductFamily", products[r["_sourceProduct"]]["ProductFamily"])
     rows = list(openpyxl.load_workbook(args.workbook, data_only=True).active.iter_rows(values_only=True))
     h = next(i for i, r in enumerate(rows) if r and r[0] == "Item")
     wb = {int(r[0]): dict(zip(rows[h], r)) for r in rows[h + 1:] if r and r[0] and str(r[0]).isdigit()}
@@ -182,7 +199,7 @@ def score_run(doc, products, by_model, stock, key, wb):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("runs", nargs="+", help="raw Adjudicator reply files, in run order")
-    ap.add_argument("--answer-key", default=str(DATA / "09_hero_schedule_ANSWER_KEY.csv"))
+    ap.add_argument("--answer-key", default=str(ANSWER_KEY), help="answer-key CSV, or the seed zip that contains it")
     ap.add_argument("--products", default=str(DATA / "04_products.csv"))
     ap.add_argument("--stock", default=str(DATA / "05_stock_positions.csv"))
     ap.add_argument("--workbook", default=str(DATA / "Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx"))

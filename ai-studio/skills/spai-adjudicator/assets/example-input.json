@@ -198,28 +198,6 @@
     },
     {
       "productCode": "MCS-0383",
-      "locationCode": "ST03",
-      "locationName": "Geelong Store",
-      "locationType": "Retail Store",
-      "sourcingRank": 7,
-      "qtyOnHand": 0,
-      "qtyAvailable": 0,
-      "nextInboundQty": 0,
-      "nextInboundDate": ""
-    },
-    {
-      "productCode": "MCS-0383",
-      "locationCode": "ST07",
-      "locationName": "Gold Coast Store",
-      "locationType": "Retail Store",
-      "sourcingRank": 11,
-      "qtyOnHand": 0,
-      "qtyAvailable": 0,
-      "nextInboundQty": 0,
-      "nextInboundDate": ""
-    },
-    {
-      "productCode": "MCS-0383",
       "locationCode": "ST08",
       "locationName": "Adelaide Store",
       "locationType": "Retail Store",
