@@ -5,6 +5,8 @@
 			<Item Name="Caption" Value="Adjudication overview" />
 			<Item Name="LocalizableStrings.SPAIDashAllocByLocType_series_0.Value" Value="Qty allocated" />
 			<Item Name="LocalizableStrings.SPAIDashAllocByLocType_title.Value" Value="Stock allocation by location type" />
+			<Item Name="LocalizableStrings.SPAIDashEventsByWindow_series_0.Value" Value="Delivery events" />
+			<Item Name="LocalizableStrings.SPAIDashEventsByWindow_title.Value" Value="Delivery events by window" />
 			<Item Name="LocalizableStrings.SPAIDashLinesByReason_series_0.Value" Value="Lines" />
 			<Item Name="LocalizableStrings.SPAIDashLinesByReason_title.Value" Value="Lines by reason code" />
 			<Item Name="LocalizableStrings.SPAIDashResolvedBy_series_0.Value" Value="Lines" />

@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "a592dd29-26b3-4b84-8d40-7448bff29381",
+    "Name": "SPAICallUpLine_ListPage",
+    "ModifiedOnUtc": "\/Date(1789831700000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Call-up lines list page",
+    "DependsOn": []
+  }
+}

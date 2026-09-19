@@ -393,7 +393,7 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIDashValueByPhase",
+				"name": "SPAIDashEventsByWindow",
 				"parentName": "Main",
 				"propertyName": "items",
 				"index": 3,
@@ -406,13 +406,13 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 					},
 					"type": "crt.ChartWidget",
 					"config": {
-						"title": "#ResourceString(SPAIDashValueByPhase_title)#",
+						"title": "#ResourceString(SPAIDashEventsByWindow_title)#",
 						"color": "dark-blue",
 						"theme": "without-fill",
 						"series": [
 							{
 								"type": "bar",
-								"label": "#ResourceString(SPAIDashValueByPhase_series_0)#",
+								"label": "#ResourceString(SPAIDashEventsByWindow_series_0)#",
 								"legend": {
 									"enabled": true
 								},
@@ -421,15 +421,15 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 								},
 								"data": {
 									"providing": {
-										"attribute": "SPAIDashValueByPhase_SeriesData_vp5c7ty",
-										"schemaName": "SPAIScheduleLine",
+										"attribute": "SPAIDashEventsByWindow_SeriesData_vp5c7ty",
+										"schemaName": "SPAIDeliveryEvent",
 										"filters": {
 											"filter": {
 												"items": {},
 												"logicalOperation": 0,
 												"isEnabled": true,
 												"filterType": 6,
-												"rootSchemaName": "SPAIScheduleLine"
+												"rootSchemaName": "SPAIDeliveryEvent"
 											},
 											"filterAttributes": []
 										},
@@ -441,11 +441,11 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 												"expression": {
 													"expressionType": 1,
 													"functionType": 2,
-													"aggregationType": 2,
-													"aggregationEvalType": 1,
+													"aggregationType": 1,
+													"aggregationEvalType": 2,
 													"functionArgument": {
 														"expressionType": 0,
-														"columnPath": "SPAILineTotal"
+														"columnPath": "Id"
 													}
 												}
 											}
@@ -458,7 +458,7 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 												"isVisible": true,
 												"expression": {
 													"expressionType": 0,
-													"columnPath": "SPAICallOffOrder.SPAIPhaseName"
+													"columnPath": "SPAIDeliveryWindow"
 												}
 											}
 										},
@@ -477,13 +477,13 @@ define("SPAIMeridianAdjudicationDashboard", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, 
 						"scales": {
 							"stacked": false,
 							"xAxis": {
-								"name": "Call-off phase",
+								"name": "Delivery window",
 								"formatting": {
 									"type": "string"
 								}
 							},
 							"yAxis": {
-								"name": "Value",
+								"name": "Events",
 								"formatting": {
 									"type": "number"
 								}

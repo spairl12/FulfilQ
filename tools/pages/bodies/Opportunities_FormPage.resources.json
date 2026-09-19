@@ -1,0 +1,10 @@
+{
+ "SPAIOppQuotesPanel_title": "Quotes",
+ "SPAIOppQuotesExport_caption": "Export to Excel",
+ "SPAIOppQuotesImport_caption": "Import data",
+ "SPAIOppQuotesSearch_placeholder": "Search",
+ "SPAIOppCallUpsPanel_title": "Call-up schedules (delivery programme)",
+ "SPAIOppCallUpsExport_caption": "Export to Excel",
+ "SPAIOppCallUpsImport_caption": "Import data",
+ "SPAIOppCallUpsSearch_placeholder": "Search"
+}

@@ -1,0 +1,28 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "AddonSchemaManager",
+      "UId": "b195f025-0091-45f9-9725-dd685363b3de",
+      "A2": "SPAICallUpScheduleRelatedPage",
+      "A5": "6f71e54c-1960-40c9-94f6-073fd67699ab",
+      "B1": [],
+      "B2": [],
+      "B3": [],
+      "B6": "5530927f-22ea-e7c9-4ccf-506d3a6c2ed2",
+      "B8": "0.0.0.0",
+      "AD1": "096ff215-af44-4cb8-a9a9-edf1edf5c822",
+      "AD2": "EntitySchemaManager",
+      "AD3": "RelatedPage",
+      "AD5": "3a2d6f51-1bfc-4c17-aacb-b53de4866b7c",
+      "AD4": {
+        "Pages": [
+          {
+            "UId": "23f4af0d-d9ce-4eaa-8b2c-8ca46e0c63df",
+            "PageSchemaUId": "39f4e9e9-a447-4f03-bcd9-839736c260b0",
+            "IsDefault": true
+          }
+        ]
+      }
+    }
+  }
+}

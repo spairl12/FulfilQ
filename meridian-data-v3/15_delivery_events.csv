@@ -1,0 +1,75 @@
+EventCode,ScheduleRef,Sequence,Label,EventType,ScheduledOn,WindowCode,Status
+SCH-0441-01-E00,SCH-0441-01,0,Onsite prototype,Prototype,2026-10-23,W0,Scheduled
+SCH-0441-01-E01,SCH-0441-01,1,Level 1,Level rollout,2027-02-15,W1,Scheduled
+SCH-0441-02-E01,SCH-0441-02,1,Level 1,Level rollout,2027-01-11,W1,Scheduled
+SCH-0441-01-E02,SCH-0441-01,2,Level 2,Level rollout,2027-02-27,W1,Scheduled
+SCH-0441-02-E02,SCH-0441-02,2,Level 2,Level rollout,2027-01-23,W1,Scheduled
+SCH-0441-01-E03,SCH-0441-01,3,Level 3,Level rollout,2027-03-11,W1,Scheduled
+SCH-0441-02-E03,SCH-0441-02,3,Level 3,Level rollout,2027-02-04,W1,Scheduled
+SCH-0441-01-E04,SCH-0441-01,4,Level 4,Level rollout,2027-03-23,W1,Scheduled
+SCH-0441-02-E04,SCH-0441-02,4,Level 4,Level rollout,2027-02-16,W1,Scheduled
+SCH-0441-01-E05,SCH-0441-01,5,Level 5,Level rollout,2027-04-04,W1,Scheduled
+SCH-0441-02-E05,SCH-0441-02,5,Level 5,Level rollout,2027-02-28,W1,Scheduled
+SCH-0441-01-E06,SCH-0441-01,6,Level 6,Level rollout,2027-04-16,W1,Scheduled
+SCH-0441-02-E06,SCH-0441-02,6,Level 6,Level rollout,2027-03-12,W1,Scheduled
+SCH-0441-01-E07,SCH-0441-01,7,Level 7,Level rollout,2027-04-28,W2,Scheduled
+SCH-0441-02-E07,SCH-0441-02,7,Level 7,Level rollout,2027-03-24,W2,Scheduled
+SCH-0441-01-E08,SCH-0441-01,8,Level 8,Level rollout,2027-05-10,W2,Scheduled
+SCH-0441-02-E08,SCH-0441-02,8,Level 8,Level rollout,2027-04-05,W2,Scheduled
+SCH-0441-01-E09,SCH-0441-01,9,Level 9,Level rollout,2027-05-22,W2,Scheduled
+SCH-0441-02-E09,SCH-0441-02,9,Level 9,Level rollout,2027-04-17,W2,Scheduled
+SCH-0441-01-E10,SCH-0441-01,10,Level 10,Level rollout,2027-06-03,W2,Scheduled
+SCH-0441-02-E10,SCH-0441-02,10,Level 10,Level rollout,2027-04-29,W2,Scheduled
+SCH-0441-01-E11,SCH-0441-01,11,Level 11,Level rollout,2027-06-15,W2,Scheduled
+SCH-0441-02-E11,SCH-0441-02,11,Level 11,Level rollout,2027-05-11,W2,Scheduled
+SCH-0441-01-E12,SCH-0441-01,12,Level 12,Level rollout,2027-06-27,W2,Scheduled
+SCH-0441-02-E12,SCH-0441-02,12,Level 12,Level rollout,2027-05-23,W2,Scheduled
+SCH-0441-01-E13,SCH-0441-01,13,Level 13,Level rollout,2027-07-09,W3,Scheduled
+SCH-0441-02-E13,SCH-0441-02,13,Level 13,Level rollout,2027-06-04,W3,Scheduled
+SCH-0441-01-E14,SCH-0441-01,14,Level 14,Level rollout,2027-07-21,W3,Scheduled
+SCH-0441-02-E14,SCH-0441-02,14,Level 14,Level rollout,2027-06-16,W3,Scheduled
+SCH-0441-01-E15,SCH-0441-01,15,Level 15,Level rollout,2027-08-02,W3,Scheduled
+SCH-0441-02-E15,SCH-0441-02,15,Level 15,Level rollout,2027-06-28,W3,Scheduled
+SCH-0441-01-E16,SCH-0441-01,16,Level 16,Level rollout,2027-08-14,W3,Scheduled
+SCH-0441-02-E16,SCH-0441-02,16,Level 16,Level rollout,2027-07-10,W3,Scheduled
+SCH-0441-01-E17,SCH-0441-01,17,Level 17,Level rollout,2027-08-26,W3,Scheduled
+SCH-0441-02-E17,SCH-0441-02,17,Level 17,Level rollout,2027-07-22,W3,Scheduled
+SCH-0441-01-E18,SCH-0441-01,18,Level 18,Level rollout,2027-09-07,W3,Scheduled
+SCH-0441-02-E18,SCH-0441-02,18,Level 18,Level rollout,2027-08-03,W3,Scheduled
+SCH-0441-01-E19,SCH-0441-01,19,Level 19,Level rollout,2027-09-19,W4,Scheduled
+SCH-0441-02-E19,SCH-0441-02,19,Level 19,Level rollout,2027-08-15,W4,Scheduled
+SCH-0441-01-E20,SCH-0441-01,20,Level 20,Level rollout,2027-10-01,W4,Scheduled
+SCH-0441-02-E20,SCH-0441-02,20,Level 20,Level rollout,2027-08-27,W4,Scheduled
+SCH-0441-01-E21,SCH-0441-01,21,Level 21,Level rollout,2027-10-13,W4,Scheduled
+SCH-0441-02-E21,SCH-0441-02,21,Level 21,Level rollout,2027-09-08,W4,Scheduled
+SCH-0441-01-E22,SCH-0441-01,22,Level 22,Level rollout,2027-10-25,W4,Scheduled
+SCH-0441-02-E22,SCH-0441-02,22,Level 22,Level rollout,2027-09-20,W4,Scheduled
+SCH-0441-01-E23,SCH-0441-01,23,Level 23,Level rollout,2027-11-06,W4,Scheduled
+SCH-0441-02-E23,SCH-0441-02,23,Level 23,Level rollout,2027-10-02,W4,Scheduled
+SCH-0441-01-E24,SCH-0441-01,24,Level 24,Level rollout,2027-11-18,W4,Scheduled
+SCH-0441-02-E24,SCH-0441-02,24,Level 24,Level rollout,2027-10-14,W4,Scheduled
+SCH-0438-01-E00,SCH-0438-01,0,Onsite prototype,Prototype,2026-02-10,W0,Received on site
+SCH-0438-01-E01,SCH-0438-01,1,Level 1,Level rollout,2026-04-06,W1,Received on site
+SCH-0438-02-E01,SCH-0438-02,1,Level 1,Level rollout,2026-03-02,W1,Received on site
+SCH-0438-01-E02,SCH-0438-01,2,Level 2,Level rollout,2026-04-22,W1,Received on site
+SCH-0438-02-E02,SCH-0438-02,2,Level 2,Level rollout,2026-03-18,W1,Received on site
+SCH-0438-01-E03,SCH-0438-01,3,Level 3,Level rollout,2026-05-08,W1,Received on site
+SCH-0438-02-E03,SCH-0438-02,3,Level 3,Level rollout,2026-04-03,W1,Received on site
+SCH-0438-01-E04,SCH-0438-01,4,Level 4,Level rollout,2026-05-24,W1,Received on site
+SCH-0438-02-E04,SCH-0438-02,4,Level 4,Level rollout,2026-04-19,W1,Received on site
+SCH-0438-01-E05,SCH-0438-01,5,Level 5,Level rollout,2026-06-09,W1,Received on site
+SCH-0438-02-E05,SCH-0438-02,5,Level 5,Level rollout,2026-05-05,W1,Received on site
+SCH-0438-01-E06,SCH-0438-01,6,Level 6,Level rollout,2026-06-25,W1,Received on site
+SCH-0438-02-E06,SCH-0438-02,6,Level 6,Level rollout,2026-05-21,W1,Received on site
+SCH-0438-01-E07,SCH-0438-01,7,Level 7,Level rollout,2026-07-11,W2,Received on site
+SCH-0438-02-E07,SCH-0438-02,7,Level 7,Level rollout,2026-06-06,W2,Received on site
+SCH-0438-01-E08,SCH-0438-01,8,Level 8,Level rollout,2026-07-27,W2,Received on site
+SCH-0438-02-E08,SCH-0438-02,8,Level 8,Level rollout,2026-06-22,W2,Received on site
+SCH-0438-01-E09,SCH-0438-01,9,Level 9,Level rollout,2026-08-12,W2,Received on site
+SCH-0438-02-E09,SCH-0438-02,9,Level 9,Level rollout,2026-07-08,W2,Received on site
+SCH-0438-01-E10,SCH-0438-01,10,Level 10,Level rollout,2026-08-28,W2,Received on site
+SCH-0438-02-E10,SCH-0438-02,10,Level 10,Level rollout,2026-07-24,W2,Received on site
+SCH-0438-01-E11,SCH-0438-01,11,Level 11,Level rollout,2026-09-13,W2,Overdue
+SCH-0438-02-E11,SCH-0438-02,11,Level 11,Level rollout,2026-08-09,W2,Received on site
+SCH-0438-01-E12,SCH-0438-01,12,Level 12,Level rollout,2026-09-29,W2,Dispatched
+SCH-0438-02-E12,SCH-0438-02,12,Level 12,Level rollout,2026-08-25,W2,Received on site

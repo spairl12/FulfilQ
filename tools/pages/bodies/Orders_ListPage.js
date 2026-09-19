@@ -36,9 +36,9 @@ define("Orders_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 						},
 						{
 							"id": "10f1b29b-b3d5-532d-9235-937a2c951c7d",
-							"code": "PDS_SPAIDeliveryLabel",
-							"caption": "#ResourceString(PDS_SPAIDeliveryLabel)#",
-							"dataValueType": 1
+							"code": "PDS_SPAIDeliveryEvent",
+							"caption": "#ResourceString(PDS_SPAIDeliveryEvent)#",
+							"dataValueType": 10
 						},
 						{
 							"id": "3de54efa-8ad9-cdc5-ca61-07c09afeaab9",
@@ -116,9 +116,9 @@ define("Orders_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 							"path": "PDS.SPAIPurchaseOrderNo"
 						}
 					},
-					"PDS_SPAIDeliveryLabel": {
+					"PDS_SPAIDeliveryEvent": {
 						"modelConfig": {
-							"path": "PDS.SPAIDeliveryLabel"
+							"path": "PDS.SPAIDeliveryEvent"
 						}
 					}
 				}

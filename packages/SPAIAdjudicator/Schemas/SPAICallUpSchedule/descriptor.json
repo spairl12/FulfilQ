@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "096ff215-af44-4cb8-a9a9-edf1edf5c822",
+    "Name": "SPAICallUpSchedule",
+    "ModifiedOnUtc": "\/Date(1789830883000)\/",
+    "Parent": {
+      "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
+      "Name": "BaseEntity"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Call-up schedule",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Call-up line" />
+			<Item Name="Columns.SPAIDeliveryEvent.Caption" Value="Delivery event" />
+			<Item Name="Columns.SPAIQtyDelivered.Caption" Value="Qty delivered" />
+			<Item Name="Columns.SPAIQtyRequired.Caption" Value="Qty required" />
+			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAIStatus.Caption" Value="Status" />
+			<Item Name="Columns.SPAISubPO.Caption" Value="Sub-PO" />
+		</Items>
+	</Group>
+</Resources>

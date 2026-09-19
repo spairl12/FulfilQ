@@ -7,6 +7,10 @@
 			<Item Name="LocalizableStrings.SPAICallOffsPanel_title.Value" Value="Call-off orders (sub-POs)" />
 			<Item Name="LocalizableStrings.SPAICallOffsSearch_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.SPAIFulfilmentTab_caption.Value" Value="Fulfilment" />
+			<Item Name="LocalizableStrings.SPAIOrderCallUpsExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIOrderCallUpsImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIOrderCallUpsPanel_title.Value" Value="Call-up lines on this sub-PO" />
+			<Item Name="LocalizableStrings.SPAIOrderCallUpsSearch_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.SPAIOrderDeliveriesExport_caption.Value" Value="Export to Excel" />
 			<Item Name="LocalizableStrings.SPAIOrderDeliveriesImport_caption.Value" Value="Import data" />
 			<Item Name="LocalizableStrings.SPAIOrderDeliveriesPanel_title.Value" Value="Deliveries" />

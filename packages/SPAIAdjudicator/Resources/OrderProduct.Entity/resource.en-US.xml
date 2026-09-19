@@ -2,6 +2,10 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="Columns.SPAIAlternateVariant.Caption" Value="Alternate variant" />
+			<Item Name="Columns.SPAIDisplayRef.Caption" Value="Display ref" />
+			<Item Name="Columns.SPAIIsAlternative.Caption" Value="Approved alternative (ALT)" />
+			<Item Name="Columns.SPAIItemCode.Caption" Value="Item ref" />
 			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
 		</Items>
 	</Group>

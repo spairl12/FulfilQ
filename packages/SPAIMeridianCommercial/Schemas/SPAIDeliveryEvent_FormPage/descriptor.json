@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c3a03d16-8781-4c75-a902-fa4aa40a8493",
+    "Name": "SPAIDeliveryEvent_FormPage",
+    "ModifiedOnUtc": "\/Date(1789831650000)\/",
+    "Parent": {
+      "UId": "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9",
+      "Name": "PageWithTabsFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Delivery events form page",
+    "DependsOn": []
+  }
+}

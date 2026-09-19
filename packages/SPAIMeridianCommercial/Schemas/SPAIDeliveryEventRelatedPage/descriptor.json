@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b58b463b-dc87-44a6-bb45-c59ab1fe9bb2",
+    "Name": "SPAIDeliveryEventRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789831363000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Delivery events (Page settings)",
+    "DependsOn": []
+  }
+}

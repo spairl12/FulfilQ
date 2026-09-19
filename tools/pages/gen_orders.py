@@ -4,16 +4,19 @@ import json, os
 from gen_pages import control, expanded_list, dump
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bodies", "Orders_FormPage.js")
-FIELDS = [("SPAIOrderType", "K"), ("SPAIPurchaseOrderNo", "T"), ("SPAIBlanketOrder", "K"), ("SPAIDeliveryLabel", "T"),
-          ("SPAIPhaseNumber", "I"), ("SPAIPhaseName", "T"), ("SPAITargetDate", "D"), ("SPAIPrimaryLocation", "K"),
-          ("SPAISourceQuote", "K"), ("SPAIScope", "L")]
+FIELDS = [("SPAIOrderType", "K"), ("SPAIPurchaseOrderNo", "T"), ("SPAIBlanketOrder", "K"), ("SPAIDeliveryEvent", "K"),
+          ("SPAITargetDate", "D"), ("SPAIPrimaryLocation", "K"), ("SPAISourceQuote", "K")]
 CALL_OFFS = dict(prefix="SPAICallOffs", entity="Order", fk="SPAIBlanketOrder", title="Call-off orders (sub-POs)",
-                 cols=[("Number", "T", 150), ("SPAIPurchaseOrderNo", "T", 140), ("SPAIDeliveryLabel", "T", 150),
-                       ("SPAIPhaseName", "T", 170), ("SPAITargetDate", "D", 120), ("Status", "K", 140),
+                 cols=[("Number", "T", 150), ("SPAIPurchaseOrderNo", "T", 140), ("SPAIDeliveryEvent", "K", 180),
+                       ("SPAITargetDate", "D", 120), ("Status", "K", 140),
                        ("DeliveryStatus", "K", 150), ("Amount", "M", 130)])
 DELIVERIES = dict(prefix="SPAIOrderDeliveries", entity="SPAIDelivery", fk="SPAIOrder", title="Deliveries",
                   cols=[("SPAIFromLocation", "K", 180), ("SPAIScheduledOn", "D", 120), ("SPAIReceivedOn", "D", 130),
                         ("SPAIStatus", "K", 150), ("SPAIDriver", "K", 150), ("SPAILineCount", "I", 90), ("SPAIValue", "M", 120)])
+
+CALL_UPS = dict(prefix="SPAIOrderCallUps", entity="SPAICallUpLine", fk="SPAISubPO", title="Call-up lines on this sub-PO",
+                cols=[("SPAIScheduleLine", "K", 240), ("SPAIDeliveryEvent", "K", 180), ("SPAIQtyRequired", "I", 120),
+                      ("SPAIQtyDelivered", "I", 120), ("SPAIStatus", "K", 150)])
 
 res = {"SPAIFulfilmentTab_caption": "Fulfilment"}
 vc = [{"operation": "insert", "name": "SPAIFulfilmentTab", "parentName": "Tabs", "propertyName": "items", "index": 1,
@@ -32,7 +35,7 @@ for i, (c, t) in enumerate(FIELDS):
     if wide or col == 2: row, col = row + 1, 1
     else: col = 2
 ds, deps = {}, {}
-for idx, d in enumerate((CALL_OFFS, DELIVERIES), start=1):
+for idx, d in enumerate((CALL_OFFS, DELIVERIES, CALL_UPS), start=1):
     dvc, dattrs, dds, ddeps, dres = expanded_list(d, "SPAIFulfilmentTab", idx)
     vc += dvc; attrs.update(dattrs); ds.update(dds); deps.update(ddeps); res.update(dres)
 

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b0061d4b-a428-4cc4-bf6f-6e06c4a83f53",
+    "Name": "SPAICallUpLineRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789831410000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Call-up lines (Page settings)",
+    "DependsOn": []
+  }
+}

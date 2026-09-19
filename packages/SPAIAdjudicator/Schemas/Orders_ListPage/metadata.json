@@ -30,6 +30,4 @@
 = MetaData.Schema.B7 true
 = MetaData.Schema.B8 "10.0.0.858"
 = MetaData.Schema.HD1 "56ae9204-7a84-4d40-bc9e-db2157404d02"
-= MetaData.Schema.HD6 "define('{0}Structure', ['{0}Resources'], function(resources) {{return {{schemaUId:'{2}',schemaName:'{3}',parentSchemaUId:'{4}',extendParent:{5},type:Terrasoft.SchemaType.ANGULAR_SCHEMA,entitySchema:'',name:'',extend:'Terrasoft.model.BaseViewModel',schema:{{leftPanel:[],rightPanel:[],actions:[],analytics:[]}},methods:{{}},controlsConfig:{{}},customBindings:{{}},bindings:{{}},parameters:{{}},schemaVersion:0,optionalProperties:{{}},schemaDifferences:function(){{\n{1}\n}}}};}});"
-- MetaData.Schema.HD12
 + MetaData.Schema.B7 true

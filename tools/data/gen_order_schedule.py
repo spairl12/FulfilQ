@@ -1,6 +1,7 @@
 """Generates the fictionalised inbound order-fulfilment documents for Corvina Quarter Stage 2:
-  1. <PO>_Order_Schedule.xlsx - a call-up style order schedule (blanket PO, a sub-PO per delivery, delivery dates by
-     product group, grouped by phase), modelled on the layout of a real commercial call-up sheet.
+  1. <PO>_Order_Schedule.xlsx - a call-up style order schedule (blanket PO, a sub-PO per delivery event, per-level delivery
+     dates on two call-up schedules, grouped by delivery window), modelled on the layout of a real commercial call-up sheet.
+     The programme (events, dates, windows) comes from meridian-data-v3 files 13-15.
   2. <PO>_email.eml          - the customer's PO email that carries it.
 All parties, addresses, numbers and contacts are fictional. Items are evolved from the tender schedule
 (Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx); "ALT" marks an approved alternative, derived only from the
@@ -11,20 +12,21 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.normpath(os.path.join(HERE, "..", "..", "meridian-data-v2"))
-PO, BSO, PROJECT_ID = "HBC-PO-77120", "BSO-2026-0141", "PID-CQ-S2"
+PO, BSO, PROJECT_ID = "BPO-0441", "BSO-2026-0141", "PID-CQ-S2"
 OUT_XLSX = os.path.join(DATA, f"Corvina_Quarter_{PO}_Order_Schedule.xlsx")
 OUT_EML = os.path.join(DATA, f"Corvina_Quarter_{PO}_email.eml")
 TODAY = dt.date(2026, 9, 19)
-ROUGH_IN = ("Toilet Suite", "Basin Mixer", "Shower Set")  # BP4 rule: these families ship at plumbing rough-in
 
 products = {r["ModelCode"]: r for r in csv.DictReader(open(os.path.join(DATA, "04_products.csv"), encoding="utf-8-sig"))}
 by_code = {r["ProductCode"]: r for r in products.values()}
 families = {r["Name"]: r["Category"] for r in csv.DictReader(open(os.path.join(DATA, "02_product_families.csv"), encoding="utf-8-sig"))}
 
 # ---- read tender schedule items ----
+FAMILY_CODE = {"Wall Oven": "OVN", "Cooktop": "CT", "Dishwasher": "DW", "Rangehood": "RH", "Microwave": "MW", "Basin": "BSN",
+               "Toilet Suite": "TS", "Basin Mixer": "MX", "Shower Set": "SS", "Kitchen Sink Mixer": "KM"}
 ws = openpyxl.load_workbook(os.path.join(DATA, "Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx"), data_only=True).active
 header_row = next(r for r in range(1, 20) if ws.cell(r, 1).value == "Item")
-items = []
+items, seq = [], {}
 for r in range(header_row + 1, ws.max_row + 1):
     v = [ws.cell(r, c).value for c in range(1, 14)]
     if not v[0] or not v[8]:
@@ -37,40 +39,41 @@ for r in range(header_row + 1, ws.max_row + 1):
         model = prod["ModelCode"]
     family = prod["ProductFamily"] if prod else ""
     group = "Appliances" if (families.get(family) == "Appliances" or (not prod and v[1] in ("Kitchen", "Laundry", "Butlers Pantry"))) else "Tapware & Sanitaryware"
-    items.append(dict(item=f"{v[0]}{' ALT' if alt else ''}", model=model or "(unconfirmed)", desc=str(v[3])[:60],
-                      tier=str(v[2]), qty=int(v[8]), group=group, rough_in=family in ROUGH_IN))
+    code = FAMILY_CODE.get(family, "GEN")  # item ref: architect-style family code + sequence (DW-01, CT-03)
+    seq[code] = seq.get(code, 0) + 1
+    ref = f"{code}-{seq[code]:02d}"
+    items.append(dict(item=f"{ref}{' ALT' if alt else ''}", tender_item=str(v[0]), model=model or "(unconfirmed)",
+                      desc=str(v[3])[:60], tier=str(v[2]), qty=int(v[8]), group=group))
 
-# ---- delivery plan: one sub-PO per delivery column ----
-def weekly(start, n, step=7): return [start + dt.timedelta(days=step * i) for i in range(n)]
-deliveries = [dict(phase="Prototype", label="Prototype (display suite)", dates={"Appliances": dt.date(2026, 9, 10), "Tapware & Sanitaryware": dt.date(2026, 9, 10)})]
-for i, (lbl, d) in enumerate(zip(["Levels 1-6", "Levels 7-12", "Levels 13-18 + PH"], weekly(dt.date(2026, 11, 4), 3, 21))):
-    deliveries.append(dict(phase="Phase 1 - Plumbing rough-in", label=lbl, dates={"Tapware & Sanitaryware": d}))
-app_dates, ts_dates = weekly(dt.date(2027, 1, 11), 18, 5), weekly(dt.date(2027, 1, 7), 18, 5)
-for lvl in range(1, 19):
-    deliveries.append(dict(phase="Phase 2 - Fitout, Levels 1-18", label=f"Level {lvl}",
-                           dates={"Appliances": app_dates[lvl - 1], "Tapware & Sanitaryware": ts_dates[lvl - 1]}))
-deliveries.append(dict(phase="Phase 3 - Penthouse finishes", label="Penthouse (L19)",
-                       dates={"Appliances": dt.date(2027, 6, 16), "Tapware & Sanitaryware": dt.date(2027, 6, 11)}))
-for n, d in enumerate(deliveries, start=1):
-    d["subpo"] = f"{PO}-{n:02d}"
+# ---- delivery programme: the v3 call-up schedules for Corvina, one sub-PO per delivery event ----
+V3 = os.path.normpath(os.path.join(HERE, "..", "..", "meridian-data-v3"))
+SCHEDULE = {"Appliances": "SCH-0441-01", "Tapware & Sanitaryware": "SCH-0441-02"}
+windows = {w["Code"]: w["Name"] for w in csv.DictReader(open(os.path.join(V3, "14_delivery_windows.csv"), encoding="utf-8-sig"))}
+events = [e for e in csv.DictReader(open(os.path.join(V3, "15_delivery_events.csv"), encoding="utf-8-sig")) if e["ScheduleRef"] in SCHEDULE.values()]
+for n, e in enumerate(sorted(events, key=lambda e: (e["ScheduledOn"], e["EventCode"])), start=1):
+    e["subpo"] = f"{PO}-{n:02d}"
+    e["date"] = dt.date.fromisoformat(e["ScheduledOn"])
+    e["window"] = windows[e["WindowCode"]]
+by_group = {g: sorted([e for e in events if e["ScheduleRef"] == s], key=lambda e: int(e["Sequence"])) for g, s in SCHEDULE.items()}
 
 def split(total, parts):
     base, extra = divmod(total, parts)
     return [base + (1 if i < extra else 0) for i in range(parts)]
 
 for it in items:
-    q = {d["label"]: 0 for d in deliveries}
+    evs = by_group[it["group"]]
+    levels = [e for e in evs if e["EventType"] == "Level rollout"]
+    q = {e["EventCode"]: 0 for e in evs}
     remaining = it["qty"]
-    if it["tier"] == "Standard" and not it["rough_in"] and remaining > 18:
-        q["Prototype (display suite)"] = 1; remaining -= 1
-    if it["rough_in"]:
-        for lbl, n in zip(["Levels 1-6", "Levels 7-12", "Levels 13-18 + PH"], split(remaining, 3)): q[lbl] = n
-    elif it["tier"] == "Penthouse":
-        q["Penthouse (L19)"] = remaining
+    proto = next((e for e in evs if e["EventType"] == "Prototype"), None)
+    if proto and it["tier"] == "Standard" and remaining > len(levels):
+        q[proto["EventCode"]] = 1; remaining -= 1
+    if it["tier"] == "Penthouse":
+        q[levels[-1]["EventCode"]] = remaining  # penthouse finishes land with the top level
     else:
-        for lvl, n in enumerate(split(remaining, 18), start=1): q[f"Level {lvl}"] = n
+        for e, n in zip(levels, split(remaining, len(levels))): q[e["EventCode"]] = n
     it["plan"] = q
-    it["received"] = q["Prototype (display suite)"]
+    it["received"] = sum(n for c, n in q.items() if next(e for e in evs if e["EventCode"] == c)["date"] < TODAY)
     it["remaining"] = it["qty"] - it["received"]
 
 # ---- workbook ----
@@ -93,42 +96,41 @@ for i, (k, v) in enumerate(site):
 for i, (k, c) in enumerate(FILL.items()):
     sh.cell(7 + i, 16, "").fill = PatternFill("solid", fgColor=c); sh.cell(7 + i, 17, k)
 
-FIRST = 8  # first delivery column
-heads = ["Tender Item #", "Model Code", "Item Description", "Order Qty", "Remaining Qty", f"Received on Site ({TODAY:%d/%m/%y})"]
+FIRST = 9  # first delivery column
+heads = ["Item Ref", "Tender Item #", "Model Code", "Item Description", "Order Qty", "Remaining Qty", f"Received on Site ({TODAY:%d/%m/%y})"]
 row = 13
 for grp in ("Appliances", "Tapware & Sanitaryware"):
     g_items = [i for i in items if i["group"] == grp]
     if not g_items:
         continue
-    sh.cell(row, 2, f"{grp.upper()} - delivery schedule").font = Font(bold=True, size=11); row += 1
-    for c, d in enumerate(deliveries, start=FIRST):  # phase / sub-PO / date / label header rows
-        sh.cell(row, c, d["phase"]).font = Font(italic=True, size=8)
+    sh.cell(row, 2, f"{grp.upper()} - delivery schedule {SCHEDULE[grp]}").font = Font(bold=True, size=11); row += 1
+    evs = by_group[grp]
+    for c, d in enumerate(evs, start=FIRST):  # window / sub-PO / date / label header rows
+        sh.cell(row, c, d["window"]).font = Font(italic=True, size=8)
         sh.cell(row + 1, c, d["subpo"]).font = Font(size=8)
-        date = d["dates"].get(grp)
-        cell = sh.cell(row + 2, c, date.strftime("%d/%m/%Y") if date else "-")
-        status = "Received" if date and date < TODAY else "Scheduled for delivery"
-        if date: cell.fill = PatternFill("solid", fgColor=FILL[status])
-        sh.cell(row + 3, c, d["label"]).font = bold
-    sh.cell(row, FIRST - 1, "Phase").font = bold
+        cell = sh.cell(row + 2, c, d["date"].strftime("%d/%m/%Y"))
+        cell.fill = PatternFill("solid", fgColor=FILL["Received" if d["date"] < TODAY else "Scheduled for delivery"])
+        sh.cell(row + 3, c, d["Label"]).font = bold
+    sh.cell(row, FIRST - 1, "Delivery window").font = bold
     sh.cell(row + 1, FIRST - 1, "Sub-PO #").font = bold
     sh.cell(row + 2, FIRST - 1, "Delivery Date").font = bold
     for c, h in enumerate(heads, start=2):
         sh.cell(row + 3, c, h).font = bold
     row += 4
     for it in g_items:
-        vals = [it["item"], it["model"], it["desc"], it["qty"], it["remaining"], it["received"]]
+        vals = [it["item"], it["tender_item"], it["model"], it["desc"], it["qty"], it["remaining"], it["received"]]
         for c, v in enumerate(vals, start=2):
             sh.cell(row, c, v).border = box
-        for c, d in enumerate(deliveries, start=FIRST):
-            n = it["plan"][d["label"]]
+        for c, d in enumerate(evs, start=FIRST):
+            n = it["plan"][d["EventCode"]]
             cell = sh.cell(row, c, n if n else None); cell.border = box
             cell.alignment = Alignment(horizontal="center")
         row += 1
     row += 2
 sh.cell(row, 2, "Quantities are totals per delivery. Each delivery column is a separate sub-PO under the blanket PO above; "
                 "items marked ALT are approved alternatives to the tendered model.").font = Font(italic=True, size=9)
-sh.column_dimensions["D"].width = 44
-for c in "BCEFG": sh.column_dimensions[c].width = 16
+sh.column_dimensions["E"].width = 44
+for c in "BCDFGH": sh.column_dimensions[c].width = 14
 wb.save(OUT_XLSX)
 
 # ---- PO email ----
@@ -146,9 +148,11 @@ Hi Meridian Commercial team,
 Following award of tender TND-2026-0141, please find attached our blanket purchase order {PO}
 for Corvina Quarter Stage 2 (project {PROJECT_ID}), referencing your blanket sales order {BSO}.
 
-- {len(items)} line items, {total} units in total, across {len(deliveries)} scheduled deliveries.
-- Each delivery column in the attached schedule is issued as its own sub-PO ({PO}-01 to {PO}-{len(deliveries):02d}).
-- Phase 1 (plumbing rough-in) must land before 23/12/2026; fitout runs level by level from January.
+- {len(items)} line items, {total} units in total, across {len(events)} scheduled deliveries on two call-up
+  schedules: appliances ({SCHEDULE["Appliances"]}) and plumbing and sanitaryware ({SCHEDULE["Tapware & Sanitaryware"]}).
+- Each delivery column in the attached schedule is issued as its own sub-PO ({PO}-01 to {PO}-{len(events):02d}).
+- The onsite prototype is due {min(e["date"] for e in events):%d/%m/%Y}; plumbing runs ahead of appliances, level by level
+  through Level 24.
 - Items marked ALT are the approved alternatives agreed at tender clarification.
 - Deliveries to 12 Harbour Esplanade, Docklands. Site contact: Idris Fanshawe, 0400 000 141.
 
@@ -162,5 +166,5 @@ Dana Whitlock
 Contracts Manager, Halloran Bright Constructions (fictional)
 """
 open(OUT_EML, "w").write(eml)
-print(f"{len(items)} items ({sum(1 for i in items if 'ALT' in i['item'])} ALT), {len(deliveries)} deliveries/sub-POs, {total} units")
+print(f"{len(items)} items ({sum(1 for i in items if 'ALT' in i['item'])} ALT), {len(events)} deliveries/sub-POs, {total} units")
 print(OUT_XLSX); print(OUT_EML)

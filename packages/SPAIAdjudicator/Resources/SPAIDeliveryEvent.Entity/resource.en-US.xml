@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Delivery event" />
+			<Item Name="Columns.SPAICallUpSchedule.Caption" Value="Call-up schedule" />
+			<Item Name="Columns.SPAIDeliveryWindow.Caption" Value="Delivery window" />
+			<Item Name="Columns.SPAIEventCode.Caption" Value="Event code" />
+			<Item Name="Columns.SPAIEventType.Caption" Value="Event type" />
+			<Item Name="Columns.SPAILabel.Caption" Value="Label" />
+			<Item Name="Columns.SPAIScheduledOn.Caption" Value="Scheduled on" />
+			<Item Name="Columns.SPAISequence.Caption" Value="Sequence" />
+			<Item Name="Columns.SPAIStatus.Caption" Value="Status" />
+		</Items>
+	</Group>
+</Resources>

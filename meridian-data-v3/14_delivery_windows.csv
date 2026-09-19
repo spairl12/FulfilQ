@@ -1,0 +1,6 @@
+Code,Name,Sequence,LevelFrom,LevelTo
+W0,Prototype,0,0,0
+W1,Levels 1-6,1,1,6
+W2,Levels 7-12,2,7,12
+W3,Levels 13-18,3,13,18
+W4,Levels 19-24,4,19,24

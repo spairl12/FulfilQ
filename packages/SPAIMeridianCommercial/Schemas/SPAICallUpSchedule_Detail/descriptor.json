@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "b2262af5-c730-4bb3-9ca9-f4228a735025",
+    "Name": "SPAICallUpSchedule_Detail",
+    "ModifiedOnUtc": "\/Date(1789831312000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Call-up schedules detail",
+    "DependsOn": []
+  }
+}

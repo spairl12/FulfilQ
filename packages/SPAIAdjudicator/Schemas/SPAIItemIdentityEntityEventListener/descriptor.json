@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "637e21e8-7207-4aed-9354-ad96fea7e357",
+    "Name": "SPAIItemIdentityEntityEventListener",
+    "ModifiedOnUtc": "\/Date(1789832279000)\/",
+    "ManagerName": "SourceCodeSchemaManager",
+    "Caption": "Item identity and remaining qty",
+    "DependsOn": []
+  }
+}

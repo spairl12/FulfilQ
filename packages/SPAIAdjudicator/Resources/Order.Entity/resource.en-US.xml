@@ -3,13 +3,10 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Columns.SPAIBlanketOrder.Caption" Value="Blanket order" />
-			<Item Name="Columns.SPAIDeliveryLabel.Caption" Value="Delivery (level / prototype)" />
+			<Item Name="Columns.SPAIDeliveryEvent.Caption" Value="Delivery event" />
 			<Item Name="Columns.SPAIOrderType.Caption" Value="Order type" />
-			<Item Name="Columns.SPAIPhaseName.Caption" Value="Phase name" />
-			<Item Name="Columns.SPAIPhaseNumber.Caption" Value="Phase number" />
 			<Item Name="Columns.SPAIPrimaryLocation.Caption" Value="Primary location" />
 			<Item Name="Columns.SPAIPurchaseOrderNo.Caption" Value="Customer PO no." />
-			<Item Name="Columns.SPAIScope.Caption" Value="Scope" />
 			<Item Name="Columns.SPAISourceQuote.Caption" Value="Source quote" />
 			<Item Name="Columns.SPAITargetDate.Caption" Value="Target date" />
 		</Items>

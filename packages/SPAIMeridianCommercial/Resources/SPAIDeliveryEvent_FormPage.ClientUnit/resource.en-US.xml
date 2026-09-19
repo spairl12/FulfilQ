@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="Delivery events form page" />
+			<Item Name="LocalizableStrings.SPAIEvtCallUpsExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIEvtCallUpsImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIEvtCallUpsPanel_title.Value" Value="Call-up lines" />
+			<Item Name="LocalizableStrings.SPAIEvtCallUpsSearch_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.SPAIEvtSubPOsExport_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.SPAIEvtSubPOsImport_caption.Value" Value="Import data" />
+			<Item Name="LocalizableStrings.SPAIEvtSubPOsPanel_title.Value" Value="Sub-PO" />
+			<Item Name="LocalizableStrings.SPAIEvtSubPOsSearch_placeholder.Value" Value="Search" />
+		</Items>
+	</Group>
+</Resources>

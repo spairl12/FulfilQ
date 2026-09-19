@@ -33,9 +33,9 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"dataValueType": 10
 						},
 						{
-							"id": "899e6554-d764-58b7-83a8-121b070b7321",
-							"code": "PDS_SPAIItemCode",
-							"caption": "#ResourceString(PDS_SPAIItemCode)#",
+							"id": "3a37bae2-fc6b-599a-9a80-7d39c48026e6",
+							"code": "PDS_SPAIDisplayRef",
+							"caption": "#ResourceString(PDS_SPAIDisplayRef)#",
 							"dataValueType": 1
 						},
 						{
@@ -75,6 +75,18 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"dataValueType": 4
 						},
 						{
+							"id": "e03c7423-4db1-5f8a-ab37-75b52bd6be54",
+							"code": "PDS_SPAIQtyReceived",
+							"caption": "#ResourceString(PDS_SPAIQtyReceived)#",
+							"dataValueType": 4
+						},
+						{
+							"id": "63013ab5-f1e6-5196-855c-3b9d0d144448",
+							"code": "PDS_SPAIQtyRemaining",
+							"caption": "#ResourceString(PDS_SPAIQtyRemaining)#",
+							"dataValueType": 4
+						},
+						{
 							"id": "e77b8197-941c-54d6-9cc9-e4a2c23e166f",
 							"code": "PDS_SPAIMatchedProduct",
 							"caption": "#ResourceString(PDS_SPAIMatchedProduct)#",
@@ -97,12 +109,6 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"code": "PDS_SPAILineMarginPct",
 							"caption": "#ResourceString(PDS_SPAILineMarginPct)#",
 							"dataValueType": 5
-						},
-						{
-							"id": "880a7fa3-ba0b-5dde-b835-f32f353620ca",
-							"code": "PDS_SPAICallOffOrder",
-							"caption": "#ResourceString(PDS_SPAICallOffOrder)#",
-							"dataValueType": 10
 						},
 						{
 							"id": "bfd710b9-2726-5e9c-809c-3690d7c67be5",
@@ -145,9 +151,9 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"path": "PDS.SPAIOpportunity"
 						}
 					},
-					"PDS_SPAIItemCode": {
+					"PDS_SPAIDisplayRef": {
 						"modelConfig": {
-							"path": "PDS.SPAIItemCode"
+							"path": "PDS.SPAIDisplayRef"
 						}
 					},
 					"PDS_SPAILineNumber": {
@@ -180,6 +186,16 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"path": "PDS.SPAIQuantity"
 						}
 					},
+					"PDS_SPAIQtyReceived": {
+						"modelConfig": {
+							"path": "PDS.SPAIQtyReceived"
+						}
+					},
+					"PDS_SPAIQtyRemaining": {
+						"modelConfig": {
+							"path": "PDS.SPAIQtyRemaining"
+						}
+					},
 					"PDS_SPAIMatchedProduct": {
 						"modelConfig": {
 							"path": "PDS.SPAIMatchedProduct"
@@ -198,11 +214,6 @@ define("SPAIScheduleLines_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 					"PDS_SPAILineMarginPct": {
 						"modelConfig": {
 							"path": "PDS.SPAILineMarginPct"
-						}
-					},
-					"PDS_SPAICallOffOrder": {
-						"modelConfig": {
-							"path": "PDS.SPAICallOffOrder"
 						}
 					},
 					"PDS_SPAIEstimatorDecision": {

@@ -45,10 +45,31 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIQtyAllocated",
+				"name": "SPAIField_SPAISourcePlanType",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAISourcePlanType",
+					"control": "$PDS_SPAISourcePlanType",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true
+				},
+				"parentName": "GeneralInfoTabContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIQtyAllocated",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
 						"row": 1,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -60,15 +81,15 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAISourceTier",
 				"values": {
 					"layoutConfig": {
-						"column": 2,
-						"row": 1,
+						"column": 1,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -81,14 +102,14 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 2
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAIInterstateFreight",
 				"values": {
 					"layoutConfig": {
-						"column": 1,
+						"column": 2,
 						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -100,15 +121,15 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 3
 			},
 			{
 				"operation": "insert",
 				"name": "SPAIField_SPAIAllocatedOn",
 				"values": {
 					"layoutConfig": {
-						"column": 2,
-						"row": 2,
+						"column": 1,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -120,7 +141,7 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 3
+				"index": 4
 			},
 			{
 				"operation": "merge",
@@ -184,6 +205,11 @@ define("SPAILineSources_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				"PDS_SPAIScheduleLine": {
 					"modelConfig": {
 						"path": "PDS.SPAIScheduleLine"
+					}
+				},
+				"PDS_SPAISourcePlanType": {
+					"modelConfig": {
+						"path": "PDS.SPAISourcePlanType"
 					}
 				},
 				"PDS_SPAIQtyAllocated": {

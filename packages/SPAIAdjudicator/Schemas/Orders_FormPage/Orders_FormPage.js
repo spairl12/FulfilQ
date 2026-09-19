@@ -98,7 +98,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIDeliveryLabel",
+				"name": "SPAIField_SPAIDeliveryEvent",
 				"values": {
 					"layoutConfig": {
 						"column": 2,
@@ -106,11 +106,12 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 						"colSpan": 1,
 						"rowSpan": 1
 					},
-					"label": "$Resources.Strings.PDS_SPAIDeliveryLabel",
-					"control": "$PDS_SPAIDeliveryLabel",
+					"label": "$Resources.Strings.PDS_SPAIDeliveryEvent",
+					"control": "$PDS_SPAIDeliveryEvent",
 					"labelPosition": "auto",
-					"type": "crt.Input",
-					"multiline": false
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true
 				},
 				"parentName": "SPAIFulfilmentFields",
 				"propertyName": "items",
@@ -118,50 +119,11 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIPhaseNumber",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 3,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"label": "$Resources.Strings.PDS_SPAIPhaseNumber",
-					"control": "$PDS_SPAIPhaseNumber",
-					"labelPosition": "auto",
-					"type": "crt.NumberInput"
-				},
-				"parentName": "SPAIFulfilmentFields",
-				"propertyName": "items",
-				"index": 4
-			},
-			{
-				"operation": "insert",
-				"name": "SPAIField_SPAIPhaseName",
-				"values": {
-					"layoutConfig": {
-						"column": 2,
-						"row": 3,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"label": "$Resources.Strings.PDS_SPAIPhaseName",
-					"control": "$PDS_SPAIPhaseName",
-					"labelPosition": "auto",
-					"type": "crt.Input",
-					"multiline": false
-				},
-				"parentName": "SPAIFulfilmentFields",
-				"propertyName": "items",
-				"index": 5
-			},
-			{
-				"operation": "insert",
 				"name": "SPAIField_SPAITargetDate",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 4,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -173,7 +135,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				},
 				"parentName": "SPAIFulfilmentFields",
 				"propertyName": "items",
-				"index": 6
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -181,7 +143,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				"values": {
 					"layoutConfig": {
 						"column": 2,
-						"row": 4,
+						"row": 3,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -194,7 +156,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				},
 				"parentName": "SPAIFulfilmentFields",
 				"propertyName": "items",
-				"index": 7
+				"index": 5
 			},
 			{
 				"operation": "insert",
@@ -202,7 +164,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 5,
+						"row": 4,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -215,27 +177,7 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 				},
 				"parentName": "SPAIFulfilmentFields",
 				"propertyName": "items",
-				"index": 8
-			},
-			{
-				"operation": "insert",
-				"name": "SPAIField_SPAIScope",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 6,
-						"colSpan": 2,
-						"rowSpan": 1
-					},
-					"label": "$Resources.Strings.PDS_SPAIScope",
-					"control": "$PDS_SPAIScope",
-					"labelPosition": "auto",
-					"type": "crt.Input",
-					"multiline": true
-				},
-				"parentName": "SPAIFulfilmentFields",
-				"propertyName": "items",
-				"index": 9
+				"index": 6
 			},
 			{
 				"operation": "insert",
@@ -323,20 +265,12 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 							"width": 140
 						},
 						{
-							"id": "dc49181b-f66a-5b3b-8ea0-a886da8c87af",
-							"code": "SPAICallOffsGridDS_SPAIDeliveryLabel",
-							"path": "SPAIDeliveryLabel",
-							"caption": "#ResourceString(SPAICallOffsGridDS_SPAIDeliveryLabel)#",
-							"dataValueType": 1,
-							"width": 150
-						},
-						{
-							"id": "8d3f7fab-b935-5c28-bd57-0135d4a512f9",
-							"code": "SPAICallOffsGridDS_SPAIPhaseName",
-							"path": "SPAIPhaseName",
-							"caption": "#ResourceString(SPAICallOffsGridDS_SPAIPhaseName)#",
-							"dataValueType": 1,
-							"width": 170
+							"id": "73716a5f-4ad8-5b00-a814-b8f1b6b59dd8",
+							"code": "SPAICallOffsGridDS_SPAIDeliveryEvent",
+							"path": "SPAIDeliveryEvent",
+							"caption": "#ResourceString(SPAICallOffsGridDS_SPAIDeliveryEvent)#",
+							"dataValueType": 10,
+							"width": 180
 						},
 						{
 							"id": "c0cbf6a2-61f4-5572-a56f-4c37a44e1d21",
@@ -838,6 +772,287 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 						]
 					}
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsPanel",
+				"parentName": "SPAIFulfilmentTab",
+				"propertyName": "items",
+				"index": 3,
+				"values": {
+					"type": "crt.ExpansionPanel",
+					"title": "#ResourceString(SPAIOrderCallUpsPanel_title)#",
+					"expanded": true,
+					"togglePosition": "before",
+					"titleWidth": 20,
+					"fullWidthHeader": true,
+					"fitContent": true,
+					"items": [],
+					"tools": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsGridWrap",
+				"parentName": "SPAIOrderCallUpsPanel",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsGrid",
+				"parentName": "SPAIOrderCallUpsGridWrap",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.DataGrid",
+					"items": "$SPAIOrderCallUpsGrid",
+					"activeRow": "$SPAIOrderCallUpsGrid_ActiveRow",
+					"primaryColumnName": "SPAIOrderCallUpsGridDS_Id",
+					"fitContent": true,
+					"visible": true,
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						}
+					},
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 2,
+						"rowSpan": 6
+					},
+					"columns": [
+						{
+							"id": "6d2b2d4d-dc2f-5d41-8e6b-a203e8fc31cc",
+							"code": "SPAIOrderCallUpsGridDS_SPAIScheduleLine",
+							"path": "SPAIScheduleLine",
+							"caption": "#ResourceString(SPAIOrderCallUpsGridDS_SPAIScheduleLine)#",
+							"dataValueType": 10,
+							"width": 240
+						},
+						{
+							"id": "61cfc7bb-74f4-579b-b484-1f6da12f8412",
+							"code": "SPAIOrderCallUpsGridDS_SPAIDeliveryEvent",
+							"path": "SPAIDeliveryEvent",
+							"caption": "#ResourceString(SPAIOrderCallUpsGridDS_SPAIDeliveryEvent)#",
+							"dataValueType": 10,
+							"width": 180
+						},
+						{
+							"id": "3acd1db5-985e-5c72-85b2-3446f8732c4b",
+							"code": "SPAIOrderCallUpsGridDS_SPAIQtyRequired",
+							"path": "SPAIQtyRequired",
+							"caption": "#ResourceString(SPAIOrderCallUpsGridDS_SPAIQtyRequired)#",
+							"dataValueType": 4,
+							"width": 120
+						},
+						{
+							"id": "f05b1fd6-9c84-5087-846e-2d6060b37d77",
+							"code": "SPAIOrderCallUpsGridDS_SPAIQtyDelivered",
+							"path": "SPAIQtyDelivered",
+							"caption": "#ResourceString(SPAIOrderCallUpsGridDS_SPAIQtyDelivered)#",
+							"dataValueType": 4,
+							"width": 120
+						},
+						{
+							"id": "778a7104-6c81-59ea-b125-fee379c2e728",
+							"code": "SPAIOrderCallUpsGridDS_SPAIStatus",
+							"path": "SPAIStatus",
+							"caption": "#ResourceString(SPAIOrderCallUpsGridDS_SPAIStatus)#",
+							"dataValueType": 10,
+							"width": 150
+						}
+					]
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsToolsContainer",
+				"parentName": "SPAIOrderCallUpsPanel",
+				"propertyName": "tools",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"color": "transparent",
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsToolsRow",
+				"parentName": "SPAIOrderCallUpsToolsContainer",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"alignItems": "center",
+					"gap": "none",
+					"items": [],
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsAddButton",
+				"parentName": "SPAIOrderCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.Button",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "SPAICallUpLine",
+							"defaultValues": [
+								{
+									"attributeName": "SPAISubPO",
+									"value": "$Id"
+								}
+							]
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsRefreshButton",
+				"parentName": "SPAIOrderCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 1,
+				"values": {
+					"type": "crt.Button",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "SPAIOrderCallUpsGridDS"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsSettingsButton",
+				"parentName": "SPAIOrderCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 2,
+				"values": {
+					"type": "crt.Button",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clickMode": "menu",
+					"menuItems": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsExport",
+				"parentName": "SPAIOrderCallUpsSettingsButton",
+				"propertyName": "menuItems",
+				"index": 0,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "export-button-icon",
+					"caption": "#ResourceString(SPAIOrderCallUpsExport_caption)#",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "SPAIOrderCallUpsGrid"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsImport",
+				"parentName": "SPAIOrderCallUpsSettingsButton",
+				"propertyName": "menuItems",
+				"index": 1,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "import-button-icon",
+					"caption": "#ResourceString(SPAIOrderCallUpsImport_caption)#",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "SPAICallUpLine"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIOrderCallUpsSearch",
+				"parentName": "SPAIOrderCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 3,
+				"values": {
+					"type": "crt.SearchFilter",
+					"iconOnly": true,
+					"placeholder": "#ResourceString(SPAIOrderCallUpsSearch_placeholder)#",
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "SPAIOrderCallUpsSearch_SPAIOrderCallUpsGrid",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"SPAIOrderCallUpsGrid"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"SPAIOrderCallUpsSearch_SearchValue",
+							"SPAIOrderCallUpsSearch_FilteredColumnsGroups"
+						]
+					}
+				}
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -862,19 +1077,9 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 							"path": "PDS.SPAIBlanketOrder"
 						}
 					},
-					"PDS_SPAIDeliveryLabel": {
+					"PDS_SPAIDeliveryEvent": {
 						"modelConfig": {
-							"path": "PDS.SPAIDeliveryLabel"
-						}
-					},
-					"PDS_SPAIPhaseNumber": {
-						"modelConfig": {
-							"path": "PDS.SPAIPhaseNumber"
-						}
-					},
-					"PDS_SPAIPhaseName": {
-						"modelConfig": {
-							"path": "PDS.SPAIPhaseName"
+							"path": "PDS.SPAIDeliveryEvent"
 						}
 					},
 					"PDS_SPAITargetDate": {
@@ -890,11 +1095,6 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 					"PDS_SPAISourceQuote": {
 						"modelConfig": {
 							"path": "PDS.SPAISourceQuote"
-						}
-					},
-					"PDS_SPAIScope": {
-						"modelConfig": {
-							"path": "PDS.SPAIScope"
 						}
 					},
 					"SPAICallOffsGrid": {
@@ -925,14 +1125,9 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 										"path": "SPAICallOffsGridDS.SPAIPurchaseOrderNo"
 									}
 								},
-								"SPAICallOffsGridDS_SPAIDeliveryLabel": {
+								"SPAICallOffsGridDS_SPAIDeliveryEvent": {
 									"modelConfig": {
-										"path": "SPAICallOffsGridDS.SPAIDeliveryLabel"
-									}
-								},
-								"SPAICallOffsGridDS_SPAIPhaseName": {
-									"modelConfig": {
-										"path": "SPAICallOffsGridDS.SPAIPhaseName"
+										"path": "SPAICallOffsGridDS.SPAIDeliveryEvent"
 									}
 								},
 								"SPAICallOffsGridDS_SPAITargetDate": {
@@ -1013,6 +1208,52 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 								}
 							}
 						}
+					},
+					"SPAIOrderCallUpsGrid": {
+						"isCollection": true,
+						"modelConfig": {
+							"path": "SPAIOrderCallUpsGridDS",
+							"filterAttributes": [
+								{
+									"name": "SPAIOrderCallUpsSearch_SPAIOrderCallUpsGrid",
+									"loadOnChange": true
+								}
+							]
+						},
+						"viewModelConfig": {
+							"attributes": {
+								"SPAIOrderCallUpsGridDS_Id": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.Id"
+									}
+								},
+								"SPAIOrderCallUpsGridDS_SPAIScheduleLine": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.SPAIScheduleLine"
+									}
+								},
+								"SPAIOrderCallUpsGridDS_SPAIDeliveryEvent": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.SPAIDeliveryEvent"
+									}
+								},
+								"SPAIOrderCallUpsGridDS_SPAIQtyRequired": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.SPAIQtyRequired"
+									}
+								},
+								"SPAIOrderCallUpsGridDS_SPAIQtyDelivered": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.SPAIQtyDelivered"
+									}
+								},
+								"SPAIOrderCallUpsGridDS_SPAIStatus": {
+									"modelConfig": {
+										"path": "SPAIOrderCallUpsGridDS.SPAIStatus"
+									}
+								}
+							}
+						}
 					}
 				}
 			}
@@ -1036,11 +1277,8 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 								"SPAIPurchaseOrderNo": {
 									"path": "SPAIPurchaseOrderNo"
 								},
-								"SPAIDeliveryLabel": {
-									"path": "SPAIDeliveryLabel"
-								},
-								"SPAIPhaseName": {
-									"path": "SPAIPhaseName"
+								"SPAIDeliveryEvent": {
+									"path": "SPAIDeliveryEvent"
 								},
 								"SPAITargetDate": {
 									"path": "SPAITargetDate"
@@ -1086,6 +1324,30 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 								}
 							}
 						}
+					},
+					"SPAIOrderCallUpsGridDS": {
+						"type": "crt.EntityDataSource",
+						"scope": "viewElement",
+						"config": {
+							"entitySchemaName": "SPAICallUpLine",
+							"attributes": {
+								"SPAIScheduleLine": {
+									"path": "SPAIScheduleLine"
+								},
+								"SPAIDeliveryEvent": {
+									"path": "SPAIDeliveryEvent"
+								},
+								"SPAIQtyRequired": {
+									"path": "SPAIQtyRequired"
+								},
+								"SPAIQtyDelivered": {
+									"path": "SPAIQtyDelivered"
+								},
+								"SPAIStatus": {
+									"path": "SPAIStatus"
+								}
+							}
+						}
 					}
 				}
 			},
@@ -1104,6 +1366,12 @@ define("Orders_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/**SCHEMA_
 					"SPAIOrderDeliveriesGridDS": [
 						{
 							"attributePath": "SPAIOrder",
+							"relationPath": "PDS.Id"
+						}
+					],
+					"SPAIOrderCallUpsGridDS": [
+						{
+							"attributePath": "SPAISubPO",
 							"relationPath": "PDS.Id"
 						}
 					]

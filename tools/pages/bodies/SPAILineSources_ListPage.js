@@ -39,6 +39,12 @@ define("SPAILineSources_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 							"dataValueType": 10
 						},
 						{
+							"id": "f5381cfe-cd5e-53db-8a30-6bb35982a4cd",
+							"code": "PDS_SPAISourcePlanType",
+							"caption": "#ResourceString(PDS_SPAISourcePlanType)#",
+							"dataValueType": 10
+						},
+						{
 							"id": "661c1327-687c-5923-af96-89160f5288d8",
 							"code": "PDS_SPAISourceTier",
 							"caption": "#ResourceString(PDS_SPAISourceTier)#",
@@ -100,6 +106,11 @@ define("SPAILineSources_ListPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 					"PDS_SPAILocation": {
 						"modelConfig": {
 							"path": "PDS.SPAILocation"
+						}
+					},
+					"PDS_SPAISourcePlanType": {
+						"modelConfig": {
+							"path": "PDS.SPAISourcePlanType"
 						}
 					},
 					"PDS_SPAISourceTier": {

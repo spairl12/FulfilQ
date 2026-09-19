@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "39f4e9e9-a447-4f03-bcd9-839736c260b0",
+    "Name": "SPAICallUpSchedule_FormPage",
+    "ModifiedOnUtc": "\/Date(1789831613000)\/",
+    "Parent": {
+      "UId": "3b2e117f-8c6b-4ca5-80a2-7ebb497cddf9",
+      "Name": "PageWithTabsFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Call-up schedules form page",
+    "DependsOn": []
+  }
+}

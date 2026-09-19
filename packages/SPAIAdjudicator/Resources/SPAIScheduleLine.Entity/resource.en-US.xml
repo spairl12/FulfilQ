@@ -4,23 +4,24 @@
 		<Items>
 			<Item Name="Caption" Value="Schedule line" />
 			<Item Name="Columns.SPAIAdjudicationNote.Caption" Value="Adjudication note" />
-			<Item Name="Columns.SPAICallOffOrder.Caption" Value="Call-off order" />
+			<Item Name="Columns.SPAIAlternateVariant.Caption" Value="Alternate variant" />
 			<Item Name="Columns.SPAIComplianceNotes.Caption" Value="Compliance notes" />
 			<Item Name="Columns.SPAIConfidence.Caption" Value="Confidence" />
+			<Item Name="Columns.SPAIDisplayRef.Caption" Value="Display ref" />
 			<Item Name="Columns.SPAIEstimatorDecision.Caption" Value="Estimator decision" />
 			<Item Name="Columns.SPAIIsAlternative.Caption" Value="Approved alternative (ALT)" />
-			<Item Name="Columns.SPAIItemCode.Caption" Value="Item code" />
+			<Item Name="Columns.SPAIItemCode.Caption" Value="Item ref" />
 			<Item Name="Columns.SPAILineMarginPct.Caption" Value="Line margin %" />
 			<Item Name="Columns.SPAILineNumber.Caption" Value="Line number" />
 			<Item Name="Columns.SPAILineStatus.Caption" Value="Line status" />
 			<Item Name="Columns.SPAILineTotal.Caption" Value="Line total" />
 			<Item Name="Columns.SPAIMatchedProduct.Caption" Value="Matched product" />
 			<Item Name="Columns.SPAIOpportunity.Caption" Value="Opportunity" />
-			<Item Name="Columns.SPAIQtyReceived.Caption" Value="Qty received" />
-			<Item Name="Columns.SPAIQtyRemaining.Caption" Value="Qty remaining" />
+			<Item Name="Columns.SPAIQtyReceived.Caption" Value="Received on site" />
+			<Item Name="Columns.SPAIQtyRemaining.Caption" Value="Remaining qty" />
 			<Item Name="Columns.SPAIQtyShortfall.Caption" Value="Qty shortfall" />
 			<Item Name="Columns.SPAIQtySourced.Caption" Value="Qty sourced" />
-			<Item Name="Columns.SPAIQuantity.Caption" Value="Quantity" />
+			<Item Name="Columns.SPAIQuantity.Caption" Value="Order qty" />
 			<Item Name="Columns.SPAIReasonCode.Caption" Value="Reason code" />
 			<Item Name="Columns.SPAIRequiredCutoutD.Caption" Value="Required cut-out D" />
 			<Item Name="Columns.SPAIRequiredCutoutH.Caption" Value="Required cut-out H" />

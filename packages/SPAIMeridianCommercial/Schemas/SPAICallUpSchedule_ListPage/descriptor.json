@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "48aaa5c9-96d9-4626-8cb6-be90894e088b",
+    "Name": "SPAICallUpSchedule_ListPage",
+    "ModifiedOnUtc": "\/Date(1789831632000)\/",
+    "Parent": {
+      "UId": "b7b898d0-8c77-4953-c097-23fa6800da02",
+      "Name": "ListPageV3Template"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "Call-up schedules list page",
+    "DependsOn": []
+  }
+}

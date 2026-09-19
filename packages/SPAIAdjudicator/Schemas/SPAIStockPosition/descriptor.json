@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "e373cd3e-43ba-4916-a433-152ed0468014",
     "Name": "SPAIStockPosition",
-    "ModifiedOnUtc": "\/Date(1789799893000)\/",
+    "ModifiedOnUtc": "\/Date(1789821514000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"

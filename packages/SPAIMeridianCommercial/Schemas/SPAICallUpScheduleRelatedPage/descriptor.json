@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b195f025-0091-45f9-9725-dd685363b3de",
+    "Name": "SPAICallUpScheduleRelatedPage",
+    "ModifiedOnUtc": "\/Date(1789831312000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "Call-up schedules (Page settings)",
+    "DependsOn": []
+  }
+}

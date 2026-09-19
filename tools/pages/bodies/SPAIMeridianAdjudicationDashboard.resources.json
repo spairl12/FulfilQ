@@ -1,0 +1,13 @@
+{
+ "SPAIDashLinesByReason_series_0": "Lines",
+ "SPAIDashLinesByReason_title": "Lines by reason code",
+ "SPAIDashResolvedBy_series_0": "Lines",
+ "SPAIDashResolvedBy_title": "Resolved deterministically vs by AI",
+ "SPAIDashSubstByFamily_series_0": "All matched lines",
+ "SPAIDashSubstByFamily_series_1": "Substituted lines",
+ "SPAIDashSubstByFamily_title": "Substitution rate by product family",
+ "SPAIDashAllocByLocType_series_0": "Qty allocated",
+ "SPAIDashAllocByLocType_title": "Stock allocation by location type",
+ "SPAIDashEventsByWindow_title": "Delivery events by window",
+ "SPAIDashEventsByWindow_series_0": "Delivery events"
+}

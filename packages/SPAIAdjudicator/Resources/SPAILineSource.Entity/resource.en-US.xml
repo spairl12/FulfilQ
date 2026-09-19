@@ -8,6 +8,7 @@
 			<Item Name="Columns.SPAILocation.Caption" Value="Location" />
 			<Item Name="Columns.SPAIQtyAllocated.Caption" Value="Qty allocated" />
 			<Item Name="Columns.SPAIScheduleLine.Caption" Value="Schedule line" />
+			<Item Name="Columns.SPAISourcePlanType.Caption" Value="Source plan type" />
 			<Item Name="Columns.SPAISourceTier.Caption" Value="Source tier" />
 		</Items>
 	</Group>

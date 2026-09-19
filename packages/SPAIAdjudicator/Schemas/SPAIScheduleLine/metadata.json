@@ -285,18 +285,6 @@
   "E5": false
 }
 + MetaData.Schema.D2 {
-  "UId": "5d09e515-d212-4f33-bef2-91c6fae4a7cc",
-  "A2": "SPAICallOffOrder",
-  "A3": "da27baaa-69ac-40e5-b008-96bd96ef4825",
-  "A4": "da27baaa-69ac-40e5-b008-96bd96ef4825",
-  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
-  "S2": "b295071f-7ea9-4e62-8d1a-919bf3732ff2",
-  "S4": "80294582-06b5-4faa-a85f-3323e5536b71",
-  "E5": false,
-  "E17": "SPAICallOffOrderId",
-  "E18": "SPAICallOffOrderNumber"
-}
-+ MetaData.Schema.D2 {
   "UId": "7d8367d4-51e0-438f-99d0-938cc6b79ff9",
   "A2": "SPAIEstimatorDecision",
   "A3": "da27baaa-69ac-40e5-b008-96bd96ef4825",
@@ -344,6 +332,24 @@
   "S2": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
   "E5": false
 }
++ MetaData.Schema.D2 {
+  "UId": "80548080-e408-4b2d-94cc-833ae15328f7",
+  "A2": "SPAIAlternateVariant",
+  "A3": "da27baaa-69ac-40e5-b008-96bd96ef4825",
+  "A4": "da27baaa-69ac-40e5-b008-96bd96ef4825",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false
+}
++ MetaData.Schema.D2 {
+  "UId": "2751d962-0f33-471a-8236-a3527b1e3c3e",
+  "A2": "SPAIDisplayRef",
+  "A3": "da27baaa-69ac-40e5-b008-96bd96ef4825",
+  "A4": "da27baaa-69ac-40e5-b008-96bd96ef4825",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "e80190a5-03b2-4095-90f7-a193a960adee",
@@ -377,12 +383,13 @@
   "c880da7a-d2b7-4e83-bebc-a1ba63442668",
   "43577ee1-378c-4db9-906b-500316533d50",
   "52246da4-45d8-483a-a53c-2d3ae820ea69",
-  "5d09e515-d212-4f33-bef2-91c6fae4a7cc",
   "7d8367d4-51e0-438f-99d0-938cc6b79ff9",
   "e6cf2e2c-7ba5-44aa-940f-ba489c5bb2ed",
   "b9f29aeb-b080-4104-910b-c15d9d49d2a7",
   "847840ea-3be1-4211-a829-9139b318c4c3",
-  "bb31cd05-b2ee-45ac-ab5c-75d3d014d4d4"
+  "bb31cd05-b2ee-45ac-ab5c-75d3d014d4d4",
+  "80548080-e408-4b2d-94cc-833ae15328f7",
+  "2751d962-0f33-471a-8236-a3527b1e3c3e"
 ]
 = MetaData.Schema.D20.A2 "SPAIScheduleLineEvents"
 + MetaData.Schema.D20.FA1 false

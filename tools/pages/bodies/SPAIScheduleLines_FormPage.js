@@ -3,11 +3,31 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 		viewConfigDiff: /**SCHEMA_VIEW_CONFIG_DIFF*/[
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAIItemCode",
+				"name": "SPAIField_SPAIDisplayRef",
 				"values": {
 					"layoutConfig": {
 						"column": 1,
 						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIDisplayRef",
+					"control": "$PDS_SPAIDisplayRef",
+					"labelPosition": "auto",
+					"type": "crt.Input",
+					"multiline": false
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIItemCode",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 2,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -19,7 +39,46 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 0
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIIsAlternative",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 3,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIIsAlternative",
+					"control": "$PDS_SPAIIsAlternative",
+					"labelPosition": "auto",
+					"type": "crt.Checkbox"
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIAlternateVariant",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 4,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIAlternateVariant",
+					"control": "$PDS_SPAIAlternateVariant",
+					"labelPosition": "auto",
+					"type": "crt.Input",
+					"multiline": false
+				},
+				"parentName": "SideAreaProfileContainer",
+				"propertyName": "items",
+				"index": 3
 			},
 			{
 				"operation": "insert",
@@ -27,7 +86,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 2,
+						"row": 5,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -39,7 +98,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 1
+				"index": 4
 			},
 			{
 				"operation": "insert",
@@ -47,7 +106,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 3,
+						"row": 6,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -60,7 +119,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 2
+				"index": 5
 			},
 			{
 				"operation": "insert",
@@ -68,7 +127,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				"values": {
 					"layoutConfig": {
 						"column": 1,
-						"row": 4,
+						"row": 7,
 						"colSpan": 1,
 						"rowSpan": 1
 					},
@@ -81,26 +140,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "SideAreaProfileContainer",
 				"propertyName": "items",
-				"index": 3
-			},
-			{
-				"operation": "insert",
-				"name": "SPAIField_SPAIIsAlternative",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 5,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"label": "$Resources.Strings.PDS_SPAIIsAlternative",
-					"control": "$PDS_SPAIIsAlternative",
-					"labelPosition": "auto",
-					"type": "crt.Checkbox"
-				},
-				"parentName": "SideAreaProfileContainer",
-				"propertyName": "items",
-				"index": 4
+				"index": 6
 			},
 			{
 				"operation": "insert",
@@ -534,31 +574,10 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 			},
 			{
 				"operation": "insert",
-				"name": "SPAIField_SPAICallOffOrder",
-				"values": {
-					"layoutConfig": {
-						"column": 1,
-						"row": 12,
-						"colSpan": 1,
-						"rowSpan": 1
-					},
-					"label": "$Resources.Strings.PDS_SPAICallOffOrder",
-					"control": "$PDS_SPAICallOffOrder",
-					"labelPosition": "auto",
-					"type": "crt.ComboBox",
-					"mode": "List",
-					"showValueAsLink": true
-				},
-				"parentName": "GeneralInfoTabContainer",
-				"propertyName": "items",
-				"index": 22
-			},
-			{
-				"operation": "insert",
 				"name": "SPAIField_SPAIEstimatorDecision",
 				"values": {
 					"layoutConfig": {
-						"column": 2,
+						"column": 1,
 						"row": 12,
 						"colSpan": 1,
 						"rowSpan": 1
@@ -572,7 +591,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 23
+				"index": 22
 			},
 			{
 				"operation": "insert",
@@ -592,7 +611,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 24
+				"index": 23
 			},
 			{
 				"operation": "insert",
@@ -612,7 +631,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 25
+				"index": 24
 			},
 			{
 				"operation": "insert",
@@ -632,7 +651,7 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				},
 				"parentName": "GeneralInfoTabContainer",
 				"propertyName": "items",
-				"index": 26
+				"index": 25
 			},
 			{
 				"operation": "insert",
@@ -718,6 +737,14 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"caption": "#ResourceString(SPAILineSourcesGridDS_SPAISourceTier)#",
 							"dataValueType": 10,
 							"width": 160
+						},
+						{
+							"id": "23f07c3b-72a6-571d-842b-e7bc0cca5054",
+							"code": "SPAILineSourcesGridDS_SPAISourcePlanType",
+							"path": "SPAISourcePlanType",
+							"caption": "#ResourceString(SPAILineSourcesGridDS_SPAISourcePlanType)#",
+							"dataValueType": 10,
+							"width": 150
 						},
 						{
 							"id": "b1040249-0330-57b3-9040-323b69416053",
@@ -916,6 +943,287 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				}
 			},
 			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsPanel",
+				"parentName": "GeneralInfoTab",
+				"propertyName": "items",
+				"index": 2,
+				"values": {
+					"type": "crt.ExpansionPanel",
+					"title": "#ResourceString(SPAISLCallUpsPanel_title)#",
+					"expanded": true,
+					"togglePosition": "before",
+					"titleWidth": 20,
+					"fullWidthHeader": true,
+					"fitContent": true,
+					"items": [],
+					"tools": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsGridWrap",
+				"parentName": "SPAISLCallUpsPanel",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(32px, 1fr)",
+						"minmax(32px, 1fr)"
+					],
+					"rows": "minmax(max-content, 32px)",
+					"gap": {
+						"columnGap": "large",
+						"rowGap": 0
+					},
+					"styles": {
+						"overflow-x": "hidden"
+					},
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsGrid",
+				"parentName": "SPAISLCallUpsGridWrap",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.DataGrid",
+					"items": "$SPAISLCallUpsGrid",
+					"activeRow": "$SPAISLCallUpsGrid_ActiveRow",
+					"primaryColumnName": "SPAISLCallUpsGridDS_Id",
+					"fitContent": true,
+					"visible": true,
+					"features": {
+						"rows": {
+							"selection": {
+								"enable": true,
+								"multiple": true
+							}
+						}
+					},
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 2,
+						"rowSpan": 6
+					},
+					"columns": [
+						{
+							"id": "fe3b74fa-111a-5cc7-b546-ceb0125a5b23",
+							"code": "SPAISLCallUpsGridDS_SPAIDeliveryEvent",
+							"path": "SPAIDeliveryEvent",
+							"caption": "#ResourceString(SPAISLCallUpsGridDS_SPAIDeliveryEvent)#",
+							"dataValueType": 10,
+							"width": 200
+						},
+						{
+							"id": "2412a7c3-dd37-5b51-a476-c7ce9ed651f3",
+							"code": "SPAISLCallUpsGridDS_SPAISubPO",
+							"path": "SPAISubPO",
+							"caption": "#ResourceString(SPAISLCallUpsGridDS_SPAISubPO)#",
+							"dataValueType": 10,
+							"width": 160
+						},
+						{
+							"id": "dc08fcf8-1206-536e-93d7-967ce6ea2764",
+							"code": "SPAISLCallUpsGridDS_SPAIQtyRequired",
+							"path": "SPAIQtyRequired",
+							"caption": "#ResourceString(SPAISLCallUpsGridDS_SPAIQtyRequired)#",
+							"dataValueType": 4,
+							"width": 120
+						},
+						{
+							"id": "6a0f5779-9a5d-5003-a753-76058be52744",
+							"code": "SPAISLCallUpsGridDS_SPAIQtyDelivered",
+							"path": "SPAIQtyDelivered",
+							"caption": "#ResourceString(SPAISLCallUpsGridDS_SPAIQtyDelivered)#",
+							"dataValueType": 4,
+							"width": 120
+						},
+						{
+							"id": "d28eef7f-a717-5432-b135-39ed537a6fa3",
+							"code": "SPAISLCallUpsGridDS_SPAIStatus",
+							"path": "SPAIStatus",
+							"caption": "#ResourceString(SPAISLCallUpsGridDS_SPAIStatus)#",
+							"dataValueType": 10,
+							"width": 150
+						}
+					]
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsToolsContainer",
+				"parentName": "SPAISLCallUpsPanel",
+				"propertyName": "tools",
+				"index": 0,
+				"values": {
+					"type": "crt.GridContainer",
+					"rows": "minmax(max-content, 24px)",
+					"columns": [
+						"minmax(32px, 1fr)"
+					],
+					"gap": {
+						"columnGap": "large",
+						"rowGap": "none"
+					},
+					"color": "transparent",
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsToolsRow",
+				"parentName": "SPAISLCallUpsToolsContainer",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.FlexContainer",
+					"direction": "row",
+					"alignItems": "center",
+					"gap": "none",
+					"items": [],
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsAddButton",
+				"parentName": "SPAISLCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 0,
+				"values": {
+					"type": "crt.Button",
+					"icon": "add-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.CreateRecordRequest",
+						"params": {
+							"entityName": "SPAICallUpLine",
+							"defaultValues": [
+								{
+									"attributeName": "SPAIScheduleLine",
+									"value": "$Id"
+								}
+							]
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsRefreshButton",
+				"parentName": "SPAISLCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 1,
+				"values": {
+					"type": "crt.Button",
+					"icon": "reload-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clicked": {
+						"request": "crt.LoadDataRequest",
+						"params": {
+							"config": {
+								"loadType": "reload"
+							},
+							"dataSourceName": "SPAISLCallUpsGridDS"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsSettingsButton",
+				"parentName": "SPAISLCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 2,
+				"values": {
+					"type": "crt.Button",
+					"icon": "actions-button-icon",
+					"iconPosition": "only-icon",
+					"color": "default",
+					"clickMode": "menu",
+					"menuItems": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsExport",
+				"parentName": "SPAISLCallUpsSettingsButton",
+				"propertyName": "menuItems",
+				"index": 0,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "export-button-icon",
+					"caption": "#ResourceString(SPAISLCallUpsExport_caption)#",
+					"clicked": {
+						"request": "crt.ExportDataGridToExcelRequest",
+						"params": {
+							"viewName": "SPAISLCallUpsGrid"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsImport",
+				"parentName": "SPAISLCallUpsSettingsButton",
+				"propertyName": "menuItems",
+				"index": 1,
+				"values": {
+					"type": "crt.MenuItem",
+					"icon": "import-button-icon",
+					"caption": "#ResourceString(SPAISLCallUpsImport_caption)#",
+					"clicked": {
+						"request": "crt.ImportDataRequest",
+						"params": {
+							"entitySchemaName": "SPAICallUpLine"
+						}
+					}
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAISLCallUpsSearch",
+				"parentName": "SPAISLCallUpsToolsRow",
+				"propertyName": "items",
+				"index": 3,
+				"values": {
+					"type": "crt.SearchFilter",
+					"iconOnly": true,
+					"placeholder": "#ResourceString(SPAISLCallUpsSearch_placeholder)#",
+					"_filterOptions": {
+						"expose": [
+							{
+								"attribute": "SPAISLCallUpsSearch_SPAISLCallUpsGrid",
+								"converters": [
+									{
+										"converter": "crt.SearchFilterAttributeConverter",
+										"args": [
+											"SPAISLCallUpsGrid"
+										]
+									}
+								]
+							}
+						],
+						"from": [
+							"SPAISLCallUpsSearch_SearchValue",
+							"SPAISLCallUpsSearch_FilteredColumnsGroups"
+						]
+					}
+				}
+			},
+			{
 				"operation": "merge",
 				"name": "AttachmentList",
 				"values": {
@@ -969,9 +1277,24 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 						"path": "PDS.Id"
 					}
 				},
+				"PDS_SPAIDisplayRef": {
+					"modelConfig": {
+						"path": "PDS.SPAIDisplayRef"
+					}
+				},
 				"PDS_SPAIItemCode": {
 					"modelConfig": {
 						"path": "PDS.SPAIItemCode"
+					}
+				},
+				"PDS_SPAIIsAlternative": {
+					"modelConfig": {
+						"path": "PDS.SPAIIsAlternative"
+					}
+				},
+				"PDS_SPAIAlternateVariant": {
+					"modelConfig": {
+						"path": "PDS.SPAIAlternateVariant"
 					}
 				},
 				"PDS_SPAISpecifiedText": {
@@ -987,11 +1310,6 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 				"PDS_SPAIReasonCode": {
 					"modelConfig": {
 						"path": "PDS.SPAIReasonCode"
-					}
-				},
-				"PDS_SPAIIsAlternative": {
-					"modelConfig": {
-						"path": "PDS.SPAIIsAlternative"
 					}
 				},
 				"PDS_SPAIOpportunity": {
@@ -1104,11 +1422,6 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 						"path": "PDS.SPAILineMarginPct"
 					}
 				},
-				"PDS_SPAICallOffOrder": {
-					"modelConfig": {
-						"path": "PDS.SPAICallOffOrder"
-					}
-				},
 				"PDS_SPAIEstimatorDecision": {
 					"modelConfig": {
 						"path": "PDS.SPAIEstimatorDecision"
@@ -1162,6 +1475,11 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 									"path": "SPAILineSourcesGridDS.SPAISourceTier"
 								}
 							},
+							"SPAILineSourcesGridDS_SPAISourcePlanType": {
+								"modelConfig": {
+									"path": "SPAILineSourcesGridDS.SPAISourcePlanType"
+								}
+							},
 							"SPAILineSourcesGridDS_SPAIQtyAllocated": {
 								"modelConfig": {
 									"path": "SPAILineSourcesGridDS.SPAIQtyAllocated"
@@ -1175,6 +1493,52 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"SPAILineSourcesGridDS_SPAIAllocatedOn": {
 								"modelConfig": {
 									"path": "SPAILineSourcesGridDS.SPAIAllocatedOn"
+								}
+							}
+						}
+					}
+				},
+				"SPAISLCallUpsGrid": {
+					"isCollection": true,
+					"modelConfig": {
+						"path": "SPAISLCallUpsGridDS",
+						"filterAttributes": [
+							{
+								"name": "SPAISLCallUpsSearch_SPAISLCallUpsGrid",
+								"loadOnChange": true
+							}
+						]
+					},
+					"viewModelConfig": {
+						"attributes": {
+							"SPAISLCallUpsGridDS_Id": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.Id"
+								}
+							},
+							"SPAISLCallUpsGridDS_SPAIDeliveryEvent": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.SPAIDeliveryEvent"
+								}
+							},
+							"SPAISLCallUpsGridDS_SPAISubPO": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.SPAISubPO"
+								}
+							},
+							"SPAISLCallUpsGridDS_SPAIQtyRequired": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.SPAIQtyRequired"
+								}
+							},
+							"SPAISLCallUpsGridDS_SPAIQtyDelivered": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.SPAIQtyDelivered"
+								}
+							},
+							"SPAISLCallUpsGridDS_SPAIStatus": {
+								"modelConfig": {
+									"path": "SPAISLCallUpsGridDS.SPAIStatus"
 								}
 							}
 						}
@@ -1221,6 +1585,9 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							"SPAISourceTier": {
 								"path": "SPAISourceTier"
 							},
+							"SPAISourcePlanType": {
+								"path": "SPAISourcePlanType"
+							},
 							"SPAIQtyAllocated": {
 								"path": "SPAIQtyAllocated"
 							},
@@ -1232,11 +1599,41 @@ define("SPAIScheduleLines_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, functio
 							}
 						}
 					}
+				},
+				"SPAISLCallUpsGridDS": {
+					"type": "crt.EntityDataSource",
+					"scope": "viewElement",
+					"config": {
+						"entitySchemaName": "SPAICallUpLine",
+						"attributes": {
+							"SPAIDeliveryEvent": {
+								"path": "SPAIDeliveryEvent"
+							},
+							"SPAISubPO": {
+								"path": "SPAISubPO"
+							},
+							"SPAIQtyRequired": {
+								"path": "SPAIQtyRequired"
+							},
+							"SPAIQtyDelivered": {
+								"path": "SPAIQtyDelivered"
+							},
+							"SPAIStatus": {
+								"path": "SPAIStatus"
+							}
+						}
+					}
 				}
 			},
 			"primaryDataSourceName": "PDS",
 			"dependencies": {
 				"SPAILineSourcesGridDS": [
+					{
+						"attributePath": "SPAIScheduleLine",
+						"relationPath": "PDS.Id"
+					}
+				],
+				"SPAISLCallUpsGridDS": [
 					{
 						"attributePath": "SPAIScheduleLine",
 						"relationPath": "PDS.Id"

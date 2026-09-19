@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "c6f79847-2d8d-4e7d-b731-de2a43349450",
+    "Name": "SPAISourcePlanType",
+    "ModifiedOnUtc": "\/Date(1789830671000)\/",
+    "Parent": {
+      "UId": "11ab4bcb-9b23-4b6d-9c86-520fae925d75",
+      "Name": "BaseLookup"
+    },
+    "ManagerName": "EntitySchemaManager",
+    "Caption": "Source plan type",
+    "DependsOn": []
+  }
+}

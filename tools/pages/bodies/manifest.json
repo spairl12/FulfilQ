@@ -36,7 +36,11 @@
    "SPAILineSourcesPanel_title": "Line sources",
    "SPAILineSourcesExport_caption": "Export to Excel",
    "SPAILineSourcesImport_caption": "Import data",
-   "SPAILineSourcesSearch_placeholder": "Search"
+   "SPAILineSourcesSearch_placeholder": "Search",
+   "SPAISLCallUpsPanel_title": "Call-up (deliveries by level)",
+   "SPAISLCallUpsExport_caption": "Export to Excel",
+   "SPAISLCallUpsImport_caption": "Import data",
+   "SPAISLCallUpsSearch_placeholder": "Search"
   }
  },
  {
@@ -97,6 +101,50 @@
  {
   "schema-name": "SPAILineSources_ListPage",
   "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAILineSources_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAICallUpSchedule_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAICallUpSchedule_FormPage.js",
+  "resources": {
+   "SPAISchEventsPanel_title": "Delivery events",
+   "SPAISchEventsExport_caption": "Export to Excel",
+   "SPAISchEventsImport_caption": "Import data",
+   "SPAISchEventsSearch_placeholder": "Search"
+  }
+ },
+ {
+  "schema-name": "SPAICallUpSchedule_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAICallUpSchedule_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAIDeliveryEvent_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDeliveryEvent_FormPage.js",
+  "resources": {
+   "SPAIEvtSubPOsPanel_title": "Sub-PO",
+   "SPAIEvtSubPOsExport_caption": "Export to Excel",
+   "SPAIEvtSubPOsImport_caption": "Import data",
+   "SPAIEvtSubPOsSearch_placeholder": "Search",
+   "SPAIEvtCallUpsPanel_title": "Call-up lines",
+   "SPAIEvtCallUpsExport_caption": "Export to Excel",
+   "SPAIEvtCallUpsImport_caption": "Import data",
+   "SPAIEvtCallUpsSearch_placeholder": "Search"
+  }
+ },
+ {
+  "schema-name": "SPAIDeliveryEvent_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAIDeliveryEvent_ListPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAICallUpLine_FormPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAICallUpLine_FormPage.js",
+  "resources": {}
+ },
+ {
+  "schema-name": "SPAICallUpLine_ListPage",
+  "body-file": "/Users/sheldonp/Desktop/Personal/Creatio Hackathon/Meridian Commercial Supply/tools/pages/bodies/SPAICallUpLine_ListPage.js",
   "resources": {}
  }
 ]
