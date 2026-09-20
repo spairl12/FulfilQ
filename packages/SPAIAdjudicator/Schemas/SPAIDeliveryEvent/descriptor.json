@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "b8cb553f-ad6c-442b-a19e-ba847549bfcf",
     "Name": "SPAIDeliveryEvent",
-    "ModifiedOnUtc": "\/Date(1789830897000)\/",
+    "ModifiedOnUtc": "\/Date(1789881569000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"

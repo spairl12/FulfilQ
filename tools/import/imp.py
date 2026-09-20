@@ -366,12 +366,44 @@ def s_dishwasher_wels():
         "SPAIWELSRating": F(r["WELSRating"])}) for r in rows("04_products.csv") if r["ProductFamily"] == "Dishwasher"],
         "dishwasher WELS registration + rating")
 
+def s_redate():
+    """M2 follow-up: converting Date/Time columns to Date truncates the UTC-stored value, which moves every
+    date back one day. Re-writes every date-only column from the source files. Idempotent."""
+    q=[]
+    for r in rows("07_tenders.csv"):
+        q.append(update_q("Opportunity", gid("opp", r["TenderCode"]),
+            {"SPAITenderCloseOn": D(r["TenderCloseOn"]), "SPAIScheduleReceivedOn": D(r["ScheduleReceivedOn"])}))
+    run_batch("Opportunity", q, "re-date tenders")
+    run_batch("Product", [update_q("Product", gid("prd", r["ProductCode"]), {"SPAIComplianceVerifiedOn": D(r["ComplianceVerifiedOn"])})
+                          for r in rows("04_products.csv") if r["ComplianceVerifiedOn"]], "re-date product compliance")
+    run_batch("SPAISubstitutionRule", [update_q("SPAISubstitutionRule", gid("rule", r["RuleCode"]), {"SPAIApprovedOn": D(r["ApprovedOn"])})
+                                       for r in rows("06_substitution_rules.csv") if r["ApprovedOn"]], "re-date substitution rules")
+    run_batch("SPAIStockPosition", [update_q("SPAIStockPosition", gid("stk", r["StockCode"]), {"SPAINextInboundDate": D(r["NextInboundDate"])})
+                                    for r in rows("05_stock_positions.csv") if r["NextInboundDate"]], "re-date stock inbound")
+    events = rows4("21_corvina_events.csv") + rows4("25_kelmore_events.csv")
+    run_batch("SPAIDeliveryEvent", [update_q("SPAIDeliveryEvent", gid("evt", e["EventCode"]), {"SPAIScheduledOn": D(e["ScheduledOn"])})
+                                    for e in events], "re-date delivery events")
+    subpos = rows4("26_kelmore_subpos.csv")
+    run_batch("Order", [update_q("Order", gid("ord", p["SubPORef"]), {"SPAITargetDate": D(p["ScheduledOn"])}) for p in subpos]
+              + [update_q("Order", gid("ord", KELMORE_BPO), {"SPAITargetDate": D(max(e["ScheduledOn"] for e in rows4("25_kelmore_events.csv"))),
+                                                             "Date": D(min(e["ScheduledOn"] for e in rows4("25_kelmore_events.csv")))})],
+              "re-date orders")
+    run_batch("SPAIDelivery", [update_q("SPAIDelivery", gid("dlv", p["SubPORef"]),
+        {"SPAIScheduledOn": D(p["ScheduledOn"]), "SPAIReceivedOn": D(p["ScheduledOn"]) if p["Status"] == "Received on site" else (7, None)})
+        for p in subpos], "re-date deliveries")
+    ke = rows4("25_kelmore_events.csv")
+    upd = []
+    for w in rows4("22_delivery_windows.csv"):
+        d = sorted(e["ScheduledOn"] for e in ke if e["WindowCode"] == w["Code"])
+        if d: upd.append(update_q("SPAIDeliveryWindow", gid("win", w["Code"]), {"SPAIFromDate": D(d[0]), "SPAIToDate": D(d[-1])}))
+    run_batch("SPAIDeliveryWindow", upd, "re-date window spans")
+
 STEPS = {"brands": s_brands, "families": s_families, "locations": s_locations, "drivers": s_drivers, "accounts": s_accounts,
          "contacts": s_contacts, "products": s_products, "superseded": s_superseded, "stock": s_stock, "rules": s_rules,
          "tenders": s_tenders, "alignment": s_alignment, "fulfilment": s_fulfilment,
          "callup_lookups": s_callup_lookups, "corvina_programme": s_corvina_programme, "kelmore_programme": s_kelmore_programme,
          "kelmore_subpos": s_kelmore_subpos, "kelmore_lines": s_kelmore_lines, "kelmore_callups": s_kelmore_callups,
          "rules_v2fix": s_rules_v2fix, "retire_phases": s_retire_phases, "retire_v3": s_retire_v3,
-         "dishwasher_wels": s_dishwasher_wels}
+         "dishwasher_wels": s_dishwasher_wels, "redate": s_redate}
 if __name__ == "__main__":
     for s in sys.argv[1:]: STEPS[s]()

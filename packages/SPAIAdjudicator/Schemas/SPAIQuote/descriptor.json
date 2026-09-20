@@ -2,7 +2,7 @@
   "Descriptor": {
     "UId": "ab0e8a2b-3f28-4c50-a4c9-fd8e60f72e6e",
     "Name": "SPAIQuote",
-    "ModifiedOnUtc": "\/Date(1789801758000)\/",
+    "ModifiedOnUtc": "\/Date(1789881484000)\/",
     "Parent": {
       "UId": "1bab9dcf-17d5-49f8-9536-8e0064f1dce0",
       "Name": "BaseEntity"

@@ -9,7 +9,6 @@
 			<Item Name="Columns.SPAILevelTo.Caption" Value="Level to" />
 			<Item Name="Columns.SPAISequence.Caption" Value="Sequence" />
 			<Item Name="Columns.SPAIToDate.Caption" Value="To date" />
-			<Item Name="EventsProcessSchema.Caption" Value="Business process" />
 		</Items>
 	</Group>
 </Resources>
