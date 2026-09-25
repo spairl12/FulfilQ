@@ -86,6 +86,10 @@ print("A6-6 call-up status mix:", dict(Counter(c["SPAIStatus.Name"] for c in CU)
 print("Corvina orders / sub-POs (expect 0 before award):", sum(1 for o in O if o["Opportunity.SPAITenderCode"] == CORVINA))
 print("Kelmore: blanket", sum(1 for o in O if o["Number"] == "BPO-0438"), "| sub-POs", sum(1 for o in O if o["Number"].startswith("SPO-0438-")),
       "| deliveries", cnt("SPAIDelivery"))
-RF = select("SPAISubstitutionRule", ["SPAIToProduct.SPAIProjectApproved"] + [f"SPAI{s}Product.SPAICutout{d}Mm" for s in ("From", "To") for d in ("Width", "Height", "Depth")])
-print("A2 rule register:", len(RF), "rules,", sum(1 for r in RF if r["SPAIToProduct.SPAIProjectApproved"] and
-      all(r[f"SPAIFromProduct.SPAICutout{d}Mm"] == r[f"SPAIToProduct.SPAICutout{d}Mm"] for d in ("Width", "Height", "Depth"))), "pass the compliance floor")
+RF = select("SPAISubstitutionRule", ["SPAIToProduct.SPAIProjectApproved", "SPAIToProduct.SPAILifecycleStatus.Name"]
+            + [f"SPAI{s}Product.SPAICutout{d}Mm" for s in ("From", "To") for d in ("Width", "Height", "Depth")])
+dims = lambda r: all(r[f"SPAIFromProduct.SPAICutout{d}Mm"] == r[f"SPAIToProduct.SPAICutout{d}Mm"] for d in ("Width", "Height", "Depth"))
+# KS2 s7 floor: same cut-out, project approved, and the replacement is Current (a Discontinued target fails it)
+print("A2 rule register:", len(RF), "rules,",
+      sum(1 for r in RF if dims(r) and r["SPAIToProduct.SPAIProjectApproved"] and r["SPAIToProduct.SPAILifecycleStatus.Name"] == "Current"),
+      "pass the full floor |", sum(1 for r in RF if dims(r) and r["SPAIToProduct.SPAIProjectApproved"]), "ignoring lifecycle")
