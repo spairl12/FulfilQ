@@ -1751,6 +1751,113 @@ define("Opportunities_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 						]
 					}
 				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIGateFields",
+				"parentName": "SPAIAdjudicationTab",
+				"propertyName": "items",
+				"index": 2,
+				"values": {
+					"type": "crt.GridContainer",
+					"columns": [
+						"minmax(64px, 1fr)",
+						"minmax(64px, 1fr)",
+						"minmax(64px, 1fr)",
+						"minmax(64px, 1fr)"
+					],
+					"rows": "minmax(32px, max-content)",
+					"gap": {
+						"columnGap": "large"
+					},
+					"items": []
+				}
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIGate1ApprovedBy",
+				"values": {
+					"layoutConfig": {
+						"column": 1,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIGate1ApprovedBy",
+					"control": "$PDS_SPAIGate1ApprovedBy",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true,
+					"readonly": true
+				},
+				"parentName": "SPAIGateFields",
+				"propertyName": "items",
+				"index": 0
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIGate1ApprovedOn",
+				"values": {
+					"layoutConfig": {
+						"column": 2,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIGate1ApprovedOn",
+					"control": "$PDS_SPAIGate1ApprovedOn",
+					"labelPosition": "auto",
+					"type": "crt.DateTimePicker",
+					"pickerType": "datetime",
+					"readonly": true
+				},
+				"parentName": "SPAIGateFields",
+				"propertyName": "items",
+				"index": 1
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIGate2ApprovedBy",
+				"values": {
+					"layoutConfig": {
+						"column": 3,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIGate2ApprovedBy",
+					"control": "$PDS_SPAIGate2ApprovedBy",
+					"labelPosition": "auto",
+					"type": "crt.ComboBox",
+					"mode": "List",
+					"showValueAsLink": true,
+					"readonly": true
+				},
+				"parentName": "SPAIGateFields",
+				"propertyName": "items",
+				"index": 2
+			},
+			{
+				"operation": "insert",
+				"name": "SPAIField_SPAIGate2ApprovedOn",
+				"values": {
+					"layoutConfig": {
+						"column": 4,
+						"row": 1,
+						"colSpan": 1,
+						"rowSpan": 1
+					},
+					"label": "$Resources.Strings.PDS_SPAIGate2ApprovedOn",
+					"control": "$PDS_SPAIGate2ApprovedOn",
+					"labelPosition": "auto",
+					"type": "crt.DateTimePicker",
+					"pickerType": "datetime",
+					"readonly": true
+				},
+				"parentName": "SPAIGateFields",
+				"propertyName": "items",
+				"index": 3
 			}
 		]/**SCHEMA_VIEW_CONFIG_DIFF*/,
 		viewModelConfigDiff: /**SCHEMA_VIEW_MODEL_CONFIG_DIFF*/[
@@ -1946,6 +2053,26 @@ define("Opportunities_FormPage", /**SCHEMA_DEPS*/["@creatio-devkit/common"]/**SC
 									}
 								}
 							}
+						}
+					},
+					"PDS_SPAIGate1ApprovedBy": {
+						"modelConfig": {
+							"path": "PDS.SPAIGate1ApprovedBy"
+						}
+					},
+					"PDS_SPAIGate1ApprovedOn": {
+						"modelConfig": {
+							"path": "PDS.SPAIGate1ApprovedOn"
+						}
+					},
+					"PDS_SPAIGate2ApprovedBy": {
+						"modelConfig": {
+							"path": "PDS.SPAIGate2ApprovedBy"
+						}
+					},
+					"PDS_SPAIGate2ApprovedOn": {
+						"modelConfig": {
+							"path": "PDS.SPAIGate2ApprovedOn"
 						}
 					}
 				}

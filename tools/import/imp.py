@@ -399,12 +399,53 @@ def s_redate():
         if d: upd.append(update_q("SPAIDeliveryWindow", gid("win", w["Code"]), {"SPAIFromDate": D(d[0]), "SPAIToDate": D(d[-1])}))
     run_batch("SPAIDeliveryWindow", upd, "re-date window spans")
 
+CORVINA = "TND-2026-0141"
+
+def s_reset_corvina():
+    """Rehearsal reset: returns the hero tender to its pre-run state so BP1/BP3/BP5/BP6/BP8 can be demoed again.
+    Deletes what the processes create (schedule lines and, by cascade, their call-up lines and line sources; quotes and
+    quote lines; the blanket order, its sub-POs, order lines and deliveries), restores stock allocation from the CSV, and
+    clears the tender's counters, gate stamps and adjudication status.
+    The Decision ledger is deliberately NOT cleared: it is insert-only, and the history of earlier runs is evidence,
+    not clutter. Delete those rows with the break-glass login if a run must look pristine.
+    Kelmore (the live job) is untouched."""
+    opp = gid("opp", CORVINA)
+    def ids(schema, cols, keep):
+        return [r["Id"] for r in select(schema, cols) if keep(r)]
+    sl = ids("SPAIScheduleLine", ["SPAIOpportunity.SPAITenderCode"], lambda r: r["SPAIOpportunity.SPAITenderCode"] == CORVINA)
+    orders = ids("Order", ["Number", "Opportunity.SPAITenderCode"], lambda r: r["Opportunity.SPAITenderCode"] == CORVINA)
+    quotes = ids("SPAIQuote", ["SPAIOpportunity.SPAITenderCode"], lambda r: r["SPAIOpportunity.SPAITenderCode"] == CORVINA)
+    oset = set(orders)
+    dels = ids("SPAIDelivery", ["SPAIOrder"], lambda r: (r["SPAIOrder"] or {}).get("value") in oset)
+    ops = ids("OrderProduct", ["Order"], lambda r: (r["Order"] or {}).get("value") in oset)
+    ql = ids("SPAIQuoteLine", ["SPAIQuote"], lambda r: (r["SPAIQuote"] or {}).get("value") in set(quotes))
+    cul = ids("SPAICallUpLine", ["SPAIScheduleLine"], lambda r: (r["SPAIScheduleLine"] or {}).get("value") in set(sl))
+    ls = ids("SPAILineSource", ["SPAIScheduleLine"], lambda r: (r["SPAIScheduleLine"] or {}).get("value") in set(sl))
+    for schema, rows_ in (("SPAICallUpLine", cul), ("SPAILineSource", ls), ("SPAIQuoteLine", ql), ("SPAIQuote", quotes),
+                          ("SPAIDelivery", dels), ("OrderProduct", ops), ("Order", orders), ("SPAIScheduleLine", sl)):
+        run_batch(schema, [delete_q(schema, i) for i in rows_], f"reset: {schema} ({len(rows_)})")
+    # stock back to the seeded numbers (BP8 encumbers on award)
+    run_batch("SPAIStockPosition", [update_q("SPAIStockPosition", gid("stk", r["StockCode"]),
+        {"SPAIQtyAllocated": I(r["QtyAllocated"]), "SPAIQtyAvailable": I(r["QtyAvailable"])}) for r in rows("05_stock_positions.csv")],
+        "reset: stock allocation")
+    t = next(x for x in rows("07_tenders.csv") if x["TenderCode"] == CORVINA)
+    ast = lookup_map("SPAIAdjudicationStatus")
+    run_batch("Opportunity", [update_q("Opportunity", opp, {
+        "Stage": L(STAGE.get(t["AdjudicationStatus"], STAGE["Not started"])), "SPAIAdjudicationStatus": L(ast[t["AdjudicationStatus"]]),
+        "Amount": M(t["EstimatedValue"]), "SPAITotalCost": (6, None), "SPAITotalSell": (6, None), "SPAIGrossMarginPct": (5, None),
+        "SPAILineCount": (4, None), "SPAIExactMatchCount": (4, None), "SPAIMultiSourceCount": (4, None), "SPAISubstitutionCount": (4, None),
+        "SPAIEscalationCount": (4, None), "SPAIDeterministicCount": (4, None), "SPAIAiCallCount": (4, None), "SPAIHoursToClose": (5, None),
+        "SPAIGate1ApprovedBy": (10, None), "SPAIGate1ApprovedOn": (7, None), "SPAIGate2ApprovedBy": (10, None), "SPAIGate2ApprovedOn": (7, None)})],
+        "reset: tender counters, gates and status")
+    led = [r for r in select("SPAIDecisionLedger", ["SPAIOpportunity.SPAITenderCode"]) if r["SPAIOpportunity.SPAITenderCode"] == CORVINA]
+    print(f"reset: {len(led)} Corvina ledger rows left in place (insert-only; use the break-glass login to remove them)")
+
 STEPS = {"brands": s_brands, "families": s_families, "locations": s_locations, "drivers": s_drivers, "accounts": s_accounts,
          "contacts": s_contacts, "products": s_products, "superseded": s_superseded, "stock": s_stock, "rules": s_rules,
          "tenders": s_tenders, "alignment": s_alignment, "fulfilment": s_fulfilment,
          "callup_lookups": s_callup_lookups, "corvina_programme": s_corvina_programme, "kelmore_programme": s_kelmore_programme,
          "kelmore_subpos": s_kelmore_subpos, "kelmore_lines": s_kelmore_lines, "kelmore_callups": s_kelmore_callups,
          "rules_v2fix": s_rules_v2fix, "retire_phases": s_retire_phases, "retire_v3": s_retire_v3,
-         "dishwasher_wels": s_dishwasher_wels, "redate": s_redate}
+         "dishwasher_wels": s_dishwasher_wels, "redate": s_redate, "reset_corvina": s_reset_corvina}
 if __name__ == "__main__":
     for s in sys.argv[1:]: STEPS[s]()
