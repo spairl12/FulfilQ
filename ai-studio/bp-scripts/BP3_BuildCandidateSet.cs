@@ -26,8 +26,10 @@ Guid opportunityId = Get<Guid>("OpportunityId");
 const int CandidateCap = 60;
 const int LeadTimeLimitWeeks = 12;
 
-// ---- Regime matrix: KS2 section 7 "Combined eligibility matrix", transcribed. ONE place to change. ----
+// ---- Regime matrix: KS2 section 7 "Combined eligibility matrix", transcribed. ----
 // Columns: cut-out, WELS, GEMS, WaterMark. Project approved and lifecycle Current apply to all families.
+// The SAME table is in BP2a_DeterministicMatch.cs, ai-studio/tests/score_adjudication.py and
+// tools/import/verify.py. If KS2 section 7 changes, all four move together.
 var regimes = new Dictionary<string, bool[]>(StringComparer.OrdinalIgnoreCase) {
 	{ "Wall Oven",          new[] { true,  false, true,  false } },
 	{ "Cooktop",            new[] { true,  false, true,  false } },

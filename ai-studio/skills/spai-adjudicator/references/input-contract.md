@@ -91,7 +91,7 @@ Only locations with `SPAILocation.SPAIIsAvailable` = true are sent. Rows where `
 
 Project approved and lifecycle Current apply to every family.
 
-> **Open data finding (2026-09-20).** None of the 76 Dishwasher products in `meridian-data-v3/04_products.csv` carries `SPAIWelsRegistrationNo` or `SPAIWELSRating`. With the matrix applied as written, every dishwasher candidate fails the floor. That affects answer-key lines 021 and 039 (DISCONTINUED), 028 (TYPO) and 034 (AMBIGUOUS), and the deterministic EXACT dishwasher lines. The run sheet records the decision (data fix or policy fix) as a prerequisite to Test Gate 2. The BP scripts keep the matrix in one table so the decision is a one-line change.
+> **Open data finding (2026-09-20).** None of the 76 Dishwasher products in `meridian-data-v3/04_products.csv` carries `SPAIWelsRegistrationNo` or `SPAIWELSRating`. With the matrix applied as written, every dishwasher candidate fails the floor. That affects answer-key lines 021 and 039 (DISCONTINUED), 028 (TYPO) and 034 (AMBIGUOUS), and the deterministic EXACT dishwasher lines. **Resolved 2026-09-20 by a data fix** (commit 28db011): all 76 dishwashers now carry a WELS registration and rating, and the matrix is unchanged. The matrix is transcribed in four files — `BP2a_DeterministicMatch.cs`, `BP3_BuildCandidateSet.cs`, `ai-studio/tests/score_adjudication.py` and `tools/import/verify.py` — which move together.
 
 ## 7. Output fields the BP derives (not asked of the model)
 02 lists `resolvedCount` and `escalatedCount` as outputs. The prompt's output schema returns only `verdicts`, so `BP3_ApplyVerdicts.cs` counts them: resolved = verdicts with a validated product, escalated = verdicts with a final `requiresHuman` = true.

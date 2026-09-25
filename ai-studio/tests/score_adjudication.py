@@ -11,6 +11,9 @@ The floor re-check applies Governance Block 2 with the KS2 §7 Combined eligibil
 workbook's cut-outs, and the specified product's ratings (products CSV, matched by model code). The same
 logic runs in BP3_ApplyVerdicts.cs. If product data is fixed in the instance (for example dishwasher WELS
 registrations), export Product to CSV with the 04_products.csv headers and pass --products.
+Only the ANSWER KEY is read from meridian-seed-data-v2.zip: that zip still holds the ORIGINAL products and
+substitution rules, while meridian-data-v2/ carries the corrected 45-rule register and the dishwasher WELS
+values. Never read products or rules from the zip.
 Defaults: meridian-data-v2 (the dataset loaded into the instance, including the 2026-09-20 dishwasher WELS
 fix) and the answer key read from meridian-seed-data-v2.zip.
 """
@@ -30,7 +33,8 @@ REPO = Path(__file__).resolve().parents[2]
 DATA = REPO / "meridian-data-v2"  # the dataset loaded into the instance
 ANSWER_KEY = REPO / "meridian-seed-data-v2.zip"  # holds the v2 answer key; deliberately not committed
 LEAD_LIMIT = 12
-# KS2 §7 Combined eligibility matrix: cut-out, WELS, GEMS, WaterMark. Keep identical to BP3_BuildCandidateSet.cs.
+# KS2 §7 Combined eligibility matrix: cut-out, WELS, GEMS, WaterMark. Keep identical to
+# BP2a_DeterministicMatch.cs, BP3_BuildCandidateSet.cs and tools/import/verify.py (four places).
 REGIMES = {
     "Wall Oven": (1, 0, 1, 0), "Cooktop": (1, 0, 1, 0), "Dishwasher": (1, 1, 1, 0),
     "Rangehood": (1, 0, 0, 0), "Microwave": (1, 0, 0, 0), "Basin": (0, 0, 0, 1), "Toilet Suite": (0, 1, 0, 1),
