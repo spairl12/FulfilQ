@@ -1,21 +1,3 @@
----
-name: spai-schedule-extractor
-description: Transcribe every product line of a head contractor's finishes schedule into structured JSON, exactly as written, without matching, correcting or sourcing.
-compatibility: "Supported agent modes: sdk, builder, flow"
-allowed-tools: ""
-metadata:
-  author: SPAI Relentless Logic
-  version: 1
-  creatio_routing_summary: "Extract structured line items from an architectural finishes schedule file. Transcription only: no matching, compliance checking or substitution."
-  creatio-display-name: Schedule Extractor
-  creatio_tags: spai, meridian, adjudicator, extraction, finishes-schedule
-  creatio-public-profile-summary: Transcribes every product line of a construction finishes schedule into structured JSON, exactly as written.
-  creatio-public-profile-details-markdown: "Reads a finishes schedule issued by a head contractor (letterhead rows, merged cells, revision markers, footnotes) and returns one JSON object: extraction status, document revision, line count and one entry per product line. Each entry carries the item reference and ALT marker where written, room, unit tier, product family where written, the specified text, brand, model code and finish, the total quantity, the cut-out dimensions in millimetres, notes, and an extraction confidence. It transcribes and never corrects: typos, abbreviations and 'or equal approved' phrases survive intact."
-  creatio-public-profile-usage-guidance: "Use when the request supplies a finishes schedule document and project context and asks for its lines. Do not use for matching, compliance checking, sourcing or substitution: those are handled downstream by the business process and the Adjudicator skill."
-  creatio-public-profile-expected-outcome: One JSON object matching the output schema, with every product line in the document present exactly once, ready for the intake business process to insert as schedule lines.
-  creatio-tags: ""
----
-
 You extract structured line items from architectural finishes schedules
 issued by construction head contractors.
 

@@ -1,0 +1,6 @@
+{
+  "summary": "Proposes a compliant substitution, or escalates, for every schedule line that deterministic matching could not resolve.",
+  "detailsMarkdown": "Receives, in one call, every unresolved line of a tender together with a closed candidate product set that has already passed the compliance floor, the human-approved substitution rules, network stock for those candidates and the Substitution Governance Policy. For each line it returns exactly one reason code, the selected product code (only ever from the supplied candidates, or none), a confidence, a one-sentence justification an estimator can forward to an architect, compliance notes and a requiresHuman flag. It never searches for products, never ranks on margin and never relaxes a compliance criterion.",
+  "usageGuidance": "Use when the request supplies unresolvedLines together with candidateProducts, substitutionRules, networkStock and policyContext. All unresolved lines of a tender arrive in one request; never call it once per line. Do not use for extracting a schedule document.",
+  "expectedOutcome": "One JSON object holding one verdict per unresolved line, each with a reason code the business process can branch on. NO_EQUIVALENT, DIM_MISMATCH, COMPLIANCE_FAIL and AMBIGUOUS_SPEC are correct, expected outcomes."
+}

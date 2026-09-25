@@ -3,7 +3,7 @@
 This file defines the five inputs that BP3 `SPAIAdjudication` builds and passes in **one** call for **all** pending lines of a tender. Every key traces to a live column on 189575-crm-bundle. The columns were verified read-only via clio on 2026-09-20 against the merged schemas of `SPAIScheduleLine`, `Product`, `SPAIStockPosition`, `SPAILocation`, `SPAISubstitutionRule` and `SPAIProductFamily`.
 
 Built by: `bp-scripts/BP3_BuildCandidateSet.cs` (unresolvedLines, candidateProducts, substitutionRules, policyContext) and `bp-scripts/BP3_BuildNetworkStock.cs` (networkStock).
-Worked example: `assets/example-input.json`. It contains schedule lines 036 (DIM_TRAP) and 040 (DISCONTINUED) of the Corvina RevC hero schedule, built from `meridian-data-v3`.
+Worked example: `assets/example-input.json`, with `assets/example-output.json` as the matching reply. Both hold schedule lines **021** (a discontinued shower set) and **027** (a cut-out trap) of the Corvina RevC hero schedule, built from the **live instance** on 2026-09-25 — the same dataset the tender runs on. Line 021 also shows two rules working: the substitution rule outranks the model's own reasoning, and the superseded-by product is rejected because its WELS rating is below the specified one.
 
 **Design rule restated:** products and stock arrive here, supplied by the process. The skill never searches or retrieves them. Knowledge sources hold policy and precedent only.
 

@@ -1,16 +1,54 @@
 {
   "unresolvedLines": [
     {
-      "lineNumber": 36,
+      "lineNumber": 21,
       "itemRef": "",
       "isAlternate": false,
-      "productFamily": "Rangehood",
+      "productFamily": "Shower Set",
+      "roomType": "Ensuite",
+      "unitTier": "Standard",
+      "specifiedText": "Brightwater Shower Set",
+      "specifiedBrand": "Brightwater",
+      "specifiedModel": "07SS004",
+      "specifiedFinish": "Matte Black",
+      "quantity": 6,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "notes": "",
+      "regimes": {
+        "cutout": false,
+        "wels": true,
+        "gems": false,
+        "waterMark": true
+      },
+      "specifiedProduct": {
+        "productCode": "MCS-0457",
+        "lifecycleStatus": "Discontinued",
+        "supersededByCode": "MCS-0461",
+        "leadTimeWeeks": 18,
+        "welsRating": 5.5,
+        "energyStarRating": null,
+        "networkQtyAvailable": 0
+      },
+      "floorDiagnostics": {
+        "familyCandidates": 12,
+        "cutoutFit": 12,
+        "cutoutFitFloorFail": 8,
+        "eligible": 4
+      }
+    },
+    {
+      "lineNumber": 27,
+      "itemRef": "",
+      "isAlternate": false,
+      "productFamily": "Cooktop",
       "roomType": "Kitchen",
       "unitTier": "Premium",
-      "specifiedText": "Thornbury 750mm Rangehood",
+      "specifiedText": "Thornbury 750mm Cooktop",
       "specifiedBrand": "Thornbury",
-      "specifiedModel": "04RH75002",
-      "specifiedFinish": "Gloss White",
+      "specifiedModel": "04CT75002",
+      "specifiedFinish": "Matte Black",
       "quantity": 36,
       "cutoutW": 750,
       "cutoutH": 605,
@@ -19,193 +57,287 @@
       "regimes": {
         "cutout": true,
         "wels": false,
-        "gems": false,
+        "gems": true,
         "waterMark": false
       },
       "specifiedProduct": {
-        "productCode": "MCS-0258",
+        "productCode": "MCS-0105",
         "lifecycleStatus": "Discontinued",
-        "supersededByCode": "MCS-0231",
-        "leadTimeWeeks": 18,
+        "supersededByCode": "MCS-0099",
+        "leadTimeWeeks": 20,
         "welsRating": null,
-        "energyStarRating": null,
-        "networkQtyAvailable": 7
+        "energyStarRating": 2.5,
+        "networkQtyAvailable": 0
       },
       "floorDiagnostics": {
-        "familyCandidates": 41,
+        "familyCandidates": 48,
         "cutoutFit": 0,
         "cutoutFitFloorFail": 0,
         "eligible": 0
-      }
-    },
-    {
-      "lineNumber": 40,
-      "itemRef": "",
-      "isAlternate": false,
-      "productFamily": "Basin",
-      "roomType": "Main Bathroom",
-      "unitTier": "Standard",
-      "specifiedText": "Havelock Basin",
-      "specifiedBrand": "Havelock",
-      "specifiedModel": "09BN001",
-      "specifiedFinish": "Stainless Steel",
-      "quantity": 6,
-      "cutoutW": 0,
-      "cutoutH": 0,
-      "cutoutD": 0,
-      "notes": "",
-      "regimes": {
-        "cutout": false,
-        "wels": false,
-        "gems": false,
-        "waterMark": true
-      },
-      "specifiedProduct": {
-        "productCode": "MCS-0370",
-        "lifecycleStatus": "Discontinued",
-        "supersededByCode": "MCS-0372",
-        "leadTimeWeeks": 20,
-        "welsRating": null,
-        "energyStarRating": null,
-        "networkQtyAvailable": 24
-      },
-      "floorDiagnostics": {
-        "familyCandidates": 13,
-        "cutoutFit": 13,
-        "cutoutFitFloorFail": 0,
-        "eligible": 13
       }
     }
   ],
   "candidateProducts": [
     {
-      "productCode": "MCS-0372",
-      "name": "Havelock Basin",
-      "modelCode": "09BN003",
-      "brand": "Havelock",
-      "productFamily": "Basin",
+      "productCode": "MCS-0473",
+      "name": "Peralta Shower Set",
+      "modelCode": "08SS007",
+      "brand": "Peralta",
+      "productFamily": "Shower Set",
       "lifecycleStatus": "Current",
       "projectApproved": true,
       "cutoutW": 0,
       "cutoutH": 0,
       "cutoutD": 0,
-      "welsRegistrationNo": "",
-      "welsRating": null,
+      "welsRegistrationNo": "W55254-62",
+      "welsRating": 6.0,
       "gemsRegistrationNo": "",
       "energyStarRating": null,
-      "waterMarkCertNo": "WMKA29652",
+      "waterMarkCertNo": "WMKA25198",
       "finish": "Brushed Brass",
-      "leadTimeWeeks": 2,
-      "marginPct": 19.9,
+      "leadTimeWeeks": 4,
+      "marginPct": 18.8,
       "eligibleLines": [
         {
-          "lineNumber": 40,
+          "lineNumber": 21,
           "preRank": 1
         }
       ]
     },
     {
-      "productCode": "MCS-0383",
-      "name": "Havelock Basin",
-      "modelCode": "09BN014",
-      "brand": "Havelock",
-      "productFamily": "Basin",
+      "productCode": "MCS-0454",
+      "name": "Brightwater Shower Set",
+      "modelCode": "07SS001",
+      "brand": "Brightwater",
+      "productFamily": "Shower Set",
       "lifecycleStatus": "Current",
       "projectApproved": true,
       "cutoutW": 0,
       "cutoutH": 0,
       "cutoutD": 0,
-      "welsRegistrationNo": "",
-      "welsRating": null,
+      "welsRegistrationNo": "W92369-76",
+      "welsRating": 5.5,
       "gemsRegistrationNo": "",
       "energyStarRating": null,
-      "waterMarkCertNo": "WMKA20305",
-      "finish": "Stainless Steel",
-      "leadTimeWeeks": 4,
-      "marginPct": 25.0,
+      "waterMarkCertNo": "WMKA26639",
+      "finish": "Gunmetal",
+      "leadTimeWeeks": 3,
+      "marginPct": 20.0,
       "eligibleLines": [
         {
-          "lineNumber": 40,
+          "lineNumber": 21,
           "preRank": 2
+        }
+      ]
+    },
+    {
+      "productCode": "MCS-0458",
+      "name": "Brightwater Shower Set",
+      "modelCode": "07SS005",
+      "brand": "Brightwater",
+      "productFamily": "Shower Set",
+      "lifecycleStatus": "Current",
+      "projectApproved": true,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "welsRegistrationNo": "W43889-80",
+      "welsRating": 5.5,
+      "gemsRegistrationNo": "",
+      "energyStarRating": null,
+      "waterMarkCertNo": "WMKA26502",
+      "finish": "Gunmetal",
+      "leadTimeWeeks": 4,
+      "marginPct": 17.3,
+      "eligibleLines": [
+        {
+          "lineNumber": 21,
+          "preRank": 3
+        }
+      ]
+    },
+    {
+      "productCode": "MCS-0477",
+      "name": "Peralta Shower Set",
+      "modelCode": "08SS011",
+      "brand": "Peralta",
+      "productFamily": "Shower Set",
+      "lifecycleStatus": "Current",
+      "projectApproved": true,
+      "cutoutW": 0,
+      "cutoutH": 0,
+      "cutoutD": 0,
+      "welsRegistrationNo": "W34146-48",
+      "welsRating": 5.5,
+      "gemsRegistrationNo": "",
+      "energyStarRating": null,
+      "waterMarkCertNo": "WMKA21643",
+      "finish": "Brushed Brass",
+      "leadTimeWeeks": 3,
+      "marginPct": 25.3,
+      "eligibleLines": [
+        {
+          "lineNumber": 21,
+          "preRank": 4
         }
       ]
     }
   ],
   "substitutionRules": [
     {
-      "ruleCode": "SR-0011",
-      "fromProductCode": "MCS-0258",
-      "toProductCode": "MCS-0231",
-      "equivalenceBasis": "cut-out 750x590x560mm match; same family (Rangehood)",
-      "finishMatch": false,
-      "targetEligibleForLines": []
-    },
-    {
-      "ruleCode": "SR-0022",
-      "fromProductCode": "MCS-0370",
-      "toProductCode": "MCS-0372",
-      "equivalenceBasis": "same family (Basin)",
+      "ruleCode": "SR-0040",
+      "fromProductCode": "MCS-0457",
+      "toProductCode": "MCS-0473",
+      "equivalenceBasis": "same family (Shower Set)",
       "finishMatch": false,
       "targetEligibleForLines": [
-        40
+        21
       ]
     }
   ],
   "networkStock": [
     {
-      "productCode": "MCS-0372",
+      "productCode": "MCS-0454",
       "locationCode": "DC01",
       "locationName": "Melbourne West DC",
       "locationType": "Distribution Centre",
       "sourcingRank": 1,
-      "qtyOnHand": 387,
-      "qtyAvailable": 345,
+      "qtyOnHand": 220,
+      "qtyAvailable": 219,
       "nextInboundQty": 0,
       "nextInboundDate": ""
     },
     {
-      "productCode": "MCS-0372",
+      "productCode": "MCS-0454",
+      "locationCode": "DC02",
+      "locationName": "Sydney Central DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 2,
+      "qtyOnHand": 472,
+      "qtyAvailable": 387,
+      "nextInboundQty": 93,
+      "nextInboundDate": "2026-09-30"
+    },
+    {
+      "productCode": "MCS-0454",
       "locationCode": "DC04",
       "locationName": "Perth Metro DC",
       "locationType": "Distribution Centre",
       "sourcingRank": 4,
-      "qtyOnHand": 248,
-      "qtyAvailable": 228,
+      "qtyOnHand": 268,
+      "qtyAvailable": 246,
       "nextInboundQty": 0,
       "nextInboundDate": ""
     },
     {
-      "productCode": "MCS-0383",
-      "locationCode": "DC01",
-      "locationName": "Melbourne West DC",
-      "locationType": "Distribution Centre",
-      "sourcingRank": 1,
-      "qtyOnHand": 440,
-      "qtyAvailable": 422,
-      "nextInboundQty": 0,
-      "nextInboundDate": ""
-    },
-    {
-      "productCode": "MCS-0383",
-      "locationCode": "DC04",
-      "locationName": "Perth Metro DC",
-      "locationType": "Distribution Centre",
-      "sourcingRank": 4,
-      "qtyOnHand": 213,
-      "qtyAvailable": 146,
-      "nextInboundQty": 0,
-      "nextInboundDate": ""
-    },
-    {
-      "productCode": "MCS-0383",
-      "locationCode": "ST08",
-      "locationName": "Adelaide Store",
+      "productCode": "MCS-0454",
+      "locationCode": "ST02",
+      "locationName": "Dandenong Store",
       "locationType": "Retail Store",
-      "sourcingRank": 12,
+      "sourcingRank": 6,
+      "qtyOnHand": 2,
+      "qtyAvailable": 2,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0454",
+      "locationCode": "ST05",
+      "locationName": "Parramatta Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 9,
+      "qtyOnHand": 1,
+      "qtyAvailable": 1,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0454",
+      "locationCode": "ST07",
+      "locationName": "Gold Coast Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 11,
       "qtyOnHand": 0,
       "qtyAvailable": 0,
-      "nextInboundQty": 88,
-      "nextInboundDate": "2026-10-07"
+      "nextInboundQty": 47,
+      "nextInboundDate": "2026-10-14"
+    },
+    {
+      "productCode": "MCS-0458",
+      "locationCode": "DC04",
+      "locationName": "Perth Metro DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 4,
+      "qtyOnHand": 69,
+      "qtyAvailable": 52,
+      "nextInboundQty": 260,
+      "nextInboundDate": "2026-10-28"
+    },
+    {
+      "productCode": "MCS-0473",
+      "locationCode": "DC01",
+      "locationName": "Melbourne West DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 1,
+      "qtyOnHand": 396,
+      "qtyAvailable": 317,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0477",
+      "locationCode": "DC02",
+      "locationName": "Sydney Central DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 2,
+      "qtyOnHand": 354,
+      "qtyAvailable": 321,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0477",
+      "locationCode": "DC03",
+      "locationName": "Brisbane North DC",
+      "locationType": "Distribution Centre",
+      "sourcingRank": 3,
+      "qtyOnHand": 145,
+      "qtyAvailable": 130,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0477",
+      "locationCode": "ST02",
+      "locationName": "Dandenong Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 6,
+      "qtyOnHand": 11,
+      "qtyAvailable": 9,
+      "nextInboundQty": 0,
+      "nextInboundDate": ""
+    },
+    {
+      "productCode": "MCS-0477",
+      "locationCode": "ST03",
+      "locationName": "Geelong Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 7,
+      "qtyOnHand": 0,
+      "qtyAvailable": 0,
+      "nextInboundQty": 301,
+      "nextInboundDate": "2026-10-21"
+    },
+    {
+      "productCode": "MCS-0477",
+      "locationCode": "ST06",
+      "locationName": "Newcastle Store",
+      "locationType": "Retail Store",
+      "sourcingRank": 10,
+      "qtyOnHand": 0,
+      "qtyAvailable": 0,
+      "nextInboundQty": 358,
+      "nextInboundDate": "2026-09-30"
     }
   ],
   "policyContext": {

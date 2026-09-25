@@ -1,22 +1,22 @@
 {
   "verdicts": [
     {
-      "lineNumber": 36,
-      "reasonCode": "DIM_MISMATCH",
-      "selectedProductCode": null,
-      "confidence": 0.95,
-      "justification": "The specified Thornbury 750mm Rangehood (04RH75002) is discontinued, and no candidate in the family matches the specified cut-out of 750 x 605 x 560mm, including the approved rule target (SR-0011, 750 x 590 x 560mm), so no substitution is proposed.",
-      "complianceNotes": "Escalated: cut-out mismatch on every family candidate. Architect to confirm the cut-out or accept a joinery change.",
-      "requiresHuman": true
+      "lineNumber": 21,
+      "reasonCode": "DISCONTINUED_SUB",
+      "selectedProductCode": "MCS-0473",
+      "confidence": 0.94,
+      "justification": "The specified Brightwater Shower Set 07SS004 is discontinued. Rule SR-0040 approves the Peralta Shower Set 08SS007, which holds WELS registration W55254-62 at 6.0 stars against the specified 5.5, WaterMark certificate WMKA25198, is project approved, and has 317 units at Melbourne West DC against a requirement of 6.",
+      "complianceNotes": "Finish differs: specified matte black, proposed brushed brass. Flagged for architect confirmation. The superseded-by product MCS-0461 was not proposed: its WELS rating of 3.5 is below the specified 5.5.",
+      "requiresHuman": false
     },
     {
-      "lineNumber": 40,
-      "reasonCode": "DISCONTINUED_SUB",
-      "selectedProductCode": "MCS-0372",
-      "confidence": 0.93,
-      "justification": "The specified Havelock Basin 09BN001 is discontinued; the proposed Havelock Basin 09BN003 is its approved equivalent under rule SR-0022, holds current WaterMark certificate WMKA29652, is project approved, and has 345 units available at Melbourne West DC against a requirement of 6.",
-      "complianceNotes": "Finish differs: specified stainless steel, proposed brushed brass. Flagged for architect confirmation.",
-      "requiresHuman": false
+      "lineNumber": 27,
+      "reasonCode": "DIM_MISMATCH",
+      "selectedProductCode": null,
+      "confidence": 0.96,
+      "justification": "The specified Thornbury 750mm Cooktop 04CT75002 is discontinued, and none of the 48 eligible cooktops matches the specified cut-out of 750 x 605 x 560mm, so no substitution is proposed.",
+      "complianceNotes": "Escalated: no candidate fits the cut-out. Note the specified product measures 750 x 590 x 560mm, so the schedule dimension itself may need architect confirmation.",
+      "requiresHuman": true
     }
   ]
 }

@@ -35,7 +35,8 @@ It was verified read-only against `SPAIScheduleLine` on 189575-crm-bundle via cl
 `SPAIDisplayRef` is not written by the extractor. `SPAIItemIdentityEntityEventListener` derives it on save from item ref, ALT and variant.
 
 ## Known data condition (hero schedule)
+
 `Corvina_Quarter_Stage2_Finishes_Schedule_RevC.xlsx` has no Item Ref, ALT or product-family columns. On that document `itemRef`, `alternateVariant` and `productFamily` come back empty and `isAlternate` comes back false. That is correct transcription, not a failure. The answer key's ItemRef and ALT values do not arrive through extraction for this tender.
 
 ## Example asset
-`assets/example-output.json` shows the envelope and three of the 44 lines of RevC: 007 (Penthouse basin, Total Qty 12 against Qty/Unit 2), 023 (the "or equal approved" ambiguous line) and 028 (the model-code typo `05DW6000Q`, left intact). The values are transcribed from the workbook.
+`assets/example-output.json` shows the envelope and three of the 44 lines of the hero RevC workbook: **015** (Penthouse basin, Total Qty 12 against Qty/Unit 2), **017** (the model-code typo `04DW4501X`, left intact) and **020** (the "or equal approved" ambiguous line). The values are transcribed from the workbook the instance was loaded from.

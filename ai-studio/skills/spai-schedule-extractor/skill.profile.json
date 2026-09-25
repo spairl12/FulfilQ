@@ -1,0 +1,6 @@
+{
+  "summary": "Transcribes every product line of a construction finishes schedule into structured JSON, exactly as written.",
+  "detailsMarkdown": "Reads a finishes schedule issued by a head contractor (letterhead rows, merged cells, revision markers, footnotes) and returns one JSON object: extraction status, document revision, line count and one entry per product line. Each entry carries the item reference and ALT marker where written, room, unit tier, product family where written, the specified text, brand, model code and finish, the total quantity, the cut-out dimensions in millimetres, notes, and an extraction confidence. It transcribes and never corrects: typos, abbreviations and 'or equal approved' phrases survive intact.",
+  "usageGuidance": "Use when the request supplies a finishes schedule document and project context and asks for its lines. Do not use for matching, compliance checking, sourcing or substitution: those are handled downstream by the business process and the Adjudicator skill.",
+  "expectedOutcome": "One JSON object matching the output schema, with every product line in the document present exactly once, ready for the intake business process to insert as schedule lines."
+}
