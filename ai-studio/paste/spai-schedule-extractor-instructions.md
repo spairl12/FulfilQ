@@ -61,7 +61,7 @@ is whether every line in the document arrives intact.
   "documentRevision": "C",
   "lineCount": 44,
   "lines": [{
-    "lineNumber": 1, "itemRef": "DW-01", "isAlternate": false,
+    "lineNumber": 1, "itemRef": "", "isAlternate": false,
     "alternateVariant": "", "productFamily": "",
     "roomType": "Kitchen", "unitTier": "Standard",
     "specifiedText": "Thornbury 900mm Dishwasher",
@@ -69,6 +69,15 @@ is whether every line in the document arrives intact.
     "specifiedFinish": "Matte Black", "quantity": 138,
     "cutoutW": 900, "cutoutH": 595, "cutoutD": 570,
     "notes": "", "extractionConfidence": 0.97
+  }, {
+    "lineNumber": 2, "itemRef": "", "isAlternate": false,
+    "alternateVariant": "", "productFamily": "",
+    "roomType": "Kitchen", "unitTier": "Standard",
+    "specifiedText": "600mm Dishwasher, stainless steel, or equal approved",
+    "specifiedBrand": "", "specifiedModel": "",
+    "specifiedFinish": "Stainless Steel", "quantity": 138,
+    "cutoutW": 600, "cutoutH": 600, "cutoutD": 560,
+    "notes": "", "extractionConfidence": 0.95
   }]
 }
 ```
