@@ -75,6 +75,7 @@ Each of these was approved in this session. Anything marked **approved** changes
 | C9 | **Gap 3: stock rows with nothing available and nothing inbound are dropped** from the payload | 28% fewer stock rows on the hero tender; they cannot change a ranking |
 | C10 | **BP4 reframed** from 01's phase allocation to an **indicative delivery plan** (deliverability against the programme, commits nothing) | 04 Change 1 deleted the three phase orders BP4 assigned lines to |
 | C11 | **BP8 `SPAIAwardFulfilment` added** as a new process: Indicative → Committed, encumber stock, call-up lines, **one sub-PO per delivery event** | 04a A1 puts call-up generation at award; A3 makes the sub-PO per event. This is the award half of the split |
+| C16 | **Tier 1 is Meridian's home DC** (lowest `SPAISourcingRank`, DC01 Melbourne West), not the DC in the project's state. `SPAIProjectState` drives `SPAIInterstateFreight` instead (corrected 2026-09-25) | The seeded Kelmore sub-POs prove it: an NSW site with 17 tier-1 sub-POs from the VIC DC, and the NSW DC at tier 2. Raised by the parallel session |
 | C15 | **Sub-PO refs are blanket-scoped**, `SPO-<blanket digits>-NN`, matching Kelmore's `SPO-0438-01..25`. The script refuses to run when the blanket order has no `SPAIPurchaseOrderNo` (fixed 2026-09-25) | The first draft used a global `SPO-0001` sequence, which would interleave Corvina and Kelmore in one number space. Raised by the parallel session |
 | C12 | **BP2b writes `SPAISourcePlanType = Indicative` and never touches `SPAIQtyAllocated`** | 04 Change 4: an unawarded tender must encumber nothing |
 | C13 | **Both skills and the agent bind zero tools**, and the platform's default CRM read tools, write tools, web search, code execution and image generation are all removed from the agent | The platform attaches them at creation. They are an open query path (Block 5) and a write path (Block 1) |
@@ -103,15 +104,15 @@ Each of these was approved in this session. Anything marked **approved** changes
 
 ---
 
-## 5. Open decisions, each blocking something
+## 5. Decisions: D1 to D4 closed, D5 agreed
 
 | # | Decision | Blocks | Recommendation |
 |---|---|---|---|
-| D1 | Where the project's state comes from (F5) | BP2b tier 1 | Add `SPAIProjectState` (Text 10) to `Opportunity`; set the hero tender to `VIC` |
-| D2 | The Gate 2 value threshold | BP5 gateway, BP6 | A system setting the gateway reads, set so the hero tender goes through both gates |
-| D3 | How a line's quantity splits across delivery events | BP8 | Even across non-prototype events, remainder on the last, 1 unit per prototype event (what the script does now) |
+| ~~D1~~ | **Closed.** `Opportunity.SPAIProjectState` exists and is filled (Corvina VIC, Kelmore NSW, Aldworth VIC), commit 8008f38 | — | **Correction:** tier 1 is Meridian's home DC (the DC with sourcing rank 1, DC01 Melbourne West), not the site's state. The column drives `SPAIInterstateFreight`. `BP2b_SourcingCascade.cs` and `02c` §2 are corrected |
+| ~~D2~~ | **Closed.** System setting `SPAIGate2ValueThreshold`, Money, 5,000,000, All employees, bound as `SysSettings_SPAIGate2ValueThreshold`, commit 12fdd6d | — | Corvina $8.15M runs both gates, Kelmore $3.42M runs Gate 1 only. **The value does not travel in the package** — set it after a fresh install or the gateway reads 0 |
+| ~~D3~~ | **Closed as proposed.** Even across non-prototype events, remainder on the last, 1 unit per prototype event | — | Matches the Corvina order schedule and the seeded Kelmore call-up data. No script change |
 | ~~D4~~ | **Closed 2026-09-25.** `SPAIGate1ApprovedOn`, `SPAIGate2ApprovedOn`, `SPAIGate1ApprovedBy` and `SPAIGate2ApprovedBy` all exist on `Opportunity` | — | Write the ApprovedBy columns alongside the dates in BP5 and BP6 |
-| D5 | **Test Gate 2 versus the data (F3).** Accept and reconcile, or repair the master data | Running Gate 2 | Accept: score those six lines as correct escalations. It strengthens the "escalation is a correct answer" argument. Do **not** relax the floor to make the gate pass |
+| D5 | **Test Gate 2 versus the data (F3).** Accept and reconcile, or repair the master data | Running Gate 2 | **Both sessions agree: accept.** Score those six lines as correct escalations; it strengthens the "escalation is a correct answer" argument. Do **not** relax the floor to make the gate pass |
 
 ---
 

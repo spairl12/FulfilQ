@@ -4,10 +4,15 @@
 // Zero AI. For every line that BP2a matched (SPAIMatchedProduct set, status Pending), allocate the order
 // quantity across the network in tier order and write one SPAILineSource row per contributing location:
 //
-//   Tier 1  Home DC        SPAILocation of type Distribution Centre in the project's state
+//   Tier 1  Home DC        MERIDIAN's home DC: the Distribution Centre with the lowest SPAISourcingRank
+//                          (DC01 Melbourne West, rank 1). "Home" means ours, not the site's
 //   Tier 2  Other DCs      remaining DCs, by SPAISourcingRank
 //   Tier 3  Retail stores   by SPAISourcingRank   <- the fallback that makes the demo
 //   Tier 4  Inbound supply  SPAINextInboundQty arriving before the earliest delivery event
+//
+// Corrected 2026-09-25: an earlier draft made tier 1 the DC in the PROJECT's state. The seeded Kelmore
+// sub-POs disprove that — an NSW site whose 17 tier-1 sub-POs ship from DC01 in Victoria, while the NSW
+// DC (DC02 Erskine Park) is tier 2. SPAIProjectState is used for the interstate-freight flag only.
 //
 // Change 4 of 04_Foundation_Change_Spec (the soft-check relabel) governs this step:
 // every row is written as SPAISourcePlanType = Indicative and SPAIStockPosition.SPAIQtyAllocated is
@@ -15,8 +20,9 @@
 //
 // Process parameters:
 //   OpportunityId      Unique identifier  in
-//   ProjectState       Text               in   Opportunity.SPAIProjectState or the account's state; blank
-//                                              means no home DC and tier 1 is skipped
+//   ProjectState       Text               in   Opportunity.SPAIProjectState (VIC, NSW, ...). Decides the
+//                                              interstate-freight flag only, never the tier. Blank leaves
+//                                              SPAIInterstateFreight false everywhere
 //   FilledCount        Integer            out  lines filled from one location  (Exact match / EXACT)
 //   MultiSourceCount   Integer            out  lines filled from several       (Sourced multi-location / MULTI_SOURCE)
 //   ShortfallCount     Integer            out  lines left Pending with SPAIQtyShortfall set
@@ -84,19 +90,30 @@ if (productIds.Length > 0) {
 	}
 	sEsq.Filters.Add(sEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIProduct", productIds));
 	sEsq.Filters.Add(sEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAILocation.SPAIIsAvailable", true));
-	foreach (Entity s in sEsq.GetEntityCollection(uc)) {
+	// Meridian's home DC is the available Distribution Centre with the lowest sourcing rank.
+	var dcRanks = new List<int>();
+	var rows = sEsq.GetEntityCollection(uc);
+	foreach (Entity s in rows) {
+		if (s.GetTypedColumnValue<string>(sc["SPAILocation.SPAILocationType.Name"]) == "Distribution Centre") {
+			dcRanks.Add(s.GetTypedColumnValue<int>(sc["SPAILocation.SPAISourcingRank"]));
+		}
+	}
+	int homeDcRank = dcRanks.Count > 0 ? dcRanks.Min() : int.MinValue;
+	foreach (Entity s in rows) {
 		bool isDc = s.GetTypedColumnValue<string>(sc["SPAILocation.SPAILocationType.Name"]) == "Distribution Centre";
-		bool homeState = projectState.Length > 0 && string.Equals(
-			s.GetTypedColumnValue<string>(sc["SPAILocation.SPAIState"]), projectState, StringComparison.OrdinalIgnoreCase);
+		int rank = s.GetTypedColumnValue<int>(sc["SPAILocation.SPAISourcingRank"]);
+		string locationState = s.GetTypedColumnValue<string>(sc["SPAILocation.SPAIState"]) ?? string.Empty;
 		stock.Add(new Dictionary<string, object> {
 			{ "ProductId", s.GetTypedColumnValue<Guid>(sc["SPAIProduct"] + "Id") },
 			{ "LocationId", s.GetTypedColumnValue<Guid>(sc["SPAILocation"] + "Id") },
-			{ "Tier", isDc && homeState ? 1 : (isDc ? 2 : 3) },
-			{ "Rank", s.GetTypedColumnValue<int>(sc["SPAILocation.SPAISourcingRank"]) },
+			{ "Tier", isDc ? (rank == homeDcRank ? 1 : 2) : 3 },
+			{ "Rank", rank },
 			{ "Available", s.GetTypedColumnValue<int>(sc["SPAIQtyAvailable"]) },
 			{ "InboundQty", s.GetTypedColumnValue<int>(sc["SPAINextInboundQty"]) },
 			{ "InboundOn", s.GetTypedColumnValue<DateTime>(sc["SPAINextInboundDate"]) },
-			{ "Interstate", isDc && !homeState }
+			// Freight is interstate when the stock leaves a different state from the site, whatever its tier.
+			{ "Interstate", projectState.Length > 0 && locationState.Length > 0
+				&& !string.Equals(locationState, projectState, StringComparison.OrdinalIgnoreCase) }
 		});
 	}
 }

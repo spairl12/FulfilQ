@@ -18,7 +18,8 @@
 | S2 | Turn on process tracing for every process as you create it | 02 §7: the trace is the only way to see what an element actually received |
 | S3 | Know the three element labels you will reach for constantly: **Read data**, **Modify data**, **Script task** | Named as the designer names them |
 | S4 | After pasting any Script task: **save, then compile the package, then restart if prompted** | A Script task is the one in-process element whose C# makes the process need a compile |
-| S5 | Decide the four open values in §11 before BP2b, BP6 and BP8 | Each one is a real decision, not a default I can pick for you |
+| S5 | All four §11 decisions are now **closed**. Read them anyway: D1 carries a correction to what tier 1 means | The correction changes BP2b |
+| S6 | After any fresh install, set the values of `SPAIGate2ValueThreshold` and the ledger-administrators setting | Their definitions travel in the package, their values do not. See `docs/KS1_2.9_Availability_Assessment.md` |
 
 **Element conventions used throughout**
 - Every signal-started process runs with **Background mode on**, on every element that offers it. Nobody is waiting at a screen (02 §9 design checklist).
@@ -62,7 +63,7 @@ Build in this order: **BP2a → BP2b → BP4 → BP1 → BP3 → BP5 → BP6 →
 | # | Element | Configuration |
 |---|---|---|
 | 1 | **Signal start** | Object `Opportunity`, event **Record modified**, filter `SPAIAdjudicationStatus = Matching`. Background on |
-| 2 | **Read data** | Object `Opportunity`, first record, filter `Id = ` element 1's record. Columns: `SPAIProjectName`, `SPAITenderCode`, `Account`. Map `OpportunityId` ← `Id` |
+| 2 | **Read data** | Object `Opportunity`, first record, filter `Id = ` element 1's record. Columns: `SPAIProjectName`, `SPAITenderCode`, `SPAIProjectState`, `Account`. Map `OpportunityId` ← `Id`, `ProjectState` ← `SPAIProjectState` |
 | 3 | **Script task** "Match and apply the compliance floor" | Paste `bp-scripts/BP2a_DeterministicMatch.cs`. In: `OpportunityId`. Out: `MatchedCount`, `FloorFailCount`, `UnresolvedCount` |
 | 4 | **Modify data** | Object `Opportunity`, filter `Id = OpportunityId`. Set `SPAIDeterministicCount` = `MatchedCount`, `SPAIAdjudicationStatus` = **Sourcing** |
 | 5 | **Sub-process** | Calls BP2b `SPAISourcingCascade`. Map `OpportunityId` and `ProjectState` |
@@ -88,7 +89,7 @@ The floor lives in one dictionary at the top of the script, transcribed from KS2
 | Name | Type | Direction | Notes |
 |---|---|---|---|
 | `OpportunityId` | Unique identifier | **In** | |
-| `ProjectState` | Text | **In** | decides the home DC. Blank means tier 1 is skipped: see §11 D1 |
+| `ProjectState` | Text | **In** | `Opportunity.SPAIProjectState` (VIC, NSW, …). Sets the **interstate-freight flag only**, never the tier |
 | `FilledCount`, `MultiSourceCount`, `ShortfallCount` | Integer | Out | script outputs |
 
 ### Elements
@@ -99,13 +100,16 @@ The floor lives in one dictionary at the top of the script, transcribed from KS2
 | 3 | **Modify data** | Object `Opportunity`, filter `Id = OpportunityId`. Set `SPAIExactMatchCount` = `FilledCount`, `SPAIMultiSourceCount` = `MultiSourceCount`, `SPAIAdjudicationStatus` = **Adjudicating** |
 | 4 | **End** | |
 
-The cascade is tier 1 home DC → tier 2 other DCs → tier 3 retail stores → tier 4 inbound supply arriving before the first delivery event. A line filled from one location becomes **Exact match** / `EXACT`; from several, **Sourced multi-location** / `MULTI_SOURCE`; not filled, it stays **Pending** with `SPAIQtyShortfall` set, for the Adjudicator.
+The cascade is tier 1 **Meridian's** home DC → tier 2 other DCs → tier 3 retail stores → tier 4 inbound supply arriving before the first delivery event.
+
+> **Tier 1 is our home DC, not the site's state.** It is the available Distribution Centre with the lowest `SPAISourcingRank`, which is DC01 Melbourne West. The seeded Kelmore sub-POs are the proof: an NSW site whose 17 tier-1 sub-POs ship from DC01 in Victoria, while the NSW DC (DC02 Erskine Park) is tier 2. `SPAIProjectState` exists for the **interstate-freight flag**: `SPAIInterstateFreight` is true when the sourcing location's state differs from the site's. Corrected 2026-09-25; an earlier draft had tier 1 following the project state. A line filled from one location becomes **Exact match** / `EXACT`; from several, **Sourced multi-location** / `MULTI_SOURCE`; not filled, it stays **Pending** with `SPAIQtyShortfall` set, for the Adjudicator.
 
 ✅ **Verify after building**
 - [ ] `SPAILineSource` rows exist with `SPAISourcePlanType = Indicative` on **every** row
 - [ ] **No `SPAIStockPosition.SPAIQtyAllocated` value changed.** Note one before and after. This is the 04 Change 4 promise
 - [ ] At least one line shows tier 3, a retail store: that is the fallback the demo turns on
-- [ ] Interstate rows carry `SPAIInterstateFreight = true`
+- [ ] Tier 1 rows come from **DC01 Melbourne West** (sourcing rank 1), whatever state the site is in
+- [ ] `SPAIInterstateFreight = true` exactly on rows whose location state differs from `SPAIProjectState`. On a VIC tender, VIC stock is false and the NSW, QLD, SA and WA locations are true
 - [ ] Counters on the Opportunity match the line list; status is **Adjudicating**
 
 ---
@@ -243,7 +247,7 @@ Element 6 is the enforcement step, and 02 §4 calls its two validations "not opt
 | 5 | **Script task or Modify data** "Recalculate totals" | Sum `SPAILineTotal` over the tender's lines into `SPAITotalSell`, and `SPAIGrossMarginPct` from cost and sell. A Read data in aggregation mode plus a Formula also does this |
 | 6 | **Add data** | Object `SPAIDecisionLedger`. `SPAIActor` = current user's name, `SPAIDecisionType` = **Human override**, `SPAIOpportunity` = `OpportunityId`, `SPAIOccurredOn` = current date/time, `SPAIPriorValue` = "Awaiting Gate 1", `SPAINewValue` = "Gate 1 approved", `SPAIComplianceChecks` = "Estimator reviewed every adjudicated line" |
 | 7 | **Modify data** | Object `Opportunity`: `SPAIGate1ApprovedOn` = current date/time and `SPAIGate1ApprovedBy` = current user (both exist, D4 closed), `SPAIAdjudicationStatus` = **Awaiting Gate 2** if `SPAITotalSell` is above the threshold, otherwise **Submitted** |
-| 8 | **Exclusive gateway** | `SPAITotalSell >= ` threshold (§11 D2) → Gate 2 arm, label "Above threshold"; default → "Below threshold" |
+| 8 | **Exclusive gateway** | `SPAITotalSell >= ` the system setting **`SPAIGate2ValueThreshold`** (Money, 5,000,000) → Gate 2 arm, label "Above threshold"; default → "Below threshold". Read the setting with a Read data on `SysSettingsValue` or the platform's system-setting formula token, never a literal in the condition |
 | 9 | **End** | |
 
 **What Gate 1 must show the estimator.** 02b rule 16 is mitigated here: the review list shows the justification **and** the margin side by side, so a margin-driven proposal is visible to a human. Use the Adjudication tab list from 01 §8, filtered to `SPAILineStatus` in (Substitution proposed, Escalated, No match).
@@ -369,13 +373,13 @@ Either way, **do not change the compliance floor to make the gate pass.** That i
 
 ---
 
-## 11. Open decisions (settle before the process that needs them)
+## 11. Decisions, all closed 2026-09-25
 
 | # | Decision | Needed by | Recommendation |
 |---|---|---|---|
-| D1 | **Where does the project's state come from?** `Opportunity` has no state column (verified: `SPAIProjectName`, `SPAITenderCode`, counters, no state). Without it, tier 1 "home DC" cannot be identified and every DC is tier 2 | BP2b | Add `SPAIProjectState` (Text 10) to `Opportunity` and set it on the hero tender to `VIC`. The alternative, reading the head contractor's account address, is indirect and often blank |
-| D2 | **The Gate 2 value threshold** | BP5 element 8, BP6 | A system setting `SPAIGate2ThresholdAud` read by the gateway, so it can be shown and changed without editing a process. Pick a value that puts the hero tender above it, so the demo runs both gates |
-| D3 | **How is a line's quantity split across delivery events?** The programme gives dates, not per-level quantities | BP8 | Even spread across non-prototype events with the remainder on the last, and `PrototypeQty = 1` per prototype event. That is what the script does today. If the real sheet apportions by dwellings per level, replace the split block |
+| ~~D1~~ | **Closed 2026-09-25.** `Opportunity.SPAIProjectState` (Short text) exists and is filled: Corvina VIC, Kelmore NSW, Aldworth VIC. **With a correction:** tier 1 is Meridian's home DC (rank 1), not the site's state; the column drives the interstate-freight flag | — | Already reflected in §2 and in `BP2b_SourcingCascade.cs` |
+| ~~D2~~ | **Closed 2026-09-25.** System setting **`SPAIGate2ValueThreshold`**, type Money, value 5,000,000, All employees, bound into the package as `SysSettings_SPAIGate2ValueThreshold` | — | Corvina at $8.15M clears it and runs both gates; Kelmore at $3.42M stays below, so the "small job needs only Gate 1" path is real. **The setting's definition travels in the package, its value does not:** set it after any fresh install, or the gateway reads 0 and everything goes to Gate 2 |
+| ~~D3~~ | **Closed 2026-09-25, as proposed.** Even spread across non-prototype events, remainder on the last, `PrototypeQty = 1` per prototype event | — | Matches the fictional Corvina order schedule and the seeded Kelmore call-up data, so the demo stays internally consistent. No change to the script |
 | D4 | ~~Do the Gate 1 and Gate 2 date columns exist?~~ **Closed 2026-09-25:** `SPAIGate1ApprovedOn`, `SPAIGate2ApprovedOn`, `SPAIGate1ApprovedBy` and `SPAIGate2ApprovedBy` all exist on `Opportunity`, verified in the parallel session. BP5 and BP6 are not blocked | — | Write the ApprovedBy columns alongside the dates |
 
 ---
