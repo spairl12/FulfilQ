@@ -250,6 +250,15 @@
   "S2": "d21e9ef4-c064-4012-b286-fa1a8171da44",
   "E5": false
 }
++ MetaData.Schema.D2 {
+  "UId": "880bb4dc-313f-4503-8d47-34c7e82f2ed6",
+  "A2": "SPAIProjectState",
+  "A3": "dd5d9e4c-ac06-469e-81d9-1678485079e0",
+  "A4": "dd5d9e4c-ac06-469e-81d9-1678485079e0",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "S2": "325a73b8-0f47-44a0-8412-7606f78003ac",
+  "E5": false
+}
 ~ MetaData.Schema.D2 [
   "ae0e45ca-c495-4fe7-a39d-3ab7278e1617",
   "790563cf-fd14-4d5d-a5fd-b6eddb10d6d3",
@@ -320,7 +329,8 @@
   "6f5b7a19-4c3c-496a-b94b-bb30669df577",
   "17495497-d171-4f47-bbc2-94e3e8ae0f34",
   "130d0347-33f7-4a91-b555-8f98dd1cee1a",
-  "3a296cf2-1dab-4cb0-b89c-08576be1665d"
+  "3a296cf2-1dab-4cb0-b89c-08576be1665d",
+  "880bb4dc-313f-4503-8d47-34c7e82f2ed6"
 ]
 = MetaData.Schema.D20.FA1 false
 = MetaData.Schema.D20.FA2 false

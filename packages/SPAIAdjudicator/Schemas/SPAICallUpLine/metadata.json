@@ -117,6 +117,36 @@
   "c3954645-37e5-4536-a75c-77718e1632ee",
   "68ad7c86-75e6-4425-ae3e-3b10fe9d5e9b"
 ]
++ MetaData.Schema.D6 {
+  "UId": "93a9e579-4306-ee14-ffc9-0bf7831e49dc",
+  "A2": "SPAIScheduleLine_SPAIDeliveryEvent",
+  "A3": "9bca8aec-af88-4259-ba75-8241b57cee10",
+  "A4": "9bca8aec-af88-4259-ba75-8241b57cee10",
+  "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+  "F1": false,
+  "F2": true,
+  "F4": [
+    {
+      "UId": "73729e9b-c699-2f41-befb-555490697d7b",
+      "A2": "IndexColumn_SPAIDeliveryEvent",
+      "A3": "9bca8aec-af88-4259-ba75-8241b57cee10",
+      "A4": "9bca8aec-af88-4259-ba75-8241b57cee10",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "G1": "ac922e9c-808f-4468-8b62-8302053a56ed"
+    },
+    {
+      "UId": "57a07d08-1b7d-69fa-fe0e-449946b18224",
+      "A2": "IndexColumn_SPAIScheduleLine",
+      "A3": "9bca8aec-af88-4259-ba75-8241b57cee10",
+      "A4": "9bca8aec-af88-4259-ba75-8241b57cee10",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "G1": "b6a994bc-e6e1-4dbc-b21e-edecb1633d13"
+    }
+  ]
+}
+~ MetaData.Schema.D6 [
+  "93a9e579-4306-ee14-ffc9-0bf7831e49dc"
+]
 = MetaData.Schema.D20.A2 "SPAICallUpLineEvents"
 + MetaData.Schema.D20.FA1 false
 + MetaData.Schema.D20.FA2 false

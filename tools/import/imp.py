@@ -164,7 +164,8 @@ def s_tenders():
             "SPAITenderCode": T(r["TenderCode"]), "Account": L(a), "Owner": L(SUPERVISOR_CONTACT),
             "Stage": L(STAGE.get(r["AdjudicationStatus"], STAGE["Not started"])), "Amount": M(r["EstimatedValue"]),
             "SPAIDwellingCount": I(r["DwellingCount"]), "SPAITenderCloseOn": D(r["TenderCloseOn"]),
-            "SPAIScheduleReceivedOn": D(r["ScheduleReceivedOn"]), "SPAIAdjudicationStatus": L(ast[r["AdjudicationStatus"]])}))
+            "SPAIScheduleReceivedOn": D(r["ScheduleReceivedOn"]), "SPAIAdjudicationStatus": L(ast[r["AdjudicationStatus"]]),
+            "SPAIProjectState": T(r["Suburb"].rsplit(" ", 1)[-1])}))  # site state, e.g. "Docklands VIC" -> VIC
     insert_rows("Opportunity", recs, "07 tenders")
 
 OPP_ROLE = {"Builder contact": "5a1c0005-0000-4000-8000-000000000001", "Specifier": "5a1c0005-0000-4000-8000-000000000002",

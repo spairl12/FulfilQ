@@ -17,6 +17,7 @@
 			<Item Name="Columns.SPAILineCount.Caption" Value="Lines" />
 			<Item Name="Columns.SPAIMultiSourceCount.Caption" Value="Multi-source" />
 			<Item Name="Columns.SPAIProjectName.Caption" Value="Project name" />
+			<Item Name="Columns.SPAIProjectState.Caption" Value="Project state" />
 			<Item Name="Columns.SPAIScheduleReceivedOn.Caption" Value="Schedule received on" />
 			<Item Name="Columns.SPAISubstitutionCount.Caption" Value="Substituted" />
 			<Item Name="Columns.SPAITenderCloseOn.Caption" Value="Tender close on" />
