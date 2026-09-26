@@ -9,12 +9,14 @@
 //   SkippedCount     Integer            out  lines already present (re-run safety)
 //   RunSummary       Text               out  the sentence the agent reads back in chat
 //
-// Usings (process designer > METHODS > Usings): add exactly ONE entry, System.Linq.
+// Usings (process designer > METHODS > Usings): ADD NOTHING. Leave the list empty.
 // Verified on 189575-crm-bundle 2026-09-26: the generated process schema already carries
 // System, System.Collections.Generic, Newtonsoft.Json.Linq, Terrasoft.Core and
-// Terrasoft.Core.Entities. Adding those again broke the compile at the generated file's
-// line 11 with CS1002/CS1022/CS0116 -- errors that point nowhere near the script body.
-// Only System.Linq is missing, for OfType and Select.
+// Terrasoft.Core.Entities, and this script uses no other namespace. Any entry in the
+// Usings grid on that instance broke the compile at the generated file's line 11 with
+// CS1002/CS1022/CS0116 -- errors that point at the namespace, nowhere near the script.
+// The two LINQ calls this script once used were rewritten as plain loops so that
+// System.Linq is not needed either.
 //
 // Columns written were verified against the live SPAIScheduleLine schema (clio, 2026-09-20).
 // SPAIDisplayRef is not written here: SPAIItemIdentityEntityEventListener derives it on save.
@@ -43,8 +45,10 @@ Guid pendingStatusId = loadByName("SPAILineStatus")["Pending"];
 var existingEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
 string lineNumberColumn = existingEsq.AddColumn("SPAILineNumber").Name;
 existingEsq.Filters.Add(existingEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
-var existing = new HashSet<int>(existingEsq.GetEntityCollection(uc)
-	.Select(e => e.GetTypedColumnValue<int>(lineNumberColumn)));
+var existing = new HashSet<int>();
+foreach (Entity existingLine in existingEsq.GetEntityCollection(uc)) {
+	existing.Add(existingLine.GetTypedColumnValue<int>(lineNumberColumn));
+}
 
 Func<JToken, string> text = token => token == null || token.Type == JTokenType.Null ? string.Empty : ((string)token).Trim();
 Func<JToken, int> integer = token => {
@@ -55,7 +59,11 @@ Func<JToken, int> integer = token => {
 EntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIScheduleLine");
 int inserted = 0;
 int skipped = 0;
-foreach (JObject line in lines.OfType<JObject>()) {
+foreach (JToken lineToken in lines) {
+	JObject line = lineToken as JObject;
+	if (line == null) {
+		continue;
+	}
 	int lineNumber = integer(line["lineNumber"]);
 	if (existing.Contains(lineNumber)) {
 		skipped++;
