@@ -2,10 +2,12 @@
 // Paste the body below into the Script task. It is not a class file.
 //
 // Process parameters (create them on BP1 before pasting):
-//   OpportunityId   Unique identifier  in   the Opportunity read in step 1
-//   LinesJson       Unlimited text     in   the Schedule Extractor output (whole envelope, or the lines array)
-//   InsertedCount   Integer            out  rows inserted this run
-//   SkippedCount    Integer            out  lines already present (re-run safety)
+//   OpportunityId    Unique identifier  in   the Opportunity the schedule belongs to
+//   LinesJson        Unlimited text     in   the Schedule Extractor output (whole envelope, or the lines array)
+//   DocumentRevision Text               in   the schedule's revision marker, for the summary sentence
+//   InsertedCount    Integer            out  rows inserted this run
+//   SkippedCount     Integer            out  lines already present (re-run safety)
+//   RunSummary       Text               out  the sentence the agent reads back in chat
 //
 // Usings (process designer > Methods / Usings; the label is "verify in UI"):
 //   System, System.Collections.Generic, System.Linq, Newtonsoft.Json.Linq, Terrasoft.Core,
@@ -104,4 +106,7 @@ foreach (JObject line in lines.OfType<JObject>()) {
 }
 Set("InsertedCount", inserted);
 Set("SkippedCount", skipped);
+Set("RunSummary", string.Format(
+	"Inserted {0} schedule lines for revision {1}. {2} already present.",
+	inserted, Get<string>("DocumentRevision") ?? "(unstated)", skipped));
 return true;
