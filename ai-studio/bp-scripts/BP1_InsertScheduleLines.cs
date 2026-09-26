@@ -10,7 +10,10 @@
 //   DocumentRevision   Text               in   the schedule's revision marker, for the summary sentence
 //   InsertedCount      Integer            out  rows inserted this run
 //   SkippedCount       Integer            out  lines already present (re-run safety)
+//   CreateIfMissing    Boolean            in   default false. True only after a person has
+//                                             confirmed the tender really is new
 //   ResolvedOpportunity Text              out  the title of the opportunity actually written to
+//   OpportunityCreated Boolean            out  true when this run created the tender
 //   RunSummary         Text               out  the sentence the agent reads back in chat
 //
 // Usings (process designer > METHODS > Usings): none needed. This script uses only what
@@ -36,6 +39,7 @@ var uc = Get<UserConnection>("UserConnection");
 // TenderReference is matched against the tender code first, then the title. Anything
 // ambiguous or unfound throws with a message the agent can read out and act on.
 Guid opportunityId = Get<Guid>("OpportunityId");
+bool createdOpportunity = false;
 if (opportunityId == Guid.Empty) {
 	string reference = (Get<string>("TenderReference") ?? "").Trim();
 	if (reference.Length == 0) {
@@ -45,6 +49,17 @@ if (opportunityId == Guid.Empty) {
 	if (Guid.TryParse(reference, out parsedId)) {
 		opportunityId = parsedId;
 	} else {
+		// A one-off lookup by Name, used for the stage and status below as well.
+		Func<string, string, Guid> lookupByName = (schemaName, name) => {
+			var nameEsq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);
+			nameEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+			nameEsq.Filters.Add(nameEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Name", name));
+			foreach (Entity hit in nameEsq.GetEntityCollection(uc)) {
+				return hit.PrimaryColumnValue;
+			}
+			return Guid.Empty;
+		};
+
 		var codeEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
 		codeEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
 		string codeTitleColumn = codeEsq.AddColumn("Title").Name;
@@ -58,9 +73,7 @@ if (opportunityId == Guid.Empty) {
 			titleEsq.Filters.Add(titleEsq.CreateFilterWithParameters(FilterComparisonType.Contain, "Title", reference));
 			matches = titleEsq.GetEntityCollection(uc);
 		}
-		if (matches.Count == 0) {
-			throw new Exception("No opportunity matches \"" + reference + "\". Check the tender code or the project name.");
-		}
+
 		if (matches.Count > 1) {
 			var titles = new List<string>();
 			foreach (Entity candidate in matches) {
@@ -68,12 +81,40 @@ if (opportunityId == Guid.Empty) {
 			}
 			throw new Exception("\"" + reference + "\" matches " + matches.Count + " opportunities: " + string.Join("; ", titles) + ". Ask which one is meant.");
 		}
-		foreach (Entity only in matches) {
-			opportunityId = only.PrimaryColumnValue;
-			break;
+
+		if (matches.Count == 1) {
+			foreach (Entity only in matches) {
+				opportunityId = only.PrimaryColumnValue;
+				break;
+			}
+		} else if (!Get<bool>("CreateIfMissing")) {
+			// Default. A typo must not quietly become a second tender, so the caller is sent
+			// back to the person to confirm before anything is created.
+			throw new Exception("No tender matches \"" + reference + "\". Check the tender code or project name. If this really is a new tender, confirm with the person and call again with CreateIfMissing set true.");
+		} else {
+			Guid stageId = lookupByName("OpportunityStage", "Qualification");
+			if (stageId == Guid.Empty) {
+				throw new Exception("Cannot create the tender: the Qualification opportunity stage was not found.");
+			}
+			var newOpp = uc.EntitySchemaManager.GetInstanceByName("Opportunity").CreateEntity(uc);
+			newOpp.SetDefColumnValues();
+			newOpp.SetColumnValue("Title", reference);
+			newOpp.SetColumnValue("StageId", stageId);
+			newOpp.SetColumnValue("OwnerId", uc.CurrentUser.ContactId);
+			if (reference.StartsWith("TND-", StringComparison.OrdinalIgnoreCase)) {
+				newOpp.SetColumnValue("SPAITenderCode", reference);
+			}
+			Guid notStartedId = lookupByName("SPAIAdjudicationStatus", "Not started");
+			if (notStartedId != Guid.Empty) {
+				newOpp.SetColumnValue("SPAIAdjudicationStatusId", notStartedId);
+			}
+			newOpp.Save(false);
+			opportunityId = newOpp.PrimaryColumnValue;
+			createdOpportunity = true;
 		}
 	}
 }
+Set("OpportunityCreated", createdOpportunity);
 
 // Read the title back whichever way we got here, so the summary names the tender.
 string opportunityTitle = "";
@@ -184,6 +225,7 @@ foreach (JToken lineToken in lines) {
 Set("InsertedCount", inserted);
 Set("SkippedCount", skipped);
 Set("RunSummary", string.Format(
-	"Inserted {0} schedule lines for {1}, revision {2}. {3} already present.",
-	inserted, opportunityTitle, Get<string>("DocumentRevision") ?? "(unstated)", skipped));
+	"Inserted {0} schedule lines for {1}{2}, revision {3}. {4} already present.",
+	inserted, opportunityTitle, createdOpportunity ? " (created by this run)" : "",
+	Get<string>("DocumentRevision") ?? "(unstated)", skipped));
 return true;
