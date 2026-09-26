@@ -9,9 +9,12 @@
 //   SkippedCount     Integer            out  lines already present (re-run safety)
 //   RunSummary       Text               out  the sentence the agent reads back in chat
 //
-// Usings (process designer > Methods / Usings; the label is "verify in UI"):
-//   System, System.Collections.Generic, System.Linq, Newtonsoft.Json.Linq, Terrasoft.Core,
-//   Terrasoft.Core.Entities
+// Usings (process designer > METHODS > Usings): add exactly ONE entry, System.Linq.
+// Verified on 189575-crm-bundle 2026-09-26: the generated process schema already carries
+// System, System.Collections.Generic, Newtonsoft.Json.Linq, Terrasoft.Core and
+// Terrasoft.Core.Entities. Adding those again broke the compile at the generated file's
+// line 11 with CS1002/CS1022/CS0116 -- errors that point nowhere near the script body.
+// Only System.Linq is missing, for OfType and Select.
 //
 // Columns written were verified against the live SPAIScheduleLine schema (clio, 2026-09-20).
 // SPAIDisplayRef is not written here: SPAIItemIdentityEntityEventListener derives it on save.
