@@ -9,14 +9,17 @@
 //   SkippedCount     Integer            out  lines already present (re-run safety)
 //   RunSummary       Text               out  the sentence the agent reads back in chat
 //
-// Usings (process designer > METHODS > Usings): ADD NOTHING. Leave the list empty.
-// Verified on 189575-crm-bundle 2026-09-26: the generated process schema already carries
-// System, System.Collections.Generic, Newtonsoft.Json.Linq, Terrasoft.Core and
-// Terrasoft.Core.Entities, and this script uses no other namespace. Any entry in the
-// Usings grid on that instance broke the compile at the generated file's line 11 with
-// CS1002/CS1022/CS0116 -- errors that point at the namespace, nowhere near the script.
-// The two LINQ calls this script once used were rewritten as plain loops so that
-// System.Linq is not needed either.
+// Usings (process designer > METHODS > Usings): none needed. This script uses only what
+// the generated process schema already carries.
+//
+// Add each namespace as its OWN entry, one at a time. Pasting several as a single
+// comma-separated value generates "using A, B, C;" and fails the compile at the generated
+// file's line 11 with CS1002/CS1022/CS0116 -- errors that point at the namespace and give
+// no hint that a Usings row is at fault. The bad row survives until it is deleted, so
+// later entries look guilty. Verified on 189575-crm-bundle, 2026-09-26.
+//
+// System.Linq IS available through the grid; the LINQ this script once used was rewritten
+// as plain loops while that was in doubt, and left that way because it costs nothing.
 //
 // Columns written were verified against the live SPAIScheduleLine schema (clio, 2026-09-20).
 // SPAIDisplayRef is not written here: SPAIItemIdentityEntityEventListener derives it on save.
