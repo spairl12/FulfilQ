@@ -46,6 +46,7 @@ depends on it not having.
 |---|---|
 | F13 | Both `McpTool` rows are enabled. `bp2`'s `Description` still reads "Disabled 2026-09-26: placeholder process, no declared parameters…" — the model reads `Description` as tool documentation, so this is actively misleading it |
 | F14 | `Description` on `bp1` is the literal string `"BP1"`. Every input and output property is `ProcessSchemaParameter1/2`, described `"Parameter 1"` / `"Parameter 2"`. Discovery works, but the model cannot know what either tool does or what to send |
+| F16 | **Delegated access needs an out-of-band authorisation before any chat run.** On the first call the tool result carries an authorization requirement and a consent URL. The agent correctly refuses to relay a link that arrived as tool data, so the call fails rather than prompting. Authorise from the AI Studio Integrations UI, then start a fresh session. **Authorise before recording the demo**, or a cold session shows a failed tool call |
 | F15 | A single tool that ran intake **through** human approval would block the MCP call until a person answered. The two tools must split at the approval boundary — which is also what gives the demo its HITL beat in one conversation |
 
 ## 4. The two-tool contract
