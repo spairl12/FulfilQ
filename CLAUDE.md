@@ -4,7 +4,7 @@ Instance `https://189575-crm-bundle.creatio.com/` · clio environment `meridian`
 
 ## Start of every session
 
-1. Read `02d_Session_Status_Report.md` — the current handoff: what is built, what is on disk only, what is next.
+1. Read `02f_Handover_Brief.md` — the current handoff: architecture, what is built live, where the build is stuck, what is next. (`02d_Session_Status_Report.md` is the older handoff; still right about the data model and D1–D5.)
 2. Read `../graphify-out/GRAPH_REPORT.md` — a one-page map of the whole project (plans, specs, knowledge sources, code), grouped into communities.
 3. Do **not** bulk-read the numbered plan docs (`00_`–`03_`) up front. Find the specific section you need first (below), then open only that.
 
