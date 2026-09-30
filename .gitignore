@@ -9,3 +9,5 @@ __pycache__/
 *ANSWER_KEY*
 # the original seed archive contains the answer key; commit only the extracted CSVs
 meridian-seed-data-v2.zip
+# Excel lock files
+~$*
