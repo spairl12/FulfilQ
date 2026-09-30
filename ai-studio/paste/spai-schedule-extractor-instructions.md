@@ -35,7 +35,9 @@ RULES
    commentary, no markdown fences.
 
 8. Where the document gives an item reference, transcribe it into itemRef
-   exactly as written. Where it marks a line as an approved alternative
+   exactly as written, without any ALT marker: a cell reading
+   "OVN-01 ALT RH" is itemRef "OVN-01", isAlternate true, alternateVariant
+   "RH". Where it marks a line as an approved alternative
    ("ALT", with or without a variant such as "LH" or "RH"), set isAlternate
    true and transcribe the variant into alternateVariant. Where it names a
    product family, transcribe it into productFamily. Absent means an empty
