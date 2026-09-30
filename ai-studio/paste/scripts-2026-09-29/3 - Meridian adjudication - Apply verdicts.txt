@@ -1,0 +1,319 @@
+var uc = Get<UserConnection>("UserConnection");
+Guid opportunityId = Get<Guid>("OpportunityId");
+// The skill is told to return only the JSON object, but a model reply can arrive wrapped in a
+// ```json fence or a sentence. Take the outermost {...} (or [...]) and parse that. If nothing parses,
+// verdicts stays empty and every pending line is escalated below with a ledger row saying why:
+// a bad reply must never crash the process and leave lines silently Pending.
+string rawVerdicts = (Get<string>("VerdictsJson") ?? string.Empty).Trim();
+JArray verdicts = new JArray();
+string parseProblem = null;
+int objStart = rawVerdicts.IndexOf('{'), objEnd = rawVerdicts.LastIndexOf('}');
+int arrStart = rawVerdicts.IndexOf('['), arrEnd = rawVerdicts.LastIndexOf(']');
+string candidateJson = objStart >= 0 && objEnd > objStart && (arrStart < 0 || objStart < arrStart)
+	? rawVerdicts.Substring(objStart, objEnd - objStart + 1)
+	: (arrStart >= 0 && arrEnd > arrStart ? rawVerdicts.Substring(arrStart, arrEnd - arrStart + 1) : string.Empty);
+try {
+	JToken parsed = JToken.Parse(candidateJson.Length > 0 ? candidateJson : "null");
+	if (parsed is JObject && parsed["verdicts"] is JArray) {
+		verdicts = (JArray)parsed["verdicts"];
+	} else if (parsed is JArray) {
+		verdicts = (JArray)parsed;
+	} else {
+		parseProblem = "the Adjudicator reply contained no verdicts array";
+	}
+} catch (Exception parseError) {
+	parseProblem = "the Adjudicator reply was not valid JSON (" + parseError.Message + ")";
+}
+// When the call itself failed, say so: the element's own status and error beat a parse message.
+string callStatus = (Get<string>("AdjudicatorStatus") ?? string.Empty).Trim();
+string callError = (Get<string>("AdjudicatorError") ?? string.Empty).Trim();
+if (parseProblem != null && (callError.Length > 0 || callStatus.Length > 0)) {
+	parseProblem = "the Adjudicator call returned no usable verdicts (status: "
+		+ (callStatus.Length > 0 ? callStatus : "not reported")
+		+ (callError.Length > 0 ? "; error: " + (callError.Length > 300 ? callError.Substring(0, 300) : callError) : string.Empty) + ")";
+}
+var candidateCodes = new HashSet<string>(StringComparer.Ordinal);
+foreach (JToken t in JArray.Parse(Get<string>("CandidateProductCodesJson") ?? "[]")) {
+	candidateCodes.Add((string)t);
+}
+var lineContext = new Dictionary<int, JObject>();
+foreach (JToken t in JArray.Parse(Get<string>("UnresolvedLinesJson") ?? "[]")) {
+	JObject l = t as JObject;
+	if (l != null && l["lineNumber"] != null) {
+		lineContext[(int)l["lineNumber"]] = l;
+	}
+}
+
+// ---- Lookups ----
+Func<string, string, Dictionary<string, Guid>> loadBy = (schemaName, column) => {
+	var esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);
+	esq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	string col = esq.AddColumn(column).Name;
+	var map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);
+	foreach (Entity e in esq.GetEntityCollection(uc)) {
+		map[(e.GetTypedColumnValue<string>(col) ?? string.Empty).Trim()] = e.PrimaryColumnValue;
+	}
+	return map;
+};
+var lineStatus = loadBy("SPAILineStatus", "Name");
+var decisionType = loadBy("SPAIDecisionType", "Name");
+var reasonEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIReasonCode");
+reasonEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string reasonCodeCol = reasonEsq.AddColumn("SPAICode").Name;
+string reasonHumanCol = reasonEsq.AddColumn("SPAIRequiresHuman").Name;
+var reasons = new Dictionary<string, Tuple<Guid, bool>>(StringComparer.Ordinal);
+foreach (Entity e in reasonEsq.GetEntityCollection(uc)) {
+	reasons[(e.GetTypedColumnValue<string>(reasonCodeCol) ?? string.Empty).Trim()] =
+		Tuple.Create(e.PrimaryColumnValue, e.GetTypedColumnValue<bool>(reasonHumanCol));
+}
+var escalationCodes = new HashSet<string> { "AMBIGUOUS_SPEC", "DIM_MISMATCH", "COMPLIANCE_FAIL", "NO_EQUIVALENT" };
+
+// ---- Pending lines of this opportunity that this run sent to the model, keyed by line number ----
+var lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+lineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string numCol = lineEsq.AddColumn("SPAILineNumber").Name;
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAILineStatus.Name", "Pending"));
+var pendingIds = new Dictionary<int, Guid>();
+foreach (Entity e in lineEsq.GetEntityCollection(uc)) {
+	int pendingNumber = e.GetTypedColumnValue<int>(numCol);
+	// Only the lines THIS run claimed and sent; another run may be assessing the rest.
+	if (lineContext.ContainsKey(pendingNumber)) {
+		pendingIds[pendingNumber] = e.PrimaryColumnValue;
+	}
+}
+
+EntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIScheduleLine");
+EntitySchema productSchema = uc.EntitySchemaManager.GetInstanceByName("Product");
+EntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIDecisionLedger");
+Func<string, int, string> cut = (v, max) => v == null ? string.Empty : (v.Length <= max ? v : v.Substring(0, max));
+Func<Guid, object> orNull = g => g == Guid.Empty ? null : (object)g;
+
+Action<Guid, string, string, Guid, Guid, double, string, string, string, int> writeLedger =
+	(lineId, actor, type, productId, reasonId, confidence, checks, prior, next, sequence) => {
+		Entity row = ledgerSchema.CreateEntity(uc);
+		row.SetDefColumnValues();
+		row.SetColumnValue("SPAIOpportunityId", opportunityId);
+		row.SetColumnValue("SPAIScheduleLineId", orNull(lineId));
+		row.SetColumnValue("SPAIDecisionTypeId", decisionType[type]);
+		row.SetColumnValue("SPAIActor", cut(actor, 250));
+		row.SetColumnValue("SPAIProposedProductId", orNull(productId));
+		row.SetColumnValue("SPAIReasonCodeId", orNull(reasonId));
+		row.SetColumnValue("SPAIConfidence", confidence);
+		row.SetColumnValue("SPAIComplianceChecks", checks);
+		row.SetColumnValue("SPAIPriorValue", cut(prior, 250));
+		row.SetColumnValue("SPAINewValue", cut(next, 250));
+		row.SetColumnValue("SPAISequence", sequence);
+		row.SetColumnValue("SPAIOccurredOn", uc.CurrentUser.GetCurrentDateTime());
+		row.Save(false);
+	};
+
+int resolved = 0, escalated = 0, overrides = 0;
+var seen = new HashSet<int>();
+foreach (JToken verdictToken in verdicts) {
+	JObject v = verdictToken as JObject;
+	if (v == null) {
+		continue;
+	}
+	int n = v["lineNumber"] == null ? 0 : (int)v["lineNumber"];
+	Guid lineId;
+	if (!pendingIds.TryGetValue(n, out lineId) || !seen.Add(n)) {
+		continue;  // not a pending line of this tender, or a duplicate verdict: never written
+	}
+	string modelCode = ((string)v["reasonCode"] ?? string.Empty).Trim();
+	string code = modelCode;
+	string selected = v["selectedProductCode"] == null || v["selectedProductCode"].Type == JTokenType.Null
+		? string.Empty : ((string)v["selectedProductCode"]).Trim();
+	double confidence = 0d;
+	JToken confidenceToken = v["confidence"];
+	if (confidenceToken != null && (confidenceToken.Type == JTokenType.Float || confidenceToken.Type == JTokenType.Integer)) {
+		confidence = (double)confidenceToken;
+	} else if (confidenceToken != null && confidenceToken.Type == JTokenType.String) {
+		double.TryParse((string)confidenceToken, System.Globalization.NumberStyles.Float,
+			System.Globalization.CultureInfo.InvariantCulture, out confidence);
+	}
+	bool modelHuman = v["requiresHuman"] != null && v["requiresHuman"].Type == JTokenType.Boolean && (bool)v["requiresHuman"];
+	var checks = new List<string>();
+	string overrideReason = null;
+
+	if (!reasons.ContainsKey(code) || code == "EXACT" || code == "MULTI_SOURCE") {
+		overrideReason = "Unknown or non-adjudicator reason code '" + modelCode + "'";
+		code = "NO_EQUIVALENT";
+	}
+	if (escalationCodes.Contains(code) && selected.Length > 0) {
+		checks.Add("escalation code carries no product: '" + selected + "' discarded");
+		selected = string.Empty;
+	}
+
+	Entity product = null;
+	if (selected.Length > 0) {
+		bool inSet = candidateCodes.Contains(selected);
+		checks.Add("closed set: " + (inSet ? "PASS" : "FAIL"));
+		product = productSchema.CreateEntity(uc);
+		bool exists = inSet && product.FetchFromDB("Code", selected);
+		checks.Add("product exists: " + (exists ? "PASS" : "FAIL"));
+		if (!exists) {
+			overrideReason = "Returned code '" + selected + "' is not in the supplied candidate set or not a Product (closed-set validation)";
+			code = "NO_EQUIVALENT";
+			product = null;
+		}
+	}
+
+	JObject ctx;
+	lineContext.TryGetValue(n, out ctx);
+	if (product != null && ctx != null) {
+		// Floor re-verification from the database record, not from the model's claims.
+		JObject regime = (JObject)ctx["regimes"];
+		JToken spec = ctx["specifiedProduct"];
+		Func<string, decimal> dec = col => product.GetTypedColumnValue<decimal>(col);
+		decimal? specWels = spec != null && spec.Type == JTokenType.Object && spec["welsRating"].Type != JTokenType.Null ? (decimal?)spec["welsRating"] : null;
+		decimal? specEnergy = spec != null && spec.Type == JTokenType.Object && spec["energyStarRating"].Type != JTokenType.Null ? (decimal?)spec["energyStarRating"] : null;
+		// Each check records what was found, and "n/a" when the regime does not apply (same wording as BP2a).
+		string familyText = ctx["productFamily"] == null || ((string)ctx["productFamily"]).Length == 0
+			? "this product family" : (string)ctx["productFamily"];
+		var failed = new List<string>();
+		Action<string, bool, string, string> check = (rule, passed, found, failure) => {
+			checks.Add(rule + ": " + (passed ? "PASS" : "FAIL") + " (" + (passed ? found : failure) + ")");
+			if (!passed) {
+				failed.Add(rule + " " + failure);
+			}
+		};
+		Action<string, string> notApplicable = (rule, why) => checks.Add(rule + ": n/a (" + why + ")");
+		Func<string, string> text = col => (product.GetTypedColumnValue<string>(col) ?? string.Empty).Trim();
+
+		var lifecycleEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Product");
+		string lifecycleCol = lifecycleEsq.AddColumn("SPAILifecycleStatus.Name").Name;
+		Entity lifecycleRow = lifecycleEsq.GetEntity(uc, product.PrimaryColumnValue);
+		string lifecycle = lifecycleRow == null ? string.Empty : (lifecycleRow.GetTypedColumnValue<string>(lifecycleCol) ?? string.Empty).Trim();
+		check("lifecycle", lifecycle == "Current", "Current", "is " + (lifecycle.Length > 0 ? lifecycle : "not set") + ", must be Current");
+		check("project approval", product.GetTypedColumnValue<bool>("SPAIProjectApproved"), "approved", "not given");
+		int pw = product.GetTypedColumnValue<int>("SPAICutoutWidthMm");
+		int ph = product.GetTypedColumnValue<int>("SPAICutoutHeightMm");
+		int pdp = product.GetTypedColumnValue<int>("SPAICutoutDepthMm");
+		int w = (int)ctx["cutoutW"], h = (int)ctx["cutoutH"], d = (int)ctx["cutoutD"];
+		if ((bool)regime["cutout"]) {
+			string productCut = string.Format("{0}x{1}x{2}", pw, ph, pdp);
+			check("cut-out", pw == w && ph == h && pdp == d, productCut + " matches specified",
+				string.Format("{0} does not match specified {1}x{2}x{3}", productCut, w, h, d));
+		} else {
+			notApplicable("cut-out", familyText + " has no cut-out rule");
+		}
+		if ((bool)regime["wels"]) {
+			string reg = text("SPAIWelsRegistrationNo");
+			decimal rating = dec("SPAIWELSRating");
+			bool ratingOk = !specWels.HasValue || rating >= specWels.Value;
+			check("WELS", reg.Length > 0 && ratingOk,
+				"registered " + reg + (specWels.HasValue ? string.Format(", rating {0} >= specified {1}", rating, specWels.Value) : string.Empty),
+				reg.Length == 0 ? "not registered" : string.Format("rating {0} below specified {1}", rating, specWels.GetValueOrDefault()));
+		} else {
+			notApplicable("WELS", familyText + " is not WELS-regulated");
+		}
+		if ((bool)regime["gems"]) {
+			string reg = text("SPAIGemsRegistrationNo");
+			decimal rating = dec("SPAIEnergyStarRating");
+			bool ratingOk = !specEnergy.HasValue || rating >= specEnergy.Value;
+			check("GEMS", reg.Length > 0 && ratingOk,
+				"registered " + reg + (specEnergy.HasValue ? string.Format(", energy rating {0} >= specified {1}", rating, specEnergy.Value) : string.Empty),
+				reg.Length == 0 ? "not registered" : string.Format("energy rating {0} below specified {1}", rating, specEnergy.GetValueOrDefault()));
+		} else {
+			notApplicable("GEMS", familyText + " is not GEMS-regulated");
+		}
+		if ((bool)regime["waterMark"]) {
+			string cert = text("SPAIWaterMarkCertNo");
+			check("WaterMark", cert.Length > 0, "certificate " + cert, "certificate missing");
+		} else {
+			notApplicable("WaterMark", familyText + " does not need WaterMark");
+		}
+		if (failed.Count > 0) {
+			overrideReason = "Compliance floor failed on re-verification: " + string.Join("; ", failed);
+			code = "COMPLIANCE_FAIL";
+			product = null;
+		}
+	}
+
+	var reason = reasons[code];
+	bool finalHuman = modelHuman || reason.Item2 || overrideReason != null;
+	checks.Add(string.Format("requiresHuman: model={0} lookup={1} override={2} final={3}",
+		modelHuman, reason.Item2, overrideReason != null, finalHuman));
+	string status = code == "NO_EQUIVALENT" ? "No match" : (finalHuman ? "Escalated" : "Substitution proposed");
+
+	Entity line = lineSchema.CreateEntity(uc);
+	line.FetchFromDB(lineId);
+	string prior = "Pending";
+	line.SetColumnValue("SPAIReasonCodeId", reason.Item1);
+	line.SetColumnValue("SPAIConfidence", confidence);
+	line.SetColumnValue("SPAIAdjudicationNote", (string)v["justification"] ?? string.Empty);
+	line.SetColumnValue("SPAIComplianceNotes", string.Join(" ", new[] { (string)v["complianceNotes"] ?? string.Empty,
+		overrideReason == null ? string.Empty : "Process override: " + overrideReason + "." }).Trim());
+	line.SetColumnValue("SPAIResolvedBy", "Adjudicator");
+	line.SetColumnValue("SPAILineStatusId", lineStatus[status]);
+	if (product != null) {
+		decimal sell = product.GetTypedColumnValue<decimal>("SPAITradeSellPrice");
+		decimal cost = product.GetTypedColumnValue<decimal>("SPAIWholesaleCost");
+		int qty = line.GetTypedColumnValue<int>("SPAIQuantity");
+		line.SetColumnValue("SPAIMatchedProductId", product.PrimaryColumnValue);
+		line.SetColumnValue("SPAIUnitCost", cost);
+		line.SetColumnValue("SPAIUnitSell", sell);
+		line.SetColumnValue("SPAILineTotal", sell * qty);
+		line.SetColumnValue("SPAILineMarginPct", sell == 0m ? 0m : Math.Round((sell - cost) / sell * 100m, 1));
+	}
+	line.Save(false);
+
+	Guid productId = product == null ? Guid.Empty : product.PrimaryColumnValue;
+	string next = status + " | " + code + (product == null ? string.Empty : " | " + selected);
+	Guid modelReasonId = reasons.ContainsKey(modelCode) ? reasons[modelCode].Item1 : Guid.Empty;
+	writeLedger(lineId, "SPAI Adjudicator (Creatio.ai skill)", "AI adjudication",
+		overrideReason == null ? productId : Guid.Empty, overrideReason == null ? reason.Item1 : modelReasonId, confidence,
+		string.Join("; ", checks), prior,
+		overrideReason == null ? next : "Model proposed " + modelCode + (selected.Length > 0 ? " | " + selected : string.Empty), n);
+	if (overrideReason != null) {
+		overrides++;
+		writeLedger(lineId, "BP3 SPAIAdjudication", "Compliance rejection", Guid.Empty, reason.Item1, confidence,
+			overrideReason + ". " + string.Join("; ", checks), "Model proposed " + modelCode, next, n);
+	}
+	if (finalHuman) {
+		escalated++;
+	} else if (product != null) {
+		resolved++;
+	}
+}
+
+// Pending lines the model returned no verdict for: escalate, never leave silently pending.
+foreach (var kv in pendingIds) {
+	if (seen.Contains(kv.Key)) {
+		continue;
+	}
+	Entity line = lineSchema.CreateEntity(uc);
+	line.FetchFromDB(kv.Value);
+	line.SetColumnValue("SPAILineStatusId", lineStatus["Escalated"]);
+	line.SetColumnValue("SPAIResolvedBy", "Adjudicator");
+	string missing = parseProblem != null ? parseProblem : "the Adjudicator returned no verdict for this line";
+	line.SetColumnValue("SPAIComplianceNotes", "Process override: " + missing + ".");
+	line.Save(false);
+	writeLedger(kv.Value, "BP3 SPAIAdjudication", "Compliance rejection", Guid.Empty, Guid.Empty, 0d,
+		"No usable verdict for line " + kv.Key + " (" + missing + "); escalated to Gate 1.", "Pending", "Escalated", kv.Key);
+	escalated++;
+	overrides++;
+}
+
+// The Opportunity: tender-wide totals (so a re-run reports the whole tender), then Awaiting Gate 1.
+Func<string, int> countByStatus = statusName => {
+	var countEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+	countEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	countEsq.Filters.Add(countEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+	countEsq.Filters.Add(countEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAILineStatus.Name", statusName));
+	return countEsq.GetEntityCollection(uc).Count;
+};
+Entity opportunity = uc.EntitySchemaManager.GetInstanceByName("Opportunity").CreateEntity(uc);
+if (opportunity.FetchFromDB(opportunityId)) {
+	// A real count: the extraction in chat (1) plus every adjudication call that actually ran.
+	opportunity.SetColumnValue("SPAIAiCallCount", Math.Max(1, opportunity.GetTypedColumnValue<int>("SPAIAiCallCount")) + 1);
+	opportunity.SetColumnValue("SPAISubstitutionCount", countByStatus("Substitution proposed"));
+	opportunity.SetColumnValue("SPAIEscalationCount", countByStatus("Escalated") + countByStatus("No match"));
+	opportunity.SetColumnValue("SPAIAdjudicationStatusId", loadBy("SPAIAdjudicationStatus", "Name")["Awaiting Gate 1"]);
+	opportunity.Save(false);
+}
+Set("ResolvedCount", resolved);
+Set("EscalatedCount", escalated);
+Set("OverrideCount", overrides);
+return true;

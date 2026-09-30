@@ -1,0 +1,213 @@
+var uc = Get<UserConnection>("UserConnection");
+Guid opportunityId = Get<Guid>("OpportunityId");
+string intake = (Get<string>("RunSummary") ?? string.Empty).Trim();
+if (opportunityId == Guid.Empty) {
+	return true;
+}
+Func<string, int, string> cut = (s, n) => {
+	s = (s ?? string.Empty).Trim();
+	return s.Length > n ? s.Substring(0, n).TrimEnd() + "..." : s;
+};
+Func<string, string> firstSentence = s => {
+	s = (s ?? string.Empty).Trim();
+	int end = s.IndexOf(". ", StringComparison.Ordinal);
+	return cut(end > 0 ? s.Substring(0, end + 1) : s, 220);
+};
+
+// ---- The tender ----
+var oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+oppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string oTitle = oppEsq.AddColumn("Title").Name;
+string oCode = oppEsq.AddColumn("SPAITenderCode").Name;
+string oStatus = oppEsq.AddColumn("SPAIAdjudicationStatus.Name").Name;
+Entity opp = oppEsq.GetEntity(uc, opportunityId);
+string title = opp == null ? string.Empty : (opp.GetTypedColumnValue<string>(oTitle) ?? string.Empty).Trim();
+string tenderStatus = opp == null ? string.Empty : (opp.GetTypedColumnValue<string>(oStatus) ?? string.Empty).Trim();
+
+// ---- The lines ----
+var lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+lineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string numCol = lineEsq.AddColumn("SPAILineNumber").Name;
+string specCol = lineEsq.AddColumn("SPAISpecifiedText").Name;
+string specBrandCol = lineEsq.AddColumn("SPAISpecifiedBrand").Name;
+string roomCol = lineEsq.AddColumn("SPAIRoomType.Name").Name;
+string tierCol = lineEsq.AddColumn("SPAIUnitTier.Name").Name;
+string qtyCol = lineEsq.AddColumn("SPAIQuantity").Name;
+string statusCol = lineEsq.AddColumn("SPAILineStatus.Name").Name;
+string reasonNameCol = lineEsq.AddColumn("SPAIReasonCode.Name").Name;
+string productCol = lineEsq.AddColumn("SPAIMatchedProduct").Name;
+string productNameCol = lineEsq.AddColumn("SPAIMatchedProduct.Name").Name;
+string productCodeCol = lineEsq.AddColumn("SPAIMatchedProduct.Code").Name;
+string productBrandCol = lineEsq.AddColumn("SPAIMatchedProduct.SPAIBrand.Name").Name;
+string noteCol = lineEsq.AddColumn("SPAIAdjudicationNote").Name;
+string complianceCol = lineEsq.AddColumn("SPAIComplianceNotes").Name;
+string totalCol = lineEsq.AddColumn("SPAILineTotal").Name;
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+var lines = new List<Entity>();
+foreach (Entity l in lineEsq.GetEntityCollection(uc)) {
+	lines.Add(l);
+}
+lines.Sort((x, y) => x.GetTypedColumnValue<int>(numCol).CompareTo(y.GetTypedColumnValue<int>(numCol)));
+
+Func<Entity, string> item = l => {
+	string spec = cut(l.GetTypedColumnValue<string>(specCol), 70);
+	string room = (l.GetTypedColumnValue<string>(roomCol) ?? string.Empty).Trim();
+	string tier = (l.GetTypedColumnValue<string>(tierCol) ?? string.Empty).Trim();
+	string where = room.Length > 0 ? room + (tier.Length > 0 ? ", " + tier : string.Empty) : tier;
+	return spec + " (" + (where.Length > 0 ? where + ", " : string.Empty) + "qty " + l.GetTypedColumnValue<int>(qtyCol)
+		+ ", line " + l.GetTypedColumnValue<int>(numCol) + ")";
+};
+Func<Entity, string> proposed = l => {
+	string name = (l.GetTypedColumnValue<string>(productNameCol) ?? string.Empty).Trim();
+	string brand = (l.GetTypedColumnValue<string>(productBrandCol) ?? string.Empty).Trim();
+	string code = (l.GetTypedColumnValue<string>(productCodeCol) ?? string.Empty).Trim();
+	return name + (brand.Length > 0 && name.IndexOf(brand, StringComparison.OrdinalIgnoreCase) < 0 ? " by " + brand : string.Empty)
+		+ (code.Length > 0 ? " [" + code + "]" : string.Empty);
+};
+
+var ready = new List<Entity>();
+var substitutions = new List<Entity>();
+var suggestedByReason = new Dictionary<string, List<Entity>>();
+var noProductByReason = new Dictionary<string, List<Entity>>();
+var assessing = new List<Entity>();
+var approved = new List<Entity>();
+var excluded = new List<Entity>();
+var readyBrands = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+decimal pricedValue = 0m;
+foreach (Entity l in lines) {
+	string st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();
+	string reason = (l.GetTypedColumnValue<string>(reasonNameCol) ?? string.Empty).Trim();
+	if (reason.Length == 0) reason = "Needs a person to decide";
+	bool hasProduct = l.GetTypedColumnValue<Guid>(productCol + "Id") != Guid.Empty;
+	pricedValue += l.GetTypedColumnValue<decimal>(totalCol);
+	if (st == "Exact match" || st == "Sourced multi-location") {
+		ready.Add(l);
+		string brand = (l.GetTypedColumnValue<string>(productBrandCol) ?? string.Empty).Trim();
+		if (brand.Length > 0) readyBrands[brand] = (readyBrands.ContainsKey(brand) ? readyBrands[brand] : 0) + 1;
+	} else if (st == "Substitution proposed") {
+		substitutions.Add(l);
+	} else if (st == "Substitution approved") {
+		approved.Add(l);
+	} else if (st == "Substitution rejected") {
+		excluded.Add(l);
+	} else if (st == "Pending") {
+		assessing.Add(l);
+	} else {
+		var target = hasProduct ? suggestedByReason : noProductByReason;
+		if (!target.ContainsKey(reason)) target[reason] = new List<Entity>();
+		target[reason].Add(l);
+	}
+}
+
+// Nothing left to assess: the tender is ready for review now, not after the background step.
+if (assessing.Count == 0 && (tenderStatus == "Sourcing" || tenderStatus == "Adjudicating")) {
+	Entity o = uc.EntitySchemaManager.GetInstanceByName("Opportunity").CreateEntity(uc);
+	var statusEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIAdjudicationStatus");
+	statusEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	statusEsq.Filters.Add(statusEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Name", "Awaiting Gate 1"));
+	foreach (Entity s in statusEsq.GetEntityCollection(uc)) {
+		if (o.FetchFromDB(opportunityId)) {
+			o.SetColumnValue("SPAIAdjudicationStatusId", s.PrimaryColumnValue);
+			o.Save(false);
+			tenderStatus = "Awaiting Gate 1";
+		}
+		break;
+	}
+}
+
+var b = new System.Text.StringBuilder();
+b.AppendLine("BRIEFING FOR THE PERSON: tell this as a short story in plain words, by item name. Line numbers are references only.");
+b.AppendLine("Tender: " + title + ". " + lines.Count + " items on the schedule.");
+
+// Ready without AI
+if (ready.Count > 0) {
+	var brandParts = new List<string>();
+	foreach (var kv in readyBrands) brandParts.Add(kv.Value + " " + kv.Key);
+	b.AppendLine();
+	b.AppendLine("READY, matched exactly to our catalogue and sourced from stock, no AI needed (" + ready.Count + " items)"
+		+ (brandParts.Count > 0 ? ": " + string.Join(", ", brandParts) : string.Empty) + ".");
+	int shown = 0;
+	foreach (Entity l in ready) {
+		if (shown == 8) { b.AppendLine("  and " + (ready.Count - 8) + " more."); break; }
+		b.AppendLine("  - " + item(l));
+		shown++;
+	}
+}
+
+// Substitutions
+if (substitutions.Count > 0) {
+	b.AppendLine();
+	b.AppendLine("REPLACEMENTS PROPOSED, a compliant equivalent for an item we cannot supply as specified; each needs the person's approval (" + substitutions.Count + "):");
+	int shown = 0;
+	foreach (Entity l in substitutions) {
+		if (shown == 15) { b.AppendLine("  and " + (substitutions.Count - 15) + " more on the opportunity."); break; }
+		string reason = (l.GetTypedColumnValue<string>(reasonNameCol) ?? string.Empty).Trim();
+		string finish = cut(l.GetTypedColumnValue<string>(complianceCol), 110);
+		b.AppendLine("  - " + item(l) + ": " + (reason.Length > 0 ? reason.ToLowerInvariant() : "replacement proposed")
+			+ ". Proposed: " + proposed(l) + ". Why: " + firstSentence(l.GetTypedColumnValue<string>(noteCol))
+			+ (finish.Length > 0 ? " " + finish : string.Empty));
+		shown++;
+	}
+}
+
+// Escalated with a suggestion
+foreach (var kv in suggestedByReason) {
+	b.AppendLine();
+	b.AppendLine("NEEDS YOUR DECISION, a closest compliant match is suggested (" + kv.Value.Count + "), reason: " + kv.Key + ":");
+	int shown = 0;
+	foreach (Entity l in kv.Value) {
+		if (shown == 20) { b.AppendLine("  and " + (kv.Value.Count - 20) + " more on the opportunity."); break; }
+		string finish = cut(l.GetTypedColumnValue<string>(complianceCol), 110);
+		b.AppendLine("  - " + item(l) + ". Suggested: " + proposed(l) + (finish.Length > 0 ? ". " + finish : "."));
+		shown++;
+	}
+}
+
+// Escalated with no product
+foreach (var kv in noProductByReason) {
+	b.AppendLine();
+	b.AppendLine("NO COMPLIANT PRODUCT, needs to go back to the person or the architect (" + kv.Value.Count + "), reason: " + kv.Key
+		+ ". These cannot be approved as they stand; they can be excluded.");
+	int shown = 0;
+	foreach (Entity l in kv.Value) {
+		if (shown == 25) { b.AppendLine("  and " + (kv.Value.Count - 25) + " more on the opportunity."); break; }
+		b.AppendLine("  - " + item(l));
+		shown++;
+	}
+}
+
+// Already decided at Gate 1 (shown on re-runs)
+if (approved.Count > 0 || excluded.Count > 0) {
+	b.AppendLine();
+	b.AppendLine("ALREADY DECIDED BY A PERSON: " + approved.Count + " replacement(s) approved, " + excluded.Count + " item(s) excluded.");
+}
+
+// Still being assessed
+if (assessing.Count > 0) {
+	b.AppendLine();
+	b.AppendLine("BEING ASSESSED NOW (" + assessing.Count + " items): checking each against the compliance rules (WELS, GEMS, WaterMark, cut-out) "
+		+ "and our catalogue to find a compliant equivalent. This takes about a minute. When the person asks, call intake again with the same "
+		+ "schedule to fetch the result; nothing is written twice.");
+	int shown = 0;
+	foreach (Entity l in assessing) {
+		if (shown == 12) { b.AppendLine("  and " + (assessing.Count - 12) + " more."); break; }
+		b.AppendLine("  - " + item(l));
+		shown++;
+	}
+}
+
+b.AppendLine();
+if (pricedValue > 0m) {
+	b.AppendLine(string.Format("Indicative value of the priced items: {0:N2}.", pricedValue));
+}
+string plain = assessing.Count > 0 ? "being assessed"
+	: tenderStatus == "Awaiting Gate 1" ? "ready for the person's review"
+	: tenderStatus == "Submitted" ? "submitted to the builder"
+	: tenderStatus == "Awarded" ? "awarded"
+	: "in progress";
+b.AppendLine("STATUS: " + plain + ". On the opportunity it shows as \"" + (tenderStatus.Length > 0 ? tenderStatus : "unknown") + "\".");
+b.AppendLine("Nothing is approved, ordered or reserved until a person approves it. The full reasons for every item are on the opportunity's Adjudication tab.");
+
+Set("RunSummary", (intake.Length > 0 ? intake + "\n\n" : string.Empty) + b.ToString().TrimEnd());
+Set("AssessingCount", assessing.Count);  // gateway: only a tender with items to assess goes to the background step
+return true;

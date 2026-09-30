@@ -1,0 +1,612 @@
+var uc = Get<UserConnection>("UserConnection");
+string reference = (Get<string>("TenderReference") ?? string.Empty).Trim();
+string poNumber = (Get<string>("BlanketPoNumber") ?? string.Empty).Trim().ToUpperInvariant();
+string note = (Get<string>("AwardNote") ?? string.Empty).Trim();
+int prototypeQty = 1;
+Guid orderTypeBlanket = new Guid("43014545-cd78-4496-bdda-953a976fe891");
+Guid orderTypeCallOff = new Guid("d2c1d49c-1bdc-4435-8551-d00e45737564");
+Guid orderStatusInProgress = new Guid("c8742634-ea8b-46d9-ba71-1989b951772d");
+Guid currencyAud = new Guid("908f7166-d8da-49a9-80dd-a2958fc3fabf");
+Guid stageClosedWon = new Guid("60d5310c-5be6-df11-971b-001d60e938c6");
+string actor = "Gate 2 award approval via chat (tool approve_tender_award)";
+Set("CommittedCount", 0);
+Set("SubPoCount", 0);
+Set("CallUpLineCount", 0);
+Action<string> stop = reason => Set("RunSummary", "Nothing was changed. " + reason);
+
+// ======================= CHECKS: nothing below writes until the WRITES marker =======================
+
+// ---- The tender ----
+if (reference.Length == 0) {
+	stop("No tender was named. Ask the person which tender was awarded.");
+	return true;
+}
+Guid opportunityId = Guid.Empty, accountId = Guid.Empty;
+string title = string.Empty, tenderStatus = string.Empty;
+Guid parsedId = Guid.Empty;
+var oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+oppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string oppTitleCol = oppEsq.AddColumn("Title").Name;
+string oppStatusCol = oppEsq.AddColumn("SPAIAdjudicationStatus.Name").Name;
+string oppAccountCol = oppEsq.AddColumn("Account").Name;
+if (Guid.TryParse(reference, out parsedId)) {
+	oppEsq.Filters.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Id", parsedId));
+} else {
+	var either = new EntitySchemaQueryFilterCollection(oppEsq, Terrasoft.Common.LogicalOperationStrict.Or);
+	either.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Title", reference));
+	either.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAITenderCode", reference));
+	oppEsq.Filters.Add(either);
+}
+int found = 0;
+foreach (Entity o in oppEsq.GetEntityCollection(uc)) {
+	found++;
+	opportunityId = o.PrimaryColumnValue;
+	title = (o.GetTypedColumnValue<string>(oppTitleCol) ?? string.Empty).Trim();
+	tenderStatus = (o.GetTypedColumnValue<string>(oppStatusCol) ?? string.Empty).Trim();
+	accountId = o.GetTypedColumnValue<Guid>(oppAccountCol + "Id");
+}
+if (found == 0 && parsedId == Guid.Empty) {
+	// Same name written differently (punctuation, spacing, case): use it only when exactly one tender matches.
+	Func<string, string> normalise = value => {
+		var kept = new System.Text.StringBuilder();
+		foreach (char c in value ?? string.Empty) {
+			if (char.IsLetterOrDigit(c)) {
+				kept.Append(char.ToLowerInvariant(c));
+			}
+		}
+		return kept.ToString();
+	};
+	string wanted = normalise(reference);
+	string anchor = string.Empty;
+	foreach (string word in reference.Split(new[] { ' ', ',', '-', '/', '.', '(', ')' }, StringSplitOptions.RemoveEmptyEntries)) {
+		if (word.Length > anchor.Length) {
+			anchor = word;
+		}
+	}
+	if (wanted.Length > 0 && anchor.Length > 0) {
+		var nearEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+		nearEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+		string nTitleCol = nearEsq.AddColumn("Title").Name;
+		string nCodeCol = nearEsq.AddColumn("SPAITenderCode").Name;
+		string nStatusCol = nearEsq.AddColumn("SPAIAdjudicationStatus.Name").Name;
+		string nAccountCol = nearEsq.AddColumn("Account").Name;
+		var anyText = new EntitySchemaQueryFilterCollection(nearEsq, Terrasoft.Common.LogicalOperationStrict.Or);
+		anyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, "Title", anchor));
+		anyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, "SPAITenderCode", anchor));
+		nearEsq.Filters.Add(anyText);
+		foreach (Entity o in nearEsq.GetEntityCollection(uc)) {
+			if (normalise(o.GetTypedColumnValue<string>(nTitleCol)) == wanted || normalise(o.GetTypedColumnValue<string>(nCodeCol)) == wanted) {
+				found++;
+				opportunityId = o.PrimaryColumnValue;
+				title = (o.GetTypedColumnValue<string>(nTitleCol) ?? string.Empty).Trim();
+				tenderStatus = (o.GetTypedColumnValue<string>(nStatusCol) ?? string.Empty).Trim();
+				accountId = o.GetTypedColumnValue<Guid>(nAccountCol + "Id");
+			}
+		}
+	}
+}
+if (found == 0) {
+	stop("No tender is titled or coded exactly \"" + reference + "\". Use the tender name the intake reported.");
+	return true;
+}
+if (found > 1) {
+	stop("\"" + reference + "\" matches more than one tender. Ask the person for the tender code.");
+	return true;
+}
+Set("OpportunityId", opportunityId);
+if (tenderStatus != "Submitted") {
+	stop("Tender " + title + " is at \"" + (tenderStatus.Length > 0 ? tenderStatus : "no status")
+		+ "\". Only a Submitted tender can be awarded: Gate 1 must be complete first.");
+	return true;
+}
+if (accountId == Guid.Empty) {
+	stop("Tender " + title + " has no head contractor account, so the purchase order has no customer. Set the account on the opportunity first.");
+	return true;
+}
+
+// ---- The blanket PO number ----
+string poDigits = string.Empty;
+foreach (char c in poNumber) {
+	if (char.IsDigit(c)) {
+		poDigits += c;
+	}
+}
+if (poDigits.Length == 0) {
+	stop("\"" + poNumber + "\" has no digits to number the delivery sub-orders from. Ask the person for the builder's blanket PO number, for example BPO-0441.");
+	return true;
+}
+var poEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Order");
+poEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string poNoCol = poEsq.AddColumn("SPAIPurchaseOrderNo").Name;
+var poAny = new EntitySchemaQueryFilterCollection(poEsq, Terrasoft.Common.LogicalOperationStrict.Or);
+poAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIPurchaseOrderNo", poNumber));
+poAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Number", poNumber));
+poAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.StartWith, "SPAIPurchaseOrderNo", "SPO-" + poDigits + "-"));
+poEsq.Filters.Add(poAny);
+foreach (Entity existing in poEsq.GetEntityCollection(uc)) {
+	stop("Purchase order " + (existing.GetTypedColumnValue<string>(poNoCol) ?? poNumber)
+		+ " already exists. Check the number with the person; a PO number is used once.");
+	return true;
+}
+
+// ---- Lookups ----
+Func<string, Dictionary<string, Guid>> loadByName = schemaName => {
+	var esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);
+	esq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	string nameColumn = esq.AddColumn("Name").Name;
+	var map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);
+	foreach (Entity e in esq.GetEntityCollection(uc)) {
+		map[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;
+	}
+	return map;
+};
+var planType = loadByName("SPAISourcePlanType");
+var tenderStatusByName = loadByName("SPAIAdjudicationStatus");
+var deliveryStatus = loadByName("SPAIDeliveryStatus");
+var decisionType = loadByName("SPAIDecisionType");
+var missing = new List<string>();
+if (!planType.ContainsKey("Indicative")) missing.Add("source plan type Indicative");
+if (!planType.ContainsKey("Committed")) missing.Add("source plan type Committed");
+if (!deliveryStatus.ContainsKey("Scheduled")) missing.Add("delivery status Scheduled");
+if (!decisionType.ContainsKey("Sourcing allocation")) missing.Add("decision type Sourcing allocation");
+if (!decisionType.ContainsKey("Human override")) missing.Add("decision type Human override");
+if (!tenderStatusByName.ContainsKey("Awarded")) missing.Add("adjudication status Awarded");
+if (missing.Count > 0) {
+	stop("These lookup values are missing in the CRM: " + string.Join(", ", missing) + ". An administrator must add them.");
+	return true;
+}
+
+// ---- The builder's programme: call-up schedules and their events ----
+var schedEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAICallUpSchedule");
+schedEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string schedRefCol = schedEsq.AddColumn("SPAIScheduleRef").Name;
+string schedDescCol = schedEsq.AddColumn("SPAIDescription").Name;
+string schedBlanketCol = schedEsq.AddColumn("SPAIBlanketOrder").Name;
+schedEsq.Filters.Add(schedEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+var schedules = new List<Guid>();
+var scheduleRef = new Dictionary<Guid, string>();
+var scheduleIsAppliance = new Dictionary<Guid, bool>();
+foreach (Entity s in schedEsq.GetEntityCollection(uc)) {
+	if (s.GetTypedColumnValue<Guid>(schedBlanketCol + "Id") != Guid.Empty) {
+		stop("Tender " + title + " is already awarded: its call-up schedule " + s.GetTypedColumnValue<string>(schedRefCol)
+			+ " already has a blanket PO. Nothing is ordered twice.");
+		return true;
+	}
+	schedules.Add(s.PrimaryColumnValue);
+	scheduleRef[s.PrimaryColumnValue] = (s.GetTypedColumnValue<string>(schedRefCol) ?? string.Empty).Trim();
+	scheduleIsAppliance[s.PrimaryColumnValue] = (s.GetTypedColumnValue<string>(schedDescCol) ?? string.Empty)
+		.IndexOf("appliance", StringComparison.OrdinalIgnoreCase) >= 0;
+}
+if (schedules.Count == 0) {
+	stop("Tender " + title + " has no delivery programme (call-up schedule) loaded. The builder's construction programme must be loaded before award.");
+	return true;
+}
+schedules.Sort((a, b) => string.CompareOrdinal(scheduleRef[a], scheduleRef[b]));
+
+var eventEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIDeliveryEvent");
+eventEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string evSchedCol = eventEsq.AddColumn("SPAICallUpSchedule").Name;
+string evSeqCol = eventEsq.AddColumn("SPAISequence").Name;
+string evTypeCol = eventEsq.AddColumn("SPAIEventType.Name").Name;
+string evDateCol = eventEsq.AddColumn("SPAIScheduledOn").Name;
+eventEsq.Filters.Add(eventEsq.CreateFilterWithParameters(FilterComparisonType.Equal,
+	"SPAICallUpSchedule.SPAIOpportunity", opportunityId));
+var eventsBySchedule = new Dictionary<Guid, List<Tuple<int, Guid, bool, DateTime>>>();  // sequence, id, prototype, date
+foreach (Guid s in schedules) {
+	eventsBySchedule[s] = new List<Tuple<int, Guid, bool, DateTime>>();
+}
+foreach (Entity e in eventEsq.GetEntityCollection(uc)) {
+	Guid s = e.GetTypedColumnValue<Guid>(evSchedCol + "Id");
+	if (!eventsBySchedule.ContainsKey(s)) {
+		continue;
+	}
+	eventsBySchedule[s].Add(Tuple.Create(e.GetTypedColumnValue<int>(evSeqCol), e.PrimaryColumnValue,
+		string.Equals((e.GetTypedColumnValue<string>(evTypeCol) ?? string.Empty).Trim(), "Prototype", StringComparison.OrdinalIgnoreCase),
+		e.GetTypedColumnValue<DateTime>(evDateCol)));
+}
+var emptySchedules = new List<string>();
+DateTime firstDate = DateTime.MaxValue, lastDate = DateTime.MinValue;
+foreach (Guid s in schedules) {
+	eventsBySchedule[s].Sort((a, b) => a.Item1.CompareTo(b.Item1));
+	if (eventsBySchedule[s].Count == 0) {
+		emptySchedules.Add(scheduleRef[s]);
+	}
+	foreach (var ev in eventsBySchedule[s]) {
+		if (ev.Item4 > DateTime.MinValue && ev.Item4 < firstDate) firstDate = ev.Item4;
+		if (ev.Item4 > lastDate) lastDate = ev.Item4;
+	}
+}
+if (emptySchedules.Count > 0) {
+	stop("Call-up schedule " + string.Join(", ", emptySchedules) + " of tender " + title
+		+ " has no delivery events. The builder's programme must be complete before award.");
+	return true;
+}
+
+// ---- The supplied lines, and which schedule each is delivered on ----
+var lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+lineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string lnNumCol = lineEsq.AddColumn("SPAILineNumber").Name;
+string lnQtyCol = lineEsq.AddColumn("SPAIQuantity").Name;
+string lnItemCol = lineEsq.AddColumn("SPAIItemCode").Name;
+string lnAltCol = lineEsq.AddColumn("SPAIIsAlternative").Name;
+string lnVariantCol = lineEsq.AddColumn("SPAIAlternateVariant").Name;
+string lnProductCol = lineEsq.AddColumn("SPAIMatchedProduct").Name;
+string lnSellCol = lineEsq.AddColumn("SPAIUnitSell").Name;
+string lnStatusCol = lineEsq.AddColumn("SPAILineStatus.Name").Name;
+string lnCategoryCol = lineEsq.AddColumn("SPAIMatchedProduct.SPAIProductFamily.SPAICategory").Name;
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+var lines = new List<Entity>();
+var lineSchedule = new Dictionary<Guid, Guid>();
+var noSchedule = new List<int>();
+int notOrdered = 0;
+foreach (Entity l in lineEsq.GetEntityCollection(uc)) {
+	string st = (l.GetTypedColumnValue<string>(lnStatusCol) ?? string.Empty).Trim();
+	bool supplied = st == "Exact match" || st == "Sourced multi-location" || st == "Substitution approved";
+	if (!supplied || l.GetTypedColumnValue<Guid>(lnProductCol + "Id") == Guid.Empty || l.GetTypedColumnValue<int>(lnQtyCol) <= 0) {
+		notOrdered++;
+		continue;
+	}
+	bool appliance = (l.GetTypedColumnValue<string>(lnCategoryCol) ?? string.Empty)
+		.IndexOf("appliance", StringComparison.OrdinalIgnoreCase) >= 0;
+	Guid target = Guid.Empty;
+	if (schedules.Count == 1) {
+		target = schedules[0];
+	} else {
+		foreach (Guid s in schedules) {
+			if (scheduleIsAppliance[s] == appliance) {
+				target = s;
+				break;
+			}
+		}
+	}
+	if (target == Guid.Empty) {
+		noSchedule.Add(l.GetTypedColumnValue<int>(lnNumCol));
+		continue;
+	}
+	lines.Add(l);
+	lineSchedule[l.PrimaryColumnValue] = target;
+}
+if (noSchedule.Count > 0) {
+	noSchedule.Sort();
+	stop("Cannot tell which call-up schedule line " + string.Join(", ", noSchedule) + " is delivered on: "
+		+ "the programme's schedule descriptions do not separate appliances from other products. Ask an administrator.");
+	return true;
+}
+if (lines.Count == 0) {
+	stop("Tender " + title + " has no approved lines to order.");
+	return true;
+}
+lines.Sort((a, b) => a.GetTypedColumnValue<int>(lnNumCol).CompareTo(b.GetTypedColumnValue<int>(lnNumCol)));
+
+// ---- The indicative sources of those lines ----
+var srcEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAILineSource");
+srcEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string srcLineCol = srcEsq.AddColumn("SPAIScheduleLine").Name;
+string srcLocCol = srcEsq.AddColumn("SPAILocation").Name;
+string srcQtyCol = srcEsq.AddColumn("SPAIQtyAllocated").Name;
+string srcTierCol = srcEsq.AddColumn("SPAISourceTier").Name;
+string srcPlanCol = srcEsq.AddColumn("SPAISourcePlanType.Name").Name;
+srcEsq.Filters.Add(srcEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIScheduleLine.SPAIOpportunity", opportunityId));
+var sources = new List<Entity>();
+foreach (Entity s in srcEsq.GetEntityCollection(uc)) {
+	string plan = (s.GetTypedColumnValue<string>(srcPlanCol) ?? string.Empty).Trim();
+	if (plan == "Committed") {
+		stop("Tender " + title + " already has committed stock sources, so it has already been awarded. Nothing is ordered twice.");
+		return true;
+	}
+	if (plan == "Indicative" && lineSchedule.ContainsKey(s.GetTypedColumnValue<Guid>(srcLineCol + "Id"))) {
+		sources.Add(s);
+	}
+}
+
+// ---- Plan every write before making any ----
+var productOfLine = new Dictionary<Guid, Guid>();
+foreach (Entity l in lines) {
+	productOfLine[l.PrimaryColumnValue] = l.GetTypedColumnValue<Guid>(lnProductCol + "Id");
+}
+var stockNeed = new Dictionary<string, int>();  // "product|location" -> units to encumber
+var locationUnits = new Dictionary<Guid, Dictionary<Guid, int>>();  // schedule -> location -> units
+var tierUnits = new Dictionary<Guid, Dictionary<Guid, int>>();  // schedule -> tier -> units
+var sourcedLines = new HashSet<Guid>();
+foreach (Entity s in sources) {
+	Guid lineId = s.GetTypedColumnValue<Guid>(srcLineCol + "Id");
+	Guid loc = s.GetTypedColumnValue<Guid>(srcLocCol + "Id");
+	Guid tier = s.GetTypedColumnValue<Guid>(srcTierCol + "Id");
+	int qty = s.GetTypedColumnValue<int>(srcQtyCol);
+	if (qty <= 0) {
+		continue;
+	}
+	sourcedLines.Add(lineId);
+	Guid sched = lineSchedule[lineId];
+	if (loc != Guid.Empty) {
+		string key = productOfLine[lineId] + "|" + loc;
+		stockNeed[key] = (stockNeed.ContainsKey(key) ? stockNeed[key] : 0) + qty;
+		if (!locationUnits.ContainsKey(sched)) locationUnits[sched] = new Dictionary<Guid, int>();
+		locationUnits[sched][loc] = (locationUnits[sched].ContainsKey(loc) ? locationUnits[sched][loc] : 0) + qty;
+	}
+	if (tier != Guid.Empty) {
+		if (!tierUnits.ContainsKey(sched)) tierUnits[sched] = new Dictionary<Guid, int>();
+		tierUnits[sched][tier] = (tierUnits[sched].ContainsKey(tier) ? tierUnits[sched][tier] : 0) + qty;
+	}
+}
+Func<Dictionary<Guid, Dictionary<Guid, int>>, Guid, Guid> dominant = (bySchedule, sched) => {
+	Guid best = Guid.Empty;
+	int most = 0;
+	if (bySchedule.ContainsKey(sched)) {
+		foreach (var kv in bySchedule[sched]) {
+			if (kv.Value > most) {
+				most = kv.Value;
+				best = kv.Key;
+			}
+		}
+	}
+	return best;
+};
+
+// Quantity per (line, event): prototype events first, then an even spread, remainder on the last event.
+var callUps = new List<Tuple<Entity, Guid, int>>();  // line, event id, qty
+var eventsUsedByLine = new Dictionary<Guid, int>();
+foreach (Entity l in lines) {
+	var evs = eventsBySchedule[lineSchedule[l.PrimaryColumnValue]];
+	int remaining = l.GetTypedColumnValue<int>(lnQtyCol);
+	var rollout = new List<Guid>();
+	int planned = 0;
+	foreach (var ev in evs) {
+		if (ev.Item3) {
+			int take = Math.Min(remaining, prototypeQty);
+			if (take > 0) {
+				callUps.Add(Tuple.Create(l, ev.Item2, take));
+				remaining -= take;
+				planned++;
+			}
+		} else {
+			rollout.Add(ev.Item2);
+		}
+	}
+	if (remaining > 0 && rollout.Count == 0) {
+		// A schedule of prototype events only: the rest goes on its last event.
+		rollout.Add(evs[evs.Count - 1].Item2);
+	}
+	if (remaining > 0) {
+		int each = remaining / rollout.Count;
+		int spare = remaining - each * rollout.Count;
+		for (int i = 0; i < rollout.Count; i++) {
+			int take = each + (i == rollout.Count - 1 ? spare : 0);
+			if (take > 0) {
+				callUps.Add(Tuple.Create(l, rollout[i], take));
+				planned++;
+			}
+		}
+	}
+	eventsUsedByLine[l.PrimaryColumnValue] = planned;
+}
+var linesAtEvent = new Dictionary<Guid, HashSet<Guid>>();
+var valueAtEvent = new Dictionary<Guid, decimal>();
+foreach (var cu in callUps) {
+	if (!linesAtEvent.ContainsKey(cu.Item2)) {
+		linesAtEvent[cu.Item2] = new HashSet<Guid>();
+		valueAtEvent[cu.Item2] = 0m;
+	}
+	linesAtEvent[cu.Item2].Add(cu.Item1.PrimaryColumnValue);
+	valueAtEvent[cu.Item2] += cu.Item3 * cu.Item1.GetTypedColumnValue<decimal>(lnSellCol);
+}
+
+// ======================= WRITES =======================
+DateTime now = uc.CurrentUser.GetCurrentDateTime();
+EntitySchema orderSchema = uc.EntitySchemaManager.GetInstanceByName("Order");
+Action<Entity> orderBasics = po => {
+	po.SetDefColumnValues();
+	po.SetColumnValue("OpportunityId", opportunityId);
+	po.SetColumnValue("AccountId", accountId);
+	po.SetColumnValue("OwnerId", uc.CurrentUser.ContactId);
+	po.SetColumnValue("CurrencyId", currencyAud);
+	po.SetColumnValue("CurrencyRate", 1m);
+	po.SetColumnValue("StatusId", orderStatusInProgress);
+	if (firstDate < DateTime.MaxValue) {
+		po.SetColumnValue("Date", firstDate);
+	}
+};
+
+// 1. The blanket PO, and the programme gets it
+Entity blanket = orderSchema.CreateEntity(uc);
+orderBasics(blanket);
+blanket.SetColumnValue("Number", poNumber);
+blanket.SetColumnValue("SPAIPurchaseOrderNo", poNumber);
+blanket.SetColumnValue("SPAIOrderTypeId", orderTypeBlanket);
+if (lastDate > DateTime.MinValue) {
+	blanket.SetColumnValue("SPAITargetDate", lastDate);
+}
+blanket.Save(false);
+Guid blanketId = blanket.PrimaryColumnValue;
+Set("BlanketOrderId", blanketId);
+EntitySchema scheduleSchema = uc.EntitySchemaManager.GetInstanceByName("SPAICallUpSchedule");
+foreach (Guid s in schedules) {
+	Entity sched = scheduleSchema.CreateEntity(uc);
+	if (sched.FetchFromDB(s)) {
+		sched.SetColumnValue("SPAIBlanketOrderId", blanketId);
+		sched.Save(false);
+	}
+}
+
+// 2. Commit the sources, then encumber stock
+EntitySchema sourceSchema = uc.EntitySchemaManager.GetInstanceByName("SPAILineSource");
+int committed = 0;
+foreach (Entity s in sources) {
+	Entity row = sourceSchema.CreateEntity(uc);
+	if (row.FetchFromDB(s.PrimaryColumnValue)) {
+		row.SetColumnValue("SPAISourcePlanTypeId", planType["Committed"]);
+		row.Save(false);
+		committed++;
+	}
+}
+EntitySchema stockSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIStockPosition");
+var locationsTouched = new HashSet<string>();
+foreach (var kv in stockNeed) {
+	string[] ids = kv.Key.Split('|');
+	var posEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIStockPosition");
+	posEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	string allocCol = posEsq.AddColumn("SPAIQtyAllocated").Name;
+	string availCol = posEsq.AddColumn("SPAIQtyAvailable").Name;
+	posEsq.Filters.Add(posEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIProduct", new Guid(ids[0])));
+	posEsq.Filters.Add(posEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAILocation", new Guid(ids[1])));
+	foreach (Entity position in posEsq.GetEntityCollection(uc)) {
+		Entity update = stockSchema.CreateEntity(uc);
+		if (update.FetchFromDB(position.PrimaryColumnValue)) {
+			update.SetColumnValue("SPAIQtyAllocated", position.GetTypedColumnValue<int>(allocCol) + kv.Value);
+			update.SetColumnValue("SPAIQtyAvailable", Math.Max(0, position.GetTypedColumnValue<int>(availCol) - kv.Value));
+			update.Save(false);
+			locationsTouched.Add(ids[1]);
+		}
+		break;
+	}
+}
+Set("CommittedCount", committed);
+
+// 3. One sub-PO per delivery event, numbered from the blanket
+EntitySchema deliverySchema = uc.EntitySchemaManager.GetInstanceByName("SPAIDelivery");
+var subPoByEvent = new Dictionary<Guid, Guid>();
+int poSeq = 0;
+foreach (Guid s in schedules) {
+	Guid loc = dominant(locationUnits, s);
+	Guid tier = dominant(tierUnits, s);
+	foreach (var ev in eventsBySchedule[s]) {
+		poSeq++;
+		Entity po = orderSchema.CreateEntity(uc);
+		orderBasics(po);
+		string subRef = string.Format("SPO-{0}-{1:00}", poDigits, poSeq);
+		po.SetColumnValue("Number", subRef);
+		po.SetColumnValue("SPAIPurchaseOrderNo", subRef);
+		po.SetColumnValue("SPAIOrderTypeId", orderTypeCallOff);
+		po.SetColumnValue("SPAIBlanketOrderId", blanketId);
+		po.SetColumnValue("SPAIDeliveryEventId", ev.Item2);
+		if (ev.Item4 > DateTime.MinValue) {
+			po.SetColumnValue("SPAITargetDate", ev.Item4);
+		}
+		if (loc != Guid.Empty) {
+			po.SetColumnValue("SPAIPrimaryLocationId", loc);
+		}
+		if (tier != Guid.Empty) {
+			po.SetColumnValue("SPAISourceTierId", tier);
+		}
+		po.Save(false);
+		subPoByEvent[ev.Item2] = po.PrimaryColumnValue;
+
+		Entity delivery = deliverySchema.CreateEntity(uc);
+		delivery.SetDefColumnValues();
+		delivery.SetColumnValue("SPAIOrderId", po.PrimaryColumnValue);
+		if (loc != Guid.Empty) {
+			delivery.SetColumnValue("SPAIFromLocationId", loc);
+		}
+		if (ev.Item4 > DateTime.MinValue) {
+			delivery.SetColumnValue("SPAIScheduledOn", ev.Item4);
+		}
+		delivery.SetColumnValue("SPAIStatusId", deliveryStatus["Scheduled"]);
+		delivery.SetColumnValue("SPAILineCount", linesAtEvent.ContainsKey(ev.Item2) ? linesAtEvent[ev.Item2].Count : 0);
+		delivery.SetColumnValue("SPAIValue", valueAtEvent.ContainsKey(ev.Item2) ? valueAtEvent[ev.Item2] : 0m);
+		delivery.Save(false);
+	}
+}
+Set("SubPoCount", subPoByEvent.Count);
+
+// 4. Call-up lines and order products
+EntitySchema callUpSchema = uc.EntitySchemaManager.GetInstanceByName("SPAICallUpLine");
+EntitySchema orderProductSchema = uc.EntitySchemaManager.GetInstanceByName("OrderProduct");
+int callUpCount = 0;
+foreach (var cu in callUps) {
+	Entity l = cu.Item1;
+	Entity cul = callUpSchema.CreateEntity(uc);
+	cul.SetDefColumnValues();
+	cul.SetColumnValue("SPAIScheduleLineId", l.PrimaryColumnValue);
+	cul.SetColumnValue("SPAIDeliveryEventId", cu.Item2);
+	cul.SetColumnValue("SPAISubPOId", subPoByEvent[cu.Item2]);
+	cul.SetColumnValue("SPAIQtyRequired", cu.Item3);
+	cul.SetColumnValue("SPAIQtyDelivered", 0);
+	cul.SetColumnValue("SPAIStatusId", deliveryStatus["Scheduled"]);
+	cul.Save(false);
+	callUpCount++;
+
+	Entity op = orderProductSchema.CreateEntity(uc);
+	op.SetDefColumnValues();
+	op.SetColumnValue("OrderId", subPoByEvent[cu.Item2]);
+	op.SetColumnValue("ProductId", productOfLine[l.PrimaryColumnValue]);
+	op.SetColumnValue("Quantity", (decimal)cu.Item3);
+	op.SetColumnValue("Price", l.GetTypedColumnValue<decimal>(lnSellCol));
+	op.SetColumnValue("SPAIScheduleLineId", l.PrimaryColumnValue);
+	op.SetColumnValue("SPAIItemCode", l.GetTypedColumnValue<string>(lnItemCol));
+	op.SetColumnValue("SPAIIsAlternative", l.GetTypedColumnValue<bool>(lnAltCol));
+	op.SetColumnValue("SPAIAlternateVariant", l.GetTypedColumnValue<string>(lnVariantCol));
+	op.Save(false);  // SPAIItemIdentityEntityEventListener derives SPAIDisplayRef on save
+}
+Set("CallUpLineCount", callUpCount);
+
+// 5. The ledger: one row per line, one for the award
+EntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIDecisionLedger");
+var unsourced = new List<int>();
+foreach (Entity l in lines) {
+	int n = l.GetTypedColumnValue<int>(lnNumCol);
+	bool hasStock = sourcedLines.Contains(l.PrimaryColumnValue);
+	if (!hasStock) {
+		unsourced.Add(n);
+	}
+	Entity ledger = ledgerSchema.CreateEntity(uc);
+	ledger.SetDefColumnValues();
+	ledger.SetColumnValue("SPAIOpportunityId", opportunityId);
+	ledger.SetColumnValue("SPAIScheduleLineId", l.PrimaryColumnValue);
+	ledger.SetColumnValue("SPAIDecisionTypeId", decisionType["Sourcing allocation"]);
+	ledger.SetColumnValue("SPAIActor", actor);
+	ledger.SetColumnValue("SPAIComplianceChecks", string.Format(
+		"award under {0}: {1} units across {2} call-up line(s) on schedule {3}; {4}",
+		poNumber, l.GetTypedColumnValue<int>(lnQtyCol), eventsUsedByLine[l.PrimaryColumnValue],
+		scheduleRef[lineSchedule[l.PrimaryColumnValue]],
+		hasStock ? "stock sources converted to Committed and encumbered now" : "no stock source: to be supplied from inbound stock"));
+	ledger.SetColumnValue("SPAIPriorValue", "Indicative source plan");
+	ledger.SetColumnValue("SPAINewValue", "Committed, call-up raised");
+	ledger.SetColumnValue("SPAISequence", n);
+	ledger.SetColumnValue("SPAIOccurredOn", now);
+	ledger.Save(false);
+}
+Entity award = ledgerSchema.CreateEntity(uc);
+award.SetDefColumnValues();
+award.SetColumnValue("SPAIOpportunityId", opportunityId);
+award.SetColumnValue("SPAIDecisionTypeId", decisionType["Human override"]);
+award.SetColumnValue("SPAIActor", actor);
+award.SetColumnValue("SPAIComplianceChecks", string.Format(
+	"Gate 2: award approved in the chat after Tool Confirmation. Blanket PO {0}: {1} line(s) ordered, {2} sub-PO(s) and deliveries, {3} call-up line(s), {4} source(s) committed and stock reserved{5}",
+	poNumber, lines.Count, subPoByEvent.Count, callUpCount, committed,
+	note.Length > 0 ? ". Note from the person: " + note : string.Empty));
+award.SetColumnValue("SPAIPriorValue", "Submitted");
+award.SetColumnValue("SPAINewValue", "Awarded | Closed won | fulfilment raised");
+award.SetColumnValue("SPAISequence", 0);
+award.SetColumnValue("SPAIOccurredOn", now);
+award.Save(false);
+
+// 6. The Opportunity: Awarded, Closed won, Gate 2 stamped. Last, so the screen flips once everything exists.
+Entity opportunity = uc.EntitySchemaManager.GetInstanceByName("Opportunity").CreateEntity(uc);
+if (opportunity.FetchFromDB(opportunityId)) {
+	opportunity.SetColumnValue("SPAIAdjudicationStatusId", tenderStatusByName["Awarded"]);
+	opportunity.SetColumnValue("StageId", stageClosedWon);
+	opportunity.SetColumnValue("SPAIGate2ApprovedOn", now);
+	opportunity.SetColumnValue("SPAIGate2ApprovedById", uc.CurrentUser.ContactId);
+	opportunity.Save(false);
+}
+
+// ---- The sentence the agent relays ----
+var parts = new List<string>();
+parts.Add(string.Format("Gate 2 approved: tender {0} is Awarded and the opportunity is Closed won, under blanket PO {1}. "
+	+ "{2} line(s) ordered across {3} delivery sub-order(s), SPO-{4}-01 to SPO-{4}-{3:00}, each with a scheduled delivery, as {5} call-up line(s)",
+	title, poNumber, lines.Count, subPoByEvent.Count, poDigits, callUpCount));
+if (firstDate < DateTime.MaxValue) {
+	parts.Add("the first delivery is due on " + firstDate.ToString("d MMMM yyyy") + " and the last on " + lastDate.ToString("d MMMM yyyy"));
+}
+parts.Add(string.Format("{0} stock source(s) are now committed and reserved at {1} location(s)", committed, locationsTouched.Count));
+if (unsourced.Count > 0) {
+	unsourced.Sort();
+	parts.Add("line " + string.Join(", ", unsourced) + " had no stock source and must come from inbound supply");
+}
+if (notOrdered > 0) {
+	parts.Add(notOrdered + " line(s) were not ordered because they were excluded or not approved");
+}
+parts.Add("quantities are split evenly across each schedule's delivery events, " + prototypeQty + " unit per prototype event");
+Set("RunSummary", "BRIEFING FOR THE PERSON: tell this as the story of what the award set in motion, in plain words. "
+	+ string.Join("; ", parts) + ".");
+return true;

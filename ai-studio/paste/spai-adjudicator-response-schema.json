@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdicts"],
+  "properties": {
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lineNumber", "reasonCode", "selectedProductCode", "confidence", "justification", "complianceNotes", "requiresHuman"],
+        "properties": {
+          "lineNumber": { "type": "integer" },
+          "reasonCode": { "type": "string", "enum": ["DISCONTINUED_SUB", "LEADTIME_SUB", "STOCKOUT_SUB", "CODE_UNRECOGNISED", "AMBIGUOUS_SPEC", "DIM_MISMATCH", "COMPLIANCE_FAIL", "NO_EQUIVALENT"] },
+          "selectedProductCode": { "type": ["string", "null"] },
+          "confidence": { "type": "number" },
+          "justification": { "type": "string" },
+          "complianceNotes": { "type": "string" },
+          "requiresHuman": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}
