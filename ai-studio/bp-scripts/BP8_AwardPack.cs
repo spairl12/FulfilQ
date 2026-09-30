@@ -1,0 +1,365 @@
+// BP8 SPAIAwardFulfilment, step 2: Script task "Prepare award pack" (after "Award the tender", before End)
+// Paste the body below into the Script task. It is not a class file.
+//
+// Runs only when "Award the tender" actually awarded (BlanketOrderId set); otherwise it does nothing.
+// Writes two things, with NO AI call: every word comes from records that were checked or approved by a person.
+//   1. The tender story: a timeline built from the Decision Ledger, written to Opportunity.SPAIAdjudicationStory
+//      (Unlimited text, added by hand 2026-09-29). Internal: the audit trail as a narrative.
+//   2. The award pack: an HTML document attached to the Opportunity (OpportunityFile), addressed to the
+//      Opportunity's contact: lines supplied, each approved substitution with its written justification,
+//      excluded lines, and the delivery programme with sub-order numbers. PREPARED ONLY: a person reviews
+//      and sends it. Nothing here sends anything. No prices or margins are included.
+// Each part is guarded on its own: a problem with one is reported in RunSummary and never undoes the award.
+//
+// Process parameters (already on BP8):
+//   OpportunityId    Unique identifier  in   set by "Award the tender"
+//   BlanketOrderId   Unique identifier  in   set by "Award the tender"; empty means nothing was awarded
+//   RunSummary       Unlimited text     in/out  appended to
+//
+// Usings: the five standard rows. No System.Linq. System.Text is written out in full.
+// Compile-checked against stub types. Not yet executed against the instance.
+
+var uc = Get<UserConnection>("UserConnection");
+Guid opportunityId = Get<Guid>("OpportunityId");
+Guid blanketId = Get<Guid>("BlanketOrderId");
+string summary = (Get<string>("RunSummary") ?? string.Empty).Trim();
+if (opportunityId == Guid.Empty || blanketId == Guid.Empty) {
+	return true;
+}
+Func<string, string> esc = s => (s ?? string.Empty).Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;").Replace("\"", "&quot;");
+Func<string, int, string> cut = (s, n) => (s ?? string.Empty).Length > n ? s.Substring(0, n) + "..." : (s ?? string.Empty);
+DateTime now = uc.CurrentUser.GetCurrentDateTime();
+var notes = new List<string>();
+
+// ---- The tender ----
+var oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+oppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string oTitle = oppEsq.AddColumn("Title").Name;
+string oCode = oppEsq.AddColumn("SPAITenderCode").Name;
+string oAccount = oppEsq.AddColumn("Account.Name").Name;
+string oContact = oppEsq.AddColumn("Contact.Name").Name;
+string oAi = oppEsq.AddColumn("SPAIAiCallCount").Name;
+string oDet = oppEsq.AddColumn("SPAIDeterministicCount").Name;
+Entity opp = oppEsq.GetEntity(uc, opportunityId);
+if (opp == null) {
+	return true;
+}
+string title = (opp.GetTypedColumnValue<string>(oTitle) ?? string.Empty).Trim();
+string tenderCode = (opp.GetTypedColumnValue<string>(oCode) ?? string.Empty).Trim();
+string accountName = (opp.GetTypedColumnValue<string>(oAccount) ?? string.Empty).Trim();
+string contactName = (opp.GetTypedColumnValue<string>(oContact) ?? string.Empty).Trim();
+int aiCalls = opp.GetTypedColumnValue<int>(oAi);
+int deterministic = opp.GetTypedColumnValue<int>(oDet);
+
+Entity blanket = uc.EntitySchemaManager.GetInstanceByName("Order").CreateEntity(uc);
+string poNumber = blanket.FetchFromDB(blanketId) ? (blanket.GetTypedColumnValue<string>("SPAIPurchaseOrderNo") ?? string.Empty).Trim() : string.Empty;
+
+// ---- The lines ----
+var lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+lineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string lNum = lineEsq.AddColumn("SPAILineNumber").Name;
+string lRef = lineEsq.AddColumn("SPAIDisplayRef").Name;
+string lItem = lineEsq.AddColumn("SPAIItemCode").Name;
+string lSpec = lineEsq.AddColumn("SPAISpecifiedText").Name;
+string lQty = lineEsq.AddColumn("SPAIQuantity").Name;
+string lProdName = lineEsq.AddColumn("SPAIMatchedProduct.Name").Name;
+string lProdCode = lineEsq.AddColumn("SPAIMatchedProduct.Code").Name;
+string lStatus = lineEsq.AddColumn("SPAILineStatus.Name").Name;
+string lReason = lineEsq.AddColumn("SPAIReasonCode.SPAICode").Name;
+string lNote = lineEsq.AddColumn("SPAIAdjudicationNote").Name;
+string lCompliance = lineEsq.AddColumn("SPAIComplianceNotes").Name;
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+var lines = new List<Entity>();
+foreach (Entity l in lineEsq.GetEntityCollection(uc)) {
+	lines.Add(l);
+}
+lines.Sort((a, b) => a.GetTypedColumnValue<int>(lNum).CompareTo(b.GetTypedColumnValue<int>(lNum)));
+Func<Entity, string> lineRef = l => {
+	string r = (l.GetTypedColumnValue<string>(lRef) ?? string.Empty).Trim();
+	if (r.Length == 0) r = (l.GetTypedColumnValue<string>(lItem) ?? string.Empty).Trim();
+	return r.Length > 0 ? r : "Line " + l.GetTypedColumnValue<int>(lNum);
+};
+
+// ---- The delivery programme: sub-orders under the blanket, with units per sub-order ----
+var poEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Order");
+poEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string pNo = poEsq.AddColumn("SPAIPurchaseOrderNo").Name;
+string pLabel = poEsq.AddColumn("SPAIDeliveryEvent.SPAILabel").Name;
+string pDate = poEsq.AddColumn("SPAITargetDate").Name;
+poEsq.Filters.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIBlanketOrder", blanketId));
+var subPos = new List<Entity>();
+foreach (Entity p in poEsq.GetEntityCollection(uc)) {
+	subPos.Add(p);
+}
+subPos.Sort((a, b) => string.CompareOrdinal(a.GetTypedColumnValue<string>(pNo), b.GetTypedColumnValue<string>(pNo)));
+var cuEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAICallUpLine");
+cuEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string cSub = cuEsq.AddColumn("SPAISubPO").Name;
+string cQty = cuEsq.AddColumn("SPAIQtyRequired").Name;
+cuEsq.Filters.Add(cuEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAISubPO.SPAIBlanketOrder", blanketId));
+var unitsBySub = new Dictionary<Guid, int>();
+var linesBySub = new Dictionary<Guid, int>();
+foreach (Entity c in cuEsq.GetEntityCollection(uc)) {
+	Guid s = c.GetTypedColumnValue<Guid>(cSub + "Id");
+	unitsBySub[s] = (unitsBySub.ContainsKey(s) ? unitsBySub[s] : 0) + c.GetTypedColumnValue<int>(cQty);
+	linesBySub[s] = (linesBySub.ContainsKey(s) ? linesBySub[s] : 0) + 1;
+}
+
+// ======================= 1. The tender story =======================
+// A narrative, in Melbourne time, by item name. Ledger times are stored in UTC; the integration user's clock is UTC.
+Func<DateTime, DateTime> local = utc => {
+	foreach (string zoneId in new[] { "AUS Eastern Standard Time", "Australia/Melbourne" }) {
+		try {
+			return TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(utc, DateTimeKind.Utc), TimeZoneInfo.FindSystemTimeZoneById(zoneId));
+		} catch (Exception) {
+		}
+	}
+	return utc.AddHours(10);
+};
+Func<DateTime, string> clock = d => local(d).ToString("h:mm tt").ToLowerInvariant();
+var lineName = new Dictionary<int, string>();
+var lineProduct = new Dictionary<int, string>();
+foreach (Entity l in lines) {
+	int n = l.GetTypedColumnValue<int>(lNum);
+	lineName[n] = cut(l.GetTypedColumnValue<string>(lSpec), 60) + " (line " + n + ")";
+	lineProduct[n] = (l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim();
+}
+Func<int, string> nameOf = n => lineName.ContainsKey(n) ? lineName[n] : "line " + n;
+Func<string, string> personWords = checks => {
+	const string marker = "the person's words: \"";
+	int at = (checks ?? string.Empty).IndexOf(marker, StringComparison.Ordinal);
+	if (at < 0) return string.Empty;
+	string rest = checks.Substring(at + marker.Length);
+	int close = rest.LastIndexOf('"');
+	return close > 0 ? rest.Substring(0, close) : rest;
+};
+try {
+	var ledEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIDecisionLedger");
+	ledEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	string dOn = ledEsq.AddColumn("SPAIOccurredOn").Name;
+	string dType = ledEsq.AddColumn("SPAIDecisionType.Name").Name;
+	string dActor = ledEsq.AddColumn("SPAIActor").Name;
+	string dLine = ledEsq.AddColumn("SPAIScheduleLine.SPAILineNumber").Name;
+	string dNew = ledEsq.AddColumn("SPAINewValue").Name;
+	string dChecks = ledEsq.AddColumn("SPAIComplianceChecks").Name;
+	string dSeq = ledEsq.AddColumn("SPAISequence").Name;
+	ledEsq.Filters.Add(ledEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+	var rows = new List<Entity>();
+	foreach (Entity r in ledEsq.GetEntityCollection(uc)) {
+		rows.Add(r);
+	}
+	// Which step a ledger row belongs to, in the order the steps happen.
+	Func<Entity, int> step = r => {
+		string a = (r.GetTypedColumnValue<string>(dActor) ?? string.Empty);
+		if (a.StartsWith("BP2a")) return 1;
+		if (a.StartsWith("BP2b")) return 2;
+		if (a.StartsWith("SPAI Adjudicator") || a.StartsWith("The Adjudicator")) return 3;
+		if (a.StartsWith("Gate 1")) return 4;
+		if (a.StartsWith("Gate 2") || a.StartsWith("BP8")) return 5;
+		return 6;
+	};
+	rows.Sort((x, y) => {
+		DateTime tx = x.GetTypedColumnValue<DateTime>(dOn), ty = y.GetTypedColumnValue<DateTime>(dOn);
+		int byMinute = new DateTime(tx.Year, tx.Month, tx.Day, tx.Hour, tx.Minute, 0).CompareTo(new DateTime(ty.Year, ty.Month, ty.Day, ty.Hour, ty.Minute, 0));
+		if (byMinute != 0) return byMinute;
+		int byStep = step(x).CompareTo(step(y));
+		return byStep != 0 ? byStep : x.GetTypedColumnValue<int>(dSeq).CompareTo(y.GetTypedColumnValue<int>(dSeq));
+	});
+
+	var story = new System.Text.StringBuilder();
+	story.AppendLine("How " + title + (tenderCode.Length > 0 ? " (" + tenderCode + ")" : string.Empty) + " was adjudicated, told from the Decision Ledger. Written at award, "
+		+ local(now).ToString("d MMM yyyy") + " at " + clock(now) + " Melbourne time.");
+	story.AppendLine(string.Format("{0} items on the schedule. {1} resolved by the CRM with no AI. {2} AI call(s) in total: one to read the schedule, one to adjudicate what was left.",
+		lines.Count, deterministic, aiCalls));
+	int i = 0;
+	while (i < rows.Count) {
+		int s = step(rows[i]);
+		DateTime at = rows[i].GetTypedColumnValue<DateTime>(dOn);
+		var chapter = new List<Entity>();
+		while (i < rows.Count && step(rows[i]) == s) {
+			chapter.Add(rows[i]);
+			i++;
+		}
+		story.AppendLine();
+		string when = local(at).ToString("d MMM") + ", " + clock(at) + ": ";
+		if (s == 1) {
+			int matched = 0;
+			var failed = new List<string>();
+			foreach (Entity r in chapter) {
+				if ((r.GetTypedColumnValue<string>(dType) ?? string.Empty) == "Compliance rejection") failed.Add(nameOf(r.GetTypedColumnValue<int>(dLine)));
+				else matched++;
+			}
+			story.AppendLine(when + "Catalogue match and compliance check, no AI. " + matched + " item(s) matched exactly and passed WELS, GEMS, WaterMark, cut-out and lifecycle checks."
+				+ (failed.Count > 0 ? " The specified product failed the checks for: " + string.Join("; ", failed) + ", so it went to adjudication." : string.Empty));
+		} else if (s == 2) {
+			bool afterGate1 = false;
+			foreach (Entity r in rows) {
+				if (step(r) == 4 && r.GetTypedColumnValue<DateTime>(dOn) <= at) afterGate1 = true;
+			}
+			story.AppendLine(when + "Stock sourced across the network, no AI: " + chapter.Count + " item(s)"
+				+ (afterGate1 ? ", the replacements just approved" : string.Empty) + ". Indicative only; nothing reserved.");
+		} else if (s == 3) {
+			var proposed = new List<string>();
+			var suggested = new List<string>();
+			var none = new List<string>();
+			foreach (Entity r in chapter) {
+				int n = r.GetTypedColumnValue<int>(dLine);
+				string nv = (r.GetTypedColumnValue<string>(dNew) ?? string.Empty);
+				string product = lineProduct.ContainsKey(n) ? lineProduct[n] : string.Empty;
+				if (nv.StartsWith("Substitution proposed")) proposed.Add(nameOf(n) + (product.Length > 0 ? " -> " + product : string.Empty));
+				else if (nv.Split('|').Length > 2) suggested.Add(nameOf(n) + (product.Length > 0 ? " -> " + product : string.Empty));
+				else none.Add(nameOf(n));
+			}
+			story.AppendLine(when + "AI adjudication, one call for all " + chapter.Count + " open item(s), against a closed list of compliant candidates. Every answer was re-checked by the CRM before it was written.");
+			if (proposed.Count > 0) story.AppendLine("  Replacement proposed: " + string.Join("; ", proposed) + ".");
+			if (suggested.Count > 0) story.AppendLine("  Closest compliant match suggested: " + string.Join("; ", suggested) + ".");
+			if (none.Count > 0) story.AppendLine("  No compliant product, left for a person: " + string.Join("; ", none) + ".");
+		} else if (s == 4) {
+			var approvedNames = new List<string>();
+			var excludedNames = new List<string>();
+			string words = string.Empty, submitted = string.Empty;
+			foreach (Entity r in chapter) {
+				int n = r.GetTypedColumnValue<int>(dLine);
+				string nv = (r.GetTypedColumnValue<string>(dNew) ?? string.Empty);
+				string checks = (r.GetTypedColumnValue<string>(dChecks) ?? string.Empty);
+				string said = personWords(checks);
+				if (said.Length > 0) words = said;
+				if (n == 0) {
+					submitted = nv.StartsWith("Submitted") ? "The tender was submitted to the builder." : string.Empty;
+				} else if (nv.StartsWith("Substitution approved")) {
+					approvedNames.Add(nameOf(n) + (lineProduct.ContainsKey(n) && lineProduct[n].Length > 0 ? " -> " + lineProduct[n] : string.Empty));
+				} else if (nv.StartsWith("Substitution rejected")) {
+					excludedNames.Add(nameOf(n));
+				}
+			}
+			var parts = new List<string>();
+			if (approvedNames.Count > 0) parts.Add("approved " + string.Join("; ", approvedNames));
+			if (excludedNames.Count > 0) parts.Add("excluded " + string.Join("; ", excludedNames));
+			story.AppendLine(when + "Gate 1, the estimator's decisions in the chat, each repeated back and confirmed before it was recorded: "
+				+ (parts.Count > 0 ? string.Join("; and ", parts) + "." : "no line changed.")
+				+ (words.Length > 0 ? " In their words: \"" + cut(words, 200) + "\"." : string.Empty)
+				+ (submitted.Length > 0 ? " " + submitted : string.Empty));
+		} else if (s == 5) {
+			int ordered = 0;
+			foreach (Entity r in chapter) {
+				if (r.GetTypedColumnValue<int>(dLine) != 0) ordered++;
+			}
+			story.AppendLine(when + "Gate 2, the award approved in the chat after the person confirmed the builder's PO " + poNumber + ". "
+				+ ordered + " item(s) ordered across " + subPos.Count + " delivery order(s) against the builder's programme; stock committed and reserved; the tender marked Awarded and the opportunity Closed won.");
+		}
+	}
+	var oppSchema = uc.EntitySchemaManager.GetInstanceByName("Opportunity");
+	if (oppSchema.Columns.FindByName("SPAIAdjudicationStory") == null) {
+		notes.Add("the tender story was not saved because the opportunity has no Adjudication story field");
+	} else {
+		Entity o = oppSchema.CreateEntity(uc);
+		if (o.FetchFromDB(opportunityId)) {
+			o.SetColumnValue("SPAIAdjudicationStory", story.ToString().TrimEnd());
+			o.Save(false);
+			notes.Add("the tender story is saved on the opportunity");
+		}
+	}
+} catch (Exception ex) {
+	notes.Add("the tender story could not be written (" + cut(ex.Message, 200) + ")");
+}
+
+// ======================= 2. The award pack (customer-facing, prepared only) =======================
+try {
+	var h = new System.Text.StringBuilder();
+	h.Append("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>Award confirmation - ").Append(esc(title)).Append("</title>");
+	h.Append("<style>body{font-family:Arial,Helvetica,sans-serif;color:#1d2430;max-width:960px;margin:32px auto;padding:0 16px;font-size:14px}");
+	h.Append("h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px;border-bottom:2px solid #1d2430;padding-bottom:4px}");
+	h.Append("table{border-collapse:collapse;width:100%}th,td{border:1px solid #c9ced6;padding:6px 8px;text-align:left;vertical-align:top}");
+	h.Append("th{background:#eef1f5}.draft{background:#fff4d6;border:1px solid #e0b84c;padding:8px 12px;margin:12px 0}.meta td{border:none;padding:2px 12px 2px 0}");
+	h.Append(".num{text-align:right}</style></head><body>");
+	h.Append("<div class=\"draft\">Prepared by Meridian Commercial Supply for review. A Meridian team member checks and sends this document.</div>");
+	h.Append("<h1>Award confirmation and substitution schedule</h1>");
+	h.Append("<table class=\"meta\">");
+	h.Append("<tr><td><b>Project</b></td><td>").Append(esc(title)).Append("</td></tr>");
+	if (tenderCode.Length > 0) h.Append("<tr><td><b>Tender</b></td><td>").Append(esc(tenderCode)).Append("</td></tr>");
+	h.Append("<tr><td><b>Your purchase order</b></td><td>").Append(esc(poNumber)).Append("</td></tr>");
+	h.Append("<tr><td><b>Prepared for</b></td><td>").Append(esc(contactName.Length > 0 ? contactName + (accountName.Length > 0 ? ", " + accountName : string.Empty) : accountName)).Append("</td></tr>");
+	h.Append("<tr><td><b>Date</b></td><td>").Append(local(now).ToString("d MMMM yyyy")).Append("</td></tr></table>");
+	h.Append("<p>Thank you for awarding this package to Meridian Commercial Supply. This schedule confirms what we will supply, every product we are supplying in place of the one specified and why, and the delivery programme against your construction programme.</p>");
+
+	var supplied = new List<Entity>();
+	var substituted = new List<Entity>();
+	var excludedLines = new List<Entity>();
+	foreach (Entity l in lines) {
+		string st = (l.GetTypedColumnValue<string>(lStatus) ?? string.Empty).Trim();
+		if (st == "Exact match" || st == "Sourced multi-location" || st == "Substitution approved") {
+			supplied.Add(l);
+			if (st == "Substitution approved") substituted.Add(l);
+		} else if (st == "Substitution rejected") {
+			excludedLines.Add(l);
+		}
+	}
+
+	h.Append("<h2>1. Products supplied (").Append(supplied.Count).Append(" lines)</h2><table><tr><th>Line</th><th>Ref</th><th>As specified</th><th>Supplied</th><th class=\"num\">Qty</th><th>Basis</th></tr>");
+	foreach (Entity l in supplied) {
+		bool sub = (l.GetTypedColumnValue<string>(lStatus) ?? string.Empty).Trim() == "Substitution approved";
+		h.Append("<tr><td>").Append(l.GetTypedColumnValue<int>(lNum)).Append("</td><td>").Append(esc(lineRef(l)))
+			.Append("</td><td>").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 160)))
+			.Append("</td><td>").Append(esc((l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim() + " (" + (l.GetTypedColumnValue<string>(lProdCode) ?? string.Empty).Trim() + ")"))
+			.Append("</td><td class=\"num\">").Append(l.GetTypedColumnValue<int>(lQty))
+			.Append("</td><td>").Append(sub ? "Substitution, see section 2" : "As specified").Append("</td></tr>");
+	}
+	h.Append("</table>");
+
+	h.Append("<h2>2. Substitutions (").Append(substituted.Count).Append(")</h2>");
+	if (substituted.Count == 0) {
+		h.Append("<p>Every line is supplied as specified.</p>");
+	} else {
+		h.Append("<p>Each substitute was checked against the same regulatory requirements as the specified product (WELS, GEMS and WaterMark where they apply), with an equal or better rating, and approved by Meridian before this schedule was issued.</p>");
+		h.Append("<table><tr><th>Line</th><th>As specified</th><th>Supplied instead</th><th>Why this product is equivalent</th></tr>");
+		foreach (Entity l in substituted) {
+			string reason = (l.GetTypedColumnValue<string>(lNote) ?? string.Empty).Trim();
+			string compliance = (l.GetTypedColumnValue<string>(lCompliance) ?? string.Empty).Trim();
+			h.Append("<tr><td>").Append(l.GetTypedColumnValue<int>(lNum)).Append("</td><td>").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 160)))
+				.Append("</td><td>").Append(esc((l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim() + " (" + (l.GetTypedColumnValue<string>(lProdCode) ?? string.Empty).Trim() + ")"))
+				.Append("</td><td>").Append(esc(reason.Length > 0 ? reason : "Approved equivalent."))
+				.Append(compliance.Length > 0 ? "<br><small>" + esc(compliance) + "</small>" : string.Empty).Append("</td></tr>");
+		}
+		h.Append("</table>");
+	}
+
+	if (excludedLines.Count > 0) {
+		h.Append("<h2>3. Not included in this supply (").Append(excludedLines.Count).Append(")</h2><table><tr><th>Line</th><th>Ref</th><th>As specified</th></tr>");
+		foreach (Entity l in excludedLines) {
+			h.Append("<tr><td>").Append(l.GetTypedColumnValue<int>(lNum)).Append("</td><td>").Append(esc(lineRef(l)))
+				.Append("</td><td>").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 200))).Append("</td></tr>");
+		}
+		h.Append("</table><p>We will contact you about these lines separately.</p>");
+	}
+
+	h.Append("<h2>").Append(excludedLines.Count > 0 ? "4" : "3").Append(". Delivery programme (").Append(subPos.Count).Append(" deliveries)</h2>");
+	h.Append("<table><tr><th>Delivery order</th><th>Programme event</th><th>Date</th><th class=\"num\">Lines</th><th class=\"num\">Units</th></tr>");
+	foreach (Entity p in subPos) {
+		DateTime d = p.GetTypedColumnValue<DateTime>(pDate);
+		h.Append("<tr><td>").Append(esc(p.GetTypedColumnValue<string>(pNo))).Append("</td><td>").Append(esc(p.GetTypedColumnValue<string>(pLabel)))
+			.Append("</td><td>").Append(d > DateTime.MinValue ? d.ToString("d MMM yyyy") : "to be confirmed")
+			.Append("</td><td class=\"num\">").Append(linesBySub.ContainsKey(p.PrimaryColumnValue) ? linesBySub[p.PrimaryColumnValue] : 0)
+			.Append("</td><td class=\"num\">").Append(unitsBySub.ContainsKey(p.PrimaryColumnValue) ? unitsBySub[p.PrimaryColumnValue] : 0).Append("</td></tr>");
+	}
+	h.Append("</table><p>Quantities per delivery follow your construction programme. Please tell us if a level's requirements differ and we will adjust the call-up.</p>");
+	h.Append("<p>Meridian Commercial Supply</p></body></html>");
+
+	byte[] data = System.Text.Encoding.UTF8.GetBytes(h.ToString());
+	string fileName = "Award pack - " + (tenderCode.Length > 0 ? tenderCode : title) + " - " + poNumber + ".html";
+	Entity file = uc.EntitySchemaManager.GetInstanceByName("OpportunityFile").CreateEntity(uc);
+	file.SetDefColumnValues();
+	file.SetColumnValue("OpportunityId", opportunityId);
+	file.SetColumnValue("Name", fileName);
+	file.SetColumnValue("TypeId", new Guid("529bc2f8-0ee0-df11-971b-001d60e938c6"));  // File
+	file.SetColumnValue("Data", data);
+	file.SetColumnValue("Size", data.Length);
+	file.SetColumnValue("Version", 1);
+	file.Save(false);
+	notes.Add("an award pack (\"" + fileName + "\") is attached to the opportunity for a person to review and send to "
+		+ (contactName.Length > 0 ? contactName : "the builder") + "; nothing has been sent");
+} catch (Exception ex) {
+	notes.Add("the award pack could not be attached (" + cut(ex.Message, 200) + ")");
+}
+
+Set("RunSummary", (summary.Length > 0 ? summary + " " : string.Empty) + "Also: " + string.Join("; ", notes) + ".");
+return true;

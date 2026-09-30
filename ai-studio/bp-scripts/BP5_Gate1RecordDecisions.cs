@@ -1,0 +1,320 @@
+// BP5 SPAIGate1Approval, step 1: Script task "Record Gate 1 decisions"
+// Paste the body below into the Script task. It is not a class file.
+//
+// Called by MCP tool approve_tender_lines, which is gated by AI Studio Tool Confirmation: a person has
+// already seen and confirmed exactly which lines are approved and which are excluded before this runs.
+// Records those decisions and nothing else. It reserves NO stock and raises NO order: that happens only
+// at award (BP8), after the builder accepts the tender.
+//
+// Per line:
+//   approve  "Substitution proposed"            -> "Substitution approved"
+//            "Escalated" WITH a proposed product -> "Substitution approved" (the person accepts the suggestion)
+//            "Exact match" / "Sourced multi-location" / already approved -> no change, reported as accepted
+//            anything else (no proposed product, No match, Pending) -> refused, reported, nothing written
+//   exclude  any line not already excluded     -> "Substitution rejected" (not supplied on this tender)
+// One Human override ledger row per decision. A line named in both lists stops the run: ask the person.
+// Nothing the person can fix throws; the reason goes back in RunSummary (same pattern as BP1).
+//
+// Process parameters:
+//   TenderReference      Text               in   the tender as the person named it (title, code or id)
+//   ApproveLines         Text               in   "4, 8" or "ALL" (every proposed or suggested substitute)
+//   ExcludeLines         Text               in   optional, "5, 9"
+//   ApprovalNote         Text               in   optional, the person's own words, kept in the ledger
+//   OpportunityId        Unique identifier  out  set when the tender resolves
+//   ResolvedOpportunity  Text               out  the tender's title; empty means stop (gateway)
+//   RunSummary           Text               out  the sentence the agent relays
+//
+// Usings (METHODS > Usings): the five standard rows, ONE namespace per row:
+//   System / System.Collections.Generic / Newtonsoft.Json.Linq / Terrasoft.Core / Terrasoft.Core.Entities
+// No System.Linq. Plain loops only.
+//
+// Columns and lookup values verified against the live instance (clio, 2026-09-29). Compile-checked.
+
+var uc = Get<UserConnection>("UserConnection");
+string reference = (Get<string>("TenderReference") ?? string.Empty).Trim();
+string approveText = (Get<string>("ApproveLines") ?? string.Empty).Trim();
+string excludeText = (Get<string>("ExcludeLines") ?? string.Empty).Trim();
+string note = (Get<string>("ApprovalNote") ?? string.Empty).Trim();
+Set("ResolvedOpportunity", "");
+Action<string> stop = reason => Set("RunSummary", "Nothing was changed. " + reason);
+
+// ---- The tender: exact code, exact title, id, or the one tender with the same name written differently. ----
+Guid opportunityId = Guid.Empty;
+string title = string.Empty;
+string tenderStatus = string.Empty;
+if (reference.Length == 0) {
+	stop("No tender was named. Ask the person which tender the decisions are for.");
+	return true;
+}
+Guid parsedId = Guid.Empty;
+var oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+oppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string oppTitleCol = oppEsq.AddColumn("Title").Name;
+string oppStatusCol = oppEsq.AddColumn("SPAIAdjudicationStatus.Name").Name;
+if (Guid.TryParse(reference, out parsedId)) {
+	oppEsq.Filters.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Id", parsedId));
+} else {
+	var either = new EntitySchemaQueryFilterCollection(oppEsq, Terrasoft.Common.LogicalOperationStrict.Or);
+	either.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "Title", reference));
+	either.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAITenderCode", reference));
+	oppEsq.Filters.Add(either);
+}
+int found = 0;
+foreach (Entity o in oppEsq.GetEntityCollection(uc)) {
+	found++;
+	opportunityId = o.PrimaryColumnValue;
+	title = (o.GetTypedColumnValue<string>(oppTitleCol) ?? string.Empty).Trim();
+	tenderStatus = (o.GetTypedColumnValue<string>(oppStatusCol) ?? string.Empty).Trim();
+}
+if (found == 0 && parsedId == Guid.Empty) {
+	// Same name written differently (punctuation, spacing, case): use it only when exactly one tender matches.
+	Func<string, string> normalise = value => {
+		var kept = new System.Text.StringBuilder();
+		foreach (char c in value ?? string.Empty) {
+			if (char.IsLetterOrDigit(c)) {
+				kept.Append(char.ToLowerInvariant(c));
+			}
+		}
+		return kept.ToString();
+	};
+	string wanted = normalise(reference);
+	string anchor = string.Empty;
+	foreach (string word in reference.Split(new[] { ' ', ',', '-', '/', '.', '(', ')' }, StringSplitOptions.RemoveEmptyEntries)) {
+		if (word.Length > anchor.Length) {
+			anchor = word;
+		}
+	}
+	if (wanted.Length > 0 && anchor.Length > 0) {
+		var nearEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "Opportunity");
+		nearEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+		string nTitleCol = nearEsq.AddColumn("Title").Name;
+		string nCodeCol = nearEsq.AddColumn("SPAITenderCode").Name;
+		string nStatusCol = nearEsq.AddColumn("SPAIAdjudicationStatus.Name").Name;
+		var anyText = new EntitySchemaQueryFilterCollection(nearEsq, Terrasoft.Common.LogicalOperationStrict.Or);
+		anyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, "Title", anchor));
+		anyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, "SPAITenderCode", anchor));
+		nearEsq.Filters.Add(anyText);
+		foreach (Entity o in nearEsq.GetEntityCollection(uc)) {
+			if (normalise(o.GetTypedColumnValue<string>(nTitleCol)) == wanted || normalise(o.GetTypedColumnValue<string>(nCodeCol)) == wanted) {
+				found++;
+				opportunityId = o.PrimaryColumnValue;
+				title = (o.GetTypedColumnValue<string>(nTitleCol) ?? string.Empty).Trim();
+				tenderStatus = (o.GetTypedColumnValue<string>(nStatusCol) ?? string.Empty).Trim();
+			}
+		}
+	}
+}
+if (found == 0) {
+	stop("No tender is titled or coded exactly \"" + reference + "\". Use the tender name the intake reported.");
+	return true;
+}
+if (found > 1) {
+	stop("\"" + reference + "\" matches more than one tender. Ask the person for the tender code.");
+	return true;
+}
+if (tenderStatus != "Awaiting Gate 1") {
+	stop("Tender " + title + " is at \"" + (tenderStatus.Length > 0 ? tenderStatus : "no status")
+		+ "\". Gate 1 decisions can only be recorded while it is Awaiting Gate 1.");
+	return true;
+}
+
+// ---- Parse the two lists ----
+bool approveAll = string.Equals(approveText, "ALL", StringComparison.OrdinalIgnoreCase);
+var unreadable = new List<string>();
+Func<string, HashSet<int>> parseLines = text => {
+	var set = new HashSet<int>();
+	foreach (string token in text.Split(new[] { ',', ';', ' ', '\t', '\n' }, StringSplitOptions.RemoveEmptyEntries)) {
+		string t = token.Trim().TrimStart('#');
+		if (t.StartsWith("line", StringComparison.OrdinalIgnoreCase)) {
+			t = t.Substring(4);
+		}
+		int n;
+		if (int.TryParse(t, out n) && n > 0) {
+			set.Add(n);
+		} else if (!string.Equals(t, "and", StringComparison.OrdinalIgnoreCase) && t.Length > 0) {
+			unreadable.Add(token.Trim());
+		}
+	}
+	return set;
+};
+var approve = approveAll ? new HashSet<int>() : parseLines(approveText);
+var exclude = parseLines(excludeText);
+if (unreadable.Count > 0) {
+	stop("These could not be read as line numbers: " + string.Join(", ", unreadable)
+		+ ". Ask the person to give line numbers only, for example \"4, 8\".");
+	return true;
+}
+var both = new List<int>();
+foreach (int n in approve) {
+	if (exclude.Contains(n)) {
+		both.Add(n);
+	}
+}
+if (both.Count > 0) {
+	both.Sort();
+	stop("Line " + string.Join(", ", both) + " was named to approve and to exclude. Ask the person which they meant.");
+	return true;
+}
+if (!approveAll && approve.Count == 0 && exclude.Count == 0) {
+	stop("No lines were named. Ask the person which lines to approve, or which to exclude.");
+	return true;
+}
+
+// ---- Lookups ----
+Func<string, Dictionary<string, Guid>> loadByName = schemaName => {
+	var esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);
+	esq.PrimaryQueryColumn.IsAlwaysSelect = true;
+	string nameColumn = esq.AddColumn("Name").Name;
+	var map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);
+	foreach (Entity e in esq.GetEntityCollection(uc)) {
+		map[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;
+	}
+	return map;
+};
+var lineStatus = loadByName("SPAILineStatus");
+var decisionType = loadByName("SPAIDecisionType");
+
+// ---- The tender's lines ----
+var lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIScheduleLine");
+lineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;
+string numCol = lineEsq.AddColumn("SPAILineNumber").Name;
+string statusCol = lineEsq.AddColumn("SPAILineStatus.Name").Name;
+string productCol = lineEsq.AddColumn("SPAIMatchedProduct").Name;
+string productCodeCol = lineEsq.AddColumn("SPAIMatchedProduct.Code").Name;
+string reasonCol = lineEsq.AddColumn("SPAIReasonCode.SPAICode").Name;
+string reasonNameCol = lineEsq.AddColumn("SPAIReasonCode.Name").Name;
+string specCol = lineEsq.AddColumn("SPAISpecifiedText").Name;
+string roomCol = lineEsq.AddColumn("SPAIRoomType.Name").Name;
+string productNameCol = lineEsq.AddColumn("SPAIMatchedProduct.Name").Name;
+string productBrandCol = lineEsq.AddColumn("SPAIMatchedProduct.SPAIBrand.Name").Name;
+lineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIOpportunity", opportunityId));
+var lines = new Dictionary<int, Entity>();
+foreach (Entity l in lineEsq.GetEntityCollection(uc)) {
+	lines[l.GetTypedColumnValue<int>(numCol)] = l;
+}
+if (approveAll) {
+	foreach (var kv in lines) {
+		string st = (kv.Value.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();
+		bool hasProduct = kv.Value.GetTypedColumnValue<Guid>(productCol + "Id") != Guid.Empty;
+		if (st == "Substitution proposed" || (st == "Escalated" && hasProduct)) {
+			approve.Add(kv.Key);
+		}
+	}
+}
+
+EntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIScheduleLine");
+EntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName("SPAIDecisionLedger");
+string actor = "Gate 1 approval via chat (tool approve_tender_lines)";
+string noteText = note.Length > 0 ? "; the person's words: \"" + (note.Length > 400 ? note.Substring(0, 400) : note) + "\"" : string.Empty;
+Action<Guid, Guid, int, string, string, string> writeLedger = (lineId, productId, sequence, prior, next, checks) => {
+	Entity row = ledgerSchema.CreateEntity(uc);
+	row.SetDefColumnValues();
+	row.SetColumnValue("SPAIOpportunityId", opportunityId);
+	row.SetColumnValue("SPAIScheduleLineId", lineId);
+	row.SetColumnValue("SPAIDecisionTypeId", decisionType["Human override"]);
+	row.SetColumnValue("SPAIActor", actor);
+	if (productId != Guid.Empty) {
+		row.SetColumnValue("SPAIProposedProductId", productId);
+	}
+	row.SetColumnValue("SPAIComplianceChecks", checks + noteText);
+	row.SetColumnValue("SPAIPriorValue", prior.Length > 250 ? prior.Substring(0, 250) : prior);
+	row.SetColumnValue("SPAINewValue", next.Length > 250 ? next.Substring(0, 250) : next);
+	row.SetColumnValue("SPAISequence", sequence);
+	row.SetColumnValue("SPAIOccurredOn", uc.CurrentUser.GetCurrentDateTime());
+	row.Save(false);
+};
+
+// How an item is named back to the person: what was specified, where, and the line as a reference.
+Func<Entity, string> itemName = e => {
+	string spec = (e.GetTypedColumnValue<string>(specCol) ?? string.Empty).Trim();
+	if (spec.Length > 70) spec = spec.Substring(0, 70).TrimEnd() + "...";
+	string room = (e.GetTypedColumnValue<string>(roomCol) ?? string.Empty).Trim();
+	return spec + (room.Length > 0 ? " (" + room + ", line " : " (line ") + e.GetTypedColumnValue<int>(numCol) + ")";
+};
+Func<Entity, string> productName = e => {
+	string name = (e.GetTypedColumnValue<string>(productNameCol) ?? string.Empty).Trim();
+	string brand = (e.GetTypedColumnValue<string>(productBrandCol) ?? string.Empty).Trim();
+	return name + (brand.Length > 0 && name.IndexOf(brand, StringComparison.OrdinalIgnoreCase) < 0 ? " by " + brand : string.Empty);
+};
+var approved = new List<string>();
+var alreadyAccepted = new List<string>();
+var refused = new List<string>();
+var excluded = new List<string>();
+var notOnTender = new List<int>();
+
+var approveList = new List<int>(approve);
+approveList.Sort();
+foreach (int n in approveList) {
+	Entity l;
+	if (!lines.TryGetValue(n, out l)) {
+		notOnTender.Add(n);
+		continue;
+	}
+	string st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();
+	Guid productId = l.GetTypedColumnValue<Guid>(productCol + "Id");
+	string productCode = (l.GetTypedColumnValue<string>(productCodeCol) ?? string.Empty).Trim();
+	string reason = (l.GetTypedColumnValue<string>(reasonCol) ?? string.Empty).Trim();
+	if (st == "Exact match" || st == "Sourced multi-location" || st == "Substitution approved") {
+		alreadyAccepted.Add(itemName(l));
+		continue;
+	}
+	if ((st == "Substitution proposed" || st == "Escalated") && productId != Guid.Empty) {
+		Entity row = lineSchema.CreateEntity(uc);
+		row.FetchFromDB(l.PrimaryColumnValue);
+		row.SetColumnValue("SPAILineStatusId", lineStatus["Substitution approved"]);
+		row.Save(false);
+		writeLedger(l.PrimaryColumnValue, productId, n, st + (reason.Length > 0 ? " | " + reason : string.Empty),
+			"Substitution approved | " + productCode,
+			"Gate 1: a person approved " + productCode + " for line " + n + " in the chat, after Tool Confirmation");
+		approved.Add(itemName(l) + " -> " + productName(l) + " [" + productCode + "]");
+		continue;
+	}
+	string reasonName = (l.GetTypedColumnValue<string>(reasonNameCol) ?? string.Empty).Trim();
+	refused.Add(itemName(l) + ": " + (productId == Guid.Empty ? "there is no compliant product to approve" : "it is " + st.ToLowerInvariant())
+		+ (reasonName.Length > 0 ? " (" + reasonName.ToLowerInvariant() + ")" : string.Empty));
+}
+
+var excludeList = new List<int>(exclude);
+excludeList.Sort();
+foreach (int n in excludeList) {
+	Entity l;
+	if (!lines.TryGetValue(n, out l)) {
+		notOnTender.Add(n);
+		continue;
+	}
+	string st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();
+	if (st == "Substitution rejected") {
+		excluded.Add(itemName(l));
+		continue;
+	}
+	Entity row = lineSchema.CreateEntity(uc);
+	row.FetchFromDB(l.PrimaryColumnValue);
+	row.SetColumnValue("SPAILineStatusId", lineStatus["Substitution rejected"]);
+	row.Save(false);
+	writeLedger(l.PrimaryColumnValue, Guid.Empty, n, st, "Substitution rejected | not supplied on this tender",
+		"Gate 1: a person excluded line " + n + " from the tender in the chat, after Tool Confirmation");
+	excluded.Add(itemName(l));
+}
+
+var parts = new List<string>();
+if (approved.Count > 0) {
+	parts.Add("APPROVED BY THE PERSON (" + approved.Count + "): " + string.Join("; ", approved));
+}
+if (excluded.Count > 0) {
+	parts.Add("EXCLUDED FROM THE TENDER, will not be supplied (" + excluded.Count + "): " + string.Join("; ", excluded));
+}
+if (alreadyAccepted.Count > 0) {
+	parts.Add("ALREADY ACCEPTED, no change: " + string.Join("; ", alreadyAccepted));
+}
+if (refused.Count > 0) {
+	parts.Add("NOT APPROVED (" + refused.Count + "): " + string.Join("; ", refused) + ". Exclude these, or resolve them with the architect outside the chat");
+}
+if (notOnTender.Count > 0) {
+	notOnTender.Sort();
+	parts.Add("NOT ON THIS TENDER: line " + string.Join(", ", notOnTender));
+}
+Set("OpportunityId", opportunityId);
+Set("ResolvedOpportunity", title);
+Set("RunSummary", "BRIEFING FOR THE PERSON: tell this in plain words, by item name. Gate 1 decisions for " + title + ".\n"
+	+ (parts.Count > 0 ? string.Join(".\n", parts) + "." : "No decision changed an item."));
+return true;
