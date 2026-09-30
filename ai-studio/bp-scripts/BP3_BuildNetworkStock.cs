@@ -15,13 +15,18 @@
 //   AdjudicatorRequestJson     Unlimited text  out  all five inputs in one object, for an invocation
 //                                                   element that takes a single message (02a Step 0, R1)
 //
-// Usings: System, System.Collections.Generic, System.Linq, Newtonsoft.Json, Newtonsoft.Json.Linq,
-//         Terrasoft.Core, Terrasoft.Core.Entities
+// Usings (METHODS > Usings): exactly the five rows BP1 compiles with, ONE namespace per row:
+//   System / System.Collections.Generic / Newtonsoft.Json.Linq / Terrasoft.Core / Terrasoft.Core.Entities
+// NO System.Linq. Plain loops only.
 //
-// Compile and trace-test in the BP designer. This file has not been executed against the instance.
+// Columns verified against the live instance (clio, 2026-09-27). Compile-checked against stub types.
 
 var uc = Get<UserConnection>("UserConnection");
-var codes = JArray.Parse(Get<string>("CandidateProductCodesJson") ?? "[]").Select(t => (object)(string)t).ToArray();
+var codeList = new List<object>();
+foreach (JToken t in JArray.Parse(Get<string>("CandidateProductCodesJson") ?? "[]")) {
+	codeList.Add((string)t);
+}
+object[] codes = codeList.ToArray();
 var stock = new JArray();
 if (codes.Length > 0) {
 	var esq = new EntitySchemaQuery(uc.EntitySchemaManager, "SPAIStockPosition");
@@ -33,9 +38,17 @@ if (codes.Length > 0) {
 	}
 	esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAIProduct.Code", codes));
 	esq.Filters.Add(esq.CreateFilterWithParameters(FilterComparisonType.Equal, "SPAILocation.SPAIIsAvailable", true));
-	var rows = esq.GetEntityCollection(uc)
-		.OrderBy(e => e.GetTypedColumnValue<string>(c["SPAIProduct.Code"]), StringComparer.Ordinal)
-		.ThenBy(e => e.GetTypedColumnValue<int>(c["SPAILocation.SPAISourcingRank"]));
+	var rows = new List<Entity>();
+	foreach (Entity e in esq.GetEntityCollection(uc)) {
+		rows.Add(e);
+	}
+	// Product code, then sourcing rank: a stable order for the model and the trace.
+	rows.Sort((a, b) => {
+		int cmp = string.CompareOrdinal(a.GetTypedColumnValue<string>(c["SPAIProduct.Code"]),
+			b.GetTypedColumnValue<string>(c["SPAIProduct.Code"]));
+		return cmp != 0 ? cmp : a.GetTypedColumnValue<int>(c["SPAILocation.SPAISourcingRank"])
+			.CompareTo(b.GetTypedColumnValue<int>(c["SPAILocation.SPAISourcingRank"]));
+	});
 	foreach (Entity e in rows) {
 		// Gap 3 (token spend): a row with nothing available and nothing inbound cannot change a decision.
 		if (e.GetTypedColumnValue<int>(c["SPAIQtyAvailable"]) <= 0 && e.GetTypedColumnValue<int>(c["SPAINextInboundQty"]) <= 0) {
