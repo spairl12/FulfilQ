@@ -2,6 +2,54 @@
 <Resources Culture="en-US">
 	<Group Type="String">
 		<Items>
+			<Item Name="LocalizableStrings.ExpansionPanel_1m2b8s4_title.Value" Value="Product" />
+			<Item Name="LocalizableStrings.ExpansionPanel_85uj2xu_title.Value" Value="Order" />
+			<Item Name="LocalizableStrings.ExpansionPanel_dhe24ua_title.Value" Value="Call-up schedule" />
+			<Item Name="LocalizableStrings.ExpansionPanel_i0wg121_title.Value" Value="Stock position" />
+			<Item Name="LocalizableStrings.ExpansionPanel_mffykht_title.Value" Value="Decision ledger" />
+			<Item Name="LocalizableStrings.ExpansionPanel_sho4lst_title.Value" Value="Location" />
+			<Item Name="LocalizableStrings.ExpansionPanel_uvh4l64_title.Value" Value="Schedule line" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_27mnh2r_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_5sc0vcb_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_ebcnaha_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_mt7kx3n_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_pqovsbg_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailAddBtn_qanq0uy_caption.Value" Value="New" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_2oq8de1_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_2qwtvcs_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_4w5ui2g_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_qzoky8u_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_tr4escz_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_ts6g0sl_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailExportDataBtn_xxvc5wx_caption.Value" Value="Export to Excel" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_40yq0ti_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_91omypo_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_an9w5qo_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_cjgpq2q_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_g1hvj4x_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_issi2la_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailImportDataBtn_t3cb45i_caption.Value" Value="Data import" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_48hu2jn_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_58x6j6p_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_9ko8mpo_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_mg62gn9_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_skdhkua_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_ub5ix7d_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailRefreshBtn_x3bpc67_caption.Value" Value="Refresh" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_5ysp8x4_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_8544660_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_ab6m8k2_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_cmmv2ep_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_hzcmbod_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_sxeq98s_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSearchFilter_w2c3x00_placeholder.Value" Value="Search" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_1k1nu2o_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_e9es3gv_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_ka7o6ez_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_lrzb8uc_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_utuimqc_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_w497a51_caption.Value" Value="Actions" />
+			<Item Name="LocalizableStrings.GridDetailSettingsBtn_ykvwvr8_caption.Value" Value="Actions" />
 			<Item Name="LocalizableStrings.MeddpiccTab_caption.Value" Value="MEDDPICC" />
 			<Item Name="LocalizableStrings.OpportunityHistoryDS_EntityChangeType.Value" Value="Change Type" />
 			<Item Name="LocalizableStrings.OpportunityHistoryExpansionPanel_title.Value" Value="History of changes" />
@@ -12,20 +60,13 @@
 			<Item Name="LocalizableStrings.PDS_SPAIAdjudicationStatus_spai.Value" Value="Adjudication status" />
 			<Item Name="LocalizableStrings.SPAIAdjudicationTab_caption.Value" Value="Adjudication" />
 			<Item Name="LocalizableStrings.SPAIApproveGate1Button_caption.Value" Value="Approve Gate 1" />
-			<Item Name="LocalizableStrings.SPAIOppCallUpsExport_caption.Value" Value="Export to Excel" />
-			<Item Name="LocalizableStrings.SPAIOppCallUpsImport_caption.Value" Value="Import data" />
-			<Item Name="LocalizableStrings.SPAIOppCallUpsPanel_title.Value" Value="Call-up schedules (delivery programme)" />
-			<Item Name="LocalizableStrings.SPAIOppCallUpsSearch_placeholder.Value" Value="Search" />
-			<Item Name="LocalizableStrings.SPAIOppQuotesExport_caption.Value" Value="Export to Excel" />
-			<Item Name="LocalizableStrings.SPAIOppQuotesImport_caption.Value" Value="Import data" />
-			<Item Name="LocalizableStrings.SPAIOppQuotesPanel_title.Value" Value="Quotes" />
-			<Item Name="LocalizableStrings.SPAIOppQuotesSearch_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.SPAIRunAdjudicationButton_caption.Value" Value="Run adjudication" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesExport_caption.Value" Value="Export to Excel" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesImport_caption.Value" Value="Import data" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesPanel_title.Value" Value="Schedule lines" />
 			<Item Name="LocalizableStrings.SPAIScheduleLinesSearch_placeholder.Value" Value="Search" />
 			<Item Name="LocalizableStrings.SPAISubmitGate2Button_caption.Value" Value="Submit for Gate 2" />
+			<Item Name="LocalizableStrings.SPAITile_AICalls_config_text_template.Value" Value="{0}" />
 			<Item Name="LocalizableStrings.SPAITile_AICalls_template.Value" Value="{0}" />
 			<Item Name="LocalizableStrings.SPAITile_AICalls_title.Value" Value="AI calls" />
 			<Item Name="LocalizableStrings.SPAITile_Escal_template.Value" Value="{0}" />
@@ -44,6 +85,15 @@
 			<Item Name="LocalizableStrings.SPAITile_NoAI_title.Value" Value="Resolved without AI" />
 			<Item Name="LocalizableStrings.SPAITile_Subst_template.Value" Value="{0}" />
 			<Item Name="LocalizableStrings.SPAITile_Subst_title.Value" Value="Substituted" />
+			<Item Name="LocalizableStrings.TabContainer_9tn690h_caption.Value" Value="Decision Ledger" />
+			<Item Name="LocalizableStrings.TabContainer_e2mawjw_caption.Value" Value="Stock Positions" />
+			<Item Name="LocalizableStrings.TabContainer_eo9n1dz_caption.Value" Value="Inventory" />
+			<Item Name="LocalizableStrings.TabContainer_pgg7s1k_caption.Value" Value="Delivery Board" />
+			<Item Name="LocalizableStrings.TabContainer_snldyq1_caption.Value" Value="Locations" />
+			<Item Name="LocalizableStrings.TabContainer_stl6pxr_caption.Value" Value="Call-up Schedules" />
+			<Item Name="LocalizableStrings.TabContainer_u6u4ot1_caption.Value" Value="Orders" />
+			<Item Name="LocalizableStrings.Timer_qtiwcf0_caption.Value" Value="Timer" />
+			<Item Name="LocalizableStrings.Timer_qtiwcf0_label.Value" Value="Timer" />
 			<Item Name="LocalizableStrings.addRecord_ih4zcqj_caption.Value" Value="Add new" />
 		</Items>
 	</Group>

@@ -1,0 +1,440 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessSchemaManager",
+      "UId": "b4c7e280-6c29-4820-9204-05a0f4580346",
+      "A2": "SPAIDeterministicMatch",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "B1": [],
+      "B2": [],
+      "B3": [
+        {
+          "UId": "25669f33-11bd-4243-a807-20901d65ed44",
+          "A2": "System",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System"
+        },
+        {
+          "UId": "e2c35bed-6dd6-4b3e-8e60-6e5e70fb8034",
+          "A2": "System.Collections.Generic",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System.Collections.Generic"
+        },
+        {
+          "UId": "5ac77e15-d290-4c68-a82e-5686e40d6210",
+          "A2": "Newtonsoft.Json.Linq",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Newtonsoft.Json.Linq"
+        },
+        {
+          "UId": "2b123bdc-aebd-4096-8766-73846a04efba",
+          "A2": "Terrasoft.Core",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core"
+        },
+        {
+          "UId": "6a14c450-5bf2-4916-b512-505c7ad32899",
+          "A2": "Terrasoft.Core.Entities",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core.Entities"
+        }
+      ],
+      "B6": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+      "B8": "10.0.0.858",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "b7c9acfb-1951-4c6d-9927-a7da96e65452",
+          "A2": "OpportunityId",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {
+            "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "1717a896-0132-4540-a612-84520a4feeb9",
+          "A2": "ProjectState",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "a1556180-e19e-4744-8694-a0378c0470e5",
+          "A2": "MatchedCount",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "25f93cff-06dd-4251-9e8c-5a2e4c23be4f",
+          "A2": "FloorFailCount",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "899e0c86-2b31-4d45-a173-71cfa5694376",
+          "A2": "UnresolvedCount",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+          },
+          "L12": 1
+        }
+      ],
+      "IJ1": true,
+      "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+      "IJ10": true,
+      "BK15": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "1ec91b1f-fba7-426e-9e20-c4ab29309f0e",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "GT2": "[Element:{ea20ad51-949c-4efa-b52c-ba333617bc6e}].[Parameter:{b7ceb2d7-66b8-4f74-8eda-c34c707fab4a}]",
+          "GT3": "b7ceb2d7-66b8-4f74-8eda-c34c707fab4a",
+          "GT5": "46a29795-3e9c-4775-8ec1-67abb34b431a",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS1": 3,
+            "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{b7c9acfb-1951-4c6d-9927-a7da96e65452}]#]",
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "ee4f3ae7-d1df-4f47-80bf-9c5494abdbc4",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "GT2": "[Element:{ea20ad51-949c-4efa-b52c-ba333617bc6e}].[Parameter:{a8ac7791-7128-4c20-b443-3cf3788e3547}]",
+          "GT3": "a8ac7791-7128-4c20-b443-3cf3788e3547",
+          "GT5": "d5e5501d-bf07-4bbe-8a54-25404673e40d",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS1": 3,
+            "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{1717a896-0132-4540-a612-84520a4feeb9}]#]",
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "b310ec17-24b9-4109-817e-d3600cbe4374",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "GT2": "[Element:{ea20ad51-949c-4efa-b52c-ba333617bc6e}].[Parameter:{db60afad-a3b9-4df3-b845-21a4f66a189f}]",
+          "GT3": "db60afad-a3b9-4df3-b845-21a4f66a189f",
+          "GT5": "4d482824-eabb-4ecb-8671-8be5723f39c9",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "7bef9e15-8a79-4b25-a18e-cf31207165a6",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "GT2": "[Element:{ea20ad51-949c-4efa-b52c-ba333617bc6e}].[Parameter:{7586245a-8d72-451f-afaa-9d3ae849a67e}]",
+          "GT3": "7586245a-8d72-451f-afaa-9d3ae849a67e",
+          "GT5": "029ee8f3-e562-4e21-b968-55fa70ab113d",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "dae21b1a-a4ba-49e7-8db7-608502b9df06",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "GT2": "[Element:{ea20ad51-949c-4efa-b52c-ba333617bc6e}].[Parameter:{4a9c4e41-4237-406a-8955-85492bf61c21}]",
+          "GT3": "4a9c4e41-4237-406a-8955-85492bf61c21",
+          "GT5": "8037b944-3728-4860-9373-8fcd22b2e19e",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        }
+      ],
+      "BK37": {
+        "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+        "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+        "A2": "NotificationCaption",
+        "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+        "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+        "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+        "L8": {
+          "GS1": 3,
+          "GS2": "[#[PropertyValue:Caption]#]"
+        }
+      },
+      "BK1": "FFFFFFFF",
+      "BK2": "FFBBBBBB",
+      "BK3": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+          "UId": "e64e0cae-1302-4e60-88c5-4d14e0b5f913",
+          "A2": "LaneSet1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "BM1": 0,
+          "BM4": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+              "UId": "9e358807-b219-427f-b829-c4b9e8aefa8c",
+              "A2": "Lane1",
+              "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+              "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+              "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+              "IL2": "e64e0cae-1302-4e60-88c5-4d14e0b5f913",
+              "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+              "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+              "CD1": [],
+              "CD2": [],
+              "CD4": "e64e0cae-1302-4e60-88c5-4d14e0b5f913",
+              "CD7": []
+            }
+          ]
+        }
+      ],
+      "BK5": [],
+      "BK4": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartEvent",
+          "UId": "0b2c01c8-d40a-4d8c-8865-bac41934222b",
+          "A2": "StartEvent1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9e358807-b219-427f-b829-c4b9e8aefa8c",
+          "BL3": "50;184",
+          "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": [],
+          "ED1": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
+          "UId": "caa03ae2-ecd8-4fb9-bd4d-6e35ffb0a287",
+          "A2": "TerminateEvent1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9e358807-b219-427f-b829-c4b9e8aefa8c",
+          "BL3": "600;184",
+          "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "e5958432-afa4-4eb1-8d20-cb1a47104b82",
+          "A2": "ScriptTask1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9e358807-b219-427f-b829-c4b9e8aefa8c",
+          "BL3": "257;172",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nGuid opportunityId = Get<Guid>(\"OpportunityId\");\n\n// KS2 §7 Combined eligibility matrix: cut-out, WELS, GEMS, WaterMark. Keep identical to\n// BP3_BuildCandidateSet.cs, ai-studio/tests/score_adjudication.py and tools/import/verify.py (four places).\nvar regimes = new Dictionary<string, bool[]>(StringComparer.OrdinalIgnoreCase) {\n\t{ \"Wall Oven\",          new[] { true,  false, true,  false } },\n\t{ \"Cooktop\",            new[] { true,  false, true,  false } },\n\t{ \"Dishwasher\",         new[] { true,  true,  true,  false } },\n\t{ \"Rangehood\",          new[] { true,  false, false, false } },\n\t{ \"Microwave\",          new[] { true,  false, false, false } },\n\t{ \"Basin\",              new[] { false, false, false, true  } },\n\t{ \"Toilet Suite\",       new[] { false, true,  false, true  } },\n\t{ \"Basin Mixer\",        new[] { false, true,  false, true  } },\n\t{ \"Shower Set\",         new[] { false, true,  false, true  } },\n\t{ \"Kitchen Sink Mixer\", new[] { false, true,  false, true  } }\n};\n\nFunc<string, Dictionary<string, Guid>> loadByName = schemaName => {\n\tvar esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);\n\tesq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring nameColumn = esq.AddColumn(\"Name\").Name;\n\tvar map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);\n\tforeach (Entity e in esq.GetEntityCollection(uc)) {\n\t\tmap[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n\t}\n\treturn map;\n};\nvar decisionType = loadByName(\"SPAIDecisionType\");\nvar reasonEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIReasonCode\");\nreasonEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring reasonCodeCol = reasonEsq.AddColumn(\"SPAICode\").Name;\nvar reasons = new Dictionary<string, Guid>(StringComparer.Ordinal);\nforeach (Entity e in reasonEsq.GetEntityCollection(uc)) {\n\treasons[(e.GetTypedColumnValue<string>(reasonCodeCol) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n}\n\n// ---- Pending lines ----\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nvar lc = new Dictionary<string, string>();\nforeach (string c in new[] { \"SPAILineNumber\", \"SPAISpecifiedModel\", \"SPAIRequiredCutoutW\", \"SPAIRequiredCutoutH\",\n\t\t\"SPAIRequiredCutoutD\", \"SPAIQuantity\", \"SPAIComplianceNotes\" }) {\n\tlc[c] = lineEsq.AddColumn(c).Name;\n}\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAILineStatus.Name\", \"Pending\"));\n// Already decided on an earlier run: leave alone.\nlineEsq.Filters.Add(lineEsq.CreateIsNullFilter(\"SPAIMatchedProduct\"));\nlineEsq.Filters.Add(lineEsq.CreateIsNullFilter(\"SPAIReasonCode\"));\nvar lines = new List<Entity>();\nforeach (Entity pending in lineEsq.GetEntityCollection(uc)) {\n\tlines.Add(pending);\n}\n\n// ---- Specified products, by model code ----\nvar modelCodeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);\nforeach (Entity l in lines) {\n\tstring m = (l.GetTypedColumnValue<string>(lc[\"SPAISpecifiedModel\"]) ?? string.Empty).Trim();\n\tif (m.Length > 0) {\n\t\tmodelCodeSet.Add(m);\n\t}\n}\nvar modelCodeList = new List<object>();\nforeach (string m in modelCodeSet) {\n\tmodelCodeList.Add(m);\n}\nobject[] modelCodes = modelCodeList.ToArray();\nvar products = new Dictionary<string, Entity>(StringComparer.OrdinalIgnoreCase);\nvar pc = new Dictionary<string, string>();\nif (modelCodes.Length > 0) {\n\tvar pEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Product\");\n\tpEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\t// Read every value through the name the query assigned. A column reached through a lookup\n\t// (\"SPAIProductFamily.Name\") is NOT readable by its dotted path.\n\tforeach (string c in new[] { \"Code\", \"SPAIModelCode\", \"SPAIProductFamily.Name\", \"SPAILifecycleStatus.Name\",\n\t\t\t\"SPAIProjectApproved\", \"SPAICutoutWidthMm\", \"SPAICutoutHeightMm\", \"SPAICutoutDepthMm\",\n\t\t\t\"SPAIWelsRegistrationNo\", \"SPAIGemsRegistrationNo\", \"SPAIWaterMarkCertNo\", \"SPAILeadTimeWeeks\",\n\t\t\t\"SPAITradeSellPrice\", \"SPAIWholesaleCost\" }) {\n\t\tpc[c] = pEsq.AddColumn(c).Name;\n\t}\n\tpEsq.Filters.Add(pEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIModelCode\", modelCodes));\n\tforeach (Entity p in pEsq.GetEntityCollection(uc)) {\n\t\tstring code = (p.GetTypedColumnValue<string>(pc[\"SPAIModelCode\"]) ?? string.Empty).Trim();\n\t\tif (code.Length > 0 && !products.ContainsKey(code)) {\n\t\t\tproducts[code] = p;\n\t\t}\n\t}\n}\n\nEntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIScheduleLine\");\nEntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDecisionLedger\");\nFunc<string, int, string> cut = (v, max) => v == null ? string.Empty : (v.Length <= max ? v : v.Substring(0, max));\nAction<Guid, string, Guid, Guid, string, string, string, int> writeLedger =\n\t(lineId, type, productId, reasonId, checks, prior, next, sequence) => {\n\t\tEntity row = ledgerSchema.CreateEntity(uc);\n\t\trow.SetDefColumnValues();\n\t\trow.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\n\t\trow.SetColumnValue(\"SPAIScheduleLineId\", lineId);\n\t\trow.SetColumnValue(\"SPAIDecisionTypeId\", decisionType[type]);\n\t\trow.SetColumnValue(\"SPAIActor\", \"BP2a SPAIDeterministicMatch\");\n\t\tif (productId != Guid.Empty) {\n\t\t\trow.SetColumnValue(\"SPAIProposedProductId\", productId);\n\t\t}\n\t\tif (reasonId != Guid.Empty) {\n\t\t\trow.SetColumnValue(\"SPAIReasonCodeId\", reasonId);\n\t\t}\n\t\trow.SetColumnValue(\"SPAIComplianceChecks\", checks);\n\t\trow.SetColumnValue(\"SPAIPriorValue\", cut(prior, 250));\n\t\trow.SetColumnValue(\"SPAINewValue\", cut(next, 250));\n\t\trow.SetColumnValue(\"SPAISequence\", sequence);\n\t\trow.SetColumnValue(\"SPAIOccurredOn\", uc.CurrentUser.GetCurrentDateTime());\n\t\trow.Save(false);\n\t};\n\nint matched = 0, floorFail = 0, unresolved = 0;\nforeach (Entity line in lines) {\n\tint n = line.GetTypedColumnValue<int>(lc[\"SPAILineNumber\"]);\n\tstring model = (line.GetTypedColumnValue<string>(lc[\"SPAISpecifiedModel\"]) ?? string.Empty).Trim();\n\tEntity p;\n\tif (model.Length == 0 || !products.TryGetValue(model, out p)) {\n\t\tunresolved++;\n\t\tcontinue;  // typo, or no model code at all: the Adjudicator's problem, not ours\n\t}\n\tstring family = p.GetTypedColumnValue<string>(pc[\"SPAIProductFamily.Name\"]) ?? string.Empty;\n\tbool[] r;\n\tif (!regimes.TryGetValue(family, out r)) {\n\t\tr = new[] { true, true, true, true };  // unknown family: every regime applies\n\t}\n\tint w = line.GetTypedColumnValue<int>(lc[\"SPAIRequiredCutoutW\"]);\n\tint h = line.GetTypedColumnValue<int>(lc[\"SPAIRequiredCutoutH\"]);\n\tint d = line.GetTypedColumnValue<int>(lc[\"SPAIRequiredCutoutD\"]);\n\t// Each check records WHAT WAS FOUND, and \"n/a\" when the regime does not apply to the family, so an\n\t// auditor can tell \"checked and passed\" from \"not applicable\" (live run 2026-09-27 logged a wall\n\t// oven's WELS check as PASS, and a discontinued product as \"fails: lifecycle Current\").\n\t// The specified product IS the specification, so there is no rating comparison to make here.\n\t// Ratings are compared against it in BP3, where a DIFFERENT product is proposed.\n\tstring familyText = family.Length > 0 ? family : \"this product family\";\n\tvar checkParts = new List<string>();\n\tvar failedParts = new List<string>();\n\tAction<string, bool, string, string> check = (rule, passed, found, failure) => {\n\t\tcheckParts.Add(rule + \": \" + (passed ? \"PASS\" : \"FAIL\") + \" (\" + (passed ? found : failure) + \")\");\n\t\tif (!passed) {\n\t\t\tfailedParts.Add(rule + \" \" + failure);\n\t\t}\n\t};\n\tAction<string, string> notApplicable = (rule, why) => checkParts.Add(rule + \": n/a (\" + why + \")\");\n\tFunc<string, string> text = c => (p.GetTypedColumnValue<string>(pc[c]) ?? string.Empty).Trim();\n\n\tstring lifecycle = text(\"SPAILifecycleStatus.Name\");\n\tcheck(\"lifecycle\", lifecycle == \"Current\", \"Current\",\n\t\t\"is \" + (lifecycle.Length > 0 ? lifecycle : \"not set\") + \", must be Current\");\n\tcheck(\"project approval\", p.GetTypedColumnValue<bool>(pc[\"SPAIProjectApproved\"]), \"approved\",\n\t\t\"not given\");\n\tint pw = p.GetTypedColumnValue<int>(pc[\"SPAICutoutWidthMm\"]);\n\tint ph = p.GetTypedColumnValue<int>(pc[\"SPAICutoutHeightMm\"]);\n\tint pd = p.GetTypedColumnValue<int>(pc[\"SPAICutoutDepthMm\"]);\n\tif (r[0]) {\n\t\tstring productCut = string.Format(\"{0}x{1}x{2}\", pw, ph, pd);\n\t\tcheck(\"cut-out\", pw == w && ph == h && pd == d, productCut + \" matches specified\",\n\t\t\tstring.Format(\"{0} does not match specified {1}x{2}x{3}\", productCut, w, h, d));\n\t} else {\n\t\tnotApplicable(\"cut-out\", familyText + \" has no cut-out rule\");\n\t}\n\tstring wels = text(\"SPAIWelsRegistrationNo\");\n\tif (r[1]) {\n\t\tcheck(\"WELS\", wels.Length > 0, \"registered \" + wels, \"not registered\");\n\t} else {\n\t\tnotApplicable(\"WELS\", familyText + \" is not WELS-regulated\");\n\t}\n\tstring gems = text(\"SPAIGemsRegistrationNo\");\n\tif (r[2]) {\n\t\tcheck(\"GEMS\", gems.Length > 0, \"registered \" + gems, \"not registered\");\n\t} else {\n\t\tnotApplicable(\"GEMS\", familyText + \" is not GEMS-regulated\");\n\t}\n\tstring waterMark = text(\"SPAIWaterMarkCertNo\");\n\tif (r[3]) {\n\t\tcheck(\"WaterMark\", waterMark.Length > 0, \"certificate \" + waterMark, \"certificate missing\");\n\t} else {\n\t\tnotApplicable(\"WaterMark\", familyText + \" does not need WaterMark\");\n\t}\n\tstring checks = string.Join(\"; \", checkParts);\n\tEntity row = lineSchema.CreateEntity(uc);\n\trow.FetchFromDB(line.PrimaryColumnValue);\n\tif (failedParts.Count == 0) {\n\t\tdecimal sell = p.GetTypedColumnValue<decimal>(pc[\"SPAITradeSellPrice\"]);\n\t\tdecimal cost = p.GetTypedColumnValue<decimal>(pc[\"SPAIWholesaleCost\"]);\n\t\tint qty = line.GetTypedColumnValue<int>(lc[\"SPAIQuantity\"]);\n\t\trow.SetColumnValue(\"SPAIMatchedProductId\", p.PrimaryColumnValue);\n\t\trow.SetColumnValue(\"SPAIUnitCost\", cost);\n\t\trow.SetColumnValue(\"SPAIUnitSell\", sell);\n\t\trow.SetColumnValue(\"SPAILineTotal\", sell * qty);\n\t\trow.SetColumnValue(\"SPAILineMarginPct\", sell == 0m ? 0m : Math.Round((sell - cost) / sell * 100m, 1));\n\t\trow.SetColumnValue(\"SPAIResolvedBy\", \"Deterministic\");\n\t\trow.Save(false);  // status stays Pending: BP2b decides Exact match vs multi-location vs shortfall\n\t\twriteLedger(line.PrimaryColumnValue, \"Deterministic match\", p.PrimaryColumnValue, Guid.Empty, checks,\n\t\t\t\"Pending\", \"Matched \" + p.GetTypedColumnValue<string>(pc[\"Code\"]), n);\n\t\tmatched++;\n\t} else {\n\t\trow.SetColumnValue(\"SPAIReasonCodeId\", reasons[\"COMPLIANCE_FAIL\"]);\n\t\trow.SetColumnValue(\"SPAIComplianceNotes\", string.Join(\" \", new[] {\n\t\t\tline.GetTypedColumnValue<string>(lc[\"SPAIComplianceNotes\"]) ?? string.Empty,\n\t\t\t\"Specified product fails the compliance floor: \"\n\t\t\t\t+ string.Join(\"; \", failedParts) + \".\" }).Trim());\n\t\trow.Save(false);\n\t\twriteLedger(line.PrimaryColumnValue, \"Compliance rejection\", Guid.Empty, reasons[\"COMPLIANCE_FAIL\"], checks,\n\t\t\t\"Pending\", \"COMPLIANCE_FAIL on the specified product\", n);\n\t\tfloorFail++;\n\t}\n}\n// The Opportunity: resolved-without-AI total across every run, the state for BP2b, status Sourcing.\nvar totalEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\ntotalEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\ntotalEsq.Filters.Add(totalEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\ntotalEsq.Filters.Add(totalEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIResolvedBy\", \"Deterministic\"));\nint deterministicTotal = totalEsq.GetEntityCollection(uc).Count;\nEntity opportunity = uc.EntitySchemaManager.GetInstanceByName(\"Opportunity\").CreateEntity(uc);\nstring projectState = string.Empty;\nif (opportunity.FetchFromDB(opportunityId)) {\n\tprojectState = (opportunity.GetTypedColumnValue<string>(\"SPAIProjectState\") ?? string.Empty).Trim();\n\topportunity.SetColumnValue(\"SPAIDeterministicCount\", deterministicTotal);\n\t// Status moves to Sourcing only when this run had open lines to work on, and never pulls back a tender\n\t// that is already past Gate 1: re-running intake to fetch a proposal must not undo a submission or award.\n\tvar statusByName = loadByName(\"SPAIAdjudicationStatus\");\n\tGuid currentStatus = opportunity.GetTypedColumnValue<Guid>(\"SPAIAdjudicationStatusId\");\n\tbool advanced = false;\n\tforeach (string later in new[] { \"Awaiting Gate 2\", \"Submitted\", \"Awarded\", \"Re-adjudicating\" }) {\n\t\tif (statusByName.ContainsKey(later) && currentStatus == statusByName[later]) {\n\t\t\tadvanced = true;\n\t\t}\n\t}\n\tif (!advanced && matched + floorFail + unresolved > 0) {\n\t\topportunity.SetColumnValue(\"SPAIAdjudicationStatusId\", statusByName[\"Sourcing\"]);\n\t}\n\topportunity.Save(false);\n}\nSet(\"ProjectState\", projectState);\nSet(\"MatchedCount\", matched);\nSet(\"FloorFailCount\", floorFail);\nSet(\"UnresolvedCount\", unresolved);\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSubProcess",
+          "UId": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+          "A2": "SubProcess1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9e358807-b219-427f-b829-c4b9e8aefa8c",
+          "BL3": "427;172",
+          "BL7": "49eafdbb-a89e-4bdf-a29d-7f17b1670a45",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "BN2": "69;55",
+          "BO2": true,
+          "BO3": true,
+          "BP2": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "b7ceb2d7-66b8-4f74-8eda-c34c707fab4a",
+              "A2": "OpportunityId",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+              "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{b7c9acfb-1951-4c6d-9927-a7da96e65452}]#]",
+                "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+              },
+              "L12": 0
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "a8ac7791-7128-4c20-b443-3cf3788e3547",
+              "A2": "ProjectState",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+              "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{1717a896-0132-4540-a612-84520a4feeb9}]#]",
+                "GS5": "b4c7e280-6c29-4820-9204-05a0f4580346"
+              },
+              "L12": 0
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "db60afad-a3b9-4df3-b845-21a4f66a189f",
+              "A2": "FilledCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "7586245a-8d72-451f-afaa-9d3ae849a67e",
+              "A2": "MultiSourceCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "4a9c4e41-4237-406a-8955-85492bf61c21",
+              "A2": "ShortfallCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            }
+          ],
+          "CK4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "CK2": [],
+          "CK3": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "275ab5d6-243c-4d83-bd8f-a05a0b206cdc",
+          "A2": "SequenceFlow1",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "CI1": "0b2c01c8-d40a-4d8c-8865-bac41934222b",
+          "CI2": "e5958432-afa4-4eb1-8d20-cb1a47104b82",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "81;200",
+          "CI12": "257;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "28aefaa1-70bc-4b2f-b8c4-c972f8652fdf",
+          "A2": "SequenceFlow2",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "CI1": "e5958432-afa4-4eb1-8d20-cb1a47104b82",
+          "CI2": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "326;200",
+          "CI12": "427;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "142b76c0-2314-4d45-994a-59dce565aa80",
+          "A2": "SequenceFlow3",
+          "A3": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A4": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "b4c7e280-6c29-4820-9204-05a0f4580346",
+          "CI1": "ea20ad51-949c-4efa-b52c-ba333617bc6e",
+          "CI2": "caa03ae2-ecd8-4fb9-bd4d-6e35ffb0a287",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "496;200",
+          "CI12": "600;200"
+        }
+      ],
+      "BK9": [],
+      "BK18": "Business Process",
+      "BK29": true,
+      "BK30": true,
+      "BK34": "en-US",
+      "Labels": [],
+      "BK24": []
+    }
+  }
+}

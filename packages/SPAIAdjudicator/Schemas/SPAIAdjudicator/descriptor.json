@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "9b45c34a-18a8-9d28-0ff3-5e614a2c0aa7",
+    "Name": "SPAIAdjudicator",
+    "ModifiedOnUtc": "\/Date(1790597452000)\/",
+    "ManagerName": "CopilotIntentSchemaManager",
+    "Caption": "SPAI Adjudicator",
+    "DependsOn": []
+  }
+}

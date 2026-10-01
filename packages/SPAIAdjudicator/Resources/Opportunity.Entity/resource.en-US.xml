@@ -3,6 +3,7 @@
 	<Group Type="String">
 		<Items>
 			<Item Name="Columns.SPAIAdjudicationStatus.Caption" Value="Adjudication status" />
+			<Item Name="Columns.SPAIAdjudicationStory.Caption" Value="Adjudication story" />
 			<Item Name="Columns.SPAIAiCallCount.Caption" Value="AI calls" />
 			<Item Name="Columns.SPAIDeterministicCount.Caption" Value="Resolved without AI" />
 			<Item Name="Columns.SPAIDwellingCount.Caption" Value="Dwelling count" />

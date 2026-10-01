@@ -1,0 +1,620 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessSchemaManager",
+      "UId": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+      "A2": "SPAIGate1Approval",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "B1": [],
+      "B2": [],
+      "B3": [
+        {
+          "UId": "e354946d-8ef5-4612-90f4-b7384a3728eb",
+          "A2": "System",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System"
+        },
+        {
+          "UId": "bd9732ce-a371-46aa-83e4-5099aee969c7",
+          "A2": "System.Collections.Generic",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System.Collections.Generic"
+        },
+        {
+          "UId": "994ffb51-6e14-445c-b592-7a9039ae6f50",
+          "A2": "Newtonsoft.Json.Linq",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Newtonsoft.Json.Linq"
+        },
+        {
+          "UId": "e4631ff7-bbe3-4d8c-99b2-904de17b6f54",
+          "A2": "Terrasoft.Core",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core"
+        },
+        {
+          "UId": "d6843313-020a-4a62-8218-634389f6e60a",
+          "A2": "Terrasoft.Core.Entities",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core.Entities"
+        }
+      ],
+      "B6": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+      "B8": "10.0.0.858",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "ead482d5-8fe3-4d8b-9954-174b527f23cc",
+          "A2": "TenderReference",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "c60df2f0-ebbf-4e9e-b430-157ae24004a4",
+          "A2": "ApproveLines",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "f5f285d5-13dd-417b-b723-5fee773f1262",
+          "A2": "ExcludeLines",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "72430a68-b09f-474e-83ae-cd16d1e3f8ed",
+          "A2": "ApprovalNote",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "560cb619-1593-470b-9ec1-329268a47ed5",
+          "A2": "OpportunityId",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "6192defe-950c-46ce-8546-9acd65df235a",
+          "A2": "ResolvedOpportunity",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "0ab52760-fcac-4bec-b0c8-94c99fea3864",
+          "A2": "RunSummary",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "9427a638-e6eb-4ec8-9838-8b3c97520ebe",
+          "A2": "TenderStatus",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "7d4a92ef-0c7b-478c-a960-2e6762135865",
+          "A2": "OutstandingCount",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+          },
+          "L12": 1
+        }
+      ],
+      "IJ1": true,
+      "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+      "IJ10": true,
+      "BK15": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "734495e4-28d9-4db1-a57f-4a9fe445bfa2",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "GT2": "[Element:{c8941d10-6d6f-41ca-8b33-cd43476a4064}].[Parameter:{50a04c72-bacb-4086-b6d8-6eecb0503323}]",
+          "GT3": "50a04c72-bacb-4086-b6d8-6eecb0503323",
+          "GT5": "46a29795-3e9c-4775-8ec1-67abb34b431a",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "2cbf6cd4-a3d2-4d72-904f-c1a6ada29a36",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "GT2": "[Element:{c8941d10-6d6f-41ca-8b33-cd43476a4064}].[Parameter:{b2cba676-1b16-48ca-a296-5d2dc9a02a45}]",
+          "GT3": "b2cba676-1b16-48ca-a296-5d2dc9a02a45",
+          "GT5": "d5e5501d-bf07-4bbe-8a54-25404673e40d",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "bf6297b2-f599-4161-b85b-3378bea70e98",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "GT2": "[Element:{c8941d10-6d6f-41ca-8b33-cd43476a4064}].[Parameter:{e0b72bac-20dd-47a4-9925-93e351cae342}]",
+          "GT3": "e0b72bac-20dd-47a4-9925-93e351cae342",
+          "GT5": "4d482824-eabb-4ecb-8671-8be5723f39c9",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "1a8b3fcf-6c27-4d04-bef5-f98a8c1d3295",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "GT2": "[Element:{c8941d10-6d6f-41ca-8b33-cd43476a4064}].[Parameter:{1a791359-d11b-4666-a0cd-2b5daf323d6b}]",
+          "GT3": "1a791359-d11b-4666-a0cd-2b5daf323d6b",
+          "GT5": "029ee8f3-e562-4e21-b968-55fa70ab113d",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaMapping",
+          "UId": "dba1a73d-c431-40be-a7ab-7a9f6d11c25c",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "GT2": "[Element:{c8941d10-6d6f-41ca-8b33-cd43476a4064}].[Parameter:{9a6a7de9-8da5-477d-9152-aba73b084dec}]",
+          "GT3": "9a6a7de9-8da5-477d-9152-aba73b084dec",
+          "GT5": "8037b944-3728-4860-9373-8fcd22b2e19e",
+          "GT4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "GT1": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          }
+        }
+      ],
+      "BK37": {
+        "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+        "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+        "A2": "NotificationCaption",
+        "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+        "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+        "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+        "L8": {
+          "GS1": 3,
+          "GS2": "[#[PropertyValue:Caption]#]"
+        }
+      },
+      "BK1": "FFFFFFFF",
+      "BK2": "FFBBBBBB",
+      "BK3": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+          "UId": "15468b85-5a93-4df5-baa3-94f0dad7f29e",
+          "A2": "LaneSet1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BM1": 0,
+          "BM4": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+              "UId": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+              "A2": "Lane1",
+              "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+              "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+              "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+              "IL2": "15468b85-5a93-4df5-baa3-94f0dad7f29e",
+              "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+              "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+              "CD1": [],
+              "CD2": [],
+              "CD4": "15468b85-5a93-4df5-baa3-94f0dad7f29e",
+              "CD7": []
+            }
+          ]
+        }
+      ],
+      "BK5": [],
+      "BK4": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartEvent",
+          "UId": "1abc4bd5-e61a-4e1a-ac58-7c2646eb8805",
+          "A2": "StartEvent1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "11;176",
+          "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": [],
+          "ED1": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
+          "UId": "21eccb9c-9c69-4692-a709-74f7c6bfe168",
+          "A2": "TerminateEvent1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "449;99",
+          "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaExclusiveGateway",
+          "UId": "eee675a3-bddc-4aa3-a6f6-ff916fe2acda",
+          "A2": "ExclusiveGateway1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "269;164",
+          "BL7": "bd9f7570-6c97-4f16-90e5-663a190c6c7c",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "55;55",
+          "BO3": true,
+          "HH2": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "e763f19a-f8a4-4fc3-b23f-b16618604f4f",
+          "A2": "ScriptTask1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "146;164",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nstring reference = (Get<string>(\"TenderReference\") ?? string.Empty).Trim();\nstring approveText = (Get<string>(\"ApproveLines\") ?? string.Empty).Trim();\nstring excludeText = (Get<string>(\"ExcludeLines\") ?? string.Empty).Trim();\nstring note = (Get<string>(\"ApprovalNote\") ?? string.Empty).Trim();\nSet(\"ResolvedOpportunity\", \"\");\nAction<string> stop = reason => Set(\"RunSummary\", \"Nothing was changed. \" + reason);\n\n// ---- The tender: exact code, exact title, id, or the one tender with the same name written differently. ----\nGuid opportunityId = Guid.Empty;\nstring title = string.Empty;\nstring tenderStatus = string.Empty;\nif (reference.Length == 0) {\n\tstop(\"No tender was named. Ask the person which tender the decisions are for.\");\n\treturn true;\n}\nGuid parsedId = Guid.Empty;\nvar oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Opportunity\");\noppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring oppTitleCol = oppEsq.AddColumn(\"Title\").Name;\nstring oppStatusCol = oppEsq.AddColumn(\"SPAIAdjudicationStatus.Name\").Name;\nif (Guid.TryParse(reference, out parsedId)) {\n\toppEsq.Filters.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Id\", parsedId));\n} else {\n\tvar either = new EntitySchemaQueryFilterCollection(oppEsq, Terrasoft.Common.LogicalOperationStrict.Or);\n\teither.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Title\", reference));\n\teither.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAITenderCode\", reference));\n\toppEsq.Filters.Add(either);\n}\nint found = 0;\nforeach (Entity o in oppEsq.GetEntityCollection(uc)) {\n\tfound++;\n\topportunityId = o.PrimaryColumnValue;\n\ttitle = (o.GetTypedColumnValue<string>(oppTitleCol) ?? string.Empty).Trim();\n\ttenderStatus = (o.GetTypedColumnValue<string>(oppStatusCol) ?? string.Empty).Trim();\n}\nif (found == 0 && parsedId == Guid.Empty) {\n\t// Same name written differently (punctuation, spacing, case): use it only when exactly one tender matches.\n\tFunc<string, string> normalise = value => {\n\t\tvar kept = new System.Text.StringBuilder();\n\t\tforeach (char c in value ?? string.Empty) {\n\t\t\tif (char.IsLetterOrDigit(c)) {\n\t\t\t\tkept.Append(char.ToLowerInvariant(c));\n\t\t\t}\n\t\t}\n\t\treturn kept.ToString();\n\t};\n\tstring wanted = normalise(reference);\n\tstring anchor = string.Empty;\n\tforeach (string word in reference.Split(new[] { ' ', ',', '-', '/', '.', '(', ')' }, StringSplitOptions.RemoveEmptyEntries)) {\n\t\tif (word.Length > anchor.Length) {\n\t\t\tanchor = word;\n\t\t}\n\t}\n\tif (wanted.Length > 0 && anchor.Length > 0) {\n\t\tvar nearEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Opportunity\");\n\t\tnearEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\t\tstring nTitleCol = nearEsq.AddColumn(\"Title\").Name;\n\t\tstring nCodeCol = nearEsq.AddColumn(\"SPAITenderCode\").Name;\n\t\tstring nStatusCol = nearEsq.AddColumn(\"SPAIAdjudicationStatus.Name\").Name;\n\t\tvar anyText = new EntitySchemaQueryFilterCollection(nearEsq, Terrasoft.Common.LogicalOperationStrict.Or);\n\t\tanyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, \"Title\", anchor));\n\t\tanyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, \"SPAITenderCode\", anchor));\n\t\tnearEsq.Filters.Add(anyText);\n\t\tforeach (Entity o in nearEsq.GetEntityCollection(uc)) {\n\t\t\tif (normalise(o.GetTypedColumnValue<string>(nTitleCol)) == wanted || normalise(o.GetTypedColumnValue<string>(nCodeCol)) == wanted) {\n\t\t\t\tfound++;\n\t\t\t\topportunityId = o.PrimaryColumnValue;\n\t\t\t\ttitle = (o.GetTypedColumnValue<string>(nTitleCol) ?? string.Empty).Trim();\n\t\t\t\ttenderStatus = (o.GetTypedColumnValue<string>(nStatusCol) ?? string.Empty).Trim();\n\t\t\t}\n\t\t}\n\t}\n}\nif (found == 0) {\n\tstop(\"No tender is titled or coded exactly \\\"\" + reference + \"\\\". Use the tender name the intake reported.\");\n\treturn true;\n}\nif (found > 1) {\n\tstop(\"\\\"\" + reference + \"\\\" matches more than one tender. Ask the person for the tender code.\");\n\treturn true;\n}\nif (tenderStatus != \"Awaiting Gate 1\") {\n\tstop(\"Tender \" + title + \" is at \\\"\" + (tenderStatus.Length > 0 ? tenderStatus : \"no status\")\n\t\t+ \"\\\". Gate 1 decisions can only be recorded while it is Awaiting Gate 1.\");\n\treturn true;\n}\n\n// ---- Parse the two lists ----\nbool approveAll = string.Equals(approveText, \"ALL\", StringComparison.OrdinalIgnoreCase);\nvar unreadable = new List<string>();\nFunc<string, HashSet<int>> parseLines = text => {\n\tvar set = new HashSet<int>();\n\tforeach (string token in text.Split(new[] { ',', ';', ' ', '\\t', '\\n' }, StringSplitOptions.RemoveEmptyEntries)) {\n\t\tstring t = token.Trim().TrimStart('#');\n\t\tif (t.StartsWith(\"line\", StringComparison.OrdinalIgnoreCase)) {\n\t\t\tt = t.Substring(4);\n\t\t}\n\t\tint n;\n\t\tif (int.TryParse(t, out n) && n > 0) {\n\t\t\tset.Add(n);\n\t\t} else if (!string.Equals(t, \"and\", StringComparison.OrdinalIgnoreCase) && t.Length > 0) {\n\t\t\tunreadable.Add(token.Trim());\n\t\t}\n\t}\n\treturn set;\n};\nvar approve = approveAll ? new HashSet<int>() : parseLines(approveText);\nvar exclude = parseLines(excludeText);\nif (unreadable.Count > 0) {\n\tstop(\"These could not be read as line numbers: \" + string.Join(\", \", unreadable)\n\t\t+ \". Ask the person to give line numbers only, for example \\\"4, 8\\\".\");\n\treturn true;\n}\nvar both = new List<int>();\nforeach (int n in approve) {\n\tif (exclude.Contains(n)) {\n\t\tboth.Add(n);\n\t}\n}\nif (both.Count > 0) {\n\tboth.Sort();\n\tstop(\"Line \" + string.Join(\", \", both) + \" was named to approve and to exclude. Ask the person which they meant.\");\n\treturn true;\n}\nif (!approveAll && approve.Count == 0 && exclude.Count == 0) {\n\tstop(\"No lines were named. Ask the person which lines to approve, or which to exclude.\");\n\treturn true;\n}\n\n// ---- Lookups ----\nFunc<string, Dictionary<string, Guid>> loadByName = schemaName => {\n\tvar esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);\n\tesq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring nameColumn = esq.AddColumn(\"Name\").Name;\n\tvar map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);\n\tforeach (Entity e in esq.GetEntityCollection(uc)) {\n\t\tmap[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n\t}\n\treturn map;\n};\nvar lineStatus = loadByName(\"SPAILineStatus\");\nvar decisionType = loadByName(\"SPAIDecisionType\");\n\n// ---- The tender's lines ----\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring numCol = lineEsq.AddColumn(\"SPAILineNumber\").Name;\nstring statusCol = lineEsq.AddColumn(\"SPAILineStatus.Name\").Name;\nstring productCol = lineEsq.AddColumn(\"SPAIMatchedProduct\").Name;\nstring productCodeCol = lineEsq.AddColumn(\"SPAIMatchedProduct.Code\").Name;\nstring reasonCol = lineEsq.AddColumn(\"SPAIReasonCode.SPAICode\").Name;\nstring reasonNameCol = lineEsq.AddColumn(\"SPAIReasonCode.Name\").Name;\nstring specCol = lineEsq.AddColumn(\"SPAISpecifiedText\").Name;\nstring roomCol = lineEsq.AddColumn(\"SPAIRoomType.Name\").Name;\nstring productNameCol = lineEsq.AddColumn(\"SPAIMatchedProduct.Name\").Name;\nstring productBrandCol = lineEsq.AddColumn(\"SPAIMatchedProduct.SPAIBrand.Name\").Name;\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nvar lines = new Dictionary<int, Entity>();\nforeach (Entity l in lineEsq.GetEntityCollection(uc)) {\n\tlines[l.GetTypedColumnValue<int>(numCol)] = l;\n}\nif (approveAll) {\n\tforeach (var kv in lines) {\n\t\tstring st = (kv.Value.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();\n\t\tbool hasProduct = kv.Value.GetTypedColumnValue<Guid>(productCol + \"Id\") != Guid.Empty;\n\t\tif (st == \"Substitution proposed\" || (st == \"Escalated\" && hasProduct)) {\n\t\t\tapprove.Add(kv.Key);\n\t\t}\n\t}\n}\n\nEntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIScheduleLine\");\nEntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDecisionLedger\");\nstring actor = \"Gate 1 approval via chat (tool approve_tender_lines)\";\nstring noteText = note.Length > 0 ? \"; the person's words: \\\"\" + (note.Length > 400 ? note.Substring(0, 400) : note) + \"\\\"\" : string.Empty;\nAction<Guid, Guid, int, string, string, string> writeLedger = (lineId, productId, sequence, prior, next, checks) => {\n\tEntity row = ledgerSchema.CreateEntity(uc);\n\trow.SetDefColumnValues();\n\trow.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\n\trow.SetColumnValue(\"SPAIScheduleLineId\", lineId);\n\trow.SetColumnValue(\"SPAIDecisionTypeId\", decisionType[\"Human override\"]);\n\trow.SetColumnValue(\"SPAIActor\", actor);\n\tif (productId != Guid.Empty) {\n\t\trow.SetColumnValue(\"SPAIProposedProductId\", productId);\n\t}\n\trow.SetColumnValue(\"SPAIComplianceChecks\", checks + noteText);\n\trow.SetColumnValue(\"SPAIPriorValue\", prior.Length > 250 ? prior.Substring(0, 250) : prior);\n\trow.SetColumnValue(\"SPAINewValue\", next.Length > 250 ? next.Substring(0, 250) : next);\n\trow.SetColumnValue(\"SPAISequence\", sequence);\n\trow.SetColumnValue(\"SPAIOccurredOn\", uc.CurrentUser.GetCurrentDateTime());\n\trow.Save(false);\n};\n\n// How an item is named back to the person: what was specified, where, and the line as a reference.\nFunc<Entity, string> itemName = e => {\n\tstring spec = (e.GetTypedColumnValue<string>(specCol) ?? string.Empty).Trim();\n\tif (spec.Length > 70) spec = spec.Substring(0, 70).TrimEnd() + \"...\";\n\tstring room = (e.GetTypedColumnValue<string>(roomCol) ?? string.Empty).Trim();\n\treturn spec + (room.Length > 0 ? \" (\" + room + \", line \" : \" (line \") + e.GetTypedColumnValue<int>(numCol) + \")\";\n};\nFunc<Entity, string> productName = e => {\n\tstring name = (e.GetTypedColumnValue<string>(productNameCol) ?? string.Empty).Trim();\n\tstring brand = (e.GetTypedColumnValue<string>(productBrandCol) ?? string.Empty).Trim();\n\treturn name + (brand.Length > 0 && name.IndexOf(brand, StringComparison.OrdinalIgnoreCase) < 0 ? \" by \" + brand : string.Empty);\n};\nvar approved = new List<string>();\nvar alreadyAccepted = new List<string>();\nvar refused = new List<string>();\nvar excluded = new List<string>();\nvar notOnTender = new List<int>();\n\nvar approveList = new List<int>(approve);\napproveList.Sort();\nforeach (int n in approveList) {\n\tEntity l;\n\tif (!lines.TryGetValue(n, out l)) {\n\t\tnotOnTender.Add(n);\n\t\tcontinue;\n\t}\n\tstring st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();\n\tGuid productId = l.GetTypedColumnValue<Guid>(productCol + \"Id\");\n\tstring productCode = (l.GetTypedColumnValue<string>(productCodeCol) ?? string.Empty).Trim();\n\tstring reason = (l.GetTypedColumnValue<string>(reasonCol) ?? string.Empty).Trim();\n\tif (st == \"Exact match\" || st == \"Sourced multi-location\" || st == \"Substitution approved\") {\n\t\talreadyAccepted.Add(itemName(l));\n\t\tcontinue;\n\t}\n\tif ((st == \"Substitution proposed\" || st == \"Escalated\") && productId != Guid.Empty) {\n\t\tEntity row = lineSchema.CreateEntity(uc);\n\t\trow.FetchFromDB(l.PrimaryColumnValue);\n\t\trow.SetColumnValue(\"SPAILineStatusId\", lineStatus[\"Substitution approved\"]);\n\t\trow.Save(false);\n\t\twriteLedger(l.PrimaryColumnValue, productId, n, st + (reason.Length > 0 ? \" | \" + reason : string.Empty),\n\t\t\t\"Substitution approved | \" + productCode,\n\t\t\t\"Gate 1: a person approved \" + productCode + \" for line \" + n + \" in the chat, after Tool Confirmation\");\n\t\tapproved.Add(itemName(l) + \" -> \" + productName(l) + \" [\" + productCode + \"]\");\n\t\tcontinue;\n\t}\n\tstring reasonName = (l.GetTypedColumnValue<string>(reasonNameCol) ?? string.Empty).Trim();\n\trefused.Add(itemName(l) + \": \" + (productId == Guid.Empty ? \"there is no compliant product to approve\" : \"it is \" + st.ToLowerInvariant())\n\t\t+ (reasonName.Length > 0 ? \" (\" + reasonName.ToLowerInvariant() + \")\" : string.Empty));\n}\n\nvar excludeList = new List<int>(exclude);\nexcludeList.Sort();\nforeach (int n in excludeList) {\n\tEntity l;\n\tif (!lines.TryGetValue(n, out l)) {\n\t\tnotOnTender.Add(n);\n\t\tcontinue;\n\t}\n\tstring st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();\n\tif (st == \"Substitution rejected\") {\n\t\texcluded.Add(itemName(l));\n\t\tcontinue;\n\t}\n\tEntity row = lineSchema.CreateEntity(uc);\n\trow.FetchFromDB(l.PrimaryColumnValue);\n\trow.SetColumnValue(\"SPAILineStatusId\", lineStatus[\"Substitution rejected\"]);\n\trow.Save(false);\n\twriteLedger(l.PrimaryColumnValue, Guid.Empty, n, st, \"Substitution rejected | not supplied on this tender\",\n\t\t\"Gate 1: a person excluded line \" + n + \" from the tender in the chat, after Tool Confirmation\");\n\texcluded.Add(itemName(l));\n}\n\nvar parts = new List<string>();\nif (approved.Count > 0) {\n\tparts.Add(\"APPROVED BY THE PERSON (\" + approved.Count + \"): \" + string.Join(\"; \", approved));\n}\nif (excluded.Count > 0) {\n\tparts.Add(\"EXCLUDED FROM THE TENDER, will not be supplied (\" + excluded.Count + \"): \" + string.Join(\"; \", excluded));\n}\nif (alreadyAccepted.Count > 0) {\n\tparts.Add(\"ALREADY ACCEPTED, no change: \" + string.Join(\"; \", alreadyAccepted));\n}\nif (refused.Count > 0) {\n\tparts.Add(\"NOT APPROVED (\" + refused.Count + \"): \" + string.Join(\"; \", refused) + \". Exclude these, or resolve them with the architect outside the chat\");\n}\nif (notOnTender.Count > 0) {\n\tnotOnTender.Sort();\n\tparts.Add(\"NOT ON THIS TENDER: line \" + string.Join(\", \", notOnTender));\n}\nSet(\"OpportunityId\", opportunityId);\nSet(\"ResolvedOpportunity\", title);\nSet(\"RunSummary\", \"BRIEFING FOR THE PERSON: tell this in plain words, by item name. Gate 1 decisions for \" + title + \".\\n\"\n\t+ (parts.Count > 0 ? string.Join(\".\\n\", parts) + \".\" : \"No decision changed an item.\"));\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSubProcess",
+          "UId": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+          "A2": "SubProcess1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "398;164",
+          "BL7": "49eafdbb-a89e-4bdf-a29d-7f17b1670a45",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "69;55",
+          "BO2": true,
+          "BO3": true,
+          "BP2": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "50a04c72-bacb-4086-b6d8-6eecb0503323",
+              "A2": "OpportunityId",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+              "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+              "L8": {
+                "GS1": 3,
+                "GS2": "[#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{560cb619-1593-470b-9ec1-329268a47ed5}]#]",
+                "GS5": "4fe8a69f-a59b-43c3-8571-93f736e69bea"
+              },
+              "L12": 0
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "b2cba676-1b16-48ca-a296-5d2dc9a02a45",
+              "A2": "ProjectState",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+              "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 0
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "e0b72bac-20dd-47a4-9925-93e351cae342",
+              "A2": "FilledCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "1a791359-d11b-4666-a0cd-2b5daf323d6b",
+              "A2": "MultiSourceCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            },
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+              "UId": "9a6a7de9-8da5-477d-9152-aba73b084dec",
+              "A2": "ShortfallCount",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "IL2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+              "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+              "L8": {
+                "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+              },
+              "L12": 1
+            }
+          ],
+          "CK4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "CK2": [],
+          "CK3": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "554f6f64-3d2e-4b4f-9284-bda80d8611be",
+          "A2": "ScriptTask2",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "630;164",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nGuid opportunityId = Get<Guid>(\"OpportunityId\");\nstring summary = (Get<string>(\"RunSummary\") ?? string.Empty).Trim();\n\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring numCol = lineEsq.AddColumn(\"SPAILineNumber\").Name;\nstring statusCol = lineEsq.AddColumn(\"SPAILineStatus.Name\").Name;\nstring reasonCol = lineEsq.AddColumn(\"SPAIReasonCode.SPAICode\").Name;\nstring totalCol = lineEsq.AddColumn(\"SPAILineTotal\").Name;\nstring shortCol = lineEsq.AddColumn(\"SPAIQtyShortfall\").Name;\nstring qtyCol = lineEsq.AddColumn(\"SPAIQuantity\").Name;\nstring costCol = lineEsq.AddColumn(\"SPAIUnitCost\").Name;\nstring reasonNameCol = lineEsq.AddColumn(\"SPAIReasonCode.Name\").Name;\nstring specCol = lineEsq.AddColumn(\"SPAISpecifiedText\").Name;\nstring roomCol = lineEsq.AddColumn(\"SPAIRoomType.Name\").Name;\nstring productCol = lineEsq.AddColumn(\"SPAIMatchedProduct\").Name;\nstring createdCol = lineEsq.AddColumn(\"CreatedOn\").Name;\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\n\nint supplied = 0, excludedCount = 0, lineCount = 0, exactCount = 0, multiCount = 0, subCount = 0, openEscalations = 0;\ndecimal value = 0m, cost = 0m;\nDateTime scheduleArrived = DateTime.MaxValue;  // the first schedule line written: when the schedule reached the CRM\nvar outstanding = new List<Tuple<int, string>>();\nvar openByReason = new Dictionary<string, List<Tuple<int, string>>>();\nvar shortfalls = new List<string>();\nforeach (Entity l in lineEsq.GetEntityCollection(uc)) {\n\tint n = l.GetTypedColumnValue<int>(numCol);\n\tstring st = (l.GetTypedColumnValue<string>(statusCol) ?? string.Empty).Trim();\n\tstring reason = (l.GetTypedColumnValue<string>(reasonCol) ?? string.Empty).Trim();\n\tlineCount++;\n\tDateTime created = l.GetTypedColumnValue<DateTime>(createdCol);\n\tif (created > DateTime.MinValue && created < scheduleArrived) scheduleArrived = created;\n\tif (st == \"Exact match\") exactCount++;\n\tif (st == \"Sourced multi-location\") multiCount++;\n\tif (st == \"Substitution proposed\" || st == \"Substitution approved\") subCount++;\n\tif (st == \"Escalated\" || st == \"No match\") openEscalations++;\n\tif (st == \"Exact match\" || st == \"Sourced multi-location\" || st == \"Substitution approved\") {\n\t\tsupplied++;\n\t\tvalue += l.GetTypedColumnValue<decimal>(totalCol);\n\t\tcost += l.GetTypedColumnValue<int>(qtyCol) * l.GetTypedColumnValue<decimal>(costCol);\n\t\tint shortQty = l.GetTypedColumnValue<int>(shortCol);\n\t\tif (shortQty > 0) {\n\t\t\tstring shortSpec = (l.GetTypedColumnValue<string>(specCol) ?? string.Empty).Trim();\n\t\t\tshortfalls.Add(shortSpec + \" (line \" + n + \"): \" + shortQty + \" units not in stock, to be ordered in\");\n\t\t}\n\t} else if (st == \"Substitution rejected\") {\n\t\texcludedCount++;\n\t} else {\n\t\toutstanding.Add(Tuple.Create(n, st + (reason.Length > 0 ? \" \" + reason : string.Empty)));\n\t\tstring spec = (l.GetTypedColumnValue<string>(specCol) ?? string.Empty).Trim();\n\t\tif (spec.Length > 70) spec = spec.Substring(0, 70).TrimEnd() + \"...\";\n\t\tstring room = (l.GetTypedColumnValue<string>(roomCol) ?? string.Empty).Trim();\n\t\tbool hasProduct = l.GetTypedColumnValue<Guid>(productCol + \"Id\") != Guid.Empty;\n\t\tstring group = (l.GetTypedColumnValue<string>(reasonNameCol) ?? string.Empty).Trim();\n\t\tgroup = (group.Length > 0 ? group : st) + (hasProduct ? \" (a suggested product can be approved)\" : \" (no product: exclude, or resolve with the architect)\");\n\t\tif (!openByReason.ContainsKey(group)) openByReason[group] = new List<Tuple<int, string>>();\n\t\topenByReason[group].Add(Tuple.Create(n, spec + (room.Length > 0 ? \" (\" + room + \", line \" + n + \")\" : \" (line \" + n + \")\")));\n\t}\n}\noutstanding.Sort((a, b) => a.Item1.CompareTo(b.Item1));\n\nFunc<string, Dictionary<string, Guid>> loadByName = schemaName => {\n\tvar esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);\n\tesq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring nameColumn = esq.AddColumn(\"Name\").Name;\n\tvar map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);\n\tforeach (Entity e in esq.GetEntityCollection(uc)) {\n\t\tmap[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n\t}\n\treturn map;\n};\n\nstring tenderStatus = \"Awaiting Gate 1\";\nvar parts = new List<string>();\nparts.Add(string.Format(\"WHERE THE TENDER STANDS: {0} item(s) will be supplied, {1} excluded, {2} still need a decision\", supplied, excludedCount, outstanding.Count));\nif (shortfalls.Count > 0) {\n\tparts.Add(\"STOCK TO ORDER IN at award: \" + string.Join(\"; \", shortfalls));\n}\n\nEntity opportunity = uc.EntitySchemaManager.GetInstanceByName(\"Opportunity\").CreateEntity(uc);\nif (opportunity.FetchFromDB(opportunityId)) {\n\topportunity.SetColumnValue(\"SPAITotalSell\", value);\n\topportunity.SetColumnValue(\"SPAITotalCost\", cost);\n\topportunity.SetColumnValue(\"SPAIGrossMarginPct\", value > 0m ? Math.Round((value - cost) / value * 100m, 1) : 0m);\n\topportunity.SetColumnValue(\"SPAILineCount\", lineCount);\n\topportunity.SetColumnValue(\"SPAIExactMatchCount\", exactCount);\n\topportunity.SetColumnValue(\"SPAIMultiSourceCount\", multiCount);\n\topportunity.SetColumnValue(\"SPAISubstitutionCount\", subCount);\n\topportunity.SetColumnValue(\"SPAIEscalationCount\", openEscalations);\n\tif (outstanding.Count == 0) {\n\t\ttenderStatus = \"Submitted\";\n\t\tvar statusByName = loadByName(\"SPAIAdjudicationStatus\");\n\t\topportunity.SetColumnValue(\"SPAIAdjudicationStatusId\", statusByName[tenderStatus]);\n\t\topportunity.SetColumnValue(\"SPAIGate1ApprovedOn\", uc.CurrentUser.GetCurrentDateTime());\n\t\t// Hours to close: from the schedule reaching the CRM to the tender being submitted at Gate 1.\n\t\tif (scheduleArrived < DateTime.MaxValue) {\n\t\t\tdouble hours = (uc.CurrentUser.GetCurrentDateTime() - scheduleArrived).TotalHours;\n\t\t\topportunity.SetColumnValue(\"SPAIHoursToClose\", Math.Round((decimal)Math.Max(0d, hours), 1));\n\t\t}\n\t\topportunity.SetColumnValue(\"SPAIGate1ApprovedById\", uc.CurrentUser.ContactId);\n\n\t\tEntity ledger = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDecisionLedger\").CreateEntity(uc);\n\t\tledger.SetDefColumnValues();\n\t\tledger.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\n\t\tledger.SetColumnValue(\"SPAIDecisionTypeId\", loadByName(\"SPAIDecisionType\")[\"Human override\"]);\n\t\tledger.SetColumnValue(\"SPAIActor\", \"Gate 1 approval via chat (tool approve_tender_lines)\");\n\t\tledger.SetColumnValue(\"SPAIComplianceChecks\", string.Format(\n\t\t\t\"Gate 1 complete: {0} line(s) supplied, {1} excluded, none outstanding; tender value {2:N2}; submitted to the builder; no stock reserved\",\n\t\t\tsupplied, excludedCount, value));\n\t\tledger.SetColumnValue(\"SPAIPriorValue\", \"Awaiting Gate 1\");\n\t\tledger.SetColumnValue(\"SPAINewValue\", tenderStatus);\n\t\tledger.SetColumnValue(\"SPAISequence\", 0);\n\t\tledger.SetColumnValue(\"SPAIOccurredOn\", uc.CurrentUser.GetCurrentDateTime());\n\t\tledger.Save(false);\n\n\t\tparts.Add(string.Format(\"GATE 1 COMPLETE: every item is decided. Tender value {0:N2}, gross margin {1}%\", value,\n\t\t\tvalue > 0m ? Math.Round((value - cost) / value * 100m, 1).ToString(System.Globalization.CultureInfo.InvariantCulture) : \"0\"));\n\t\tparts.Add(\"NEXT: the tender goes to the builder as submitted. When the builder awards it and sends their blanket purchase order number, \"\n\t\t\t+ \"Gate 2 approves the award, and only then is stock reserved and the orders raised\");\n\t} else {\n\t\tvar groups = new List<string>();\n\t\tforeach (var kv in openByReason) {\n\t\t\tkv.Value.Sort((a, c) => a.Item1.CompareTo(c.Item1));\n\t\t\tvar names = new List<string>();\n\t\t\tforeach (var o in kv.Value) {\n\t\t\t\tif (names.Count == 20) {\n\t\t\t\t\tnames.Add(\"and \" + (kv.Value.Count - 20) + \" more\");\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t\tnames.Add(o.Item2);\n\t\t\t}\n\t\t\tgroups.Add(kv.Key + \", \" + kv.Value.Count + \": \" + string.Join(\"; \", names));\n\t\t}\n\t\tparts.Add(\"STILL TO DECIDE, by reason:\\n  - \" + string.Join(\"\\n  - \", groups));\n\t}\n\topportunity.Save(false);\n}\n\nSet(\"TenderStatus\", tenderStatus);\nSet(\"OutstandingCount\", outstanding.Count);\nstring plainStatus = tenderStatus == \"Submitted\" ? \"submitted to the builder\" : \"waiting for the person's decisions\";\nSet(\"RunSummary\", (summary.Length > 0 ? summary + \"\\n\\n\" : string.Empty) + string.Join(\".\\n\", parts)\n\t+ \".\\nSTATUS: \" + plainStatus + \". On the opportunity it shows as \\\"\" + tenderStatus + \"\\\". No stock has been reserved and no order raised.\");\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
+          "UId": "227c198c-8225-419e-b996-fb6af240e496",
+          "A2": "TerminateEvent2",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "9eafb6df-57f4-41ef-bcf7-4f67cb98974d",
+          "BL3": "813;176",
+          "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaConditionalFlow",
+          "UId": "2cc63ae4-79a3-4910-b2d3-04f46d7bb7e2",
+          "A2": "ConditionalSequenceFlow1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "dac675d4-ea84-4e44-9056-38bf918618e9",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "eee675a3-bddc-4aa3-a6f6-ff916fe2acda",
+          "CI2": "21eccb9c-9c69-4692-a709-74f7c6bfe168",
+          "CI3": "string.IsNullOrEmpty([#[IsOwnerSchema:false].[IsSchema:false].[Parameter:{6192defe-950c-46ce-8546-9acd65df235a}]#])",
+          "CI4": 2,
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI7": "0;1",
+          "CI8": "-1;0",
+          "CI11": "297;164",
+          "CI12": "449;115",
+          "CI10": {
+            "Item0": "297;115"
+          },
+          "GV2": "{}",
+          "GV3": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "4a41b519-78cb-495d-b2e5-fe73f80dde45",
+          "A2": "SequenceFlow3",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+          "CI2": "554f6f64-3d2e-4b4f-9284-bda80d8611be",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "467;192",
+          "CI12": "630;192"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "50af30af-e57b-4366-b299-6108ad3a746b",
+          "A2": "SequenceFlow4",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "554f6f64-3d2e-4b4f-9284-bda80d8611be",
+          "CI2": "227c198c-8225-419e-b996-fb6af240e496",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "699;192",
+          "CI12": "813;192"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "25f08c35-dbc7-410f-95ba-acb91130207e",
+          "A2": "SequenceFlow5",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "1abc4bd5-e61a-4e1a-ac58-7c2646eb8805",
+          "CI2": "e763f19a-f8a4-4fc3-b23f-b16618604f4f",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "42;192",
+          "CI12": "146;192"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "0ef9d95f-fa4b-4ee1-bce3-8c9e7e8aa4b8",
+          "A2": "SequenceFlow6",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "e763f19a-f8a4-4fc3-b23f-b16618604f4f",
+          "CI2": "eee675a3-bddc-4aa3-a6f6-ff916fe2acda",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "215;192",
+          "CI12": "269;192"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "fecabd96-ac22-4422-ad93-6a5906308c85",
+          "A2": "DefaultSequenceFlow2",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "573ed909-e069-4161-b193-ae8dd9437c68",
+          "BL8": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "CI1": "eee675a3-bddc-4aa3-a6f6-ff916fe2acda",
+          "CI2": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+          "CI3": "null",
+          "CI4": 1,
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "324;192",
+          "CI12": "398;192"
+        }
+      ],
+      "BK9": [],
+      "BK18": "Business Process",
+      "BK29": true,
+      "BK30": true,
+      "BK34": "null",
+      "Labels": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLabel",
+          "UId": "e2a56be9-9e51-48df-2fe0-2853db809295",
+          "A2": "ConditionalSequenceFlow1_label1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "ParentUId": "2cc63ae4-79a3-4910-b2d3-04f46d7bb7e2",
+          "X": 33,
+          "Y": -109
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLabel",
+          "UId": "b0fbdeca-110a-3419-0e4b-ff5f8e8754bf",
+          "A2": "SubProcess1_label1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "ParentUId": "c8941d10-6d6f-41ca-8b33-cd43476a4064",
+          "X": -29
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLabel",
+          "UId": "dc1144df-3080-f16b-3f8d-0031bf474605",
+          "A2": "SequenceFlow3_label1",
+          "A3": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "A4": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+          "ParentUId": "4a41b519-78cb-495d-b2e5-fe73f80dde45",
+          "X": 116,
+          "Y": 33
+        }
+      ],
+      "BK24": []
+    }
+  }
+}

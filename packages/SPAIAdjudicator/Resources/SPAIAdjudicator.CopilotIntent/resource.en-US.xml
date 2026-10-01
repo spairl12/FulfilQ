@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="Caption" Value="SPAI Adjudicator" />
+			<Item Name="InputParameters.AdjudicatorRequest.Sys_Caption" Value="AdjudicatorRequest" />
+			<Item Name="OutputParameters.VerdictsJson.Sys_Caption" Value="VerdictsJson" />
+		</Items>
+	</Group>
+</Resources>

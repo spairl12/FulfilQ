@@ -1,0 +1,342 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessSchemaManager",
+      "UId": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+      "A2": "SPAIAwardFulfilment",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "B1": [],
+      "B2": [],
+      "B3": [
+        {
+          "UId": "9b1d02c3-e2ab-40b2-a328-6b3bce600804",
+          "A2": "System",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System"
+        },
+        {
+          "UId": "a08da3f1-89ef-4b31-9f8d-c533ba74113b",
+          "A2": "System.Collections.Generic",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System.Collections.Generic"
+        },
+        {
+          "UId": "3ea02754-9623-4e2f-ad2d-bedc69c30a0f",
+          "A2": "Newtonsoft.Json.Linq",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Newtonsoft.Json.Linq"
+        },
+        {
+          "UId": "45f1869f-8f78-4d6a-936c-47d5693b7f51",
+          "A2": "Terrasoft.Core",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core"
+        },
+        {
+          "UId": "39ea7626-3b75-4307-afb6-acafee0c56f7",
+          "A2": "Terrasoft.Core.Entities",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core.Entities"
+        }
+      ],
+      "B6": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+      "B8": "10.0.0.858",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "64dedf30-5609-4fcf-b7d6-436192d88da8",
+          "A2": "TenderReference",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "43b3953a-9c73-45f4-b64f-d08176e9cbeb",
+          "A2": "BlanketPoNumber",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "771caa84-b92b-42fa-a0b0-aa672decda09",
+          "A2": "AwardNote",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "39d667ec-a4d4-43d9-ae63-2500d525b3c4",
+          "A2": "OpportunityId",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "43f89d94-fe0f-4630-a114-523a0fad3204",
+          "A2": "BlanketOrderId",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "2763e139-7b07-4221-98f1-fd9a657036df",
+          "A2": "CommittedCount",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "f7f75afc-f9e8-4047-bc1c-f9ef87cc24cc",
+          "A2": "SubPoCount",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "209db88d-f4b4-4c2e-9ea1-a9b34b62bc81",
+          "A2": "CallUpLineCount",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "badb9ff1-441d-4ab6-adba-15f253b22df6",
+          "A2": "RunSummary",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "L1": "c0f04627-4620-4bc0-84e5-9419dc8516b1",
+          "L8": {
+            "GS5": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19"
+          },
+          "L12": 1
+        }
+      ],
+      "IJ1": true,
+      "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+      "IJ10": true,
+      "BK15": [],
+      "BK37": {
+        "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+        "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+        "A2": "NotificationCaption",
+        "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+        "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+        "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+        "L8": {
+          "GS1": 3,
+          "GS2": "[#[PropertyValue:Caption]#]"
+        }
+      },
+      "BK1": "FFFFFFFF",
+      "BK2": "FFBBBBBB",
+      "BK3": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+          "UId": "74a2a115-4fe3-4d13-af76-3be6e590abb4",
+          "A2": "LaneSet1",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "BM1": 0,
+          "BM4": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+              "UId": "3a63e34b-e6b4-464a-ab90-a7f5e7e53d2b",
+              "A2": "Lane1",
+              "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+              "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+              "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+              "IL2": "74a2a115-4fe3-4d13-af76-3be6e590abb4",
+              "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+              "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+              "CD1": [],
+              "CD2": [],
+              "CD4": "74a2a115-4fe3-4d13-af76-3be6e590abb4",
+              "CD7": []
+            }
+          ]
+        }
+      ],
+      "BK5": [],
+      "BK4": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartEvent",
+          "UId": "2107ed5a-9ff4-4041-ab00-4d8af0cce377",
+          "A2": "StartEvent1",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "3a63e34b-e6b4-464a-ab90-a7f5e7e53d2b",
+          "BL3": "50;184",
+          "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": [],
+          "ED1": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
+          "UId": "6ce21770-3bd7-4eb3-abdf-f1cec9c05786",
+          "A2": "TerminateEvent1",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "3a63e34b-e6b4-464a-ab90-a7f5e7e53d2b",
+          "BL3": "600;184",
+          "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "ab72ad6f-7221-4230-b029-4cf1b2e61a02",
+          "A2": "ScriptTask1",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "3a63e34b-e6b4-464a-ab90-a7f5e7e53d2b",
+          "BL3": "192;172",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nstring reference = (Get<string>(\"TenderReference\") ?? string.Empty).Trim();\nstring poNumber = (Get<string>(\"BlanketPoNumber\") ?? string.Empty).Trim().ToUpperInvariant();\nstring note = (Get<string>(\"AwardNote\") ?? string.Empty).Trim();\nint prototypeQty = 1;\nGuid orderTypeBlanket = new Guid(\"43014545-cd78-4496-bdda-953a976fe891\");\nGuid orderTypeCallOff = new Guid(\"d2c1d49c-1bdc-4435-8551-d00e45737564\");\nGuid orderStatusInProgress = new Guid(\"c8742634-ea8b-46d9-ba71-1989b951772d\");\nGuid currencyAud = new Guid(\"908f7166-d8da-49a9-80dd-a2958fc3fabf\");\nGuid stageClosedWon = new Guid(\"60d5310c-5be6-df11-971b-001d60e938c6\");\nstring actor = \"Gate 2 award approval via chat (tool approve_tender_award)\";\nSet(\"CommittedCount\", 0);\nSet(\"SubPoCount\", 0);\nSet(\"CallUpLineCount\", 0);\nAction<string> stop = reason => Set(\"RunSummary\", \"Nothing was changed. \" + reason);\n\n// ======================= CHECKS: nothing below writes until the WRITES marker =======================\n\n// ---- The tender ----\nif (reference.Length == 0) {\n\tstop(\"No tender was named. Ask the person which tender was awarded.\");\n\treturn true;\n}\nGuid opportunityId = Guid.Empty, accountId = Guid.Empty;\nstring title = string.Empty, tenderStatus = string.Empty;\nGuid parsedId = Guid.Empty;\nvar oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Opportunity\");\noppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring oppTitleCol = oppEsq.AddColumn(\"Title\").Name;\nstring oppStatusCol = oppEsq.AddColumn(\"SPAIAdjudicationStatus.Name\").Name;\nstring oppAccountCol = oppEsq.AddColumn(\"Account\").Name;\nif (Guid.TryParse(reference, out parsedId)) {\n\toppEsq.Filters.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Id\", parsedId));\n} else {\n\tvar either = new EntitySchemaQueryFilterCollection(oppEsq, Terrasoft.Common.LogicalOperationStrict.Or);\n\teither.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Title\", reference));\n\teither.Add(oppEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAITenderCode\", reference));\n\toppEsq.Filters.Add(either);\n}\nint found = 0;\nforeach (Entity o in oppEsq.GetEntityCollection(uc)) {\n\tfound++;\n\topportunityId = o.PrimaryColumnValue;\n\ttitle = (o.GetTypedColumnValue<string>(oppTitleCol) ?? string.Empty).Trim();\n\ttenderStatus = (o.GetTypedColumnValue<string>(oppStatusCol) ?? string.Empty).Trim();\n\taccountId = o.GetTypedColumnValue<Guid>(oppAccountCol + \"Id\");\n}\nif (found == 0 && parsedId == Guid.Empty) {\n\t// Same name written differently (punctuation, spacing, case): use it only when exactly one tender matches.\n\tFunc<string, string> normalise = value => {\n\t\tvar kept = new System.Text.StringBuilder();\n\t\tforeach (char c in value ?? string.Empty) {\n\t\t\tif (char.IsLetterOrDigit(c)) {\n\t\t\t\tkept.Append(char.ToLowerInvariant(c));\n\t\t\t}\n\t\t}\n\t\treturn kept.ToString();\n\t};\n\tstring wanted = normalise(reference);\n\tstring anchor = string.Empty;\n\tforeach (string word in reference.Split(new[] { ' ', ',', '-', '/', '.', '(', ')' }, StringSplitOptions.RemoveEmptyEntries)) {\n\t\tif (word.Length > anchor.Length) {\n\t\t\tanchor = word;\n\t\t}\n\t}\n\tif (wanted.Length > 0 && anchor.Length > 0) {\n\t\tvar nearEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Opportunity\");\n\t\tnearEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\t\tstring nTitleCol = nearEsq.AddColumn(\"Title\").Name;\n\t\tstring nCodeCol = nearEsq.AddColumn(\"SPAITenderCode\").Name;\n\t\tstring nStatusCol = nearEsq.AddColumn(\"SPAIAdjudicationStatus.Name\").Name;\n\t\tstring nAccountCol = nearEsq.AddColumn(\"Account\").Name;\n\t\tvar anyText = new EntitySchemaQueryFilterCollection(nearEsq, Terrasoft.Common.LogicalOperationStrict.Or);\n\t\tanyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, \"Title\", anchor));\n\t\tanyText.Add(nearEsq.CreateFilterWithParameters(FilterComparisonType.Contain, \"SPAITenderCode\", anchor));\n\t\tnearEsq.Filters.Add(anyText);\n\t\tforeach (Entity o in nearEsq.GetEntityCollection(uc)) {\n\t\t\tif (normalise(o.GetTypedColumnValue<string>(nTitleCol)) == wanted || normalise(o.GetTypedColumnValue<string>(nCodeCol)) == wanted) {\n\t\t\t\tfound++;\n\t\t\t\topportunityId = o.PrimaryColumnValue;\n\t\t\t\ttitle = (o.GetTypedColumnValue<string>(nTitleCol) ?? string.Empty).Trim();\n\t\t\t\ttenderStatus = (o.GetTypedColumnValue<string>(nStatusCol) ?? string.Empty).Trim();\n\t\t\t\taccountId = o.GetTypedColumnValue<Guid>(nAccountCol + \"Id\");\n\t\t\t}\n\t\t}\n\t}\n}\nif (found == 0) {\n\tstop(\"No tender is titled or coded exactly \\\"\" + reference + \"\\\". Use the tender name the intake reported.\");\n\treturn true;\n}\nif (found > 1) {\n\tstop(\"\\\"\" + reference + \"\\\" matches more than one tender. Ask the person for the tender code.\");\n\treturn true;\n}\nSet(\"OpportunityId\", opportunityId);\nif (tenderStatus != \"Submitted\") {\n\tstop(\"Tender \" + title + \" is at \\\"\" + (tenderStatus.Length > 0 ? tenderStatus : \"no status\")\n\t\t+ \"\\\". Only a Submitted tender can be awarded: Gate 1 must be complete first.\");\n\treturn true;\n}\nif (accountId == Guid.Empty) {\n\tstop(\"Tender \" + title + \" has no head contractor account, so the purchase order has no customer. Set the account on the opportunity first.\");\n\treturn true;\n}\n\n// ---- The blanket PO number ----\nstring poDigits = string.Empty;\nforeach (char c in poNumber) {\n\tif (char.IsDigit(c)) {\n\t\tpoDigits += c;\n\t}\n}\nif (poDigits.Length == 0) {\n\tstop(\"\\\"\" + poNumber + \"\\\" has no digits to number the delivery sub-orders from. Ask the person for the builder's blanket PO number, for example BPO-0441.\");\n\treturn true;\n}\nvar poEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Order\");\npoEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring poNoCol = poEsq.AddColumn(\"SPAIPurchaseOrderNo\").Name;\nvar poAny = new EntitySchemaQueryFilterCollection(poEsq, Terrasoft.Common.LogicalOperationStrict.Or);\npoAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIPurchaseOrderNo\", poNumber));\npoAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"Number\", poNumber));\npoAny.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.StartWith, \"SPAIPurchaseOrderNo\", \"SPO-\" + poDigits + \"-\"));\npoEsq.Filters.Add(poAny);\nforeach (Entity existing in poEsq.GetEntityCollection(uc)) {\n\tstop(\"Purchase order \" + (existing.GetTypedColumnValue<string>(poNoCol) ?? poNumber)\n\t\t+ \" already exists. Check the number with the person; a PO number is used once.\");\n\treturn true;\n}\n\n// ---- Lookups ----\nFunc<string, Dictionary<string, Guid>> loadByName = schemaName => {\n\tvar esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);\n\tesq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring nameColumn = esq.AddColumn(\"Name\").Name;\n\tvar map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);\n\tforeach (Entity e in esq.GetEntityCollection(uc)) {\n\t\tmap[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n\t}\n\treturn map;\n};\nvar planType = loadByName(\"SPAISourcePlanType\");\nvar tenderStatusByName = loadByName(\"SPAIAdjudicationStatus\");\nvar deliveryStatus = loadByName(\"SPAIDeliveryStatus\");\nvar decisionType = loadByName(\"SPAIDecisionType\");\nvar missing = new List<string>();\nif (!planType.ContainsKey(\"Indicative\")) missing.Add(\"source plan type Indicative\");\nif (!planType.ContainsKey(\"Committed\")) missing.Add(\"source plan type Committed\");\nif (!deliveryStatus.ContainsKey(\"Scheduled\")) missing.Add(\"delivery status Scheduled\");\nif (!decisionType.ContainsKey(\"Sourcing allocation\")) missing.Add(\"decision type Sourcing allocation\");\nif (!decisionType.ContainsKey(\"Human override\")) missing.Add(\"decision type Human override\");\nif (!tenderStatusByName.ContainsKey(\"Awarded\")) missing.Add(\"adjudication status Awarded\");\nif (missing.Count > 0) {\n\tstop(\"These lookup values are missing in the CRM: \" + string.Join(\", \", missing) + \". An administrator must add them.\");\n\treturn true;\n}\n\n// ---- The builder's programme: call-up schedules and their events ----\nvar schedEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAICallUpSchedule\");\nschedEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring schedRefCol = schedEsq.AddColumn(\"SPAIScheduleRef\").Name;\nstring schedDescCol = schedEsq.AddColumn(\"SPAIDescription\").Name;\nstring schedBlanketCol = schedEsq.AddColumn(\"SPAIBlanketOrder\").Name;\nschedEsq.Filters.Add(schedEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nvar schedules = new List<Guid>();\nvar scheduleRef = new Dictionary<Guid, string>();\nvar scheduleIsAppliance = new Dictionary<Guid, bool>();\nforeach (Entity s in schedEsq.GetEntityCollection(uc)) {\n\tif (s.GetTypedColumnValue<Guid>(schedBlanketCol + \"Id\") != Guid.Empty) {\n\t\tstop(\"Tender \" + title + \" is already awarded: its call-up schedule \" + s.GetTypedColumnValue<string>(schedRefCol)\n\t\t\t+ \" already has a blanket PO. Nothing is ordered twice.\");\n\t\treturn true;\n\t}\n\tschedules.Add(s.PrimaryColumnValue);\n\tscheduleRef[s.PrimaryColumnValue] = (s.GetTypedColumnValue<string>(schedRefCol) ?? string.Empty).Trim();\n\tscheduleIsAppliance[s.PrimaryColumnValue] = (s.GetTypedColumnValue<string>(schedDescCol) ?? string.Empty)\n\t\t.IndexOf(\"appliance\", StringComparison.OrdinalIgnoreCase) >= 0;\n}\nif (schedules.Count == 0) {\n\tstop(\"Tender \" + title + \" has no delivery programme (call-up schedule) loaded. The builder's construction programme must be loaded before award.\");\n\treturn true;\n}\nschedules.Sort((a, b) => string.CompareOrdinal(scheduleRef[a], scheduleRef[b]));\n\nvar eventEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIDeliveryEvent\");\neventEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring evSchedCol = eventEsq.AddColumn(\"SPAICallUpSchedule\").Name;\nstring evSeqCol = eventEsq.AddColumn(\"SPAISequence\").Name;\nstring evTypeCol = eventEsq.AddColumn(\"SPAIEventType.Name\").Name;\nstring evDateCol = eventEsq.AddColumn(\"SPAIScheduledOn\").Name;\neventEsq.Filters.Add(eventEsq.CreateFilterWithParameters(FilterComparisonType.Equal,\n\t\"SPAICallUpSchedule.SPAIOpportunity\", opportunityId));\nvar eventsBySchedule = new Dictionary<Guid, List<Tuple<int, Guid, bool, DateTime>>>();  // sequence, id, prototype, date\nforeach (Guid s in schedules) {\n\teventsBySchedule[s] = new List<Tuple<int, Guid, bool, DateTime>>();\n}\nforeach (Entity e in eventEsq.GetEntityCollection(uc)) {\n\tGuid s = e.GetTypedColumnValue<Guid>(evSchedCol + \"Id\");\n\tif (!eventsBySchedule.ContainsKey(s)) {\n\t\tcontinue;\n\t}\n\teventsBySchedule[s].Add(Tuple.Create(e.GetTypedColumnValue<int>(evSeqCol), e.PrimaryColumnValue,\n\t\tstring.Equals((e.GetTypedColumnValue<string>(evTypeCol) ?? string.Empty).Trim(), \"Prototype\", StringComparison.OrdinalIgnoreCase),\n\t\te.GetTypedColumnValue<DateTime>(evDateCol)));\n}\nvar emptySchedules = new List<string>();\nDateTime firstDate = DateTime.MaxValue, lastDate = DateTime.MinValue;\nforeach (Guid s in schedules) {\n\teventsBySchedule[s].Sort((a, b) => a.Item1.CompareTo(b.Item1));\n\tif (eventsBySchedule[s].Count == 0) {\n\t\temptySchedules.Add(scheduleRef[s]);\n\t}\n\tforeach (var ev in eventsBySchedule[s]) {\n\t\tif (ev.Item4 > DateTime.MinValue && ev.Item4 < firstDate) firstDate = ev.Item4;\n\t\tif (ev.Item4 > lastDate) lastDate = ev.Item4;\n\t}\n}\nif (emptySchedules.Count > 0) {\n\tstop(\"Call-up schedule \" + string.Join(\", \", emptySchedules) + \" of tender \" + title\n\t\t+ \" has no delivery events. The builder's programme must be complete before award.\");\n\treturn true;\n}\n\n// ---- The supplied lines, and which schedule each is delivered on ----\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring lnNumCol = lineEsq.AddColumn(\"SPAILineNumber\").Name;\nstring lnQtyCol = lineEsq.AddColumn(\"SPAIQuantity\").Name;\nstring lnItemCol = lineEsq.AddColumn(\"SPAIItemCode\").Name;\nstring lnAltCol = lineEsq.AddColumn(\"SPAIIsAlternative\").Name;\nstring lnVariantCol = lineEsq.AddColumn(\"SPAIAlternateVariant\").Name;\nstring lnProductCol = lineEsq.AddColumn(\"SPAIMatchedProduct\").Name;\nstring lnSellCol = lineEsq.AddColumn(\"SPAIUnitSell\").Name;\nstring lnStatusCol = lineEsq.AddColumn(\"SPAILineStatus.Name\").Name;\nstring lnCategoryCol = lineEsq.AddColumn(\"SPAIMatchedProduct.SPAIProductFamily.SPAICategory\").Name;\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nvar lines = new List<Entity>();\nvar lineSchedule = new Dictionary<Guid, Guid>();\nvar noSchedule = new List<int>();\nint notOrdered = 0;\nforeach (Entity l in lineEsq.GetEntityCollection(uc)) {\n\tstring st = (l.GetTypedColumnValue<string>(lnStatusCol) ?? string.Empty).Trim();\n\tbool supplied = st == \"Exact match\" || st == \"Sourced multi-location\" || st == \"Substitution approved\";\n\tif (!supplied || l.GetTypedColumnValue<Guid>(lnProductCol + \"Id\") == Guid.Empty || l.GetTypedColumnValue<int>(lnQtyCol) <= 0) {\n\t\tnotOrdered++;\n\t\tcontinue;\n\t}\n\tbool appliance = (l.GetTypedColumnValue<string>(lnCategoryCol) ?? string.Empty)\n\t\t.IndexOf(\"appliance\", StringComparison.OrdinalIgnoreCase) >= 0;\n\tGuid target = Guid.Empty;\n\tif (schedules.Count == 1) {\n\t\ttarget = schedules[0];\n\t} else {\n\t\tforeach (Guid s in schedules) {\n\t\t\tif (scheduleIsAppliance[s] == appliance) {\n\t\t\t\ttarget = s;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tif (target == Guid.Empty) {\n\t\tnoSchedule.Add(l.GetTypedColumnValue<int>(lnNumCol));\n\t\tcontinue;\n\t}\n\tlines.Add(l);\n\tlineSchedule[l.PrimaryColumnValue] = target;\n}\nif (noSchedule.Count > 0) {\n\tnoSchedule.Sort();\n\tstop(\"Cannot tell which call-up schedule line \" + string.Join(\", \", noSchedule) + \" is delivered on: \"\n\t\t+ \"the programme's schedule descriptions do not separate appliances from other products. Ask an administrator.\");\n\treturn true;\n}\nif (lines.Count == 0) {\n\tstop(\"Tender \" + title + \" has no approved lines to order.\");\n\treturn true;\n}\nlines.Sort((a, b) => a.GetTypedColumnValue<int>(lnNumCol).CompareTo(b.GetTypedColumnValue<int>(lnNumCol)));\n\n// ---- The indicative sources of those lines ----\nvar srcEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAILineSource\");\nsrcEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring srcLineCol = srcEsq.AddColumn(\"SPAIScheduleLine\").Name;\nstring srcLocCol = srcEsq.AddColumn(\"SPAILocation\").Name;\nstring srcQtyCol = srcEsq.AddColumn(\"SPAIQtyAllocated\").Name;\nstring srcTierCol = srcEsq.AddColumn(\"SPAISourceTier\").Name;\nstring srcPlanCol = srcEsq.AddColumn(\"SPAISourcePlanType.Name\").Name;\nsrcEsq.Filters.Add(srcEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIScheduleLine.SPAIOpportunity\", opportunityId));\nvar sources = new List<Entity>();\nforeach (Entity s in srcEsq.GetEntityCollection(uc)) {\n\tstring plan = (s.GetTypedColumnValue<string>(srcPlanCol) ?? string.Empty).Trim();\n\tif (plan == \"Committed\") {\n\t\tstop(\"Tender \" + title + \" already has committed stock sources, so it has already been awarded. Nothing is ordered twice.\");\n\t\treturn true;\n\t}\n\tif (plan == \"Indicative\" && lineSchedule.ContainsKey(s.GetTypedColumnValue<Guid>(srcLineCol + \"Id\"))) {\n\t\tsources.Add(s);\n\t}\n}\n\n// ---- Plan every write before making any ----\nvar productOfLine = new Dictionary<Guid, Guid>();\nforeach (Entity l in lines) {\n\tproductOfLine[l.PrimaryColumnValue] = l.GetTypedColumnValue<Guid>(lnProductCol + \"Id\");\n}\nvar stockNeed = new Dictionary<string, int>();  // \"product|location\" -> units to encumber\nvar locationUnits = new Dictionary<Guid, Dictionary<Guid, int>>();  // schedule -> location -> units\nvar tierUnits = new Dictionary<Guid, Dictionary<Guid, int>>();  // schedule -> tier -> units\nvar sourcedLines = new HashSet<Guid>();\nforeach (Entity s in sources) {\n\tGuid lineId = s.GetTypedColumnValue<Guid>(srcLineCol + \"Id\");\n\tGuid loc = s.GetTypedColumnValue<Guid>(srcLocCol + \"Id\");\n\tGuid tier = s.GetTypedColumnValue<Guid>(srcTierCol + \"Id\");\n\tint qty = s.GetTypedColumnValue<int>(srcQtyCol);\n\tif (qty <= 0) {\n\t\tcontinue;\n\t}\n\tsourcedLines.Add(lineId);\n\tGuid sched = lineSchedule[lineId];\n\tif (loc != Guid.Empty) {\n\t\tstring key = productOfLine[lineId] + \"|\" + loc;\n\t\tstockNeed[key] = (stockNeed.ContainsKey(key) ? stockNeed[key] : 0) + qty;\n\t\tif (!locationUnits.ContainsKey(sched)) locationUnits[sched] = new Dictionary<Guid, int>();\n\t\tlocationUnits[sched][loc] = (locationUnits[sched].ContainsKey(loc) ? locationUnits[sched][loc] : 0) + qty;\n\t}\n\tif (tier != Guid.Empty) {\n\t\tif (!tierUnits.ContainsKey(sched)) tierUnits[sched] = new Dictionary<Guid, int>();\n\t\ttierUnits[sched][tier] = (tierUnits[sched].ContainsKey(tier) ? tierUnits[sched][tier] : 0) + qty;\n\t}\n}\nFunc<Dictionary<Guid, Dictionary<Guid, int>>, Guid, Guid> dominant = (bySchedule, sched) => {\n\tGuid best = Guid.Empty;\n\tint most = 0;\n\tif (bySchedule.ContainsKey(sched)) {\n\t\tforeach (var kv in bySchedule[sched]) {\n\t\t\tif (kv.Value > most) {\n\t\t\t\tmost = kv.Value;\n\t\t\t\tbest = kv.Key;\n\t\t\t}\n\t\t}\n\t}\n\treturn best;\n};\n\n// Quantity per (line, event): prototype events first, then an even spread, remainder on the last event.\nvar callUps = new List<Tuple<Entity, Guid, int>>();  // line, event id, qty\nvar eventsUsedByLine = new Dictionary<Guid, int>();\nforeach (Entity l in lines) {\n\tvar evs = eventsBySchedule[lineSchedule[l.PrimaryColumnValue]];\n\tint remaining = l.GetTypedColumnValue<int>(lnQtyCol);\n\tvar rollout = new List<Guid>();\n\tint planned = 0;\n\tforeach (var ev in evs) {\n\t\tif (ev.Item3) {\n\t\t\tint take = Math.Min(remaining, prototypeQty);\n\t\t\tif (take > 0) {\n\t\t\t\tcallUps.Add(Tuple.Create(l, ev.Item2, take));\n\t\t\t\tremaining -= take;\n\t\t\t\tplanned++;\n\t\t\t}\n\t\t} else {\n\t\t\trollout.Add(ev.Item2);\n\t\t}\n\t}\n\tif (remaining > 0 && rollout.Count == 0) {\n\t\t// A schedule of prototype events only: the rest goes on its last event.\n\t\trollout.Add(evs[evs.Count - 1].Item2);\n\t}\n\tif (remaining > 0) {\n\t\tint each = remaining / rollout.Count;\n\t\tint spare = remaining - each * rollout.Count;\n\t\tfor (int i = 0; i < rollout.Count; i++) {\n\t\t\tint take = each + (i == rollout.Count - 1 ? spare : 0);\n\t\t\tif (take > 0) {\n\t\t\t\tcallUps.Add(Tuple.Create(l, rollout[i], take));\n\t\t\t\tplanned++;\n\t\t\t}\n\t\t}\n\t}\n\teventsUsedByLine[l.PrimaryColumnValue] = planned;\n}\nvar linesAtEvent = new Dictionary<Guid, HashSet<Guid>>();\nvar valueAtEvent = new Dictionary<Guid, decimal>();\nforeach (var cu in callUps) {\n\tif (!linesAtEvent.ContainsKey(cu.Item2)) {\n\t\tlinesAtEvent[cu.Item2] = new HashSet<Guid>();\n\t\tvalueAtEvent[cu.Item2] = 0m;\n\t}\n\tlinesAtEvent[cu.Item2].Add(cu.Item1.PrimaryColumnValue);\n\tvalueAtEvent[cu.Item2] += cu.Item3 * cu.Item1.GetTypedColumnValue<decimal>(lnSellCol);\n}\n\n// ======================= WRITES =======================\nDateTime now = uc.CurrentUser.GetCurrentDateTime();\nEntitySchema orderSchema = uc.EntitySchemaManager.GetInstanceByName(\"Order\");\nAction<Entity> orderBasics = po => {\n\tpo.SetDefColumnValues();\n\tpo.SetColumnValue(\"OpportunityId\", opportunityId);\n\tpo.SetColumnValue(\"AccountId\", accountId);\n\tpo.SetColumnValue(\"OwnerId\", uc.CurrentUser.ContactId);\n\tpo.SetColumnValue(\"CurrencyId\", currencyAud);\n\tpo.SetColumnValue(\"CurrencyRate\", 1m);\n\tpo.SetColumnValue(\"StatusId\", orderStatusInProgress);\n\tif (firstDate < DateTime.MaxValue) {\n\t\tpo.SetColumnValue(\"Date\", firstDate);\n\t}\n};\n\n// 1. The blanket PO, and the programme gets it\nEntity blanket = orderSchema.CreateEntity(uc);\norderBasics(blanket);\nblanket.SetColumnValue(\"Number\", poNumber);\nblanket.SetColumnValue(\"SPAIPurchaseOrderNo\", poNumber);\nblanket.SetColumnValue(\"SPAIOrderTypeId\", orderTypeBlanket);\nif (lastDate > DateTime.MinValue) {\n\tblanket.SetColumnValue(\"SPAITargetDate\", lastDate);\n}\nblanket.Save(false);\nGuid blanketId = blanket.PrimaryColumnValue;\nSet(\"BlanketOrderId\", blanketId);\nEntitySchema scheduleSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAICallUpSchedule\");\nforeach (Guid s in schedules) {\n\tEntity sched = scheduleSchema.CreateEntity(uc);\n\tif (sched.FetchFromDB(s)) {\n\t\tsched.SetColumnValue(\"SPAIBlanketOrderId\", blanketId);\n\t\tsched.Save(false);\n\t}\n}\n\n// 2. Commit the sources, then encumber stock\nEntitySchema sourceSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAILineSource\");\nint committed = 0;\nforeach (Entity s in sources) {\n\tEntity row = sourceSchema.CreateEntity(uc);\n\tif (row.FetchFromDB(s.PrimaryColumnValue)) {\n\t\trow.SetColumnValue(\"SPAISourcePlanTypeId\", planType[\"Committed\"]);\n\t\trow.Save(false);\n\t\tcommitted++;\n\t}\n}\nEntitySchema stockSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIStockPosition\");\nvar locationsTouched = new HashSet<string>();\nforeach (var kv in stockNeed) {\n\tstring[] ids = kv.Key.Split('|');\n\tvar posEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIStockPosition\");\n\tposEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring allocCol = posEsq.AddColumn(\"SPAIQtyAllocated\").Name;\n\tstring availCol = posEsq.AddColumn(\"SPAIQtyAvailable\").Name;\n\tposEsq.Filters.Add(posEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIProduct\", new Guid(ids[0])));\n\tposEsq.Filters.Add(posEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAILocation\", new Guid(ids[1])));\n\tforeach (Entity position in posEsq.GetEntityCollection(uc)) {\n\t\tEntity update = stockSchema.CreateEntity(uc);\n\t\tif (update.FetchFromDB(position.PrimaryColumnValue)) {\n\t\t\tupdate.SetColumnValue(\"SPAIQtyAllocated\", position.GetTypedColumnValue<int>(allocCol) + kv.Value);\n\t\t\tupdate.SetColumnValue(\"SPAIQtyAvailable\", Math.Max(0, position.GetTypedColumnValue<int>(availCol) - kv.Value));\n\t\t\tupdate.Save(false);\n\t\t\tlocationsTouched.Add(ids[1]);\n\t\t}\n\t\tbreak;\n\t}\n}\nSet(\"CommittedCount\", committed);\n\n// 3. One sub-PO per delivery event, numbered from the blanket\nEntitySchema deliverySchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDelivery\");\nvar subPoByEvent = new Dictionary<Guid, Guid>();\nint poSeq = 0;\nforeach (Guid s in schedules) {\n\tGuid loc = dominant(locationUnits, s);\n\tGuid tier = dominant(tierUnits, s);\n\tforeach (var ev in eventsBySchedule[s]) {\n\t\tpoSeq++;\n\t\tEntity po = orderSchema.CreateEntity(uc);\n\t\torderBasics(po);\n\t\tstring subRef = string.Format(\"SPO-{0}-{1:00}\", poDigits, poSeq);\n\t\tpo.SetColumnValue(\"Number\", subRef);\n\t\tpo.SetColumnValue(\"SPAIPurchaseOrderNo\", subRef);\n\t\tpo.SetColumnValue(\"SPAIOrderTypeId\", orderTypeCallOff);\n\t\tpo.SetColumnValue(\"SPAIBlanketOrderId\", blanketId);\n\t\tpo.SetColumnValue(\"SPAIDeliveryEventId\", ev.Item2);\n\t\tif (ev.Item4 > DateTime.MinValue) {\n\t\t\tpo.SetColumnValue(\"SPAITargetDate\", ev.Item4);\n\t\t}\n\t\tif (loc != Guid.Empty) {\n\t\t\tpo.SetColumnValue(\"SPAIPrimaryLocationId\", loc);\n\t\t}\n\t\tif (tier != Guid.Empty) {\n\t\t\tpo.SetColumnValue(\"SPAISourceTierId\", tier);\n\t\t}\n\t\tpo.Save(false);\n\t\tsubPoByEvent[ev.Item2] = po.PrimaryColumnValue;\n\n\t\tEntity delivery = deliverySchema.CreateEntity(uc);\n\t\tdelivery.SetDefColumnValues();\n\t\tdelivery.SetColumnValue(\"SPAIOrderId\", po.PrimaryColumnValue);\n\t\tif (loc != Guid.Empty) {\n\t\t\tdelivery.SetColumnValue(\"SPAIFromLocationId\", loc);\n\t\t}\n\t\tif (ev.Item4 > DateTime.MinValue) {\n\t\t\tdelivery.SetColumnValue(\"SPAIScheduledOn\", ev.Item4);\n\t\t}\n\t\tdelivery.SetColumnValue(\"SPAIStatusId\", deliveryStatus[\"Scheduled\"]);\n\t\tdelivery.SetColumnValue(\"SPAILineCount\", linesAtEvent.ContainsKey(ev.Item2) ? linesAtEvent[ev.Item2].Count : 0);\n\t\tdelivery.SetColumnValue(\"SPAIValue\", valueAtEvent.ContainsKey(ev.Item2) ? valueAtEvent[ev.Item2] : 0m);\n\t\tdelivery.Save(false);\n\t}\n}\nSet(\"SubPoCount\", subPoByEvent.Count);\n\n// 4. Call-up lines and order products\nEntitySchema callUpSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAICallUpLine\");\nEntitySchema orderProductSchema = uc.EntitySchemaManager.GetInstanceByName(\"OrderProduct\");\nint callUpCount = 0;\nforeach (var cu in callUps) {\n\tEntity l = cu.Item1;\n\tEntity cul = callUpSchema.CreateEntity(uc);\n\tcul.SetDefColumnValues();\n\tcul.SetColumnValue(\"SPAIScheduleLineId\", l.PrimaryColumnValue);\n\tcul.SetColumnValue(\"SPAIDeliveryEventId\", cu.Item2);\n\tcul.SetColumnValue(\"SPAISubPOId\", subPoByEvent[cu.Item2]);\n\tcul.SetColumnValue(\"SPAIQtyRequired\", cu.Item3);\n\tcul.SetColumnValue(\"SPAIQtyDelivered\", 0);\n\tcul.SetColumnValue(\"SPAIStatusId\", deliveryStatus[\"Scheduled\"]);\n\tcul.Save(false);\n\tcallUpCount++;\n\n\tEntity op = orderProductSchema.CreateEntity(uc);\n\top.SetDefColumnValues();\n\top.SetColumnValue(\"OrderId\", subPoByEvent[cu.Item2]);\n\top.SetColumnValue(\"ProductId\", productOfLine[l.PrimaryColumnValue]);\n\top.SetColumnValue(\"Quantity\", (decimal)cu.Item3);\n\top.SetColumnValue(\"Price\", l.GetTypedColumnValue<decimal>(lnSellCol));\n\top.SetColumnValue(\"SPAIScheduleLineId\", l.PrimaryColumnValue);\n\top.SetColumnValue(\"SPAIItemCode\", l.GetTypedColumnValue<string>(lnItemCol));\n\top.SetColumnValue(\"SPAIIsAlternative\", l.GetTypedColumnValue<bool>(lnAltCol));\n\top.SetColumnValue(\"SPAIAlternateVariant\", l.GetTypedColumnValue<string>(lnVariantCol));\n\top.Save(false);  // SPAIItemIdentityEntityEventListener derives SPAIDisplayRef on save\n}\nSet(\"CallUpLineCount\", callUpCount);\n\n// 5. The ledger: one row per line, one for the award\nEntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDecisionLedger\");\nvar unsourced = new List<int>();\nforeach (Entity l in lines) {\n\tint n = l.GetTypedColumnValue<int>(lnNumCol);\n\tbool hasStock = sourcedLines.Contains(l.PrimaryColumnValue);\n\tif (!hasStock) {\n\t\tunsourced.Add(n);\n\t}\n\tEntity ledger = ledgerSchema.CreateEntity(uc);\n\tledger.SetDefColumnValues();\n\tledger.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\n\tledger.SetColumnValue(\"SPAIScheduleLineId\", l.PrimaryColumnValue);\n\tledger.SetColumnValue(\"SPAIDecisionTypeId\", decisionType[\"Sourcing allocation\"]);\n\tledger.SetColumnValue(\"SPAIActor\", actor);\n\tledger.SetColumnValue(\"SPAIComplianceChecks\", string.Format(\n\t\t\"award under {0}: {1} units across {2} call-up line(s) on schedule {3}; {4}\",\n\t\tpoNumber, l.GetTypedColumnValue<int>(lnQtyCol), eventsUsedByLine[l.PrimaryColumnValue],\n\t\tscheduleRef[lineSchedule[l.PrimaryColumnValue]],\n\t\thasStock ? \"stock sources converted to Committed and encumbered now\" : \"no stock source: to be supplied from inbound stock\"));\n\tledger.SetColumnValue(\"SPAIPriorValue\", \"Indicative source plan\");\n\tledger.SetColumnValue(\"SPAINewValue\", \"Committed, call-up raised\");\n\tledger.SetColumnValue(\"SPAISequence\", n);\n\tledger.SetColumnValue(\"SPAIOccurredOn\", now);\n\tledger.Save(false);\n}\nEntity award = ledgerSchema.CreateEntity(uc);\naward.SetDefColumnValues();\naward.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\naward.SetColumnValue(\"SPAIDecisionTypeId\", decisionType[\"Human override\"]);\naward.SetColumnValue(\"SPAIActor\", actor);\naward.SetColumnValue(\"SPAIComplianceChecks\", string.Format(\n\t\"Gate 2: award approved in the chat after Tool Confirmation. Blanket PO {0}: {1} line(s) ordered, {2} sub-PO(s) and deliveries, {3} call-up line(s), {4} source(s) committed and stock reserved{5}\",\n\tpoNumber, lines.Count, subPoByEvent.Count, callUpCount, committed,\n\tnote.Length > 0 ? \". Note from the person: \" + note : string.Empty));\naward.SetColumnValue(\"SPAIPriorValue\", \"Submitted\");\naward.SetColumnValue(\"SPAINewValue\", \"Awarded | Closed won | fulfilment raised\");\naward.SetColumnValue(\"SPAISequence\", 0);\naward.SetColumnValue(\"SPAIOccurredOn\", now);\naward.Save(false);\n\n// 6. The Opportunity: Awarded, Closed won, Gate 2 stamped. Last, so the screen flips once everything exists.\nEntity opportunity = uc.EntitySchemaManager.GetInstanceByName(\"Opportunity\").CreateEntity(uc);\nif (opportunity.FetchFromDB(opportunityId)) {\n\topportunity.SetColumnValue(\"SPAIAdjudicationStatusId\", tenderStatusByName[\"Awarded\"]);\n\topportunity.SetColumnValue(\"StageId\", stageClosedWon);\n\topportunity.SetColumnValue(\"SPAIGate2ApprovedOn\", now);\n\topportunity.SetColumnValue(\"SPAIGate2ApprovedById\", uc.CurrentUser.ContactId);\n\topportunity.Save(false);\n}\n\n// ---- The sentence the agent relays ----\nvar parts = new List<string>();\nparts.Add(string.Format(\"Gate 2 approved: tender {0} is Awarded and the opportunity is Closed won, under blanket PO {1}. \"\n\t+ \"{2} line(s) ordered across {3} delivery sub-order(s), SPO-{4}-01 to SPO-{4}-{3:00}, each with a scheduled delivery, as {5} call-up line(s)\",\n\ttitle, poNumber, lines.Count, subPoByEvent.Count, poDigits, callUpCount));\nif (firstDate < DateTime.MaxValue) {\n\tparts.Add(\"the first delivery is due on \" + firstDate.ToString(\"d MMMM yyyy\") + \" and the last on \" + lastDate.ToString(\"d MMMM yyyy\"));\n}\nparts.Add(string.Format(\"{0} stock source(s) are now committed and reserved at {1} location(s)\", committed, locationsTouched.Count));\nif (unsourced.Count > 0) {\n\tunsourced.Sort();\n\tparts.Add(\"line \" + string.Join(\", \", unsourced) + \" had no stock source and must come from inbound supply\");\n}\nif (notOrdered > 0) {\n\tparts.Add(notOrdered + \" line(s) were not ordered because they were excluded or not approved\");\n}\nparts.Add(\"quantities are split evenly across each schedule's delivery events, \" + prototypeQty + \" unit per prototype event\");\nSet(\"RunSummary\", \"BRIEFING FOR THE PERSON: tell this as the story of what the award set in motion, in plain words. \"\n\t+ string.Join(\"; \", parts) + \".\");\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "e1d7f853-2eff-4319-8d23-d012031b335b",
+          "A2": "ScriptTask2",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "3a63e34b-e6b4-464a-ab90-a7f5e7e53d2b",
+          "BL3": "384;172",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nGuid opportunityId = Get<Guid>(\"OpportunityId\");\nGuid blanketId = Get<Guid>(\"BlanketOrderId\");\nstring summary = (Get<string>(\"RunSummary\") ?? string.Empty).Trim();\nif (opportunityId == Guid.Empty || blanketId == Guid.Empty) {\n\treturn true;\n}\nFunc<string, string> esc = s => (s ?? string.Empty).Replace(\"&\", \"&amp;\").Replace(\"<\", \"&lt;\").Replace(\">\", \"&gt;\").Replace(\"\\\"\", \"&quot;\");\nFunc<string, int, string> cut = (s, n) => (s ?? string.Empty).Length > n ? s.Substring(0, n) + \"...\" : (s ?? string.Empty);\nDateTime now = uc.CurrentUser.GetCurrentDateTime();\nvar notes = new List<string>();\n\n// ---- The tender ----\nvar oppEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Opportunity\");\noppEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring oTitle = oppEsq.AddColumn(\"Title\").Name;\nstring oCode = oppEsq.AddColumn(\"SPAITenderCode\").Name;\nstring oAccount = oppEsq.AddColumn(\"Account.Name\").Name;\nstring oContact = oppEsq.AddColumn(\"Contact.Name\").Name;\nstring oAi = oppEsq.AddColumn(\"SPAIAiCallCount\").Name;\nstring oDet = oppEsq.AddColumn(\"SPAIDeterministicCount\").Name;\nEntity opp = oppEsq.GetEntity(uc, opportunityId);\nif (opp == null) {\n\treturn true;\n}\nstring title = (opp.GetTypedColumnValue<string>(oTitle) ?? string.Empty).Trim();\nstring tenderCode = (opp.GetTypedColumnValue<string>(oCode) ?? string.Empty).Trim();\nstring accountName = (opp.GetTypedColumnValue<string>(oAccount) ?? string.Empty).Trim();\nstring contactName = (opp.GetTypedColumnValue<string>(oContact) ?? string.Empty).Trim();\nint aiCalls = opp.GetTypedColumnValue<int>(oAi);\nint deterministic = opp.GetTypedColumnValue<int>(oDet);\n\nEntity blanket = uc.EntitySchemaManager.GetInstanceByName(\"Order\").CreateEntity(uc);\nstring poNumber = blanket.FetchFromDB(blanketId) ? (blanket.GetTypedColumnValue<string>(\"SPAIPurchaseOrderNo\") ?? string.Empty).Trim() : string.Empty;\n\n// ---- The lines ----\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring lNum = lineEsq.AddColumn(\"SPAILineNumber\").Name;\nstring lRef = lineEsq.AddColumn(\"SPAIDisplayRef\").Name;\nstring lItem = lineEsq.AddColumn(\"SPAIItemCode\").Name;\nstring lSpec = lineEsq.AddColumn(\"SPAISpecifiedText\").Name;\nstring lQty = lineEsq.AddColumn(\"SPAIQuantity\").Name;\nstring lProdName = lineEsq.AddColumn(\"SPAIMatchedProduct.Name\").Name;\nstring lProdCode = lineEsq.AddColumn(\"SPAIMatchedProduct.Code\").Name;\nstring lStatus = lineEsq.AddColumn(\"SPAILineStatus.Name\").Name;\nstring lReason = lineEsq.AddColumn(\"SPAIReasonCode.SPAICode\").Name;\nstring lNote = lineEsq.AddColumn(\"SPAIAdjudicationNote\").Name;\nstring lCompliance = lineEsq.AddColumn(\"SPAIComplianceNotes\").Name;\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nvar lines = new List<Entity>();\nforeach (Entity l in lineEsq.GetEntityCollection(uc)) {\n\tlines.Add(l);\n}\nlines.Sort((a, b) => a.GetTypedColumnValue<int>(lNum).CompareTo(b.GetTypedColumnValue<int>(lNum)));\nFunc<Entity, string> lineRef = l => {\n\tstring r = (l.GetTypedColumnValue<string>(lRef) ?? string.Empty).Trim();\n\tif (r.Length == 0) r = (l.GetTypedColumnValue<string>(lItem) ?? string.Empty).Trim();\n\treturn r.Length > 0 ? r : \"Line \" + l.GetTypedColumnValue<int>(lNum);\n};\n\n// ---- The delivery programme: sub-orders under the blanket, with units per sub-order ----\nvar poEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"Order\");\npoEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring pNo = poEsq.AddColumn(\"SPAIPurchaseOrderNo\").Name;\nstring pLabel = poEsq.AddColumn(\"SPAIDeliveryEvent.SPAILabel\").Name;\nstring pDate = poEsq.AddColumn(\"SPAITargetDate\").Name;\npoEsq.Filters.Add(poEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIBlanketOrder\", blanketId));\nvar subPos = new List<Entity>();\nforeach (Entity p in poEsq.GetEntityCollection(uc)) {\n\tsubPos.Add(p);\n}\nsubPos.Sort((a, b) => string.CompareOrdinal(a.GetTypedColumnValue<string>(pNo), b.GetTypedColumnValue<string>(pNo)));\nvar cuEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAICallUpLine\");\ncuEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring cSub = cuEsq.AddColumn(\"SPAISubPO\").Name;\nstring cQty = cuEsq.AddColumn(\"SPAIQtyRequired\").Name;\ncuEsq.Filters.Add(cuEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAISubPO.SPAIBlanketOrder\", blanketId));\nvar unitsBySub = new Dictionary<Guid, int>();\nvar linesBySub = new Dictionary<Guid, int>();\nforeach (Entity c in cuEsq.GetEntityCollection(uc)) {\n\tGuid s = c.GetTypedColumnValue<Guid>(cSub + \"Id\");\n\tunitsBySub[s] = (unitsBySub.ContainsKey(s) ? unitsBySub[s] : 0) + c.GetTypedColumnValue<int>(cQty);\n\tlinesBySub[s] = (linesBySub.ContainsKey(s) ? linesBySub[s] : 0) + 1;\n}\n\n// ======================= 1. The tender story =======================\n// A narrative, in Melbourne time, by item name. Ledger times are stored in UTC; the integration user's clock is UTC.\nFunc<DateTime, DateTime> local = utc => {\n\tforeach (string zoneId in new[] { \"AUS Eastern Standard Time\", \"Australia/Melbourne\" }) {\n\t\ttry {\n\t\t\treturn TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(utc, DateTimeKind.Utc), TimeZoneInfo.FindSystemTimeZoneById(zoneId));\n\t\t} catch (Exception) {\n\t\t}\n\t}\n\treturn utc.AddHours(10);\n};\nFunc<DateTime, string> clock = d => local(d).ToString(\"h:mm tt\").ToLowerInvariant();\nvar lineName = new Dictionary<int, string>();\nvar lineProduct = new Dictionary<int, string>();\nforeach (Entity l in lines) {\n\tint n = l.GetTypedColumnValue<int>(lNum);\n\tlineName[n] = cut(l.GetTypedColumnValue<string>(lSpec), 60) + \" (line \" + n + \")\";\n\tlineProduct[n] = (l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim();\n}\nFunc<int, string> nameOf = n => lineName.ContainsKey(n) ? lineName[n] : \"line \" + n;\nFunc<string, string> personWords = checks => {\n\tconst string marker = \"the person's words: \\\"\";\n\tint at = (checks ?? string.Empty).IndexOf(marker, StringComparison.Ordinal);\n\tif (at < 0) return string.Empty;\n\tstring rest = checks.Substring(at + marker.Length);\n\tint close = rest.LastIndexOf('\"');\n\treturn close > 0 ? rest.Substring(0, close) : rest;\n};\ntry {\n\tvar ledEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIDecisionLedger\");\n\tledEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring dOn = ledEsq.AddColumn(\"SPAIOccurredOn\").Name;\n\tstring dType = ledEsq.AddColumn(\"SPAIDecisionType.Name\").Name;\n\tstring dActor = ledEsq.AddColumn(\"SPAIActor\").Name;\n\tstring dLine = ledEsq.AddColumn(\"SPAIScheduleLine.SPAILineNumber\").Name;\n\tstring dNew = ledEsq.AddColumn(\"SPAINewValue\").Name;\n\tstring dChecks = ledEsq.AddColumn(\"SPAIComplianceChecks\").Name;\n\tstring dSeq = ledEsq.AddColumn(\"SPAISequence\").Name;\n\tledEsq.Filters.Add(ledEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\n\tvar rows = new List<Entity>();\n\tforeach (Entity r in ledEsq.GetEntityCollection(uc)) {\n\t\trows.Add(r);\n\t}\n\t// Which step a ledger row belongs to, in the order the steps happen.\n\tFunc<Entity, int> step = r => {\n\t\tstring a = (r.GetTypedColumnValue<string>(dActor) ?? string.Empty);\n\t\tif (a.StartsWith(\"BP2a\")) return 1;\n\t\tif (a.StartsWith(\"BP2b\")) return 2;\n\t\tif (a.StartsWith(\"SPAI Adjudicator\") || a.StartsWith(\"The Adjudicator\")) return 3;\n\t\tif (a.StartsWith(\"Gate 1\")) return 4;\n\t\tif (a.StartsWith(\"Gate 2\") || a.StartsWith(\"BP8\")) return 5;\n\t\treturn 6;\n\t};\n\trows.Sort((x, y) => {\n\t\tDateTime tx = x.GetTypedColumnValue<DateTime>(dOn), ty = y.GetTypedColumnValue<DateTime>(dOn);\n\t\tint byMinute = new DateTime(tx.Year, tx.Month, tx.Day, tx.Hour, tx.Minute, 0).CompareTo(new DateTime(ty.Year, ty.Month, ty.Day, ty.Hour, ty.Minute, 0));\n\t\tif (byMinute != 0) return byMinute;\n\t\tint byStep = step(x).CompareTo(step(y));\n\t\treturn byStep != 0 ? byStep : x.GetTypedColumnValue<int>(dSeq).CompareTo(y.GetTypedColumnValue<int>(dSeq));\n\t});\n\n\tvar story = new System.Text.StringBuilder();\n\tstory.AppendLine(\"How \" + title + (tenderCode.Length > 0 ? \" (\" + tenderCode + \")\" : string.Empty) + \" was adjudicated, told from the Decision Ledger. Written at award, \"\n\t\t+ local(now).ToString(\"d MMM yyyy\") + \" at \" + clock(now) + \" Melbourne time.\");\n\tstory.AppendLine(string.Format(\"{0} items on the schedule. {1} resolved by the CRM with no AI. {2} AI call(s) in total: one to read the schedule, one to adjudicate what was left.\",\n\t\tlines.Count, deterministic, aiCalls));\n\tint i = 0;\n\twhile (i < rows.Count) {\n\t\tint s = step(rows[i]);\n\t\tDateTime at = rows[i].GetTypedColumnValue<DateTime>(dOn);\n\t\tvar chapter = new List<Entity>();\n\t\twhile (i < rows.Count && step(rows[i]) == s) {\n\t\t\tchapter.Add(rows[i]);\n\t\t\ti++;\n\t\t}\n\t\tstory.AppendLine();\n\t\tstring when = local(at).ToString(\"d MMM\") + \", \" + clock(at) + \": \";\n\t\tif (s == 1) {\n\t\t\tint matched = 0;\n\t\t\tvar failed = new List<string>();\n\t\t\tforeach (Entity r in chapter) {\n\t\t\t\tif ((r.GetTypedColumnValue<string>(dType) ?? string.Empty) == \"Compliance rejection\") failed.Add(nameOf(r.GetTypedColumnValue<int>(dLine)));\n\t\t\t\telse matched++;\n\t\t\t}\n\t\t\tstory.AppendLine(when + \"Catalogue match and compliance check, no AI. \" + matched + \" item(s) matched exactly and passed WELS, GEMS, WaterMark, cut-out and lifecycle checks.\"\n\t\t\t\t+ (failed.Count > 0 ? \" The specified product failed the checks for: \" + string.Join(\"; \", failed) + \", so it went to adjudication.\" : string.Empty));\n\t\t} else if (s == 2) {\n\t\t\tbool afterGate1 = false;\n\t\t\tforeach (Entity r in rows) {\n\t\t\t\tif (step(r) == 4 && r.GetTypedColumnValue<DateTime>(dOn) <= at) afterGate1 = true;\n\t\t\t}\n\t\t\tstory.AppendLine(when + \"Stock sourced across the network, no AI: \" + chapter.Count + \" item(s)\"\n\t\t\t\t+ (afterGate1 ? \", the replacements just approved\" : string.Empty) + \". Indicative only; nothing reserved.\");\n\t\t} else if (s == 3) {\n\t\t\tvar proposed = new List<string>();\n\t\t\tvar suggested = new List<string>();\n\t\t\tvar none = new List<string>();\n\t\t\tforeach (Entity r in chapter) {\n\t\t\t\tint n = r.GetTypedColumnValue<int>(dLine);\n\t\t\t\tstring nv = (r.GetTypedColumnValue<string>(dNew) ?? string.Empty);\n\t\t\t\tstring product = lineProduct.ContainsKey(n) ? lineProduct[n] : string.Empty;\n\t\t\t\tif (nv.StartsWith(\"Substitution proposed\")) proposed.Add(nameOf(n) + (product.Length > 0 ? \" -> \" + product : string.Empty));\n\t\t\t\telse if (nv.Split('|').Length > 2) suggested.Add(nameOf(n) + (product.Length > 0 ? \" -> \" + product : string.Empty));\n\t\t\t\telse none.Add(nameOf(n));\n\t\t\t}\n\t\t\tstory.AppendLine(when + \"AI adjudication, one call for all \" + chapter.Count + \" open item(s), against a closed list of compliant candidates. Every answer was re-checked by the CRM before it was written.\");\n\t\t\tif (proposed.Count > 0) story.AppendLine(\"  Replacement proposed: \" + string.Join(\"; \", proposed) + \".\");\n\t\t\tif (suggested.Count > 0) story.AppendLine(\"  Closest compliant match suggested: \" + string.Join(\"; \", suggested) + \".\");\n\t\t\tif (none.Count > 0) story.AppendLine(\"  No compliant product, left for a person: \" + string.Join(\"; \", none) + \".\");\n\t\t} else if (s == 4) {\n\t\t\tvar approvedNames = new List<string>();\n\t\t\tvar excludedNames = new List<string>();\n\t\t\tstring words = string.Empty, submitted = string.Empty;\n\t\t\tforeach (Entity r in chapter) {\n\t\t\t\tint n = r.GetTypedColumnValue<int>(dLine);\n\t\t\t\tstring nv = (r.GetTypedColumnValue<string>(dNew) ?? string.Empty);\n\t\t\t\tstring checks = (r.GetTypedColumnValue<string>(dChecks) ?? string.Empty);\n\t\t\t\tstring said = personWords(checks);\n\t\t\t\tif (said.Length > 0) words = said;\n\t\t\t\tif (n == 0) {\n\t\t\t\t\tsubmitted = nv.StartsWith(\"Submitted\") ? \"The tender was submitted to the builder.\" : string.Empty;\n\t\t\t\t} else if (nv.StartsWith(\"Substitution approved\")) {\n\t\t\t\t\tapprovedNames.Add(nameOf(n) + (lineProduct.ContainsKey(n) && lineProduct[n].Length > 0 ? \" -> \" + lineProduct[n] : string.Empty));\n\t\t\t\t} else if (nv.StartsWith(\"Substitution rejected\")) {\n\t\t\t\t\texcludedNames.Add(nameOf(n));\n\t\t\t\t}\n\t\t\t}\n\t\t\tvar parts = new List<string>();\n\t\t\tif (approvedNames.Count > 0) parts.Add(\"approved \" + string.Join(\"; \", approvedNames));\n\t\t\tif (excludedNames.Count > 0) parts.Add(\"excluded \" + string.Join(\"; \", excludedNames));\n\t\t\tstory.AppendLine(when + \"Gate 1, the estimator's decisions in the chat, each repeated back and confirmed before it was recorded: \"\n\t\t\t\t+ (parts.Count > 0 ? string.Join(\"; and \", parts) + \".\" : \"no line changed.\")\n\t\t\t\t+ (words.Length > 0 ? \" In their words: \\\"\" + cut(words, 200) + \"\\\".\" : string.Empty)\n\t\t\t\t+ (submitted.Length > 0 ? \" \" + submitted : string.Empty));\n\t\t} else if (s == 5) {\n\t\t\tint ordered = 0;\n\t\t\tforeach (Entity r in chapter) {\n\t\t\t\tif (r.GetTypedColumnValue<int>(dLine) != 0) ordered++;\n\t\t\t}\n\t\t\tstory.AppendLine(when + \"Gate 2, the award approved in the chat after the person confirmed the builder's PO \" + poNumber + \". \"\n\t\t\t\t+ ordered + \" item(s) ordered across \" + subPos.Count + \" delivery order(s) against the builder's programme; stock committed and reserved; the tender marked Awarded and the opportunity Closed won.\");\n\t\t}\n\t}\n\tvar oppSchema = uc.EntitySchemaManager.GetInstanceByName(\"Opportunity\");\n\tif (oppSchema.Columns.FindByName(\"SPAIAdjudicationStory\") == null) {\n\t\tnotes.Add(\"the tender story was not saved because the opportunity has no Adjudication story field\");\n\t} else {\n\t\tEntity o = oppSchema.CreateEntity(uc);\n\t\tif (o.FetchFromDB(opportunityId)) {\n\t\t\to.SetColumnValue(\"SPAIAdjudicationStory\", story.ToString().TrimEnd());\n\t\t\to.Save(false);\n\t\t\tnotes.Add(\"the tender story is saved on the opportunity\");\n\t\t}\n\t}\n} catch (Exception ex) {\n\tnotes.Add(\"the tender story could not be written (\" + cut(ex.Message, 200) + \")\");\n}\n\n// ======================= 2. The award pack (customer-facing, prepared only) =======================\ntry {\n\tvar h = new System.Text.StringBuilder();\n\th.Append(\"<!doctype html><html lang=\\\"en\\\"><head><meta charset=\\\"utf-8\\\"><title>Award confirmation - \").Append(esc(title)).Append(\"</title>\");\n\th.Append(\"<style>body{font-family:Arial,Helvetica,sans-serif;color:#1d2430;max-width:960px;margin:32px auto;padding:0 16px;font-size:14px}\");\n\th.Append(\"h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px;border-bottom:2px solid #1d2430;padding-bottom:4px}\");\n\th.Append(\"table{border-collapse:collapse;width:100%}th,td{border:1px solid #c9ced6;padding:6px 8px;text-align:left;vertical-align:top}\");\n\th.Append(\"th{background:#eef1f5}.draft{background:#fff4d6;border:1px solid #e0b84c;padding:8px 12px;margin:12px 0}.meta td{border:none;padding:2px 12px 2px 0}\");\n\th.Append(\".num{text-align:right}</style></head><body>\");\n\th.Append(\"<div class=\\\"draft\\\">Prepared by Meridian Commercial Supply for review. A Meridian team member checks and sends this document.</div>\");\n\th.Append(\"<h1>Award confirmation and substitution schedule</h1>\");\n\th.Append(\"<table class=\\\"meta\\\">\");\n\th.Append(\"<tr><td><b>Project</b></td><td>\").Append(esc(title)).Append(\"</td></tr>\");\n\tif (tenderCode.Length > 0) h.Append(\"<tr><td><b>Tender</b></td><td>\").Append(esc(tenderCode)).Append(\"</td></tr>\");\n\th.Append(\"<tr><td><b>Your purchase order</b></td><td>\").Append(esc(poNumber)).Append(\"</td></tr>\");\n\th.Append(\"<tr><td><b>Prepared for</b></td><td>\").Append(esc(contactName.Length > 0 ? contactName + (accountName.Length > 0 ? \", \" + accountName : string.Empty) : accountName)).Append(\"</td></tr>\");\n\th.Append(\"<tr><td><b>Date</b></td><td>\").Append(local(now).ToString(\"d MMMM yyyy\")).Append(\"</td></tr></table>\");\n\th.Append(\"<p>Thank you for awarding this package to Meridian Commercial Supply. This schedule confirms what we will supply, every product we are supplying in place of the one specified and why, and the delivery programme against your construction programme.</p>\");\n\n\tvar supplied = new List<Entity>();\n\tvar substituted = new List<Entity>();\n\tvar excludedLines = new List<Entity>();\n\tforeach (Entity l in lines) {\n\t\tstring st = (l.GetTypedColumnValue<string>(lStatus) ?? string.Empty).Trim();\n\t\tif (st == \"Exact match\" || st == \"Sourced multi-location\" || st == \"Substitution approved\") {\n\t\t\tsupplied.Add(l);\n\t\t\tif (st == \"Substitution approved\") substituted.Add(l);\n\t\t} else if (st == \"Substitution rejected\") {\n\t\t\texcludedLines.Add(l);\n\t\t}\n\t}\n\n\th.Append(\"<h2>1. Products supplied (\").Append(supplied.Count).Append(\" lines)</h2><table><tr><th>Line</th><th>Ref</th><th>As specified</th><th>Supplied</th><th class=\\\"num\\\">Qty</th><th>Basis</th></tr>\");\n\tforeach (Entity l in supplied) {\n\t\tbool sub = (l.GetTypedColumnValue<string>(lStatus) ?? string.Empty).Trim() == \"Substitution approved\";\n\t\th.Append(\"<tr><td>\").Append(l.GetTypedColumnValue<int>(lNum)).Append(\"</td><td>\").Append(esc(lineRef(l)))\n\t\t\t.Append(\"</td><td>\").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 160)))\n\t\t\t.Append(\"</td><td>\").Append(esc((l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim() + \" (\" + (l.GetTypedColumnValue<string>(lProdCode) ?? string.Empty).Trim() + \")\"))\n\t\t\t.Append(\"</td><td class=\\\"num\\\">\").Append(l.GetTypedColumnValue<int>(lQty))\n\t\t\t.Append(\"</td><td>\").Append(sub ? \"Substitution, see section 2\" : \"As specified\").Append(\"</td></tr>\");\n\t}\n\th.Append(\"</table>\");\n\n\th.Append(\"<h2>2. Substitutions (\").Append(substituted.Count).Append(\")</h2>\");\n\tif (substituted.Count == 0) {\n\t\th.Append(\"<p>Every line is supplied as specified.</p>\");\n\t} else {\n\t\th.Append(\"<p>Each substitute was checked against the same regulatory requirements as the specified product (WELS, GEMS and WaterMark where they apply), with an equal or better rating, and approved by Meridian before this schedule was issued.</p>\");\n\t\th.Append(\"<table><tr><th>Line</th><th>As specified</th><th>Supplied instead</th><th>Why this product is equivalent</th></tr>\");\n\t\tforeach (Entity l in substituted) {\n\t\t\tstring reason = (l.GetTypedColumnValue<string>(lNote) ?? string.Empty).Trim();\n\t\t\tstring compliance = (l.GetTypedColumnValue<string>(lCompliance) ?? string.Empty).Trim();\n\t\t\th.Append(\"<tr><td>\").Append(l.GetTypedColumnValue<int>(lNum)).Append(\"</td><td>\").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 160)))\n\t\t\t\t.Append(\"</td><td>\").Append(esc((l.GetTypedColumnValue<string>(lProdName) ?? string.Empty).Trim() + \" (\" + (l.GetTypedColumnValue<string>(lProdCode) ?? string.Empty).Trim() + \")\"))\n\t\t\t\t.Append(\"</td><td>\").Append(esc(reason.Length > 0 ? reason : \"Approved equivalent.\"))\n\t\t\t\t.Append(compliance.Length > 0 ? \"<br><small>\" + esc(compliance) + \"</small>\" : string.Empty).Append(\"</td></tr>\");\n\t\t}\n\t\th.Append(\"</table>\");\n\t}\n\n\tif (excludedLines.Count > 0) {\n\t\th.Append(\"<h2>3. Not included in this supply (\").Append(excludedLines.Count).Append(\")</h2><table><tr><th>Line</th><th>Ref</th><th>As specified</th></tr>\");\n\t\tforeach (Entity l in excludedLines) {\n\t\t\th.Append(\"<tr><td>\").Append(l.GetTypedColumnValue<int>(lNum)).Append(\"</td><td>\").Append(esc(lineRef(l)))\n\t\t\t\t.Append(\"</td><td>\").Append(esc(cut(l.GetTypedColumnValue<string>(lSpec), 200))).Append(\"</td></tr>\");\n\t\t}\n\t\th.Append(\"</table><p>We will contact you about these lines separately.</p>\");\n\t}\n\n\th.Append(\"<h2>\").Append(excludedLines.Count > 0 ? \"4\" : \"3\").Append(\". Delivery programme (\").Append(subPos.Count).Append(\" deliveries)</h2>\");\n\th.Append(\"<table><tr><th>Delivery order</th><th>Programme event</th><th>Date</th><th class=\\\"num\\\">Lines</th><th class=\\\"num\\\">Units</th></tr>\");\n\tforeach (Entity p in subPos) {\n\t\tDateTime d = p.GetTypedColumnValue<DateTime>(pDate);\n\t\th.Append(\"<tr><td>\").Append(esc(p.GetTypedColumnValue<string>(pNo))).Append(\"</td><td>\").Append(esc(p.GetTypedColumnValue<string>(pLabel)))\n\t\t\t.Append(\"</td><td>\").Append(d > DateTime.MinValue ? d.ToString(\"d MMM yyyy\") : \"to be confirmed\")\n\t\t\t.Append(\"</td><td class=\\\"num\\\">\").Append(linesBySub.ContainsKey(p.PrimaryColumnValue) ? linesBySub[p.PrimaryColumnValue] : 0)\n\t\t\t.Append(\"</td><td class=\\\"num\\\">\").Append(unitsBySub.ContainsKey(p.PrimaryColumnValue) ? unitsBySub[p.PrimaryColumnValue] : 0).Append(\"</td></tr>\");\n\t}\n\th.Append(\"</table><p>Quantities per delivery follow your construction programme. Please tell us if a level's requirements differ and we will adjust the call-up.</p>\");\n\th.Append(\"<p>Meridian Commercial Supply</p></body></html>\");\n\n\tbyte[] data = System.Text.Encoding.UTF8.GetBytes(h.ToString());\n\tstring fileName = \"Award pack - \" + (tenderCode.Length > 0 ? tenderCode : title) + \" - \" + poNumber + \".html\";\n\tEntity file = uc.EntitySchemaManager.GetInstanceByName(\"OpportunityFile\").CreateEntity(uc);\n\tfile.SetDefColumnValues();\n\tfile.SetColumnValue(\"OpportunityId\", opportunityId);\n\tfile.SetColumnValue(\"Name\", fileName);\n\tfile.SetColumnValue(\"TypeId\", new Guid(\"529bc2f8-0ee0-df11-971b-001d60e938c6\"));  // File\n\tfile.SetColumnValue(\"Data\", data);\n\tfile.SetColumnValue(\"Size\", data.Length);\n\tfile.SetColumnValue(\"Version\", 1);\n\tfile.Save(false);\n\tnotes.Add(\"an award pack (\\\"\" + fileName + \"\\\") is attached to the opportunity for a person to review and send to \"\n\t\t+ (contactName.Length > 0 ? contactName : \"the builder\") + \"; nothing has been sent\");\n} catch (Exception ex) {\n\tnotes.Add(\"the award pack could not be attached (\" + cut(ex.Message, 200) + \")\");\n}\n\nSet(\"RunSummary\", (summary.Length > 0 ? summary + \" \" : string.Empty) + \"Also: \" + string.Join(\"; \", notes) + \".\");\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "9551647e-ffea-4d1f-8c98-832d7034150c",
+          "A2": "SequenceFlow1",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "CI1": "2107ed5a-9ff4-4041-ab00-4d8af0cce377",
+          "CI2": "ab72ad6f-7221-4230-b029-4cf1b2e61a02",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "81;200",
+          "CI12": "192;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "a833f659-0ee6-4b9b-9615-c217e2b5075a",
+          "A2": "SequenceFlow2",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "CI1": "ab72ad6f-7221-4230-b029-4cf1b2e61a02",
+          "CI2": "e1d7f853-2eff-4319-8d23-d012031b335b",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "261;200",
+          "CI12": "384;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "f222f762-109a-4474-9c08-45231b930d9b",
+          "A2": "SequenceFlow3",
+          "A3": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A4": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+          "CI1": "e1d7f853-2eff-4319-8d23-d012031b335b",
+          "CI2": "6ce21770-3bd7-4eb3-abdf-f1cec9c05786",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "453;200",
+          "CI12": "600;200"
+        }
+      ],
+      "BK9": [],
+      "BK18": "Business Process",
+      "BK29": true,
+      "BK30": true,
+      "BK34": "en-US",
+      "Labels": [],
+      "BK24": []
+    }
+  }
+}

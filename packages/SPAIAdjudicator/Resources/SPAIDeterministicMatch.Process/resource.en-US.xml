@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.ScriptTask1.Caption" Value="Match and apply the compliance floor" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="Meridian: sourcing cascade 1" />
+			<Item Name="BaseElements.SubProcess1.Parameters.FilledCount.Caption" Value="FilledCount" />
+			<Item Name="BaseElements.SubProcess1.Parameters.MultiSourceCount.Caption" Value="MultiSourceCount" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OpportunityId.DisplayValue" Value="[#OpportunityId#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.ProjectState.Caption" Value="ProjectState" />
+			<Item Name="BaseElements.SubProcess1.Parameters.ProjectState.DisplayValue" Value="[#ProjectState#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.ShortfallCount.Caption" Value="ShortfallCount" />
+			<Item Name="Caption" Value="Meridian: deterministic match and compliance floor" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.FloorFailCount.Caption" Value="FloorFailCount" />
+			<Item Name="Parameters.MatchedCount.Caption" Value="MatchedCount" />
+			<Item Name="Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="Parameters.ProjectState.Caption" Value="ProjectState" />
+			<Item Name="Parameters.UnresolvedCount.Caption" Value="UnresolvedCount" />
+		</Items>
+	</Group>
+</Resources>

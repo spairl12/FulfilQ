@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="Conditional flow 1" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Caption" Value="SPAI Adjudicator 1" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.AdjudicatorRequest.Caption" Value="AdjudicatorRequest" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.AdjudicatorRequest.DisplayValue" Value="[#AdjudicatorRequestJson#]" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.CopilotRootSessionId.Caption" Value="Copilot root session identifier" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.CopilotSessionId.Caption" Value="Copilot session identifier" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.ErrorMessage.Caption" Value="Error message" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.ExecutionStatus.Caption" Value="Status" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.ExecutionStatusId.Caption" Value="Status Id" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.IntentSchemaUId.Caption" Value="Sub-agent schema UId" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.IntentSchemaUId.DisplayValue" Value="9b45c34a-18a8-9d28-0ff3-5e614a2c0aa7" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.ResponseText.Caption" Value="Response text" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.VerdictsJson.Caption" Value="VerdictsJson" />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.VerdictsJson.Sys_Description" Value="The complete result as a JSON string: the object {&quot;verdicts&quot;:[...]} exactly as defined by the output schema in the prompt. Nothing else." />
+			<Item Name="BaseElements.ExecuteIntentUserTask2.Parameters.WarningMessage.Caption" Value="Warning message" />
+			<Item Name="BaseElements.ScriptTask1.Caption" Value="Build candidate set" />
+			<Item Name="BaseElements.ScriptTask2.Caption" Value="Build network stock" />
+			<Item Name="BaseElements.ScriptTask3.Caption" Value="Apply verdicts" />
+			<Item Name="BaseElements.TerminateEvent1.Caption" Value="Nothing to adjudicate" />
+			<Item Name="Caption" Value="Meridian: adjudication" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.AdjudicatorError.Caption" Value="AdjudicatorError" />
+			<Item Name="Parameters.AdjudicatorError.DisplayValue" Value="[#SPAI Adjudicator 1.Error message#]" />
+			<Item Name="Parameters.AdjudicatorRequestJson.Caption" Value="AdjudicatorRequestJson" />
+			<Item Name="Parameters.AdjudicatorStatus.Caption" Value="AdjudicatorStatus" />
+			<Item Name="Parameters.AdjudicatorStatus.DisplayValue" Value="[#SPAI Adjudicator 1.Status#]" />
+			<Item Name="Parameters.CandidateProductCodesJson.Caption" Value="CandidateProductCodesJson" />
+			<Item Name="Parameters.CandidateProductsJson.Caption" Value="CandidateProductsJson" />
+			<Item Name="Parameters.EscalatedCount.Caption" Value="EscalatedCount" />
+			<Item Name="Parameters.NetworkStockJson.Caption" Value="NetworkStockJson" />
+			<Item Name="Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="Parameters.OverrideCount.Caption" Value="OverrideCount" />
+			<Item Name="Parameters.PendingLineCount.Caption" Value="PendingLineCount" />
+			<Item Name="Parameters.PolicyContextJson.Caption" Value="PolicyContextJson" />
+			<Item Name="Parameters.ResolvedCount.Caption" Value="ResolvedCount" />
+			<Item Name="Parameters.SubstitutionRulesJson.Caption" Value="SubstitutionRulesJson" />
+			<Item Name="Parameters.UnresolvedLinesJson.Caption" Value="UnresolvedLinesJson" />
+			<Item Name="Parameters.VerdictsJson.Caption" Value="VerdictsJson" />
+			<Item Name="Parameters.VerdictsJson.DisplayValue" Value="[#SPAI Adjudicator 1.VerdictsJson#]" />
+		</Items>
+	</Group>
+</Resources>

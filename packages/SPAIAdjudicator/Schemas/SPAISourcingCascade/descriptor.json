@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+    "Name": "SPAISourcingCascade",
+    "ModifiedOnUtc": "\/Date(1790802996000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: sourcing cascade",
+    "DependsOn": []
+  }
+}

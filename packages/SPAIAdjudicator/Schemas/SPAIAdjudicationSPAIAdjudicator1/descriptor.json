@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "d709943a-236a-4bfa-a41c-10129a8cd4c3",
+    "Name": "SPAIAdjudicationSPAIAdjudicator1",
+    "ModifiedOnUtc": "\/Date(1790688274000)\/",
+    "Parent": {
+      "UId": "88db8676-580a-4d61-bb80-d6a23b0329ca",
+      "Name": "SPAIAdjudication"
+    },
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: adjudication",
+    "DependsOn": []
+  }
+}

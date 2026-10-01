@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "8e691a4d-acbe-471e-9cbb-d9edd6f34d19",
+    "Name": "SPAIAwardFulfilment",
+    "ModifiedOnUtc": "\/Date(1790748890000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: award fulfilment",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "4fe8a69f-a59b-43c3-8571-93f736e69bea",
+    "Name": "SPAIGate1Approval",
+    "ModifiedOnUtc": "\/Date(1790748819000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: Gate 1 approval",
+    "DependsOn": []
+  }
+}

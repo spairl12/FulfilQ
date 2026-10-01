@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "05a4b686-5e1d-448a-963a-ead22f997d8f",
+    "Name": "SPAIProcess_c731f1a",
+    "ModifiedOnUtc": "\/Date(1790597466000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Business process 1",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "MetaData": {
+    "Schema": {
+      "ManagerName": "ProcessSchemaManager",
+      "UId": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+      "A2": "SPAISourcingCascade",
+      "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+      "B1": [],
+      "B2": [],
+      "B3": [
+        {
+          "UId": "a15c3f50-e9e6-4854-b965-61878d8fa5eb",
+          "A2": "System",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System"
+        },
+        {
+          "UId": "83d3b9fa-acdc-46d3-896e-006771452817",
+          "A2": "System.Collections.Generic",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "System.Collections.Generic"
+        },
+        {
+          "UId": "568752b4-3152-4e41-b736-6f6911c5d9cc",
+          "A2": "Newtonsoft.Json.Linq",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Newtonsoft.Json.Linq"
+        },
+        {
+          "UId": "0e3345e5-1223-4ae4-b9e4-d2c08c5e6f70",
+          "A2": "Terrasoft.Core",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core"
+        },
+        {
+          "UId": "553cd848-8779-45f0-93ba-b8edc231ac22",
+          "A2": "Terrasoft.Core.Entities",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "cb8bb9a1-35b2-4f26-a0d7-e4f5d62e3871",
+          "GF1": "Terrasoft.Core.Entities"
+        }
+      ],
+      "B6": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+      "B8": "10.0.0.858",
+      "FJ1": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "46a29795-3e9c-4775-8ec1-67abb34b431a",
+          "A2": "OpportunityId",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "L1": "23018567-a13c-4320-8687-fd6f9e3699bd",
+          "L8": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "d5e5501d-bf07-4bbe-8a54-25404673e40d",
+          "A2": "ProjectState",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "L1": "5ca35f10-a101-4c67-a96a-383da6afacfc",
+          "L8": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          },
+          "L12": 0
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "4d482824-eabb-4ecb-8671-8be5723f39c9",
+          "A2": "FilledCount",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "029ee8f3-e562-4e21-b968-55fa70ab113d",
+          "A2": "MultiSourceCount",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          },
+          "L12": 1
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+          "UId": "8037b944-3728-4860-9373-8fcd22b2e19e",
+          "A2": "ShortfallCount",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "L1": "6b6b74e2-820d-490e-a017-2b73d4ccf2b0",
+          "L8": {
+            "GS5": "0026574b-61e0-450d-a5cd-33089e0e02e5"
+          },
+          "L12": 1
+        }
+      ],
+      "IJ1": true,
+      "BK8": "bb4d6607-026b-4b27-b640-8f5c77c1e89d",
+      "IJ10": true,
+      "BK15": [],
+      "BK37": {
+        "BL1": "Terrasoft.Core.Process.ProcessSchemaParameter",
+        "UId": "cdd58be7-2dba-4a5e-869b-1ad5d6d7513a",
+        "A2": "NotificationCaption",
+        "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+        "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+        "L1": "8b3f29bb-ea14-4ce5-a5c5-293a929b6ba2",
+        "L8": {
+          "GS1": 3,
+          "GS2": "[#[PropertyValue:Caption]#]"
+        }
+      },
+      "BK1": "FFFFFFFF",
+      "BK2": "FFBBBBBB",
+      "BK3": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaLaneSet",
+          "UId": "99ff95cc-dc19-43b3-8a0a-497958d54f6f",
+          "A2": "LaneSet1",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "11a47caf-a0d5-41fa-a274-a0b11f77447a",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "BM1": 0,
+          "BM4": [
+            {
+              "BL1": "Terrasoft.Core.Process.ProcessSchemaLane",
+              "UId": "efc91c29-2089-404e-b90b-901dd68cdfd4",
+              "A2": "Lane1",
+              "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+              "IL2": "99ff95cc-dc19-43b3-8a0a-497958d54f6f",
+              "BL7": "abcd74b9-5912-414b-82ac-f1aa4dcd554e",
+              "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+              "CD1": [],
+              "CD2": [],
+              "CD4": "99ff95cc-dc19-43b3-8a0a-497958d54f6f",
+              "CD7": []
+            }
+          ]
+        }
+      ],
+      "BK5": [],
+      "BK4": [
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaStartEvent",
+          "UId": "0b582b01-c2e3-4d08-be7f-a378b5ffba4c",
+          "A2": "StartEvent1",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "efc91c29-2089-404e-b90b-901dd68cdfd4",
+          "BL3": "50;184",
+          "BL7": "53818048-7868-48f6-ada0-0ebaa65af628",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": [],
+          "ED1": false
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaTerminateEvent",
+          "UId": "8ad847fb-ca19-40c3-a544-439863e2fab9",
+          "A2": "TerminateEvent1",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "efc91c29-2089-404e-b90b-901dd68cdfd4",
+          "BL3": "600;184",
+          "BL7": "1bd93619-0574-454e-bb4e-cf53b9eb9470",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "BN2": "31;31",
+          "BO3": true,
+          "FC1": []
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaScriptTask",
+          "UId": "90858f49-2b13-41a2-8e88-af1e549c039d",
+          "A2": "ScriptTask1",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "IL2": "efc91c29-2089-404e-b90b-901dd68cdfd4",
+          "BL3": "278;172",
+          "BL7": "0e490dda-e140-4441-b600-6f5c64d024df",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "BN2": "69;55",
+          "BO3": true,
+          "BP2": [],
+          "CL2": "FFFFFFFF",
+          "CH1": "var uc = Get<UserConnection>(\"UserConnection\");\nGuid opportunityId = Get<Guid>(\"OpportunityId\");\nstring projectState = (Get<string>(\"ProjectState\") ?? string.Empty).Trim();\nEntity opportunity = uc.EntitySchemaManager.GetInstanceByName(\"Opportunity\").CreateEntity(uc);\nbool opportunityFound = opportunity.FetchFromDB(opportunityId);\nif (projectState.Length == 0 && opportunityFound) {\n\tprojectState = (opportunity.GetTypedColumnValue<string>(\"SPAIProjectState\") ?? string.Empty).Trim();\n}\n\nFunc<string, Dictionary<string, Guid>> loadByName = schemaName => {\n\tvar esq = new EntitySchemaQuery(uc.EntitySchemaManager, schemaName);\n\tesq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tstring nameColumn = esq.AddColumn(\"Name\").Name;\n\tvar map = new Dictionary<string, Guid>(StringComparer.OrdinalIgnoreCase);\n\tforeach (Entity e in esq.GetEntityCollection(uc)) {\n\t\tmap[(e.GetTypedColumnValue<string>(nameColumn) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n\t}\n\treturn map;\n};\nvar lineStatus = loadByName(\"SPAILineStatus\");\nvar decisionType = loadByName(\"SPAIDecisionType\");\nvar sourceTier = loadByName(\"SPAISourceTier\");\nvar planType = loadByName(\"SPAISourcePlanType\");\nvar reasonEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIReasonCode\");\nreasonEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring reasonCodeCol = reasonEsq.AddColumn(\"SPAICode\").Name;\nvar reasons = new Dictionary<string, Guid>(StringComparer.Ordinal);\nforeach (Entity e in reasonEsq.GetEntityCollection(uc)) {\n\treasons[(e.GetTypedColumnValue<string>(reasonCodeCol) ?? string.Empty).Trim()] = e.PrimaryColumnValue;\n}\n\n// ---- The earliest delivery event of this tender's programme bounds tier 4 ----\nDateTime inboundCutoff = DateTime.MaxValue;\nvar eventEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIDeliveryEvent\");\nstring schedOnCol = eventEsq.AddColumn(\"SPAIScheduledOn\").Name;\neventEsq.Filters.Add(eventEsq.CreateFilterWithParameters(FilterComparisonType.Equal,\n\t\"SPAICallUpSchedule.SPAIOpportunity\", opportunityId));\nforeach (Entity e in eventEsq.GetEntityCollection(uc)) {\n\tDateTime scheduled = e.GetTypedColumnValue<DateTime>(schedOnCol);\n\tif (scheduled != DateTime.MinValue && scheduled < inboundCutoff) {\n\t\tinboundCutoff = scheduled;\n\t}\n}\n\n// ---- Lines to source: matched by BP2a (Pending) or approved at Gate 1, not yet sourced ----\nvar lineEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\nlineEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\nstring numCol = lineEsq.AddColumn(\"SPAILineNumber\").Name;\nstring qtyCol = lineEsq.AddColumn(\"SPAIQuantity\").Name;\nstring productCol = lineEsq.AddColumn(\"SPAIMatchedProduct\").Name;\nstring lineStatusCol = lineEsq.AddColumn(\"SPAILineStatus.Name\").Name;\nstring resolvedByCol = lineEsq.AddColumn(\"SPAIResolvedBy\").Name;\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\nlineEsq.Filters.Add(lineEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAILineStatus.Name\",\n\t\"Pending\", \"Substitution approved\"));\nlineEsq.Filters.Add(lineEsq.CreateIsNotNullFilter(\"SPAIMatchedProduct\"));\nvar candidates = new List<Entity>();\nforeach (Entity candidate in lineEsq.GetEntityCollection(uc)) {\n\t// An item the adjudication has claimed is being assessed right now (a zero-stock item left Pending for it).\n\t// Touching it would overwrite the claim and let an overlapping run send it to the model a second time.\n\tif ((candidate.GetTypedColumnValue<string>(resolvedByCol) ?? string.Empty).Trim() == \"Adjudicating\") {\n\t\tcontinue;\n\t}\n\tcandidates.Add(candidate);\n}\n\n// Lines that already have source rows were sourced on an earlier run.\nvar alreadySourced = new HashSet<Guid>();\nif (candidates.Count > 0) {\n\tvar doneEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAILineSource\");\n\tstring doneLineCol = doneEsq.AddColumn(\"SPAIScheduleLine\").Name;\n\tvar candidateIds = new List<object>();\n\tforeach (Entity candidate in candidates) {\n\t\tcandidateIds.Add(candidate.PrimaryColumnValue);\n\t}\n\tdoneEsq.Filters.Add(doneEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIScheduleLine\",\n\t\tcandidateIds.ToArray()));\n\tforeach (Entity done in doneEsq.GetEntityCollection(uc)) {\n\t\talreadySourced.Add(done.GetTypedColumnValue<Guid>(doneLineCol + \"Id\"));\n\t}\n}\nvar lines = new List<Entity>();\nforeach (Entity candidate in candidates) {\n\tif (!alreadySourced.Contains(candidate.PrimaryColumnValue)) {\n\t\tlines.Add(candidate);\n\t}\n}\n\n// ---- Stock for those products, at available locations, ordered by tier then sourcing rank ----\nvar productIdSet = new HashSet<Guid>();\nforeach (Entity line in lines) {\n\tproductIdSet.Add(line.GetTypedColumnValue<Guid>(productCol + \"Id\"));\n}\nvar productIdList = new List<object>();\nforeach (Guid id in productIdSet) {\n\tproductIdList.Add(id);\n}\nobject[] productIds = productIdList.ToArray();\nvar stock = new List<Dictionary<string, object>>();\nif (productIds.Length > 0) {\n\tvar sEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIStockPosition\");\n\tvar sc = new Dictionary<string, string>();\n\tforeach (string c in new[] { \"SPAIProduct\", \"SPAILocation\", \"SPAILocation.SPAILocationType.Name\",\n\t\t\t\"SPAILocation.SPAIState\", \"SPAILocation.SPAISourcingRank\", \"SPAIQtyAvailable\",\n\t\t\t\"SPAINextInboundQty\", \"SPAINextInboundDate\" }) {\n\t\tsc[c] = sEsq.AddColumn(c).Name;\n\t}\n\tsEsq.Filters.Add(sEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIProduct\", productIds));\n\tsEsq.Filters.Add(sEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAILocation.SPAIIsAvailable\", true));\n\t// Meridian's home DC is the available Distribution Centre with the lowest sourcing rank.\n\tvar dcRanks = new List<int>();\n\tvar rows = sEsq.GetEntityCollection(uc);\n\tforeach (Entity s in rows) {\n\t\tif (s.GetTypedColumnValue<string>(sc[\"SPAILocation.SPAILocationType.Name\"]) == \"Distribution Centre\") {\n\t\t\tdcRanks.Add(s.GetTypedColumnValue<int>(sc[\"SPAILocation.SPAISourcingRank\"]));\n\t\t}\n\t}\n\tint homeDcRank = int.MinValue;\n\tforeach (int dcRank in dcRanks) {\n\t\tif (homeDcRank == int.MinValue || dcRank < homeDcRank) {\n\t\t\thomeDcRank = dcRank;\n\t\t}\n\t}\n\tforeach (Entity s in rows) {\n\t\tbool isDc = s.GetTypedColumnValue<string>(sc[\"SPAILocation.SPAILocationType.Name\"]) == \"Distribution Centre\";\n\t\tint rank = s.GetTypedColumnValue<int>(sc[\"SPAILocation.SPAISourcingRank\"]);\n\t\tstring locationState = s.GetTypedColumnValue<string>(sc[\"SPAILocation.SPAIState\"]) ?? string.Empty;\n\t\tstock.Add(new Dictionary<string, object> {\n\t\t\t{ \"ProductId\", s.GetTypedColumnValue<Guid>(sc[\"SPAIProduct\"] + \"Id\") },\n\t\t\t{ \"LocationId\", s.GetTypedColumnValue<Guid>(sc[\"SPAILocation\"] + \"Id\") },\n\t\t\t{ \"Tier\", isDc ? (rank == homeDcRank ? 1 : 2) : 3 },\n\t\t\t{ \"Rank\", rank },\n\t\t\t{ \"Available\", s.GetTypedColumnValue<int>(sc[\"SPAIQtyAvailable\"]) },\n\t\t\t{ \"InboundQty\", s.GetTypedColumnValue<int>(sc[\"SPAINextInboundQty\"]) },\n\t\t\t{ \"InboundOn\", s.GetTypedColumnValue<DateTime>(sc[\"SPAINextInboundDate\"]) },\n\t\t\t// Freight is interstate when the stock leaves a different state from the site, whatever its tier.\n\t\t\t{ \"Interstate\", projectState.Length > 0 && locationState.Length > 0\n\t\t\t\t&& !string.Equals(locationState, projectState, StringComparison.OrdinalIgnoreCase) }\n\t\t});\n\t}\n}\n\nEntitySchema lineSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIScheduleLine\");\nEntitySchema sourceSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAILineSource\");\nEntitySchema ledgerSchema = uc.EntitySchemaManager.GetInstanceByName(\"SPAIDecisionLedger\");\nstring[] tierNames = { \"\", \"1 Home DC\", \"2 Other DC\", \"3 Retail store\", \"4 Inbound supply\" };\nint filled = 0, multi = 0, shortfall = 0;\n\nforeach (Entity line in lines) {\n\tGuid lineId = line.PrimaryColumnValue;\n\tGuid productId = line.GetTypedColumnValue<Guid>(productCol + \"Id\");\n\tint required = line.GetTypedColumnValue<int>(qtyCol);\n\tint remaining = required;\n\tvar rows = new List<Dictionary<string, object>>();\n\tforeach (var candidateStock in stock) {\n\t\tif ((Guid)candidateStock[\"ProductId\"] == productId) {\n\t\t\trows.Add(candidateStock);\n\t\t}\n\t}\n\t// Tier first, then sourcing rank.\n\trows.Sort((a, b) => {\n\t\tint byTier = ((int)a[\"Tier\"]).CompareTo((int)b[\"Tier\"]);\n\t\treturn byTier != 0 ? byTier : ((int)a[\"Rank\"]).CompareTo((int)b[\"Rank\"]);\n\t});\n\tvar allocations = new List<string>();\n\tint locationsUsed = 0;\n\n\t// Tiers 1 to 3: stock on hand, in tier then rank order.\n\tforeach (var s in rows) {\n\t\tif (remaining <= 0) {\n\t\t\tbreak;\n\t\t}\n\t\tint take = Math.Min(remaining, (int)s[\"Available\"]);\n\t\tif (take <= 0) {\n\t\t\tcontinue;\n\t\t}\n\t\tEntity src = sourceSchema.CreateEntity(uc);\n\t\tsrc.SetDefColumnValues();\n\t\tsrc.SetColumnValue(\"SPAIScheduleLineId\", lineId);\n\t\tsrc.SetColumnValue(\"SPAILocationId\", (Guid)s[\"LocationId\"]);\n\t\tsrc.SetColumnValue(\"SPAIQtyAllocated\", take);\n\t\tsrc.SetColumnValue(\"SPAISourceTierId\", sourceTier[tierNames[(int)s[\"Tier\"]]]);\n\t\tsrc.SetColumnValue(\"SPAISourcePlanTypeId\", planType[\"Indicative\"]);\n\t\tsrc.SetColumnValue(\"SPAIInterstateFreight\", (bool)s[\"Interstate\"]);\n\t\tsrc.SetColumnValue(\"SPAIAllocatedOn\", uc.CurrentUser.GetCurrentDateTime());\n\t\tsrc.Save(false);\n\t\ts[\"Available\"] = (int)s[\"Available\"] - take;  // in memory only: the next line cannot take it again\n\t\tremaining -= take;\n\t\tlocationsUsed++;\n\t\tallocations.Add(string.Format(\"tier {0} x{1}\", (int)s[\"Tier\"], take));\n\t}\n\t// Tier 4: inbound supply that lands before the earliest delivery event.\n\tforeach (var s in rows) {\n\t\tif (remaining <= 0) {\n\t\t\tbreak;\n\t\t}\n\t\tDateTime inboundOn = (DateTime)s[\"InboundOn\"];\n\t\tint inbound = (int)s[\"InboundQty\"];\n\t\tif (inbound <= 0 || inboundOn == DateTime.MinValue || inboundOn >= inboundCutoff) {\n\t\t\tcontinue;\n\t\t}\n\t\tint take = Math.Min(remaining, inbound);\n\t\tEntity src = sourceSchema.CreateEntity(uc);\n\t\tsrc.SetDefColumnValues();\n\t\tsrc.SetColumnValue(\"SPAIScheduleLineId\", lineId);\n\t\tsrc.SetColumnValue(\"SPAILocationId\", (Guid)s[\"LocationId\"]);\n\t\tsrc.SetColumnValue(\"SPAIQtyAllocated\", take);\n\t\tsrc.SetColumnValue(\"SPAISourceTierId\", sourceTier[\"4 Inbound supply\"]);\n\t\tsrc.SetColumnValue(\"SPAISourcePlanTypeId\", planType[\"Indicative\"]);\n\t\tsrc.SetColumnValue(\"SPAIInterstateFreight\", (bool)s[\"Interstate\"]);\n\t\tsrc.SetColumnValue(\"SPAIAllocatedOn\", uc.CurrentUser.GetCurrentDateTime());\n\t\tsrc.Save(false);\n\t\ts[\"InboundQty\"] = inbound - take;  // in memory only\n\t\tremaining -= take;\n\t\tlocationsUsed++;\n\t\tallocations.Add(string.Format(\"tier 4 x{0} arriving {1:yyyy-MM-dd}\", take, inboundOn));\n\t}\n\n\tEntity row = lineSchema.CreateEntity(uc);\n\trow.FetchFromDB(lineId);\n\trow.SetColumnValue(\"SPAIQtySourced\", required - remaining);\n\trow.SetColumnValue(\"SPAIQtyShortfall\", Math.Max(0, remaining));\n\tstring currentStatus = (line.GetTypedColumnValue<string>(lineStatusCol) ?? string.Empty).Trim();\n\tbool approvedAtGate1 = currentStatus == \"Substitution approved\";\n\tstring status, reason;\n\tif (approvedAtGate1) {\n\t\t// A person approved this substitute at Gate 1: keep that decision, record only the sourcing.\n\t\tstatus = currentStatus;\n\t\treason = string.Empty;\n\t\tif (remaining > 0) {\n\t\t\tshortfall++;\n\t\t} else if (locationsUsed > 1) {\n\t\t\tmulti++;\n\t\t} else {\n\t\t\tfilled++;\n\t\t}\n\t} else if (remaining > 0) {\n\t\tstatus = \"Pending\";  // left for BP3: the Adjudicator may find a stocked equivalent\n\t\treason = \"STOCKOUT_SUB\";\n\t\tshortfall++;\n\t} else if (locationsUsed > 1) {\n\t\tstatus = \"Sourced multi-location\";\n\t\treason = \"MULTI_SOURCE\";\n\t\tmulti++;\n\t} else {\n\t\tstatus = \"Exact match\";\n\t\treason = \"EXACT\";\n\t\tfilled++;\n\t}\n\tif (remaining <= 0 && !approvedAtGate1) {\n\t\trow.SetColumnValue(\"SPAILineStatusId\", lineStatus[status]);\n\t\trow.SetColumnValue(\"SPAIReasonCodeId\", reasons[reason]);\n\t}\n\tif (!approvedAtGate1) {\n\t\trow.SetColumnValue(\"SPAIResolvedBy\", \"Deterministic\");  // an approved substitute stays \"Adjudicator\"\n\t}\n\trow.Save(false);\n\n\tEntity ledger = ledgerSchema.CreateEntity(uc);\n\tledger.SetDefColumnValues();\n\tledger.SetColumnValue(\"SPAIOpportunityId\", opportunityId);\n\tledger.SetColumnValue(\"SPAIScheduleLineId\", lineId);\n\tledger.SetColumnValue(\"SPAIDecisionTypeId\", decisionType[\"Sourcing allocation\"]);\n\tledger.SetColumnValue(\"SPAIActor\", \"BP2b SPAISourcingCascade\");\n\tledger.SetColumnValue(\"SPAIProposedProductId\", productId);\n\tledger.SetColumnValue(\"SPAIComplianceChecks\", string.Format(\n\t\t\"required {0}; allocated {1} across {2} location(s) [{3}]; plan type Indicative; stock not encumbered\",\n\t\trequired, required - remaining, locationsUsed, string.Join(\", \", allocations)));\n\tledger.SetColumnValue(\"SPAIPriorValue\", approvedAtGate1 ? \"Substitution approved, not yet sourced\" : \"Pending\");\n\tledger.SetColumnValue(\"SPAINewValue\", approvedAtGate1\n\t\t? \"Substitution approved, sourced \" + (required - remaining) + (remaining > 0 ? \", shortfall \" + remaining : string.Empty)\n\t\t: (remaining > 0 ? \"Pending, shortfall \" + remaining : status + \" | \" + reason));\n\tledger.SetColumnValue(\"SPAISequence\", line.GetTypedColumnValue<int>(numCol));\n\tledger.SetColumnValue(\"SPAIOccurredOn\", uc.CurrentUser.GetCurrentDateTime());\n\tledger.Save(false);\n}\n// The Opportunity: counts across every run (not just this one), then status Adjudicating.\nFunc<string, int> countByStatus = statusName => {\n\tvar countEsq = new EntitySchemaQuery(uc.EntitySchemaManager, \"SPAIScheduleLine\");\n\tcountEsq.PrimaryQueryColumn.IsAlwaysSelect = true;\n\tcountEsq.Filters.Add(countEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAIOpportunity\", opportunityId));\n\tcountEsq.Filters.Add(countEsq.CreateFilterWithParameters(FilterComparisonType.Equal, \"SPAILineStatus.Name\", statusName));\n\treturn countEsq.GetEntityCollection(uc).Count;\n};\nif (opportunityFound) {\n\topportunity.SetColumnValue(\"SPAIExactMatchCount\", countByStatus(\"Exact match\"));\n\topportunity.SetColumnValue(\"SPAIMultiSourceCount\", countByStatus(\"Sourced multi-location\"));\n\t// Move to Adjudicating only inside the intake chain (BP2a set Sourcing). After Gate 1, BP5 owns the status.\n\tvar statusByName = loadByName(\"SPAIAdjudicationStatus\");\n\tif (opportunity.GetTypedColumnValue<Guid>(\"SPAIAdjudicationStatusId\") == statusByName[\"Sourcing\"]) {\n\t\topportunity.SetColumnValue(\"SPAIAdjudicationStatusId\", statusByName[\"Adjudicating\"]);\n\t}\n\topportunity.Save(false);\n}\nSet(\"FilledCount\", filled);\nSet(\"MultiSourceCount\", multi);\nSet(\"ShortfallCount\", shortfall);\nreturn true;\n",
+          "CH2": true
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "9444c67e-14fb-4112-ba04-23c7c145deab",
+          "A2": "SequenceFlow1",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "CI1": "0b582b01-c2e3-4d08-be7f-a378b5ffba4c",
+          "CI2": "90858f49-2b13-41a2-8e88-af1e549c039d",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "81;200",
+          "CI12": "278;200"
+        },
+        {
+          "BL1": "Terrasoft.Core.Process.ProcessSchemaSequenceFlow",
+          "UId": "8b2a124c-983a-4125-aef3-d6913830ac94",
+          "A2": "SequenceFlow2",
+          "A3": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A4": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "A5": "1ac9e37b-b7e0-4a94-bb46-bdb38ea0e355",
+          "BL7": "0d8351f6-c2f4-4737-bdd9-6fbfe0837fec",
+          "BL8": "0026574b-61e0-450d-a5cd-33089e0e02e5",
+          "CI1": "90858f49-2b13-41a2-8e88-af1e549c039d",
+          "CI2": "8ad847fb-ca19-40c3-a544-439863e2fab9",
+          "CI3": "null",
+          "CI5": "FF939598",
+          "CI6": 1,
+          "CI11": "347;200",
+          "CI12": "600;200"
+        }
+      ],
+      "BK9": [],
+      "BK18": "Business Process",
+      "BK29": true,
+      "BK30": true,
+      "BK34": "null",
+      "Labels": [],
+      "BK24": []
+    }
+  }
+}

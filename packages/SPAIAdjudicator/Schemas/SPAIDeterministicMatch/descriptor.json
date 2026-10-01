@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "b4c7e280-6c29-4820-9204-05a0f4580346",
+    "Name": "SPAIDeterministicMatch",
+    "ModifiedOnUtc": "\/Date(1790687642000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: deterministic match and compliance floor",
+    "DependsOn": []
+  }
+}

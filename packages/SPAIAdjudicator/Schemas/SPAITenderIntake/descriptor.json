@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "5da236ad-cfe3-4967-ac7f-b5591fe9a391",
+    "Name": "SPAITenderIntake",
+    "ModifiedOnUtc": "\/Date(1790433727000)\/",
+    "ManagerName": "ProcessSchemaManager",
+    "Caption": "Meridian: tender intake",
+    "DependsOn": []
+  }
+}

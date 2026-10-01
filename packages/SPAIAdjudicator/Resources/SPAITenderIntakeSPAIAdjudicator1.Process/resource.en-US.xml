@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Culture="en-US">
+	<Group Type="String">
+		<Items>
+			<Item Name="BaseElements.ConditionalSequenceFlow1.Caption" Value="string.IsNullOrEmpty([#ResolvedOpportunity#])" />
+			<Item Name="BaseElements.ConditionalSequenceFlow2.Caption" Value="AssessingCount &gt; 0" />
+			<Item Name="BaseElements.DefaultSequenceFlow1.Caption" Value="Match and source" />
+			<Item Name="BaseElements.ExclusiveGateway1.Caption" Value="Tender resolved" />
+			<Item Name="BaseElements.ScriptTask1.Caption" Value="Insert schedule lines" />
+			<Item Name="BaseElements.ScriptTask2.Caption" Value="Summarise proposal" />
+			<Item Name="BaseElements.SubProcess1.Caption" Value="Meridian: deterministic match and compliance floor 1" />
+			<Item Name="BaseElements.SubProcess1.Parameters.FloorFailCount.Caption" Value="FloorFailCount" />
+			<Item Name="BaseElements.SubProcess1.Parameters.MatchedCount.Caption" Value="MatchedCount" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="BaseElements.SubProcess1.Parameters.OpportunityId.DisplayValue" Value="[#OpportunityId#]" />
+			<Item Name="BaseElements.SubProcess1.Parameters.ProjectState.Caption" Value="ProjectState" />
+			<Item Name="BaseElements.SubProcess1.Parameters.UnresolvedCount.Caption" Value="UnresolvedCount" />
+			<Item Name="BaseElements.SubProcess2.Caption" Value="Meridian: adjudication 1" />
+			<Item Name="BaseElements.SubProcess2.Parameters.AdjudicatorError.Caption" Value="AdjudicatorError" />
+			<Item Name="BaseElements.SubProcess2.Parameters.AdjudicatorRequestJson.Caption" Value="AdjudicatorRequestJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.AdjudicatorStatus.Caption" Value="AdjudicatorStatus" />
+			<Item Name="BaseElements.SubProcess2.Parameters.CandidateProductCodesJson.Caption" Value="CandidateProductCodesJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.CandidateProductsJson.Caption" Value="CandidateProductsJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.EscalatedCount.Caption" Value="EscalatedCount" />
+			<Item Name="BaseElements.SubProcess2.Parameters.NetworkStockJson.Caption" Value="NetworkStockJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="BaseElements.SubProcess2.Parameters.OpportunityId.DisplayValue" Value="[#OpportunityId#]" />
+			<Item Name="BaseElements.SubProcess2.Parameters.OverrideCount.Caption" Value="OverrideCount" />
+			<Item Name="BaseElements.SubProcess2.Parameters.PendingLineCount.Caption" Value="PendingLineCount" />
+			<Item Name="BaseElements.SubProcess2.Parameters.PolicyContextJson.Caption" Value="PolicyContextJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.ResolvedCount.Caption" Value="ResolvedCount" />
+			<Item Name="BaseElements.SubProcess2.Parameters.SubstitutionRulesJson.Caption" Value="SubstitutionRulesJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.UnresolvedLinesJson.Caption" Value="UnresolvedLinesJson" />
+			<Item Name="BaseElements.SubProcess2.Parameters.VerdictsJson.Caption" Value="VerdictsJson" />
+			<Item Name="Caption" Value="Meridian: tender intake" />
+			<Item Name="LaneSets.LaneSet1.Caption" Value="LaneSet 1" />
+			<Item Name="LaneSets.LaneSet1.Lanes.Lane1.Caption" Value="Lane 1" />
+			<Item Name="NotificationCaption.Caption" Value="Process instance caption" />
+			<Item Name="NotificationCaption.DisplayValue" Value="[#Process name#]" />
+			<Item Name="Parameters.AssessingCount.Caption" Value="AssessingCount" />
+			<Item Name="Parameters.CreateIfMissing.Caption" Value="CreateIfMissing" />
+			<Item Name="Parameters.CreateIfMissing.Sys_Description" Value="Leave false. Set true only after the person has explicitly confirmed that no existing tender matches and a new one should be created." />
+			<Item Name="Parameters.DocumentRevision.Caption" Value="DocumentRevision" />
+			<Item Name="Parameters.DocumentRevision.Sys_Description" Value="The schedule's revision marker, e.g. &quot;C&quot;." />
+			<Item Name="Parameters.InsertedCount.Caption" Value="InsertedCount" />
+			<Item Name="Parameters.InsertedCount.Sys_Description" Value="Schedule lines inserted by this call." />
+			<Item Name="Parameters.LinesJson.Caption" Value="LinesJson" />
+			<Item Name="Parameters.LinesJson.Sys_Description" Value="The Schedule Extractor's JSON envelope exactly as the skill returned it. Never summarised, shortened or reformatted." />
+			<Item Name="Parameters.OpportunityCreated.Caption" Value="OpportunityCreated" />
+			<Item Name="Parameters.OpportunityCreated.Sys_Description" Value="True when this call created the tender. Tell the person when it is true." />
+			<Item Name="Parameters.OpportunityId.Caption" Value="OpportunityId" />
+			<Item Name="Parameters.OpportunityId.Sys_Description" Value="Leave empty in chat. For process-to-process calls only; when set, TenderReference is ignored." />
+			<Item Name="Parameters.ResolvedOpportunity.Caption" Value="ResolvedOpportunity" />
+			<Item Name="Parameters.ResolvedOpportunity.Sys_Description" Value="Title of the tender the lines were written to. Read it back to the person." />
+			<Item Name="Parameters.RunSummary.Caption" Value="RunSummary" />
+			<Item Name="Parameters.RunSummary.Sys_Description" Value="One sentence to relay in chat." />
+			<Item Name="Parameters.SkippedCount.Caption" Value="SkippedCount" />
+			<Item Name="Parameters.SkippedCount.Sys_Description" Value="Lines already present and skipped, so a re-run never duplicates." />
+			<Item Name="Parameters.TenderCode.Caption" Value="TenderCode" />
+			<Item Name="Parameters.TenderReference.Caption" Value="TenderReference" />
+			<Item Name="Parameters.TenderReference.Sys_Description" Value="The tender as the person named it: a tender code such as TND-2026-0141, the opportunity title, or its id. Required unless OpportunityId is sent." />
+		</Items>
+	</Group>
+</Resources>
