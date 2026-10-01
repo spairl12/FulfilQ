@@ -43,6 +43,12 @@ TENDERS = [  # use, code, title, contractor, suburb, dwellings, template, progra
     ("Demo, retake spare", "TND-26-0205", "Tarrant Quay Stage 3", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0505", "C"),
     ("Judges 1", "TND-26-0206", "Wyvern Gardens Stage 1", "Penhale Constructions", "Brunswick East VIC", 24, "medium", "medium", 640000, "BPO-0506", "A"),
     ("Judges 2", "TND-26-0207", "Ostler Rise Stage 1", "Verrin Group", "Parramatta NSW", 24, "medium", "medium", 640000, "BPO-0507", "A"),
+    ("Demo, retake 2", "TND-26-0208", "Tarrant Quay Stage 4", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0508", "C"),
+    ("Demo, retake 3", "TND-26-0209", "Tarrant Quay Stage 5", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0509", "C"),
+    ("Demo, retake 4", "TND-26-0210", "Tarrant Quay Stage 6", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0510", "C"),
+    ("Demo, retake 5", "TND-26-0211", "Tarrant Quay Stage 7", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0511", "C"),
+    ("Demo, retake 6", "TND-26-0212", "Tarrant Quay Stage 8", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0512", "C"),
+    ("Demo, retake 7", "TND-26-0213", "Tarrant Quay Stage 9", "Halloran Bright Constructions", "Port Melbourne VIC", 180, "full", "full", 8150000, "BPO-0513", "C"),
 ]
 ISSUED, CLOSES = datetime.date(2026, 9, 29), datetime.date(2026, 10, 9)
 APPLIANCES = "Appliance package: ovens, cooktops, dishwashers, rangehoods, microwaves"
